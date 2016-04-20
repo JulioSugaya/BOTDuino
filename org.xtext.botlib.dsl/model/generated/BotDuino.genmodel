@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.botlib.dsl/src-gen" editDirectory="/org.xtext.botlib.dsl.edit/src"
+    editorDirectory="/org.xtext.botlib.dsl.editor/src" modelPluginID="org.xtext.botlib.dsl"
+    forceOverwrite="true" modelName="BotDuino" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="org.xtext.botlib.dsl.edit"
+    editorPluginID="org.xtext.botlib.dsl.editor" runtimeVersion="2.11" usedGenPackages="platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase">
+  <genPackages prefix="BotDuino" basePackage="org.eclipse.xtext.botlib.dsl" disposableProviderFactory="true"
+      fileExtensions="bot" ecorePackage="BotDuino.ecore#/">
+    <genClasses ecoreClass="BotDuino.ecore#//DomainModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BotDuino.ecore#//DomainModel/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//Entity"/>
+    <genClasses ecoreClass="BotDuino.ecore#//Registers">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//Registers/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//Registers/values"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//Type/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//Type/values"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//Rules">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Rules/thenPart"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//BTRule">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//BTRule/superType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//BTRule/name"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//SensorRule">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//SensorRule/superType"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//CTRLRule">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//CTRLRule/superType"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//ButtonRule">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//ButtonRule/superType"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//Methods">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Methods/superType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//Methods/name"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//LED">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//LED/superType"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//Button">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Button/superType"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//Motor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Motor/superType"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//Sensor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Sensor/superType"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//BlueTooth">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//BlueTooth/superType"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//CTRL">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//CTRL/superType"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//Servo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Servo/superType"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
