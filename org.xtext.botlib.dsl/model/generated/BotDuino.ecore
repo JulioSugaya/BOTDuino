@@ -21,22 +21,27 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="thenPart" eType="ecore:EClass platform:/resource/org.eclipse.xtext.xbase/model/Xbase.ecore#//XExpression"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Methods" eSuperTypes="#//Entity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//Type"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BTRule" eSuperTypes="#//Rules">
     <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//BlueTooth"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SensorRule" eSuperTypes="#//Rules">
     <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//Sensor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sensorActions" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CTRLRule" eSuperTypes="#//Rules">
     <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//CTRL"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ctrlActions" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ButtonRule" eSuperTypes="#//Rules">
     <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//Button"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Methods" eSuperTypes="#//Entity">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//Type"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="btnActions" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LED" eSuperTypes="#//Type">
     <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//LED"/>
@@ -58,5 +63,17 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Servo" eSuperTypes="#//Type">
     <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//Servo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LEDMethods" eSuperTypes="#//Methods">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ledFunctions" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MotorMethods" eSuperTypes="#//Methods">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="motorFunctions" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectLiteral" eSuperTypes="platform:/resource/org.eclipse.xtext.xbase/model/Xbase.ecore#//XExpression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" upperBound="-1"
+        eType="#//Methods" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

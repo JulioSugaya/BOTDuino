@@ -13,19 +13,23 @@ import org.eclipse.xtext.botlib.dsl.botDuino.BTRule;
 import org.eclipse.xtext.botlib.dsl.botDuino.BlueTooth;
 import org.eclipse.xtext.botlib.dsl.botDuino.Button;
 import org.eclipse.xtext.botlib.dsl.botDuino.ButtonRule;
+import org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods;
+import org.eclipse.xtext.botlib.dsl.botDuino.Methods;
+import org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods;
 import org.eclipse.xtext.botlib.dsl.botDuino.Registers;
 import org.eclipse.xtext.botlib.dsl.botDuino.Rules;
 import org.eclipse.xtext.botlib.dsl.botDuino.Type;
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.BTRuleImpl;
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.BlueToothImpl;
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.ButtonRuleImpl;
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDMethodsImpl;
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.MotorMethodsImpl;
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.ObjectLiteralImpl;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
 import org.eclipse.xtext.naming.QualifiedName;
-import org.eclipse.xtext.xbase.XBlockExpression;
 import org.eclipse.xtext.xbase.XExpression;
-import org.eclipse.xtext.xbase.XMemberFeatureCall;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
@@ -37,6 +41,12 @@ public class BotDuinoGenerator implements IGenerator {
   private IQualifiedNameProvider _iQualifiedNameProvider;
   
   private String ql = System.getProperty("line.separator");
+  
+  private String ind1 = "\t";
+  
+  private String ind2 = "\t\t";
+  
+  private String ind3 = "\t\t\t";
   
   private String c_includes = ("#include <BOTLib.h>" + this.ql);
   
@@ -64,7 +74,7 @@ public class BotDuinoGenerator implements IGenerator {
       String _c_loop = this.c_loop;
       this.c_loop = (_c_loop + ((this.bt_block + "}") + this.ql));
     }
-    this.context = (((((((this.c_includes + "\n\t\t") + this.c_vars) + "\n\t\t") + this.c_setup) + "}\n\t\t") + this.c_loop) + "}");
+    this.context = ((((((((this.c_includes + this.ql) + this.c_vars) + this.ql) + this.c_setup) + "}") + this.ql) + this.c_loop) + "}");
     URI _uRI = resource.getURI();
     String _lastSegment = _uRI.lastSegment();
     String _plus = (_lastSegment + ".cpp");
@@ -148,7 +158,7 @@ public class BotDuinoGenerator implements IGenerator {
         if ((!this.bt_test)) {
           BlueTooth _superType = btClass.getSuperType();
           String _name_1 = _superType.getName();
-          String _plus = ("  if(" + _name_1);
+          String _plus = ((this.ind1 + "if(") + _name_1);
           String _plus_1 = (_plus + ".available()){ ");
           String _plus_2 = (_plus_1 + this.ql);
           BlueTooth _superType_1 = btClass.getSuperType();
@@ -166,7 +176,7 @@ public class BotDuinoGenerator implements IGenerator {
         String _bt_block = this.bt_block;
         BlueTooth _superType_3 = btClass.getSuperType();
         String _name_4 = _superType_3.getName();
-        String _plus_8 = ("if(" + _name_4);
+        String _plus_8 = ((this.ind1 + "if(") + _name_4);
         String _plus_9 = (_plus_8 + "Response ==\'");
         QualifiedName _fullyQualifiedName = this._iQualifiedNameProvider.getFullyQualifiedName(e);
         String _plus_10 = (_plus_9 + _fullyQualifiedName);
@@ -175,11 +185,11 @@ public class BotDuinoGenerator implements IGenerator {
         this.bt_block = (_bt_block + _plus_12);
         String _bt_block_1 = this.bt_block;
         XExpression _thenPart = e.getThenPart();
-        String _splitExp = this.splitExp(((XBlockExpression) _thenPart));
+        String _splitExp = this.splitExp(((ObjectLiteralImpl) _thenPart));
         String _plus_13 = (_splitExp + this.ql);
         this.bt_block = (_bt_block_1 + _plus_13);
         String _bt_block_2 = this.bt_block;
-        this.bt_block = (_bt_block_2 + ("}" + this.ql));
+        this.bt_block = (_bt_block_2 + ((this.ind1 + "}") + this.ql));
       }
       String _xifexpression = null;
       EClass _eClass_1 = e.eClass();
@@ -191,15 +201,16 @@ public class BotDuinoGenerator implements IGenerator {
         {
           ButtonRuleImpl ruleClass = ((ButtonRuleImpl) e);
           String state = "HIGH";
-          QualifiedName _fullyQualifiedName_1 = this._iQualifiedNameProvider.getFullyQualifiedName(e);
-          boolean _equals_2 = Objects.equal(_fullyQualifiedName_1, "FREE");
+          EList<String> _btnActions = ruleClass.getBtnActions();
+          String _get = _btnActions.get(0);
+          boolean _equals_2 = Objects.equal(_get, "FREE");
           if (_equals_2) {
             state = "LOW";
           }
           String _c_loop = this.c_loop;
           Button _superType_4 = ruleClass.getSuperType();
           String _name_6 = _superType_4.getName();
-          String _plus_14 = ("  if(" + _name_6);
+          String _plus_14 = ((this.ind1 + "if(") + _name_6);
           String _plus_15 = (_plus_14 + ".getState() == ");
           String _plus_16 = (_plus_15 + state);
           String _plus_17 = (_plus_16 + "){ ");
@@ -207,11 +218,11 @@ public class BotDuinoGenerator implements IGenerator {
           this.c_loop = (_c_loop + _plus_18);
           String _c_loop_1 = this.c_loop;
           XExpression _thenPart_1 = e.getThenPart();
-          String _splitExp_1 = this.splitExp(((XBlockExpression) _thenPart_1));
+          String _splitExp_1 = this.splitExp(((ObjectLiteralImpl) _thenPart_1));
           String _plus_19 = (_splitExp_1 + this.ql);
           this.c_loop = (_c_loop_1 + _plus_19);
           String _c_loop_2 = this.c_loop;
-          _xblockexpression_1 = this.c_loop = (_c_loop_2 + ("}" + this.ql));
+          _xblockexpression_1 = this.c_loop = (_c_loop_2 + ((this.ind1 + "}") + this.ql));
         }
         _xifexpression = _xblockexpression_1;
       }
@@ -220,31 +231,49 @@ public class BotDuinoGenerator implements IGenerator {
     return _xblockexpression;
   }
   
-  public String splitExp(final XBlockExpression exp) {
+  public String splitExp(final ObjectLiteralImpl exp) {
     String s = "";
-    EList<XExpression> _expressions = exp.getExpressions();
-    for (final XExpression c : _expressions) {
-      String _s = s;
-      String _buildExp = this.buildExp(c);
-      s = (_s + _buildExp);
+    EList<Methods> _expressions = exp.getExpressions();
+    for (final Methods c : _expressions) {
+      {
+        if ((c instanceof LEDMethods)) {
+          String _s = s;
+          String _buildExp = this.buildExp(((LEDMethods)c));
+          s = (_s + _buildExp);
+        }
+        if ((c instanceof MotorMethods)) {
+          String _s_1 = s;
+          String _buildExp_1 = this.buildExp(((MotorMethods)c));
+          s = (_s_1 + _buildExp_1);
+        }
+      }
     }
     return s;
   }
   
-  public String buildExp(final XExpression exp) {
-    final XMemberFeatureCall x = ((XMemberFeatureCall) exp);
-    String _string = x.toString();
-    String _string_1 = x.toString();
-    int _indexOf = _string_1.indexOf(".");
-    _string.substring(_indexOf);
-    XExpression _memberCallTarget = x.getMemberCallTarget();
-    String _string_2 = _memberCallTarget.toString();
-    String _string_3 = x.toString();
-    String _string_4 = x.toString();
-    int _indexOf_1 = _string_4.indexOf(".");
-    String _substring = _string_3.substring(_indexOf_1);
-    String _plus = (_string_2 + _substring);
-    String _plus_1 = (_plus + ";");
-    return (_plus_1 + this.ql);
+  public String buildExp(final MotorMethods exp) {
+    final MotorMethodsImpl x = ((MotorMethodsImpl) exp);
+    Type _superType = x.getSuperType();
+    String _name = _superType.getName();
+    String _plus = (this.ind2 + _name);
+    String _plus_1 = (_plus + ".");
+    EList<String> _motorFunctions = x.getMotorFunctions();
+    String _get = _motorFunctions.get(0);
+    String _plus_2 = (_plus_1 + _get);
+    String _plus_3 = (_plus_2 + "();");
+    return (_plus_3 + this.ql);
+  }
+  
+  public String buildExp(final LEDMethods exp) {
+    final LEDMethodsImpl x = ((LEDMethodsImpl) exp);
+    Type _superType = x.getSuperType();
+    String _name = _superType.getName();
+    String _plus = (this.ind2 + _name);
+    String _plus_1 = (_plus + ".");
+    EList<String> _ledFunctions = x.getLedFunctions();
+    String _get = _ledFunctions.get(0);
+    String _plus_2 = (_plus_1 + _get);
+    String _plus_3 = (_plus_2 + "();");
+    return (_plus_3 + this.ql);
   }
 }

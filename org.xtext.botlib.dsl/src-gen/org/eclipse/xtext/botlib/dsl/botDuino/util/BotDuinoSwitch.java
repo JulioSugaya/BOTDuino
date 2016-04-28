@@ -9,6 +9,8 @@ import org.eclipse.emf.ecore.util.Switch;
 
 import org.eclipse.xtext.botlib.dsl.botDuino.*;
 
+import org.eclipse.xtext.xbase.XExpression;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Switch</b> for the model's inheritance hierarchy.
@@ -110,6 +112,14 @@ public class BotDuinoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BotDuinoPackage.METHODS:
+      {
+        Methods methods = (Methods)theEObject;
+        T result = caseMethods(methods);
+        if (result == null) result = caseEntity(methods);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BotDuinoPackage.BT_RULE:
       {
         BTRule btRule = (BTRule)theEObject;
@@ -143,14 +153,6 @@ public class BotDuinoSwitch<T> extends Switch<T>
         T result = caseButtonRule(buttonRule);
         if (result == null) result = caseRules(buttonRule);
         if (result == null) result = caseEntity(buttonRule);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case BotDuinoPackage.METHODS:
-      {
-        Methods methods = (Methods)theEObject;
-        T result = caseMethods(methods);
-        if (result == null) result = caseEntity(methods);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -214,6 +216,32 @@ public class BotDuinoSwitch<T> extends Switch<T>
         T result = caseServo(servo);
         if (result == null) result = caseType(servo);
         if (result == null) result = caseEntity(servo);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BotDuinoPackage.LED_METHODS:
+      {
+        LEDMethods ledMethods = (LEDMethods)theEObject;
+        T result = caseLEDMethods(ledMethods);
+        if (result == null) result = caseMethods(ledMethods);
+        if (result == null) result = caseEntity(ledMethods);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BotDuinoPackage.MOTOR_METHODS:
+      {
+        MotorMethods motorMethods = (MotorMethods)theEObject;
+        T result = caseMotorMethods(motorMethods);
+        if (result == null) result = caseMethods(motorMethods);
+        if (result == null) result = caseEntity(motorMethods);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BotDuinoPackage.OBJECT_LITERAL:
+      {
+        ObjectLiteral objectLiteral = (ObjectLiteral)theEObject;
+        T result = caseObjectLiteral(objectLiteral);
+        if (result == null) result = caseXExpression(objectLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -302,6 +330,22 @@ public class BotDuinoSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Methods</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Methods</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMethods(Methods object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>BT Rule</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -361,22 +405,6 @@ public class BotDuinoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseButtonRule(ButtonRule object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Methods</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Methods</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseMethods(Methods object)
   {
     return null;
   }
@@ -489,6 +517,70 @@ public class BotDuinoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseServo(Servo object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>LED Methods</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>LED Methods</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLEDMethods(LEDMethods object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Motor Methods</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Motor Methods</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMotorMethods(MotorMethods object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Object Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Object Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseObjectLiteral(ObjectLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>XExpression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>XExpression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseXExpression(XExpression object)
   {
     return null;
   }

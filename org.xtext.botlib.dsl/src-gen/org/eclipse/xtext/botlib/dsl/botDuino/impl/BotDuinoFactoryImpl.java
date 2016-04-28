@@ -69,11 +69,11 @@ public class BotDuinoFactoryImpl extends EFactoryImpl implements BotDuinoFactory
       case BotDuinoPackage.REGISTERS: return createRegisters();
       case BotDuinoPackage.TYPE: return createType();
       case BotDuinoPackage.RULES: return createRules();
+      case BotDuinoPackage.METHODS: return createMethods();
       case BotDuinoPackage.BT_RULE: return createBTRule();
       case BotDuinoPackage.SENSOR_RULE: return createSensorRule();
       case BotDuinoPackage.CTRL_RULE: return createCTRLRule();
       case BotDuinoPackage.BUTTON_RULE: return createButtonRule();
-      case BotDuinoPackage.METHODS: return createMethods();
       case BotDuinoPackage.LED: return createLED();
       case BotDuinoPackage.BUTTON: return createButton();
       case BotDuinoPackage.MOTOR: return createMotor();
@@ -81,6 +81,9 @@ public class BotDuinoFactoryImpl extends EFactoryImpl implements BotDuinoFactory
       case BotDuinoPackage.BLUE_TOOTH: return createBlueTooth();
       case BotDuinoPackage.CTRL: return createCTRL();
       case BotDuinoPackage.SERVO: return createServo();
+      case BotDuinoPackage.LED_METHODS: return createLEDMethods();
+      case BotDuinoPackage.MOTOR_METHODS: return createMotorMethods();
+      case BotDuinoPackage.OBJECT_LITERAL: return createObjectLiteral();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -146,6 +149,17 @@ public class BotDuinoFactoryImpl extends EFactoryImpl implements BotDuinoFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Methods createMethods()
+  {
+    MethodsImpl methods = new MethodsImpl();
+    return methods;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public BTRule createBTRule()
   {
     BTRuleImpl btRule = new BTRuleImpl();
@@ -183,17 +197,6 @@ public class BotDuinoFactoryImpl extends EFactoryImpl implements BotDuinoFactory
   {
     ButtonRuleImpl buttonRule = new ButtonRuleImpl();
     return buttonRule;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Methods createMethods()
-  {
-    MethodsImpl methods = new MethodsImpl();
-    return methods;
   }
 
   /**
@@ -271,6 +274,39 @@ public class BotDuinoFactoryImpl extends EFactoryImpl implements BotDuinoFactory
   {
     ServoImpl servo = new ServoImpl();
     return servo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LEDMethods createLEDMethods()
+  {
+    LEDMethodsImpl ledMethods = new LEDMethodsImpl();
+    return ledMethods;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MotorMethods createMotorMethods()
+  {
+    MotorMethodsImpl motorMethods = new MotorMethodsImpl();
+    return motorMethods;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ObjectLiteral createObjectLiteral()
+  {
+    ObjectLiteralImpl objectLiteral = new ObjectLiteralImpl();
+    return objectLiteral;
   }
 
   /**

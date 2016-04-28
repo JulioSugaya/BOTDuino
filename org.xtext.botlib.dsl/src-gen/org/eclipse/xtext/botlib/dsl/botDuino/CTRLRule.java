@@ -2,6 +2,7 @@
  */
 package org.eclipse.xtext.botlib.dsl.botDuino;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +14,7 @@ package org.eclipse.xtext.botlib.dsl.botDuino;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.xtext.botlib.dsl.botDuino.CTRLRule#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.eclipse.xtext.botlib.dsl.botDuino.CTRLRule#getCtrlActions <em>Ctrl Actions</em>}</li>
  * </ul>
  *
  * @see org.eclipse.xtext.botlib.dsl.botDuino.BotDuinoPackage#getCTRLRule()
@@ -46,5 +48,21 @@ public interface CTRLRule extends Rules
    * @generated
    */
   void setSuperType(CTRL value);
+
+  /**
+   * Returns the value of the '<em><b>Ctrl Actions</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Ctrl Actions</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Ctrl Actions</em>' attribute list.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.BotDuinoPackage#getCTRLRule_CtrlActions()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getCtrlActions();
 
 } // CTRLRule

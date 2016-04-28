@@ -7,6 +7,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.xtext.xbase.XbasePackage;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Package</b> for the model.
@@ -206,6 +208,34 @@ public interface BotDuinoPackage extends EPackage
   int RULES_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.MethodsImpl <em>Methods</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.MethodsImpl
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getMethods()
+   * @generated
+   */
+  int METHODS = 5;
+
+  /**
+   * The feature id for the '<em><b>Super Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METHODS__SUPER_TYPE = ENTITY_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Methods</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METHODS_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.BTRuleImpl <em>BT Rule</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -213,7 +243,7 @@ public interface BotDuinoPackage extends EPackage
    * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getBTRule()
    * @generated
    */
-  int BT_RULE = 5;
+  int BT_RULE = 6;
 
   /**
    * The feature id for the '<em><b>Then Part</b></em>' containment reference.
@@ -259,7 +289,7 @@ public interface BotDuinoPackage extends EPackage
    * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getSensorRule()
    * @generated
    */
-  int SENSOR_RULE = 6;
+  int SENSOR_RULE = 7;
 
   /**
    * The feature id for the '<em><b>Then Part</b></em>' containment reference.
@@ -280,13 +310,22 @@ public interface BotDuinoPackage extends EPackage
   int SENSOR_RULE__SUPER_TYPE = RULES_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Sensor Actions</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SENSOR_RULE__SENSOR_ACTIONS = RULES_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Sensor Rule</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SENSOR_RULE_FEATURE_COUNT = RULES_FEATURE_COUNT + 1;
+  int SENSOR_RULE_FEATURE_COUNT = RULES_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.CTRLRuleImpl <em>CTRL Rule</em>}' class.
@@ -296,7 +335,7 @@ public interface BotDuinoPackage extends EPackage
    * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getCTRLRule()
    * @generated
    */
-  int CTRL_RULE = 7;
+  int CTRL_RULE = 8;
 
   /**
    * The feature id for the '<em><b>Then Part</b></em>' containment reference.
@@ -317,13 +356,22 @@ public interface BotDuinoPackage extends EPackage
   int CTRL_RULE__SUPER_TYPE = RULES_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Ctrl Actions</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CTRL_RULE__CTRL_ACTIONS = RULES_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>CTRL Rule</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CTRL_RULE_FEATURE_COUNT = RULES_FEATURE_COUNT + 1;
+  int CTRL_RULE_FEATURE_COUNT = RULES_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.ButtonRuleImpl <em>Button Rule</em>}' class.
@@ -333,7 +381,7 @@ public interface BotDuinoPackage extends EPackage
    * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getButtonRule()
    * @generated
    */
-  int BUTTON_RULE = 8;
+  int BUTTON_RULE = 9;
 
   /**
    * The feature id for the '<em><b>Then Part</b></em>' containment reference.
@@ -354,50 +402,22 @@ public interface BotDuinoPackage extends EPackage
   int BUTTON_RULE__SUPER_TYPE = RULES_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Btn Actions</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUTTON_RULE__BTN_ACTIONS = RULES_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Button Rule</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BUTTON_RULE_FEATURE_COUNT = RULES_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.MethodsImpl <em>Methods</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.MethodsImpl
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getMethods()
-   * @generated
-   */
-  int METHODS = 9;
-
-  /**
-   * The feature id for the '<em><b>Super Type</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int METHODS__SUPER_TYPE = ENTITY_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int METHODS__NAME = ENTITY_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Methods</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int METHODS_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 2;
+  int BUTTON_RULE_FEATURE_COUNT = RULES_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDImpl <em>LED</em>}' class.
@@ -721,6 +741,108 @@ public interface BotDuinoPackage extends EPackage
    */
   int SERVO_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
 
+  /**
+   * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDMethodsImpl <em>LED Methods</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDMethodsImpl
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getLEDMethods()
+   * @generated
+   */
+  int LED_METHODS = 17;
+
+  /**
+   * The feature id for the '<em><b>Super Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LED_METHODS__SUPER_TYPE = METHODS__SUPER_TYPE;
+
+  /**
+   * The feature id for the '<em><b>Led Functions</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LED_METHODS__LED_FUNCTIONS = METHODS_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>LED Methods</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LED_METHODS_FEATURE_COUNT = METHODS_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.MotorMethodsImpl <em>Motor Methods</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.MotorMethodsImpl
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getMotorMethods()
+   * @generated
+   */
+  int MOTOR_METHODS = 18;
+
+  /**
+   * The feature id for the '<em><b>Super Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOTOR_METHODS__SUPER_TYPE = METHODS__SUPER_TYPE;
+
+  /**
+   * The feature id for the '<em><b>Motor Functions</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOTOR_METHODS__MOTOR_FUNCTIONS = METHODS_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Motor Methods</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOTOR_METHODS_FEATURE_COUNT = METHODS_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.ObjectLiteralImpl <em>Object Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.ObjectLiteralImpl
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getObjectLiteral()
+   * @generated
+   */
+  int OBJECT_LITERAL = 19;
+
+  /**
+   * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_LITERAL__EXPRESSIONS = XbasePackage.XEXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Object Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_LITERAL_FEATURE_COUNT = XbasePackage.XEXPRESSION_FEATURE_COUNT + 1;
+
 
   /**
    * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.DomainModel <em>Domain Model</em>}'.
@@ -839,6 +961,27 @@ public interface BotDuinoPackage extends EPackage
   EReference getRules_ThenPart();
 
   /**
+   * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.Methods <em>Methods</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Methods</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.Methods
+   * @generated
+   */
+  EClass getMethods();
+
+  /**
+   * Returns the meta object for the reference '{@link org.eclipse.xtext.botlib.dsl.botDuino.Methods#getSuperType <em>Super Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Super Type</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.Methods#getSuperType()
+   * @see #getMethods()
+   * @generated
+   */
+  EReference getMethods_SuperType();
+
+  /**
    * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.BTRule <em>BT Rule</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -892,6 +1035,17 @@ public interface BotDuinoPackage extends EPackage
   EReference getSensorRule_SuperType();
 
   /**
+   * Returns the meta object for the attribute list '{@link org.eclipse.xtext.botlib.dsl.botDuino.SensorRule#getSensorActions <em>Sensor Actions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Sensor Actions</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.SensorRule#getSensorActions()
+   * @see #getSensorRule()
+   * @generated
+   */
+  EAttribute getSensorRule_SensorActions();
+
+  /**
    * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.CTRLRule <em>CTRL Rule</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -911,6 +1065,17 @@ public interface BotDuinoPackage extends EPackage
    * @generated
    */
   EReference getCTRLRule_SuperType();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.eclipse.xtext.botlib.dsl.botDuino.CTRLRule#getCtrlActions <em>Ctrl Actions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Ctrl Actions</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.CTRLRule#getCtrlActions()
+   * @see #getCTRLRule()
+   * @generated
+   */
+  EAttribute getCTRLRule_CtrlActions();
 
   /**
    * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.ButtonRule <em>Button Rule</em>}'.
@@ -934,36 +1099,15 @@ public interface BotDuinoPackage extends EPackage
   EReference getButtonRule_SuperType();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.Methods <em>Methods</em>}'.
+   * Returns the meta object for the attribute list '{@link org.eclipse.xtext.botlib.dsl.botDuino.ButtonRule#getBtnActions <em>Btn Actions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Methods</em>'.
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.Methods
+   * @return the meta object for the attribute list '<em>Btn Actions</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.ButtonRule#getBtnActions()
+   * @see #getButtonRule()
    * @generated
    */
-  EClass getMethods();
-
-  /**
-   * Returns the meta object for the reference '{@link org.eclipse.xtext.botlib.dsl.botDuino.Methods#getSuperType <em>Super Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Super Type</em>'.
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.Methods#getSuperType()
-   * @see #getMethods()
-   * @generated
-   */
-  EReference getMethods_SuperType();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipse.xtext.botlib.dsl.botDuino.Methods#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.Methods#getName()
-   * @see #getMethods()
-   * @generated
-   */
-  EAttribute getMethods_Name();
+  EAttribute getButtonRule_BtnActions();
 
   /**
    * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.LED <em>LED</em>}'.
@@ -1113,6 +1257,69 @@ public interface BotDuinoPackage extends EPackage
   EReference getServo_SuperType();
 
   /**
+   * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods <em>LED Methods</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>LED Methods</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods
+   * @generated
+   */
+  EClass getLEDMethods();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods#getLedFunctions <em>Led Functions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Led Functions</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods#getLedFunctions()
+   * @see #getLEDMethods()
+   * @generated
+   */
+  EAttribute getLEDMethods_LedFunctions();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods <em>Motor Methods</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Motor Methods</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods
+   * @generated
+   */
+  EClass getMotorMethods();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods#getMotorFunctions <em>Motor Functions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Motor Functions</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods#getMotorFunctions()
+   * @see #getMotorMethods()
+   * @generated
+   */
+  EAttribute getMotorMethods_MotorFunctions();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.ObjectLiteral <em>Object Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Object Literal</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.ObjectLiteral
+   * @generated
+   */
+  EClass getObjectLiteral();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.eclipse.xtext.botlib.dsl.botDuino.ObjectLiteral#getExpressions <em>Expressions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Expressions</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.ObjectLiteral#getExpressions()
+   * @see #getObjectLiteral()
+   * @generated
+   */
+  EReference getObjectLiteral_Expressions();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1234,6 +1441,24 @@ public interface BotDuinoPackage extends EPackage
     EReference RULES__THEN_PART = eINSTANCE.getRules_ThenPart();
 
     /**
+     * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.MethodsImpl <em>Methods</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.MethodsImpl
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getMethods()
+     * @generated
+     */
+    EClass METHODS = eINSTANCE.getMethods();
+
+    /**
+     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference METHODS__SUPER_TYPE = eINSTANCE.getMethods_SuperType();
+
+    /**
      * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.BTRuleImpl <em>BT Rule</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1278,6 +1503,14 @@ public interface BotDuinoPackage extends EPackage
     EReference SENSOR_RULE__SUPER_TYPE = eINSTANCE.getSensorRule_SuperType();
 
     /**
+     * The meta object literal for the '<em><b>Sensor Actions</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SENSOR_RULE__SENSOR_ACTIONS = eINSTANCE.getSensorRule_SensorActions();
+
+    /**
      * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.CTRLRuleImpl <em>CTRL Rule</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1294,6 +1527,14 @@ public interface BotDuinoPackage extends EPackage
      * @generated
      */
     EReference CTRL_RULE__SUPER_TYPE = eINSTANCE.getCTRLRule_SuperType();
+
+    /**
+     * The meta object literal for the '<em><b>Ctrl Actions</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CTRL_RULE__CTRL_ACTIONS = eINSTANCE.getCTRLRule_CtrlActions();
 
     /**
      * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.ButtonRuleImpl <em>Button Rule</em>}' class.
@@ -1314,30 +1555,12 @@ public interface BotDuinoPackage extends EPackage
     EReference BUTTON_RULE__SUPER_TYPE = eINSTANCE.getButtonRule_SuperType();
 
     /**
-     * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.MethodsImpl <em>Methods</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.MethodsImpl
-     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getMethods()
-     * @generated
-     */
-    EClass METHODS = eINSTANCE.getMethods();
-
-    /**
-     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Btn Actions</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference METHODS__SUPER_TYPE = eINSTANCE.getMethods_SuperType();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute METHODS__NAME = eINSTANCE.getMethods_Name();
+    EAttribute BUTTON_RULE__BTN_ACTIONS = eINSTANCE.getButtonRule_BtnActions();
 
     /**
      * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDImpl <em>LED</em>}' class.
@@ -1464,6 +1687,60 @@ public interface BotDuinoPackage extends EPackage
      * @generated
      */
     EReference SERVO__SUPER_TYPE = eINSTANCE.getServo_SuperType();
+
+    /**
+     * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDMethodsImpl <em>LED Methods</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDMethodsImpl
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getLEDMethods()
+     * @generated
+     */
+    EClass LED_METHODS = eINSTANCE.getLEDMethods();
+
+    /**
+     * The meta object literal for the '<em><b>Led Functions</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LED_METHODS__LED_FUNCTIONS = eINSTANCE.getLEDMethods_LedFunctions();
+
+    /**
+     * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.MotorMethodsImpl <em>Motor Methods</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.MotorMethodsImpl
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getMotorMethods()
+     * @generated
+     */
+    EClass MOTOR_METHODS = eINSTANCE.getMotorMethods();
+
+    /**
+     * The meta object literal for the '<em><b>Motor Functions</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MOTOR_METHODS__MOTOR_FUNCTIONS = eINSTANCE.getMotorMethods_MotorFunctions();
+
+    /**
+     * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.ObjectLiteralImpl <em>Object Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.ObjectLiteralImpl
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getObjectLiteral()
+     * @generated
+     */
+    EClass OBJECT_LITERAL = eINSTANCE.getObjectLiteral();
+
+    /**
+     * The meta object literal for the '<em><b>Expressions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OBJECT_LITERAL__EXPRESSIONS = eINSTANCE.getObjectLiteral_Expressions();
 
   }
 

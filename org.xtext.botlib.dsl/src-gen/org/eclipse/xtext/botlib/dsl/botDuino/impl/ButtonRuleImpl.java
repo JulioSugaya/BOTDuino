@@ -2,12 +2,18 @@
  */
 package org.eclipse.xtext.botlib.dsl.botDuino.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 import org.eclipse.xtext.botlib.dsl.botDuino.BotDuinoPackage;
 import org.eclipse.xtext.botlib.dsl.botDuino.Button;
@@ -22,6 +28,7 @@ import org.eclipse.xtext.botlib.dsl.botDuino.ButtonRule;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.ButtonRuleImpl#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.ButtonRuleImpl#getBtnActions <em>Btn Actions</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,6 +44,16 @@ public class ButtonRuleImpl extends RulesImpl implements ButtonRule
    * @ordered
    */
   protected Button superType;
+
+  /**
+   * The cached value of the '{@link #getBtnActions() <em>Btn Actions</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBtnActions()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> btnActions;
 
   /**
    * <!-- begin-user-doc -->
@@ -107,6 +124,20 @@ public class ButtonRuleImpl extends RulesImpl implements ButtonRule
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<String> getBtnActions()
+  {
+    if (btnActions == null)
+    {
+      btnActions = new EDataTypeEList<String>(String.class, this, BotDuinoPackage.BUTTON_RULE__BTN_ACTIONS);
+    }
+    return btnActions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -115,6 +146,8 @@ public class ButtonRuleImpl extends RulesImpl implements ButtonRule
       case BotDuinoPackage.BUTTON_RULE__SUPER_TYPE:
         if (resolve) return getSuperType();
         return basicGetSuperType();
+      case BotDuinoPackage.BUTTON_RULE__BTN_ACTIONS:
+        return getBtnActions();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -124,6 +157,7 @@ public class ButtonRuleImpl extends RulesImpl implements ButtonRule
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -131,6 +165,10 @@ public class ButtonRuleImpl extends RulesImpl implements ButtonRule
     {
       case BotDuinoPackage.BUTTON_RULE__SUPER_TYPE:
         setSuperType((Button)newValue);
+        return;
+      case BotDuinoPackage.BUTTON_RULE__BTN_ACTIONS:
+        getBtnActions().clear();
+        getBtnActions().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -149,6 +187,9 @@ public class ButtonRuleImpl extends RulesImpl implements ButtonRule
       case BotDuinoPackage.BUTTON_RULE__SUPER_TYPE:
         setSuperType((Button)null);
         return;
+      case BotDuinoPackage.BUTTON_RULE__BTN_ACTIONS:
+        getBtnActions().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -165,8 +206,27 @@ public class ButtonRuleImpl extends RulesImpl implements ButtonRule
     {
       case BotDuinoPackage.BUTTON_RULE__SUPER_TYPE:
         return superType != null;
+      case BotDuinoPackage.BUTTON_RULE__BTN_ACTIONS:
+        return btnActions != null && !btnActions.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (btnActions: ");
+    result.append(btnActions);
+    result.append(')');
+    return result.toString();
   }
 
 } //ButtonRuleImpl

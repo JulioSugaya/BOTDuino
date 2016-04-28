@@ -22,22 +22,24 @@
     <genClasses ecoreClass="BotDuino.ecore#//Rules">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Rules/thenPart"/>
     </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//Methods">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Methods/superType"/>
+    </genClasses>
     <genClasses ecoreClass="BotDuino.ecore#//BTRule">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//BTRule/superType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//BTRule/name"/>
     </genClasses>
     <genClasses ecoreClass="BotDuino.ecore#//SensorRule">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//SensorRule/superType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//SensorRule/sensorActions"/>
     </genClasses>
     <genClasses ecoreClass="BotDuino.ecore#//CTRLRule">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//CTRLRule/superType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//CTRLRule/ctrlActions"/>
     </genClasses>
     <genClasses ecoreClass="BotDuino.ecore#//ButtonRule">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//ButtonRule/superType"/>
-    </genClasses>
-    <genClasses ecoreClass="BotDuino.ecore#//Methods">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Methods/superType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//Methods/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//ButtonRule/btnActions"/>
     </genClasses>
     <genClasses ecoreClass="BotDuino.ecore#//LED">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//LED/superType"/>
@@ -59,6 +61,15 @@
     </genClasses>
     <genClasses ecoreClass="BotDuino.ecore#//Servo">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Servo/superType"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//LEDMethods">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//LEDMethods/ledFunctions"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//MotorMethods">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//MotorMethods/motorFunctions"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//ObjectLiteral">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BotDuino.ecore#//ObjectLiteral/expressions"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

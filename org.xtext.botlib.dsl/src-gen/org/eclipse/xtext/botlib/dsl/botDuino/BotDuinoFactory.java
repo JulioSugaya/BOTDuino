@@ -68,6 +68,15 @@ public interface BotDuinoFactory extends EFactory
   Rules createRules();
 
   /**
+   * Returns a new object of class '<em>Methods</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Methods</em>'.
+   * @generated
+   */
+  Methods createMethods();
+
+  /**
    * Returns a new object of class '<em>BT Rule</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -102,15 +111,6 @@ public interface BotDuinoFactory extends EFactory
    * @generated
    */
   ButtonRule createButtonRule();
-
-  /**
-   * Returns a new object of class '<em>Methods</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Methods</em>'.
-   * @generated
-   */
-  Methods createMethods();
 
   /**
    * Returns a new object of class '<em>LED</em>'.
@@ -174,6 +174,33 @@ public interface BotDuinoFactory extends EFactory
    * @generated
    */
   Servo createServo();
+
+  /**
+   * Returns a new object of class '<em>LED Methods</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>LED Methods</em>'.
+   * @generated
+   */
+  LEDMethods createLEDMethods();
+
+  /**
+   * Returns a new object of class '<em>Motor Methods</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Motor Methods</em>'.
+   * @generated
+   */
+  MotorMethods createMotorMethods();
+
+  /**
+   * Returns a new object of class '<em>Object Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Object Literal</em>'.
+   * @generated
+   */
+  ObjectLiteral createObjectLiteral();
 
   /**
    * Returns the package supported by this factory.

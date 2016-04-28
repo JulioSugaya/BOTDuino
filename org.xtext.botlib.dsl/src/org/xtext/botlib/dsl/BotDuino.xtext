@@ -15,15 +15,20 @@ DomainModel :
 
 Entity:
  Type | Rules | Registers | Methods;
+
  
 Registers:
  'VAR' name=ID '=' values+=INT*;
 
 Type:
- LED | Button | Motor | Sensor | BlueTooth | CTRL | Servo;
+ Button | Sensor | BlueTooth | CTRL | LED | Motor | Servo;
+
 
 Rules:
 	SensorRule | ButtonRule | CTRLRule | BTRule;
+
+Methods:
+  LEDMethods | MotorMethods;	
 
 BTRule:
  superType=[BlueTooth] 
@@ -32,21 +37,18 @@ BTRule:
  
 SensorRule:
  superType=[Sensor] 
- 'when' ('HIGH' | 'LOW')
+ 'when' (sensorActions+= 'HIGH' | sensorActions+= 'LOW')
  'then' thenPart=XBlockExpression;
  
 CTRLRule:
  superType=[CTRL] 
- 'when' ('UP' | 'DOWN' | 'LEFT' | 'RIGHT')
+ 'when' (ctrlActions+= 'UP' | ctrlActions+= 'DOWN' | ctrlActions+= 'LEFT' | ctrlActions+= 'RIGHT')
  'then' thenPart=XBlockExpression;
  
 ButtonRule:
  superType=[Button] 
- 'when' ('PUSH' | 'FREE')
+ 'when' ( btnActions+= 'PUSH' | btnActions+= 'FREE')
  'then' thenPart=XBlockExpression;
-
-Methods:
- superType=[Type]'.'name=ID;
 
 LED:
  'LED' name=ID ('extends' superType=[LED])? '('
@@ -82,16 +84,24 @@ Servo:
  'Servo' name=ID ('extends' superType=[Servo])? '('
  values+=INT* ',' values+=INT* ',' values+=INT*
  ')';
- 
- 
+
+
+LEDMethods:	
+  //superType=[Type]'.'name=ID; 
+  superType=[LED]'.'( ledFunctions+= 'on' | ledFunctions+= 'off');
+
+MotorMethods:	
+  superType=[Motor] | superType=[Servo]'.'( motorFunctions+= 'run' | motorFunctions+= 'stop' | motorFunctions+= 'reverse');
+
+
 terminal INT returns ecore::EInt : ('0'..'9')+;
  
 terminal ML_COMMENT : '/*' -> '*/';
 
-  
-XBlockExpression returns xbase::XExpression: 
- {xbase::XBlockExpression}
+XBlockExpression returns xbase::XExpression:
+ {ObjectLiteral}
  '{'
- (expressions+=XExpressionOrVarDeclaration?)*
+   expressions+=Methods*
  '}';
+
 

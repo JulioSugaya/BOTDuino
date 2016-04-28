@@ -2,6 +2,7 @@
  */
 package org.eclipse.xtext.botlib.dsl.botDuino;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +14,7 @@ package org.eclipse.xtext.botlib.dsl.botDuino;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.xtext.botlib.dsl.botDuino.ButtonRule#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.eclipse.xtext.botlib.dsl.botDuino.ButtonRule#getBtnActions <em>Btn Actions</em>}</li>
  * </ul>
  *
  * @see org.eclipse.xtext.botlib.dsl.botDuino.BotDuinoPackage#getButtonRule()
@@ -46,5 +48,21 @@ public interface ButtonRule extends Rules
    * @generated
    */
   void setSuperType(Button value);
+
+  /**
+   * Returns the value of the '<em><b>Btn Actions</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Btn Actions</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Btn Actions</em>' attribute list.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.BotDuinoPackage#getButtonRule_BtnActions()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getBtnActions();
 
 } // ButtonRule

@@ -2,12 +2,18 @@
  */
 package org.eclipse.xtext.botlib.dsl.botDuino.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 import org.eclipse.xtext.botlib.dsl.botDuino.BotDuinoPackage;
 import org.eclipse.xtext.botlib.dsl.botDuino.CTRL;
@@ -22,6 +28,7 @@ import org.eclipse.xtext.botlib.dsl.botDuino.CTRLRule;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.CTRLRuleImpl#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.CTRLRuleImpl#getCtrlActions <em>Ctrl Actions</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,6 +44,16 @@ public class CTRLRuleImpl extends RulesImpl implements CTRLRule
    * @ordered
    */
   protected CTRL superType;
+
+  /**
+   * The cached value of the '{@link #getCtrlActions() <em>Ctrl Actions</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCtrlActions()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> ctrlActions;
 
   /**
    * <!-- begin-user-doc -->
@@ -107,6 +124,20 @@ public class CTRLRuleImpl extends RulesImpl implements CTRLRule
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<String> getCtrlActions()
+  {
+    if (ctrlActions == null)
+    {
+      ctrlActions = new EDataTypeEList<String>(String.class, this, BotDuinoPackage.CTRL_RULE__CTRL_ACTIONS);
+    }
+    return ctrlActions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -115,6 +146,8 @@ public class CTRLRuleImpl extends RulesImpl implements CTRLRule
       case BotDuinoPackage.CTRL_RULE__SUPER_TYPE:
         if (resolve) return getSuperType();
         return basicGetSuperType();
+      case BotDuinoPackage.CTRL_RULE__CTRL_ACTIONS:
+        return getCtrlActions();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -124,6 +157,7 @@ public class CTRLRuleImpl extends RulesImpl implements CTRLRule
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -131,6 +165,10 @@ public class CTRLRuleImpl extends RulesImpl implements CTRLRule
     {
       case BotDuinoPackage.CTRL_RULE__SUPER_TYPE:
         setSuperType((CTRL)newValue);
+        return;
+      case BotDuinoPackage.CTRL_RULE__CTRL_ACTIONS:
+        getCtrlActions().clear();
+        getCtrlActions().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -149,6 +187,9 @@ public class CTRLRuleImpl extends RulesImpl implements CTRLRule
       case BotDuinoPackage.CTRL_RULE__SUPER_TYPE:
         setSuperType((CTRL)null);
         return;
+      case BotDuinoPackage.CTRL_RULE__CTRL_ACTIONS:
+        getCtrlActions().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -165,8 +206,27 @@ public class CTRLRuleImpl extends RulesImpl implements CTRLRule
     {
       case BotDuinoPackage.CTRL_RULE__SUPER_TYPE:
         return superType != null;
+      case BotDuinoPackage.CTRL_RULE__CTRL_ACTIONS:
+        return ctrlActions != null && !ctrlActions.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (ctrlActions: ");
+    result.append(ctrlActions);
+    result.append(')');
+    return result.toString();
   }
 
 } //CTRLRuleImpl

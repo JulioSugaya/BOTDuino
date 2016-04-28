@@ -2,6 +2,7 @@
  */
 package org.eclipse.xtext.botlib.dsl.botDuino;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +14,7 @@ package org.eclipse.xtext.botlib.dsl.botDuino;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.xtext.botlib.dsl.botDuino.SensorRule#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.eclipse.xtext.botlib.dsl.botDuino.SensorRule#getSensorActions <em>Sensor Actions</em>}</li>
  * </ul>
  *
  * @see org.eclipse.xtext.botlib.dsl.botDuino.BotDuinoPackage#getSensorRule()
@@ -46,5 +48,21 @@ public interface SensorRule extends Rules
    * @generated
    */
   void setSuperType(Sensor value);
+
+  /**
+   * Returns the value of the '<em><b>Sensor Actions</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Sensor Actions</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Sensor Actions</em>' attribute list.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.BotDuinoPackage#getSensorRule_SensorActions()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getSensorActions();
 
 } // SensorRule

@@ -102,38 +102,38 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	public class TypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.Type");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cLEDParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cButtonParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cMotorParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cSensorParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cBlueToothParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cCTRLParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cButtonParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cSensorParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cBlueToothParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cCTRLParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cLEDParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cMotorParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cServoParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		
 		//Type:
-		//	LED | Button | Motor | Sensor | BlueTooth | CTRL | Servo;
+		//	Button | Sensor | BlueTooth | CTRL | LED | Motor | Servo;
 		@Override public ParserRule getRule() { return rule; }
 
-		//LED | Button | Motor | Sensor | BlueTooth | CTRL | Servo
+		//Button | Sensor | BlueTooth | CTRL | LED | Motor | Servo
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//LED
-		public RuleCall getLEDParserRuleCall_0() { return cLEDParserRuleCall_0; }
-
 		//Button
-		public RuleCall getButtonParserRuleCall_1() { return cButtonParserRuleCall_1; }
-
-		//Motor
-		public RuleCall getMotorParserRuleCall_2() { return cMotorParserRuleCall_2; }
+		public RuleCall getButtonParserRuleCall_0() { return cButtonParserRuleCall_0; }
 
 		//Sensor
-		public RuleCall getSensorParserRuleCall_3() { return cSensorParserRuleCall_3; }
+		public RuleCall getSensorParserRuleCall_1() { return cSensorParserRuleCall_1; }
 
 		//BlueTooth
-		public RuleCall getBlueToothParserRuleCall_4() { return cBlueToothParserRuleCall_4; }
+		public RuleCall getBlueToothParserRuleCall_2() { return cBlueToothParserRuleCall_2; }
 
 		//CTRL
-		public RuleCall getCTRLParserRuleCall_5() { return cCTRLParserRuleCall_5; }
+		public RuleCall getCTRLParserRuleCall_3() { return cCTRLParserRuleCall_3; }
+
+		//LED
+		public RuleCall getLEDParserRuleCall_4() { return cLEDParserRuleCall_4; }
+
+		//Motor
+		public RuleCall getMotorParserRuleCall_5() { return cMotorParserRuleCall_5; }
 
 		//Servo
 		public RuleCall getServoParserRuleCall_6() { return cServoParserRuleCall_6; }
@@ -165,6 +165,26 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 
 		//BTRule
 		public RuleCall getBTRuleParserRuleCall_3() { return cBTRuleParserRuleCall_3; }
+	}
+
+	public class MethodsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.Methods");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cLEDMethodsParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cMotorMethodsParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Methods:
+		//	LEDMethods | MotorMethods;
+		@Override public ParserRule getRule() { return rule; }
+
+		//LEDMethods | MotorMethods
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//LEDMethods
+		public RuleCall getLEDMethodsParserRuleCall_0() { return cLEDMethodsParserRuleCall_0; }
+
+		//MotorMethods
+		public RuleCall getMotorMethodsParserRuleCall_1() { return cMotorMethodsParserRuleCall_1; }
 	}
 
 	public class BTRuleElements extends AbstractParserRuleElementFinder {
@@ -225,19 +245,21 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSuperTypeSensorIDTerminalRuleCall_0_0_1 = (RuleCall)cSuperTypeSensorCrossReference_0_0.eContents().get(1);
 		private final Keyword cWhenKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Keyword cHIGHKeyword_2_0 = (Keyword)cAlternatives_2.eContents().get(0);
-		private final Keyword cLOWKeyword_2_1 = (Keyword)cAlternatives_2.eContents().get(1);
+		private final Assignment cSensorActionsAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
+		private final Keyword cSensorActionsHIGHKeyword_2_0_0 = (Keyword)cSensorActionsAssignment_2_0.eContents().get(0);
+		private final Assignment cSensorActionsAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
+		private final Keyword cSensorActionsLOWKeyword_2_1_0 = (Keyword)cSensorActionsAssignment_2_1.eContents().get(0);
 		private final Keyword cThenKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cThenPartAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cThenPartXBlockExpressionParserRuleCall_4_0 = (RuleCall)cThenPartAssignment_4.eContents().get(0);
 		
 		//SensorRule:
 		//	superType=[Sensor]
-		//	'when' ('HIGH' | 'LOW')
+		//	'when' (sensorActions+='HIGH' | sensorActions+='LOW')
 		//	'then' thenPart=XBlockExpression;
 		@Override public ParserRule getRule() { return rule; }
 
-		//superType=[Sensor] 'when' ('HIGH' | 'LOW') 'then' thenPart=XBlockExpression
+		//superType=[Sensor] 'when' (sensorActions+='HIGH' | sensorActions+='LOW') 'then' thenPart=XBlockExpression
 		public Group getGroup() { return cGroup; }
 
 		//superType=[Sensor]
@@ -252,14 +274,20 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		//'when'
 		public Keyword getWhenKeyword_1() { return cWhenKeyword_1; }
 
-		//('HIGH' | 'LOW')
+		//(sensorActions+='HIGH' | sensorActions+='LOW')
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
+		//sensorActions+='HIGH'
+		public Assignment getSensorActionsAssignment_2_0() { return cSensorActionsAssignment_2_0; }
+
 		//'HIGH'
-		public Keyword getHIGHKeyword_2_0() { return cHIGHKeyword_2_0; }
+		public Keyword getSensorActionsHIGHKeyword_2_0_0() { return cSensorActionsHIGHKeyword_2_0_0; }
+
+		//sensorActions+='LOW'
+		public Assignment getSensorActionsAssignment_2_1() { return cSensorActionsAssignment_2_1; }
 
 		//'LOW'
-		public Keyword getLOWKeyword_2_1() { return cLOWKeyword_2_1; }
+		public Keyword getSensorActionsLOWKeyword_2_1_0() { return cSensorActionsLOWKeyword_2_1_0; }
 
 		//'then'
 		public Keyword getThenKeyword_3() { return cThenKeyword_3; }
@@ -279,21 +307,26 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSuperTypeCTRLIDTerminalRuleCall_0_0_1 = (RuleCall)cSuperTypeCTRLCrossReference_0_0.eContents().get(1);
 		private final Keyword cWhenKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Keyword cUPKeyword_2_0 = (Keyword)cAlternatives_2.eContents().get(0);
-		private final Keyword cDOWNKeyword_2_1 = (Keyword)cAlternatives_2.eContents().get(1);
-		private final Keyword cLEFTKeyword_2_2 = (Keyword)cAlternatives_2.eContents().get(2);
-		private final Keyword cRIGHTKeyword_2_3 = (Keyword)cAlternatives_2.eContents().get(3);
+		private final Assignment cCtrlActionsAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
+		private final Keyword cCtrlActionsUPKeyword_2_0_0 = (Keyword)cCtrlActionsAssignment_2_0.eContents().get(0);
+		private final Assignment cCtrlActionsAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
+		private final Keyword cCtrlActionsDOWNKeyword_2_1_0 = (Keyword)cCtrlActionsAssignment_2_1.eContents().get(0);
+		private final Assignment cCtrlActionsAssignment_2_2 = (Assignment)cAlternatives_2.eContents().get(2);
+		private final Keyword cCtrlActionsLEFTKeyword_2_2_0 = (Keyword)cCtrlActionsAssignment_2_2.eContents().get(0);
+		private final Assignment cCtrlActionsAssignment_2_3 = (Assignment)cAlternatives_2.eContents().get(3);
+		private final Keyword cCtrlActionsRIGHTKeyword_2_3_0 = (Keyword)cCtrlActionsAssignment_2_3.eContents().get(0);
 		private final Keyword cThenKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cThenPartAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cThenPartXBlockExpressionParserRuleCall_4_0 = (RuleCall)cThenPartAssignment_4.eContents().get(0);
 		
 		//CTRLRule:
 		//	superType=[CTRL]
-		//	'when' ('UP' | 'DOWN' | 'LEFT' | 'RIGHT')
+		//	'when' (ctrlActions+='UP' | ctrlActions+='DOWN' | ctrlActions+='LEFT' | ctrlActions+='RIGHT')
 		//	'then' thenPart=XBlockExpression;
 		@Override public ParserRule getRule() { return rule; }
 
-		//superType=[CTRL] 'when' ('UP' | 'DOWN' | 'LEFT' | 'RIGHT') 'then' thenPart=XBlockExpression
+		//superType=[CTRL] 'when' (ctrlActions+='UP' | ctrlActions+='DOWN' | ctrlActions+='LEFT' | ctrlActions+='RIGHT') 'then'
+		//thenPart=XBlockExpression
 		public Group getGroup() { return cGroup; }
 
 		//superType=[CTRL]
@@ -308,20 +341,32 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		//'when'
 		public Keyword getWhenKeyword_1() { return cWhenKeyword_1; }
 
-		//('UP' | 'DOWN' | 'LEFT' | 'RIGHT')
+		//(ctrlActions+='UP' | ctrlActions+='DOWN' | ctrlActions+='LEFT' | ctrlActions+='RIGHT')
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
+		//ctrlActions+='UP'
+		public Assignment getCtrlActionsAssignment_2_0() { return cCtrlActionsAssignment_2_0; }
+
 		//'UP'
-		public Keyword getUPKeyword_2_0() { return cUPKeyword_2_0; }
+		public Keyword getCtrlActionsUPKeyword_2_0_0() { return cCtrlActionsUPKeyword_2_0_0; }
+
+		//ctrlActions+='DOWN'
+		public Assignment getCtrlActionsAssignment_2_1() { return cCtrlActionsAssignment_2_1; }
 
 		//'DOWN'
-		public Keyword getDOWNKeyword_2_1() { return cDOWNKeyword_2_1; }
+		public Keyword getCtrlActionsDOWNKeyword_2_1_0() { return cCtrlActionsDOWNKeyword_2_1_0; }
+
+		//ctrlActions+='LEFT'
+		public Assignment getCtrlActionsAssignment_2_2() { return cCtrlActionsAssignment_2_2; }
 
 		//'LEFT'
-		public Keyword getLEFTKeyword_2_2() { return cLEFTKeyword_2_2; }
+		public Keyword getCtrlActionsLEFTKeyword_2_2_0() { return cCtrlActionsLEFTKeyword_2_2_0; }
+
+		//ctrlActions+='RIGHT'
+		public Assignment getCtrlActionsAssignment_2_3() { return cCtrlActionsAssignment_2_3; }
 
 		//'RIGHT'
-		public Keyword getRIGHTKeyword_2_3() { return cRIGHTKeyword_2_3; }
+		public Keyword getCtrlActionsRIGHTKeyword_2_3_0() { return cCtrlActionsRIGHTKeyword_2_3_0; }
 
 		//'then'
 		public Keyword getThenKeyword_3() { return cThenKeyword_3; }
@@ -341,19 +386,21 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSuperTypeButtonIDTerminalRuleCall_0_0_1 = (RuleCall)cSuperTypeButtonCrossReference_0_0.eContents().get(1);
 		private final Keyword cWhenKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Keyword cPUSHKeyword_2_0 = (Keyword)cAlternatives_2.eContents().get(0);
-		private final Keyword cFREEKeyword_2_1 = (Keyword)cAlternatives_2.eContents().get(1);
+		private final Assignment cBtnActionsAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
+		private final Keyword cBtnActionsPUSHKeyword_2_0_0 = (Keyword)cBtnActionsAssignment_2_0.eContents().get(0);
+		private final Assignment cBtnActionsAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
+		private final Keyword cBtnActionsFREEKeyword_2_1_0 = (Keyword)cBtnActionsAssignment_2_1.eContents().get(0);
 		private final Keyword cThenKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cThenPartAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cThenPartXBlockExpressionParserRuleCall_4_0 = (RuleCall)cThenPartAssignment_4.eContents().get(0);
 		
 		//ButtonRule:
 		//	superType=[Button]
-		//	'when' ('PUSH' | 'FREE')
+		//	'when' (btnActions+='PUSH' | btnActions+='FREE')
 		//	'then' thenPart=XBlockExpression;
 		@Override public ParserRule getRule() { return rule; }
 
-		//superType=[Button] 'when' ('PUSH' | 'FREE') 'then' thenPart=XBlockExpression
+		//superType=[Button] 'when' (btnActions+='PUSH' | btnActions+='FREE') 'then' thenPart=XBlockExpression
 		public Group getGroup() { return cGroup; }
 
 		//superType=[Button]
@@ -368,14 +415,20 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		//'when'
 		public Keyword getWhenKeyword_1() { return cWhenKeyword_1; }
 
-		//('PUSH' | 'FREE')
+		//(btnActions+='PUSH' | btnActions+='FREE')
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
+		//btnActions+='PUSH'
+		public Assignment getBtnActionsAssignment_2_0() { return cBtnActionsAssignment_2_0; }
+
 		//'PUSH'
-		public Keyword getPUSHKeyword_2_0() { return cPUSHKeyword_2_0; }
+		public Keyword getBtnActionsPUSHKeyword_2_0_0() { return cBtnActionsPUSHKeyword_2_0_0; }
+
+		//btnActions+='FREE'
+		public Assignment getBtnActionsAssignment_2_1() { return cBtnActionsAssignment_2_1; }
 
 		//'FREE'
-		public Keyword getFREEKeyword_2_1() { return cFREEKeyword_2_1; }
+		public Keyword getBtnActionsFREEKeyword_2_1_0() { return cBtnActionsFREEKeyword_2_1_0; }
 
 		//'then'
 		public Keyword getThenKeyword_3() { return cThenKeyword_3; }
@@ -385,42 +438,6 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 
 		//XBlockExpression
 		public RuleCall getThenPartXBlockExpressionParserRuleCall_4_0() { return cThenPartXBlockExpressionParserRuleCall_4_0; }
-	}
-
-	public class MethodsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.Methods");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cSuperTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cSuperTypeTypeCrossReference_0_0 = (CrossReference)cSuperTypeAssignment_0.eContents().get(0);
-		private final RuleCall cSuperTypeTypeIDTerminalRuleCall_0_0_1 = (RuleCall)cSuperTypeTypeCrossReference_0_0.eContents().get(1);
-		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		
-		//Methods:
-		//	superType=[Type] '.' name=ID;
-		@Override public ParserRule getRule() { return rule; }
-
-		//superType=[Type] '.' name=ID
-		public Group getGroup() { return cGroup; }
-
-		//superType=[Type]
-		public Assignment getSuperTypeAssignment_0() { return cSuperTypeAssignment_0; }
-
-		//[Type]
-		public CrossReference getSuperTypeTypeCrossReference_0_0() { return cSuperTypeTypeCrossReference_0_0; }
-
-		//ID
-		public RuleCall getSuperTypeTypeIDTerminalRuleCall_0_0_1() { return cSuperTypeTypeIDTerminalRuleCall_0_0_1; }
-
-		//'.'
-		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
-
-		//name=ID
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 	}
 
 	public class LEDElements extends AbstractParserRuleElementFinder {
@@ -978,36 +995,159 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightParenthesisKeyword_9() { return cRightParenthesisKeyword_9; }
 	}
 
+	public class LEDMethodsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.LEDMethods");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSuperTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cSuperTypeLEDCrossReference_0_0 = (CrossReference)cSuperTypeAssignment_0.eContents().get(0);
+		private final RuleCall cSuperTypeLEDIDTerminalRuleCall_0_0_1 = (RuleCall)cSuperTypeLEDCrossReference_0_0.eContents().get(1);
+		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final Assignment cLedFunctionsAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
+		private final Keyword cLedFunctionsOnKeyword_2_0_0 = (Keyword)cLedFunctionsAssignment_2_0.eContents().get(0);
+		private final Assignment cLedFunctionsAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
+		private final Keyword cLedFunctionsOffKeyword_2_1_0 = (Keyword)cLedFunctionsAssignment_2_1.eContents().get(0);
+		
+		//LEDMethods:
+		//	superType=[LED] '.' (ledFunctions+='on' | ledFunctions+='off');
+		@Override public ParserRule getRule() { return rule; }
+
+		////superType=[Type]'.'name=ID; 
+		//superType=[LED] '.' (ledFunctions+='on' | ledFunctions+='off')
+		public Group getGroup() { return cGroup; }
+
+		////superType=[Type]'.'name=ID; 
+		//superType=[LED]
+		public Assignment getSuperTypeAssignment_0() { return cSuperTypeAssignment_0; }
+
+		//[LED]
+		public CrossReference getSuperTypeLEDCrossReference_0_0() { return cSuperTypeLEDCrossReference_0_0; }
+
+		//ID
+		public RuleCall getSuperTypeLEDIDTerminalRuleCall_0_0_1() { return cSuperTypeLEDIDTerminalRuleCall_0_0_1; }
+
+		//'.'
+		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
+
+		//(ledFunctions+='on' | ledFunctions+='off')
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+
+		//ledFunctions+='on'
+		public Assignment getLedFunctionsAssignment_2_0() { return cLedFunctionsAssignment_2_0; }
+
+		//'on'
+		public Keyword getLedFunctionsOnKeyword_2_0_0() { return cLedFunctionsOnKeyword_2_0_0; }
+
+		//ledFunctions+='off'
+		public Assignment getLedFunctionsAssignment_2_1() { return cLedFunctionsAssignment_2_1; }
+
+		//'off'
+		public Keyword getLedFunctionsOffKeyword_2_1_0() { return cLedFunctionsOffKeyword_2_1_0; }
+	}
+
+	public class MotorMethodsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.MotorMethods");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Assignment cSuperTypeAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final CrossReference cSuperTypeMotorCrossReference_0_0 = (CrossReference)cSuperTypeAssignment_0.eContents().get(0);
+		private final RuleCall cSuperTypeMotorIDTerminalRuleCall_0_0_1 = (RuleCall)cSuperTypeMotorCrossReference_0_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Assignment cSuperTypeAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final CrossReference cSuperTypeServoCrossReference_1_0_0 = (CrossReference)cSuperTypeAssignment_1_0.eContents().get(0);
+		private final RuleCall cSuperTypeServoIDTerminalRuleCall_1_0_0_1 = (RuleCall)cSuperTypeServoCrossReference_1_0_0.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Alternatives cAlternatives_1_2 = (Alternatives)cGroup_1.eContents().get(2);
+		private final Assignment cMotorFunctionsAssignment_1_2_0 = (Assignment)cAlternatives_1_2.eContents().get(0);
+		private final Keyword cMotorFunctionsRunKeyword_1_2_0_0 = (Keyword)cMotorFunctionsAssignment_1_2_0.eContents().get(0);
+		private final Assignment cMotorFunctionsAssignment_1_2_1 = (Assignment)cAlternatives_1_2.eContents().get(1);
+		private final Keyword cMotorFunctionsStopKeyword_1_2_1_0 = (Keyword)cMotorFunctionsAssignment_1_2_1.eContents().get(0);
+		private final Assignment cMotorFunctionsAssignment_1_2_2 = (Assignment)cAlternatives_1_2.eContents().get(2);
+		private final Keyword cMotorFunctionsReverseKeyword_1_2_2_0 = (Keyword)cMotorFunctionsAssignment_1_2_2.eContents().get(0);
+		
+		//MotorMethods:
+		//	superType=[Motor] | superType=[Servo] '.' (motorFunctions+='run' | motorFunctions+='stop' |
+		//	motorFunctions+='reverse');
+		@Override public ParserRule getRule() { return rule; }
+
+		//superType=[Motor] | superType=[Servo] '.' (motorFunctions+='run' | motorFunctions+='stop' | motorFunctions+='reverse')
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//superType=[Motor]
+		public Assignment getSuperTypeAssignment_0() { return cSuperTypeAssignment_0; }
+
+		//[Motor]
+		public CrossReference getSuperTypeMotorCrossReference_0_0() { return cSuperTypeMotorCrossReference_0_0; }
+
+		//ID
+		public RuleCall getSuperTypeMotorIDTerminalRuleCall_0_0_1() { return cSuperTypeMotorIDTerminalRuleCall_0_0_1; }
+
+		//superType=[Servo] '.' (motorFunctions+='run' | motorFunctions+='stop' | motorFunctions+='reverse')
+		public Group getGroup_1() { return cGroup_1; }
+
+		//superType=[Servo]
+		public Assignment getSuperTypeAssignment_1_0() { return cSuperTypeAssignment_1_0; }
+
+		//[Servo]
+		public CrossReference getSuperTypeServoCrossReference_1_0_0() { return cSuperTypeServoCrossReference_1_0_0; }
+
+		//ID
+		public RuleCall getSuperTypeServoIDTerminalRuleCall_1_0_0_1() { return cSuperTypeServoIDTerminalRuleCall_1_0_0_1; }
+
+		//'.'
+		public Keyword getFullStopKeyword_1_1() { return cFullStopKeyword_1_1; }
+
+		//(motorFunctions+='run' | motorFunctions+='stop' | motorFunctions+='reverse')
+		public Alternatives getAlternatives_1_2() { return cAlternatives_1_2; }
+
+		//motorFunctions+='run'
+		public Assignment getMotorFunctionsAssignment_1_2_0() { return cMotorFunctionsAssignment_1_2_0; }
+
+		//'run'
+		public Keyword getMotorFunctionsRunKeyword_1_2_0_0() { return cMotorFunctionsRunKeyword_1_2_0_0; }
+
+		//motorFunctions+='stop'
+		public Assignment getMotorFunctionsAssignment_1_2_1() { return cMotorFunctionsAssignment_1_2_1; }
+
+		//'stop'
+		public Keyword getMotorFunctionsStopKeyword_1_2_1_0() { return cMotorFunctionsStopKeyword_1_2_1_0; }
+
+		//motorFunctions+='reverse'
+		public Assignment getMotorFunctionsAssignment_1_2_2() { return cMotorFunctionsAssignment_1_2_2; }
+
+		//'reverse'
+		public Keyword getMotorFunctionsReverseKeyword_1_2_2_0() { return cMotorFunctionsReverseKeyword_1_2_2_0; }
+	}
+
 	public class XBlockExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.XBlockExpression");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cXBlockExpressionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Action cObjectLiteralAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cExpressionsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cExpressionsXExpressionOrVarDeclarationParserRuleCall_2_0 = (RuleCall)cExpressionsAssignment_2.eContents().get(0);
+		private final RuleCall cExpressionsMethodsParserRuleCall_2_0 = (RuleCall)cExpressionsAssignment_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//XBlockExpression xbase::XExpression:
-		//	{xbase::XBlockExpression}
+		//	{ObjectLiteral}
 		//	'{'
-		//	expressions+=XExpressionOrVarDeclaration*
+		//	expressions+=Methods*
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{xbase::XBlockExpression} '{' expressions+=XExpressionOrVarDeclaration* '}'
+		//{ObjectLiteral} '{' expressions+=Methods* '}'
 		public Group getGroup() { return cGroup; }
 
-		//{xbase::XBlockExpression}
-		public Action getXBlockExpressionAction_0() { return cXBlockExpressionAction_0; }
+		//{ObjectLiteral}
+		public Action getObjectLiteralAction_0() { return cObjectLiteralAction_0; }
 
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
-		//expressions+=XExpressionOrVarDeclaration*
+		//expressions+=Methods*
 		public Assignment getExpressionsAssignment_2() { return cExpressionsAssignment_2; }
 
-		//XExpressionOrVarDeclaration
-		public RuleCall getExpressionsXExpressionOrVarDeclarationParserRuleCall_2_0() { return cExpressionsXExpressionOrVarDeclarationParserRuleCall_2_0; }
+		//Methods
+		public RuleCall getExpressionsMethodsParserRuleCall_2_0() { return cExpressionsMethodsParserRuleCall_2_0; }
 
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
@@ -1019,11 +1159,11 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	private final RegistersElements pRegisters;
 	private final TypeElements pType;
 	private final RulesElements pRules;
+	private final MethodsElements pMethods;
 	private final BTRuleElements pBTRule;
 	private final SensorRuleElements pSensorRule;
 	private final CTRLRuleElements pCTRLRule;
 	private final ButtonRuleElements pButtonRule;
-	private final MethodsElements pMethods;
 	private final LEDElements pLED;
 	private final ButtonElements pButton;
 	private final MotorElements pMotor;
@@ -1031,6 +1171,8 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	private final BlueToothElements pBlueTooth;
 	private final CTRLElements pCTRL;
 	private final ServoElements pServo;
+	private final LEDMethodsElements pLEDMethods;
+	private final MotorMethodsElements pMotorMethods;
 	private final TerminalRule tINT;
 	private final TerminalRule tML_COMMENT;
 	private final XBlockExpressionElements pXBlockExpression;
@@ -1053,11 +1195,11 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		this.pRegisters = new RegistersElements();
 		this.pType = new TypeElements();
 		this.pRules = new RulesElements();
+		this.pMethods = new MethodsElements();
 		this.pBTRule = new BTRuleElements();
 		this.pSensorRule = new SensorRuleElements();
 		this.pCTRLRule = new CTRLRuleElements();
 		this.pButtonRule = new ButtonRuleElements();
-		this.pMethods = new MethodsElements();
 		this.pLED = new LEDElements();
 		this.pButton = new ButtonElements();
 		this.pMotor = new MotorElements();
@@ -1065,6 +1207,8 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		this.pBlueTooth = new BlueToothElements();
 		this.pCTRL = new CTRLElements();
 		this.pServo = new ServoElements();
+		this.pLEDMethods = new LEDMethodsElements();
+		this.pMotorMethods = new MotorMethodsElements();
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.INT");
 		this.tML_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.ML_COMMENT");
 		this.pXBlockExpression = new XBlockExpressionElements();
@@ -1132,7 +1276,7 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Type:
-	//	LED | Button | Motor | Sensor | BlueTooth | CTRL | Servo;
+	//	Button | Sensor | BlueTooth | CTRL | LED | Motor | Servo;
 	public TypeElements getTypeAccess() {
 		return pType;
 	}
@@ -1151,6 +1295,16 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		return getRulesAccess().getRule();
 	}
 
+	//Methods:
+	//	LEDMethods | MotorMethods;
+	public MethodsElements getMethodsAccess() {
+		return pMethods;
+	}
+	
+	public ParserRule getMethodsRule() {
+		return getMethodsAccess().getRule();
+	}
+
 	//BTRule:
 	//	superType=[BlueTooth]
 	//	'when' name=ID
@@ -1165,7 +1319,7 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 
 	//SensorRule:
 	//	superType=[Sensor]
-	//	'when' ('HIGH' | 'LOW')
+	//	'when' (sensorActions+='HIGH' | sensorActions+='LOW')
 	//	'then' thenPart=XBlockExpression;
 	public SensorRuleElements getSensorRuleAccess() {
 		return pSensorRule;
@@ -1177,7 +1331,7 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 
 	//CTRLRule:
 	//	superType=[CTRL]
-	//	'when' ('UP' | 'DOWN' | 'LEFT' | 'RIGHT')
+	//	'when' (ctrlActions+='UP' | ctrlActions+='DOWN' | ctrlActions+='LEFT' | ctrlActions+='RIGHT')
 	//	'then' thenPart=XBlockExpression;
 	public CTRLRuleElements getCTRLRuleAccess() {
 		return pCTRLRule;
@@ -1189,7 +1343,7 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 
 	//ButtonRule:
 	//	superType=[Button]
-	//	'when' ('PUSH' | 'FREE')
+	//	'when' (btnActions+='PUSH' | btnActions+='FREE')
 	//	'then' thenPart=XBlockExpression;
 	public ButtonRuleElements getButtonRuleAccess() {
 		return pButtonRule;
@@ -1197,16 +1351,6 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getButtonRuleRule() {
 		return getButtonRuleAccess().getRule();
-	}
-
-	//Methods:
-	//	superType=[Type] '.' name=ID;
-	public MethodsElements getMethodsAccess() {
-		return pMethods;
-	}
-	
-	public ParserRule getMethodsRule() {
-		return getMethodsAccess().getRule();
 	}
 
 	//LED:
@@ -1293,6 +1437,27 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		return getServoAccess().getRule();
 	}
 
+	//LEDMethods:
+	//	superType=[LED] '.' (ledFunctions+='on' | ledFunctions+='off');
+	public LEDMethodsElements getLEDMethodsAccess() {
+		return pLEDMethods;
+	}
+	
+	public ParserRule getLEDMethodsRule() {
+		return getLEDMethodsAccess().getRule();
+	}
+
+	//MotorMethods:
+	//	superType=[Motor] | superType=[Servo] '.' (motorFunctions+='run' | motorFunctions+='stop' |
+	//	motorFunctions+='reverse');
+	public MotorMethodsElements getMotorMethodsAccess() {
+		return pMotorMethods;
+	}
+	
+	public ParserRule getMotorMethodsRule() {
+		return getMotorMethodsAccess().getRule();
+	}
+
 	//terminal INT returns ecore::EInt:
 	//	'0'..'9'+;
 	public TerminalRule getINTRule() {
@@ -1306,9 +1471,9 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//XBlockExpression xbase::XExpression:
-	//	{xbase::XBlockExpression}
+	//	{ObjectLiteral}
 	//	'{'
-	//	expressions+=XExpressionOrVarDeclaration*
+	//	expressions+=Methods*
 	//	'}'
 	public XBlockExpressionElements getXBlockExpressionAccess() {
 		return pXBlockExpression;

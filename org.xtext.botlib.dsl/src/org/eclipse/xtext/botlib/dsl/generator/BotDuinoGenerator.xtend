@@ -4,25 +4,30 @@ import javax.inject.Inject
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.botlib.dsl.botDuino.BTRule
+import org.eclipse.xtext.botlib.dsl.botDuino.ButtonRule
+import org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods
+import org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods
 import org.eclipse.xtext.botlib.dsl.botDuino.Registers
 import org.eclipse.xtext.botlib.dsl.botDuino.Rules
 import org.eclipse.xtext.botlib.dsl.botDuino.Type
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.BTRuleImpl
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.BlueToothImpl
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.ButtonRuleImpl
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDMethodsImpl
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.MotorMethodsImpl
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.ObjectLiteralImpl
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.naming.IQualifiedNameProvider
-import org.eclipse.xtext.xbase.XBlockExpression
-import org.eclipse.xtext.xbase.XExpression
-import org.eclipse.xtext.xbase.XMemberFeatureCall
-import org.eclipse.xtext.botlib.dsl.botDuino.ButtonRule
-import org.eclipse.xtext.botlib.dsl.botDuino.impl.ButtonRuleImpl
 
 class BotDuinoGenerator implements IGenerator {
 	
 	  @Inject extension IQualifiedNameProvider
 	  
 	  var String ql = System.getProperty("line.separator")
+	  var String ind1 = "	"
+	  var String ind2 = "		"
+	  var String ind3 = "			"
 	  var String c_includes = "#include <BOTLib.h>" + ql
 	  var String c_vars = ""
 	  var String c_setup = "void setup() {" + ql
@@ -40,11 +45,7 @@ class BotDuinoGenerator implements IGenerator {
 	    if(bt_test){
 	    	c_loop += bt_block + "}" + ql
 	    }
-		context = c_includes + "
-		" + c_vars + "
-		" + c_setup + "}
-		" + c_loop + "}"
-		//fsa.generateFile("BOTLib.h",resource.toString(Main.getResource("/XcD_PACKAGE.h"), Charsets.UTF_8));
+		context = c_includes + ql + c_vars + ql + c_setup + "}" + ql + c_loop + "}"
     	fsa.generateFile( resource.URI.lastSegment + ".cpp", context)
 	  }
 	  
@@ -84,23 +85,24 @@ class BotDuinoGenerator implements IGenerator {
 	  	if(e.eClass.name == BTRule.simpleName){
 			var btClass = e as BTRuleImpl
 	  		if(!bt_test){
-		  	    bt_block = "  if(" + btClass.superType.name + ".available()){ "+ ql
+		  	    bt_block = ind1 + "if(" + btClass.superType.name + ".available()){ "+ ql
     					 + btClass.superType.name + "Response = " + btClass.superType.name + ".read();" + ql
 		  		bt_test = true
 			}
-	  		bt_block += "if(" + btClass.superType.name + "Response =='" + e.fullyQualifiedName + "'){" + ql
-	  		bt_block += splitExp(e.thenPart as XBlockExpression) + ql
-	  		bt_block += "}" + ql
+	  		bt_block += ind1 + "if(" + btClass.superType.name + "Response =='" + e.fullyQualifiedName + "'){" + ql
+	  		bt_block += splitExp(e.thenPart as ObjectLiteralImpl) + ql
+	  		bt_block += ind1 + "}" + ql
 	  	}
 	  	if(e.eClass.name == ButtonRule.simpleName){
 	  		    var ruleClass = e as ButtonRuleImpl
 	  		    var state = "HIGH"
-	  		    if(e.fullyQualifiedName == "FREE"){
-	  		    	state = "LOW"
+	  		    if(ruleClass.btnActions.get(0) == "FREE"){
+	  		    	state = "LOW";
 	  		    }
-		  	    c_loop += "  if(" + ruleClass.superType.name + ".getState() == " + state + "){ "+ ql
-		  		c_loop += splitExp(e.thenPart as XBlockExpression) + ql
-		  		c_loop += "}" + ql
+		  	    c_loop += ind1 + "if(" + ruleClass.superType.name + ".getState() == " + state + "){ "+ ql
+		  		c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
+		  		c_loop += ind1 + "}" + ql
+	  		
 	  	}
 	  } 
 	  
@@ -113,18 +115,28 @@ class BotDuinoGenerator implements IGenerator {
 //	    «ENDIF»	    
 //	  '''
 	  
-	  def String splitExp(XBlockExpression exp){
+	  def String splitExp(ObjectLiteralImpl exp){
 	  	var String s = ""
 	  	for ( c : exp.expressions) {
-	  		s += c.buildExp()
+	  		if(c instanceof LEDMethods){
+	  			s += c.buildExp()
+	  		}
+	  		if(c instanceof MotorMethods){
+	  			s += c.buildExp()
+	  		}
+	  		
 	  	}
 	  	return s
 	  }
 	  
-	  def String buildExp(XExpression exp){
-	  	val x = exp as XMemberFeatureCall
-	  	x.toString.substring(x.toString.indexOf("."))
-	  	return x.memberCallTarget.toString + x.toString.substring(x.toString.indexOf(".")) + ";" + ql
+	  def String buildExp(MotorMethods exp){
+	  	val x = exp as MotorMethodsImpl
+	  	return ind2 + x.superType.name + "." + x.motorFunctions.get(0) + "();" + ql
+	  }
+	  	  
+	  def String buildExp(LEDMethods exp){
+	  	val x = exp as LEDMethodsImpl
+	  	return ind2 + x.superType.name + "." + x.ledFunctions.get(0) + "();" + ql
 	  }
 	
 }

@@ -19,8 +19,10 @@ import org.eclipse.xtext.botlib.dsl.botDuino.CTRL;
 import org.eclipse.xtext.botlib.dsl.botDuino.CTRLRule;
 import org.eclipse.xtext.botlib.dsl.botDuino.DomainModel;
 import org.eclipse.xtext.botlib.dsl.botDuino.LED;
-import org.eclipse.xtext.botlib.dsl.botDuino.Methods;
+import org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods;
 import org.eclipse.xtext.botlib.dsl.botDuino.Motor;
+import org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods;
+import org.eclipse.xtext.botlib.dsl.botDuino.ObjectLiteral;
 import org.eclipse.xtext.botlib.dsl.botDuino.Registers;
 import org.eclipse.xtext.botlib.dsl.botDuino.Sensor;
 import org.eclipse.xtext.botlib.dsl.botDuino.SensorRule;
@@ -114,11 +116,17 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 			case BotDuinoPackage.LED:
 				sequence_LED(context, (LED) semanticObject); 
 				return; 
-			case BotDuinoPackage.METHODS:
-				sequence_Methods(context, (Methods) semanticObject); 
+			case BotDuinoPackage.LED_METHODS:
+				sequence_LEDMethods(context, (LEDMethods) semanticObject); 
 				return; 
 			case BotDuinoPackage.MOTOR:
 				sequence_Motor(context, (Motor) semanticObject); 
+				return; 
+			case BotDuinoPackage.MOTOR_METHODS:
+				sequence_MotorMethods(context, (MotorMethods) semanticObject); 
+				return; 
+			case BotDuinoPackage.OBJECT_LITERAL:
+				sequence_XBlockExpression(context, (ObjectLiteral) semanticObject); 
 				return; 
 			case BotDuinoPackage.REGISTERS:
 				sequence_Registers(context, (Registers) semanticObject); 
@@ -203,44 +211,8 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 				sequence_XAdditiveExpression_XAndExpression_XAssignment_XEqualityExpression_XMultiplicativeExpression_XOrExpression_XOtherOperatorExpression_XRelationalExpression(context, (XBinaryOperation) semanticObject); 
 				return; 
 			case XbasePackage.XBLOCK_EXPRESSION:
-				if (rule == grammarAccess.getXBlockExpressionRule()
-						|| rule == grammarAccess.getXExpressionRule()
-						|| rule == grammarAccess.getXAssignmentRule()
-						|| action == grammarAccess.getXAssignmentAccess().getXBinaryOperationLeftOperandAction_1_1_0_0_0()
-						|| rule == grammarAccess.getXOrExpressionRule()
-						|| action == grammarAccess.getXOrExpressionAccess().getXBinaryOperationLeftOperandAction_1_0_0_0()
-						|| rule == grammarAccess.getXAndExpressionRule()
-						|| action == grammarAccess.getXAndExpressionAccess().getXBinaryOperationLeftOperandAction_1_0_0_0()
-						|| rule == grammarAccess.getXEqualityExpressionRule()
-						|| action == grammarAccess.getXEqualityExpressionAccess().getXBinaryOperationLeftOperandAction_1_0_0_0()
-						|| rule == grammarAccess.getXRelationalExpressionRule()
-						|| action == grammarAccess.getXRelationalExpressionAccess().getXInstanceOfExpressionExpressionAction_1_0_0_0_0()
-						|| action == grammarAccess.getXRelationalExpressionAccess().getXBinaryOperationLeftOperandAction_1_1_0_0_0()
-						|| rule == grammarAccess.getXOtherOperatorExpressionRule()
-						|| action == grammarAccess.getXOtherOperatorExpressionAccess().getXBinaryOperationLeftOperandAction_1_0_0_0()
-						|| rule == grammarAccess.getXAdditiveExpressionRule()
-						|| action == grammarAccess.getXAdditiveExpressionAccess().getXBinaryOperationLeftOperandAction_1_0_0_0()
-						|| rule == grammarAccess.getXMultiplicativeExpressionRule()
-						|| action == grammarAccess.getXMultiplicativeExpressionAccess().getXBinaryOperationLeftOperandAction_1_0_0_0()
-						|| rule == grammarAccess.getXUnaryOperationRule()
-						|| rule == grammarAccess.getXCastedExpressionRule()
-						|| action == grammarAccess.getXCastedExpressionAccess().getXCastedExpressionTargetAction_1_0_0_0()
-						|| rule == grammarAccess.getXPostfixOperationRule()
-						|| action == grammarAccess.getXPostfixOperationAccess().getXPostfixOperationOperandAction_1_0_0()
-						|| rule == grammarAccess.getXMemberFeatureCallRule()
-						|| action == grammarAccess.getXMemberFeatureCallAccess().getXAssignmentAssignableAction_1_0_0_0_0()
-						|| action == grammarAccess.getXMemberFeatureCallAccess().getXMemberFeatureCallMemberCallTargetAction_1_1_0_0_0()
-						|| rule == grammarAccess.getXPrimaryExpressionRule()
-						|| rule == grammarAccess.getXParenthesizedExpressionRule()
-						|| rule == grammarAccess.getXExpressionOrVarDeclarationRule()) {
-					sequence_XBlockExpression(context, (XBlockExpression) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getXExpressionInClosureRule()) {
-					sequence_XExpressionInClosure(context, (XBlockExpression) semanticObject); 
-					return; 
-				}
-				else break;
+				sequence_XExpressionInClosure(context, (XBlockExpression) semanticObject); 
+				return; 
 			case XbasePackage.XBOOLEAN_LITERAL:
 				sequence_XBooleanLiteral(context, (XBooleanLiteral) semanticObject); 
 				return; 
@@ -423,19 +395,10 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 	 *     ButtonRule returns ButtonRule
 	 *
 	 * Constraint:
-	 *     (superType=[Button|ID] thenPart=XBlockExpression)
+	 *     (superType=[Button|ID] (btnActions+='PUSH' | btnActions+='FREE') thenPart=XBlockExpression)
 	 */
 	protected void sequence_ButtonRule(ISerializationContext context, ButtonRule semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BotDuinoPackage.Literals.BUTTON_RULE__SUPER_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BotDuinoPackage.Literals.BUTTON_RULE__SUPER_TYPE));
-			if (transientValues.isValueTransient(semanticObject, BotDuinoPackage.Literals.RULES__THEN_PART) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BotDuinoPackage.Literals.RULES__THEN_PART));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getButtonRuleAccess().getSuperTypeButtonIDTerminalRuleCall_0_0_1(), semanticObject.getSuperType());
-		feeder.accept(grammarAccess.getButtonRuleAccess().getThenPartXBlockExpressionParserRuleCall_4_0(), semanticObject.getThenPart());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -460,19 +423,10 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 	 *     CTRLRule returns CTRLRule
 	 *
 	 * Constraint:
-	 *     (superType=[CTRL|ID] thenPart=XBlockExpression)
+	 *     (superType=[CTRL|ID] (ctrlActions+='UP' | ctrlActions+='DOWN' | ctrlActions+='LEFT' | ctrlActions+='RIGHT') thenPart=XBlockExpression)
 	 */
 	protected void sequence_CTRLRule(ISerializationContext context, CTRLRule semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BotDuinoPackage.Literals.CTRL_RULE__SUPER_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BotDuinoPackage.Literals.CTRL_RULE__SUPER_TYPE));
-			if (transientValues.isValueTransient(semanticObject, BotDuinoPackage.Literals.RULES__THEN_PART) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BotDuinoPackage.Literals.RULES__THEN_PART));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCTRLRuleAccess().getSuperTypeCTRLIDTerminalRuleCall_0_0_1(), semanticObject.getSuperType());
-		feeder.accept(grammarAccess.getCTRLRuleAccess().getThenPartXBlockExpressionParserRuleCall_4_0(), semanticObject.getThenPart());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -512,6 +466,20 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Entity returns LEDMethods
+	 *     Methods returns LEDMethods
+	 *     LEDMethods returns LEDMethods
+	 *
+	 * Constraint:
+	 *     (superType=[LED|ID] (ledFunctions+='on' | ledFunctions+='off'))
+	 */
+	protected void sequence_LEDMethods(ISerializationContext context, LEDMethods semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Entity returns LED
 	 *     Type returns LED
 	 *     LED returns LED
@@ -526,23 +494,15 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Entity returns Methods
-	 *     Methods returns Methods
+	 *     Entity returns MotorMethods
+	 *     Methods returns MotorMethods
+	 *     MotorMethods returns MotorMethods
 	 *
 	 * Constraint:
-	 *     (superType=[Type|ID] name=ID)
+	 *     (superType=[Motor|ID] | (superType=[Servo|ID] (motorFunctions+='run' | motorFunctions+='stop' | motorFunctions+='reverse')))
 	 */
-	protected void sequence_Methods(ISerializationContext context, Methods semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BotDuinoPackage.Literals.METHODS__SUPER_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BotDuinoPackage.Literals.METHODS__SUPER_TYPE));
-			if (transientValues.isValueTransient(semanticObject, BotDuinoPackage.Literals.METHODS__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BotDuinoPackage.Literals.METHODS__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMethodsAccess().getSuperTypeTypeIDTerminalRuleCall_0_0_1(), semanticObject.getSuperType());
-		feeder.accept(grammarAccess.getMethodsAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.finish();
+	protected void sequence_MotorMethods(ISerializationContext context, MotorMethods semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -580,19 +540,10 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 	 *     SensorRule returns SensorRule
 	 *
 	 * Constraint:
-	 *     (superType=[Sensor|ID] thenPart=XBlockExpression)
+	 *     (superType=[Sensor|ID] (sensorActions+='HIGH' | sensorActions+='LOW') thenPart=XBlockExpression)
 	 */
 	protected void sequence_SensorRule(ISerializationContext context, SensorRule semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BotDuinoPackage.Literals.SENSOR_RULE__SUPER_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BotDuinoPackage.Literals.SENSOR_RULE__SUPER_TYPE));
-			if (transientValues.isValueTransient(semanticObject, BotDuinoPackage.Literals.RULES__THEN_PART) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BotDuinoPackage.Literals.RULES__THEN_PART));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getSensorRuleAccess().getSuperTypeSensorIDTerminalRuleCall_0_0_1(), semanticObject.getSuperType());
-		feeder.accept(grammarAccess.getSensorRuleAccess().getThenPartXBlockExpressionParserRuleCall_4_0(), semanticObject.getThenPart());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -626,41 +577,41 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     XBlockExpression returns XBlockExpression
-	 *     XExpression returns XBlockExpression
-	 *     XAssignment returns XBlockExpression
-	 *     XAssignment.XBinaryOperation_1_1_0_0_0 returns XBlockExpression
-	 *     XOrExpression returns XBlockExpression
-	 *     XOrExpression.XBinaryOperation_1_0_0_0 returns XBlockExpression
-	 *     XAndExpression returns XBlockExpression
-	 *     XAndExpression.XBinaryOperation_1_0_0_0 returns XBlockExpression
-	 *     XEqualityExpression returns XBlockExpression
-	 *     XEqualityExpression.XBinaryOperation_1_0_0_0 returns XBlockExpression
-	 *     XRelationalExpression returns XBlockExpression
-	 *     XRelationalExpression.XInstanceOfExpression_1_0_0_0_0 returns XBlockExpression
-	 *     XRelationalExpression.XBinaryOperation_1_1_0_0_0 returns XBlockExpression
-	 *     XOtherOperatorExpression returns XBlockExpression
-	 *     XOtherOperatorExpression.XBinaryOperation_1_0_0_0 returns XBlockExpression
-	 *     XAdditiveExpression returns XBlockExpression
-	 *     XAdditiveExpression.XBinaryOperation_1_0_0_0 returns XBlockExpression
-	 *     XMultiplicativeExpression returns XBlockExpression
-	 *     XMultiplicativeExpression.XBinaryOperation_1_0_0_0 returns XBlockExpression
-	 *     XUnaryOperation returns XBlockExpression
-	 *     XCastedExpression returns XBlockExpression
-	 *     XCastedExpression.XCastedExpression_1_0_0_0 returns XBlockExpression
-	 *     XPostfixOperation returns XBlockExpression
-	 *     XPostfixOperation.XPostfixOperation_1_0_0 returns XBlockExpression
-	 *     XMemberFeatureCall returns XBlockExpression
-	 *     XMemberFeatureCall.XAssignment_1_0_0_0_0 returns XBlockExpression
-	 *     XMemberFeatureCall.XMemberFeatureCall_1_1_0_0_0 returns XBlockExpression
-	 *     XPrimaryExpression returns XBlockExpression
-	 *     XParenthesizedExpression returns XBlockExpression
-	 *     XExpressionOrVarDeclaration returns XBlockExpression
+	 *     XBlockExpression returns ObjectLiteral
+	 *     XExpression returns ObjectLiteral
+	 *     XAssignment returns ObjectLiteral
+	 *     XAssignment.XBinaryOperation_1_1_0_0_0 returns ObjectLiteral
+	 *     XOrExpression returns ObjectLiteral
+	 *     XOrExpression.XBinaryOperation_1_0_0_0 returns ObjectLiteral
+	 *     XAndExpression returns ObjectLiteral
+	 *     XAndExpression.XBinaryOperation_1_0_0_0 returns ObjectLiteral
+	 *     XEqualityExpression returns ObjectLiteral
+	 *     XEqualityExpression.XBinaryOperation_1_0_0_0 returns ObjectLiteral
+	 *     XRelationalExpression returns ObjectLiteral
+	 *     XRelationalExpression.XInstanceOfExpression_1_0_0_0_0 returns ObjectLiteral
+	 *     XRelationalExpression.XBinaryOperation_1_1_0_0_0 returns ObjectLiteral
+	 *     XOtherOperatorExpression returns ObjectLiteral
+	 *     XOtherOperatorExpression.XBinaryOperation_1_0_0_0 returns ObjectLiteral
+	 *     XAdditiveExpression returns ObjectLiteral
+	 *     XAdditiveExpression.XBinaryOperation_1_0_0_0 returns ObjectLiteral
+	 *     XMultiplicativeExpression returns ObjectLiteral
+	 *     XMultiplicativeExpression.XBinaryOperation_1_0_0_0 returns ObjectLiteral
+	 *     XUnaryOperation returns ObjectLiteral
+	 *     XCastedExpression returns ObjectLiteral
+	 *     XCastedExpression.XCastedExpression_1_0_0_0 returns ObjectLiteral
+	 *     XPostfixOperation returns ObjectLiteral
+	 *     XPostfixOperation.XPostfixOperation_1_0_0 returns ObjectLiteral
+	 *     XMemberFeatureCall returns ObjectLiteral
+	 *     XMemberFeatureCall.XAssignment_1_0_0_0_0 returns ObjectLiteral
+	 *     XMemberFeatureCall.XMemberFeatureCall_1_1_0_0_0 returns ObjectLiteral
+	 *     XPrimaryExpression returns ObjectLiteral
+	 *     XParenthesizedExpression returns ObjectLiteral
+	 *     XExpressionOrVarDeclaration returns ObjectLiteral
 	 *
 	 * Constraint:
-	 *     expressions+=XExpressionOrVarDeclaration*
+	 *     expressions+=Methods*
 	 */
-	protected void sequence_XBlockExpression(ISerializationContext context, XBlockExpression semanticObject) {
+	protected void sequence_XBlockExpression(ISerializationContext context, ObjectLiteral semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

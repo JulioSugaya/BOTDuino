@@ -11,7 +11,6 @@ import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.botlib.dsl.services.BotDuinoGrammarAccess;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
@@ -22,9 +21,6 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class BotDuinoSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected BotDuinoGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_ButtonRule_FREEKeyword_2_1_or_PUSHKeyword_2_0;
-	protected AbstractElementAlias match_CTRLRule_DOWNKeyword_2_1_or_LEFTKeyword_2_2_or_RIGHTKeyword_2_3_or_UPKeyword_2_0;
-	protected AbstractElementAlias match_SensorRule_HIGHKeyword_2_0_or_LOWKeyword_2_1;
 	protected AbstractElementAlias match_XExpressionInClosure_SemicolonKeyword_1_1_q;
 	protected AbstractElementAlias match_XFunctionTypeRef___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q;
 	protected AbstractElementAlias match_XImportDeclaration_SemicolonKeyword_2_q;
@@ -34,9 +30,6 @@ public class BotDuinoSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (BotDuinoGrammarAccess) access;
-		match_ButtonRule_FREEKeyword_2_1_or_PUSHKeyword_2_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getButtonRuleAccess().getFREEKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getButtonRuleAccess().getPUSHKeyword_2_0()));
-		match_CTRLRule_DOWNKeyword_2_1_or_LEFTKeyword_2_2_or_RIGHTKeyword_2_3_or_UPKeyword_2_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getCTRLRuleAccess().getDOWNKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getCTRLRuleAccess().getLEFTKeyword_2_2()), new TokenAlias(false, false, grammarAccess.getCTRLRuleAccess().getRIGHTKeyword_2_3()), new TokenAlias(false, false, grammarAccess.getCTRLRuleAccess().getUPKeyword_2_0()));
-		match_SensorRule_HIGHKeyword_2_0_or_LOWKeyword_2_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getSensorRuleAccess().getHIGHKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getSensorRuleAccess().getLOWKeyword_2_1()));
 		match_XExpressionInClosure_SemicolonKeyword_1_1_q = new TokenAlias(false, true, grammarAccess.getXExpressionInClosureAccess().getSemicolonKeyword_1_1());
 		match_XFunctionTypeRef___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getXFunctionTypeRefAccess().getLeftParenthesisKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getXFunctionTypeRefAccess().getRightParenthesisKeyword_0_2()));
 		match_XImportDeclaration_SemicolonKeyword_2_q = new TokenAlias(false, true, grammarAccess.getXImportDeclarationAccess().getSemicolonKeyword_2());
@@ -81,13 +74,7 @@ public class BotDuinoSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_ButtonRule_FREEKeyword_2_1_or_PUSHKeyword_2_0.equals(syntax))
-				emit_ButtonRule_FREEKeyword_2_1_or_PUSHKeyword_2_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_CTRLRule_DOWNKeyword_2_1_or_LEFTKeyword_2_2_or_RIGHTKeyword_2_3_or_UPKeyword_2_0.equals(syntax))
-				emit_CTRLRule_DOWNKeyword_2_1_or_LEFTKeyword_2_2_or_RIGHTKeyword_2_3_or_UPKeyword_2_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_SensorRule_HIGHKeyword_2_0_or_LOWKeyword_2_1.equals(syntax))
-				emit_SensorRule_HIGHKeyword_2_0_or_LOWKeyword_2_1(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_XExpressionInClosure_SemicolonKeyword_1_1_q.equals(syntax))
+			if (match_XExpressionInClosure_SemicolonKeyword_1_1_q.equals(syntax))
 				emit_XExpressionInClosure_SemicolonKeyword_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_XFunctionTypeRef___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q.equals(syntax))
 				emit_XFunctionTypeRef___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -101,39 +88,6 @@ public class BotDuinoSyntacticSequencer extends AbstractSyntacticSequencer {
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     'PUSH' | 'FREE'
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     superType=[Button|ID] 'when' (ambiguity) 'then' thenPart=XBlockExpression
-	 */
-	protected void emit_ButtonRule_FREEKeyword_2_1_or_PUSHKeyword_2_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     'UP' | 'DOWN' | 'LEFT' | 'RIGHT'
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     superType=[CTRL|ID] 'when' (ambiguity) 'then' thenPart=XBlockExpression
-	 */
-	protected void emit_CTRLRule_DOWNKeyword_2_1_or_LEFTKeyword_2_2_or_RIGHTKeyword_2_3_or_UPKeyword_2_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     'HIGH' | 'LOW'
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     superType=[Sensor|ID] 'when' (ambiguity) 'then' thenPart=XBlockExpression
-	 */
-	protected void emit_SensorRule_HIGHKeyword_2_0_or_LOWKeyword_2_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 	/**
 	 * Ambiguous syntax:
 	 *     ';'?
@@ -205,7 +159,7 @@ public class BotDuinoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) 'typeof' '(' type=[JvmType|QualifiedName]
 	 *     (rule start) (ambiguity) 'while' '(' predicate=XExpression
 	 *     (rule start) (ambiguity) '{' '}' (rule start)
-	 *     (rule start) (ambiguity) '{' expressions+=XExpressionOrVarDeclaration
+	 *     (rule start) (ambiguity) '{' expressions+=Methods
 	 *     (rule start) (ambiguity) feature=[JvmIdentifiableElement|FeatureCallID]
 	 *     (rule start) (ambiguity) feature=[JvmIdentifiableElement|IdOrSuper]
 	 *     (rule start) (ambiguity) feature=[JvmIdentifiableElement|OpUnary]
@@ -257,7 +211,7 @@ public class BotDuinoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) 'typeof' '(' type=[JvmType|QualifiedName]
 	 *     (rule start) (ambiguity) 'while' '(' predicate=XExpression
 	 *     (rule start) (ambiguity) '{' '}' ')' (rule start)
-	 *     (rule start) (ambiguity) '{' expressions+=XExpressionOrVarDeclaration
+	 *     (rule start) (ambiguity) '{' expressions+=Methods
 	 *     (rule start) (ambiguity) feature=[JvmIdentifiableElement|FeatureCallID]
 	 *     (rule start) (ambiguity) feature=[JvmIdentifiableElement|IdOrSuper]
 	 *     (rule start) (ambiguity) feature=[JvmIdentifiableElement|OpUnary]

@@ -96,7 +96,7 @@ public class generatorHandler extends AbstractHandler {
 	 */
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		
-		String avrPath = "/Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl";
+		String avrPath = "/Users/juliosugaya/_projects/org.xtext.botlib.dsl";
 		IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 
 //		String[] portNames = SerialPortList.getPortNames();

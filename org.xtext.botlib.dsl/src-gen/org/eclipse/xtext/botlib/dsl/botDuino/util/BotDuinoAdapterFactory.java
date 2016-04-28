@@ -11,6 +11,8 @@ import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.xtext.botlib.dsl.botDuino.*;
 
+import org.eclipse.xtext.xbase.XExpression;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
@@ -100,6 +102,11 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
         return createRulesAdapter();
       }
       @Override
+      public Adapter caseMethods(Methods object)
+      {
+        return createMethodsAdapter();
+      }
+      @Override
       public Adapter caseBTRule(BTRule object)
       {
         return createBTRuleAdapter();
@@ -118,11 +125,6 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
       public Adapter caseButtonRule(ButtonRule object)
       {
         return createButtonRuleAdapter();
-      }
-      @Override
-      public Adapter caseMethods(Methods object)
-      {
-        return createMethodsAdapter();
       }
       @Override
       public Adapter caseLED(LED object)
@@ -158,6 +160,26 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
       public Adapter caseServo(Servo object)
       {
         return createServoAdapter();
+      }
+      @Override
+      public Adapter caseLEDMethods(LEDMethods object)
+      {
+        return createLEDMethodsAdapter();
+      }
+      @Override
+      public Adapter caseMotorMethods(MotorMethods object)
+      {
+        return createMotorMethodsAdapter();
+      }
+      @Override
+      public Adapter caseObjectLiteral(ObjectLiteral object)
+      {
+        return createObjectLiteralAdapter();
+      }
+      @Override
+      public Adapter caseXExpression(XExpression object)
+      {
+        return createXExpressionAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -257,6 +279,21 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.botlib.dsl.botDuino.Methods <em>Methods</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.Methods
+   * @generated
+   */
+  public Adapter createMethodsAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.eclipse.xtext.botlib.dsl.botDuino.BTRule <em>BT Rule</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -312,21 +349,6 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createButtonRuleAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.botlib.dsl.botDuino.Methods <em>Methods</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.Methods
-   * @generated
-   */
-  public Adapter createMethodsAdapter()
   {
     return null;
   }
@@ -432,6 +454,66 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createServoAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods <em>LED Methods</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods
+   * @generated
+   */
+  public Adapter createLEDMethodsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods <em>Motor Methods</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods
+   * @generated
+   */
+  public Adapter createMotorMethodsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.botlib.dsl.botDuino.ObjectLiteral <em>Object Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.ObjectLiteral
+   * @generated
+   */
+  public Adapter createObjectLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.xbase.XExpression <em>XExpression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipse.xtext.xbase.XExpression
+   * @generated
+   */
+  public Adapter createXExpressionAdapter()
   {
     return null;
   }
