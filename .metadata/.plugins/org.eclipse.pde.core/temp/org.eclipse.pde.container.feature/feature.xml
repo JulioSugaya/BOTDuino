@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.eclipse.pde.container.feature" version="1.0">
+	<includes id="org.xtext.botlib.dsl.sdk.source" version="1.0.0.qualifier"/>
+	<includes id="org.xtext.botlib.dsl.sdk" version="1.0.0.qualifier"/>
+</feature>

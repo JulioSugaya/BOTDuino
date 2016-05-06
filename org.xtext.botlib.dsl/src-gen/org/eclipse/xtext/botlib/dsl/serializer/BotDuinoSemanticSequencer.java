@@ -23,10 +23,10 @@ import org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods;
 import org.eclipse.xtext.botlib.dsl.botDuino.Motor;
 import org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods;
 import org.eclipse.xtext.botlib.dsl.botDuino.ObjectLiteral;
-import org.eclipse.xtext.botlib.dsl.botDuino.Registers;
 import org.eclipse.xtext.botlib.dsl.botDuino.Sensor;
 import org.eclipse.xtext.botlib.dsl.botDuino.SensorRule;
 import org.eclipse.xtext.botlib.dsl.botDuino.Servo;
+import org.eclipse.xtext.botlib.dsl.botDuino.Variables;
 import org.eclipse.xtext.botlib.dsl.services.BotDuinoGrammarAccess;
 import org.eclipse.xtext.common.types.JvmFormalParameter;
 import org.eclipse.xtext.common.types.JvmGenericArrayTypeReference;
@@ -128,9 +128,6 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 			case BotDuinoPackage.OBJECT_LITERAL:
 				sequence_XBlockExpression(context, (ObjectLiteral) semanticObject); 
 				return; 
-			case BotDuinoPackage.REGISTERS:
-				sequence_Registers(context, (Registers) semanticObject); 
-				return; 
 			case BotDuinoPackage.SENSOR:
 				sequence_Sensor(context, (Sensor) semanticObject); 
 				return; 
@@ -139,6 +136,9 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 				return; 
 			case BotDuinoPackage.SERVO:
 				sequence_Servo(context, (Servo) semanticObject); 
+				return; 
+			case BotDuinoPackage.VARIABLES:
+				sequence_Variables(context, (Variables) semanticObject); 
 				return; 
 			}
 		else if (epackage == TypesPackage.eINSTANCE)
@@ -522,19 +522,6 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Entity returns Registers
-	 *     Registers returns Registers
-	 *
-	 * Constraint:
-	 *     (name=ID values+=INT*)
-	 */
-	protected void sequence_Registers(ISerializationContext context, Registers semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Entity returns SensorRule
 	 *     Rules returns SensorRule
 	 *     SensorRule returns SensorRule
@@ -571,6 +558,19 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 	 *     (name=ID superType=[Servo|ID]? values+=INT* values+=INT* values+=INT*)
 	 */
 	protected void sequence_Servo(ISerializationContext context, Servo semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Entity returns Variables
+	 *     Variables returns Variables
+	 *
+	 * Constraint:
+	 *     (name=ID values+=INT*)
+	 */
+	protected void sequence_Variables(ISerializationContext context, Variables semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

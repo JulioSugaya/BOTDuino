@@ -14,4 +14,6 @@
  /Users/juliosugaya/_projects/org.xtext.botlib.dsl/hardware/arduino/avr/variants/eightanaloginputs/pins_arduino.h \
  /Users/juliosugaya/_projects/org.xtext.botlib.dsl/hardware/arduino/avr/variants/eightanaloginputs/../standard/pins_arduino.h \
  /Users/juliosugaya/_projects/org.xtext.botlib.dsl/hardware/arduino/avr/cores/arduino/Stream.h \
- /Users/juliosugaya/_projects/org.xtext.botlib.dsl/hardware/arduino/avr/libraries/SoftwareSerial/SoftwareSerial.h
+ /Users/juliosugaya/_projects/org.xtext.botlib.dsl/hardware/arduino/avr/libraries/SoftwareSerial/SoftwareSerial.h \
+ /Users/juliosugaya/_projects/org.xtext.botlib.dsl/hardware/arduino/avr/libraries/LiquidCrystal/src/LiquidCrystal.h \
+ /Users/juliosugaya/_projects/org.xtext.botlib.dsl/hardware/arduino/avr/cores/arduino/Print.h

@@ -23,12 +23,12 @@ import org.eclipse.xtext.botlib.dsl.botDuino.Methods;
 import org.eclipse.xtext.botlib.dsl.botDuino.Motor;
 import org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods;
 import org.eclipse.xtext.botlib.dsl.botDuino.ObjectLiteral;
-import org.eclipse.xtext.botlib.dsl.botDuino.Registers;
 import org.eclipse.xtext.botlib.dsl.botDuino.Rules;
 import org.eclipse.xtext.botlib.dsl.botDuino.Sensor;
 import org.eclipse.xtext.botlib.dsl.botDuino.SensorRule;
 import org.eclipse.xtext.botlib.dsl.botDuino.Servo;
 import org.eclipse.xtext.botlib.dsl.botDuino.Type;
+import org.eclipse.xtext.botlib.dsl.botDuino.Variables;
 
 import org.eclipse.xtext.xbase.XbasePackage;
 
@@ -53,13 +53,6 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
    * @generated
    */
   private EClass entityEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass registersEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -109,6 +102,13 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
    * @generated
    */
   private EClass buttonRuleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass variablesEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -274,36 +274,6 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
   public EClass getEntity()
   {
     return entityEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getRegisters()
-  {
-    return registersEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRegisters_Name()
-  {
-    return (EAttribute)registersEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRegisters_Values()
-  {
-    return (EAttribute)registersEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -494,6 +464,36 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
   public EAttribute getButtonRule_BtnActions()
   {
     return (EAttribute)buttonRuleEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVariables()
+  {
+    return variablesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVariables_Name()
+  {
+    return (EAttribute)variablesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVariables_Values()
+  {
+    return (EAttribute)variablesEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -731,10 +731,6 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
 
     entityEClass = createEClass(ENTITY);
 
-    registersEClass = createEClass(REGISTERS);
-    createEAttribute(registersEClass, REGISTERS__NAME);
-    createEAttribute(registersEClass, REGISTERS__VALUES);
-
     typeEClass = createEClass(TYPE);
     createEAttribute(typeEClass, TYPE__NAME);
     createEAttribute(typeEClass, TYPE__VALUES);
@@ -760,6 +756,10 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
     buttonRuleEClass = createEClass(BUTTON_RULE);
     createEReference(buttonRuleEClass, BUTTON_RULE__SUPER_TYPE);
     createEAttribute(buttonRuleEClass, BUTTON_RULE__BTN_ACTIONS);
+
+    variablesEClass = createEClass(VARIABLES);
+    createEAttribute(variablesEClass, VARIABLES__NAME);
+    createEAttribute(variablesEClass, VARIABLES__VALUES);
 
     ledEClass = createEClass(LED);
     createEReference(ledEClass, LED__SUPER_TYPE);
@@ -824,7 +824,6 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    registersEClass.getESuperTypes().add(this.getEntity());
     typeEClass.getESuperTypes().add(this.getEntity());
     rulesEClass.getESuperTypes().add(this.getEntity());
     methodsEClass.getESuperTypes().add(this.getEntity());
@@ -832,6 +831,7 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
     sensorRuleEClass.getESuperTypes().add(this.getRules());
     ctrlRuleEClass.getESuperTypes().add(this.getRules());
     buttonRuleEClass.getESuperTypes().add(this.getRules());
+    variablesEClass.getESuperTypes().add(this.getEntity());
     ledEClass.getESuperTypes().add(this.getType());
     buttonEClass.getESuperTypes().add(this.getType());
     motorEClass.getESuperTypes().add(this.getType());
@@ -848,10 +848,6 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
     initEReference(getDomainModel_Elements(), this.getEntity(), null, "elements", null, 0, -1, DomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(registersEClass, Registers.class, "Registers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRegisters_Name(), ecorePackage.getEString(), "name", null, 0, 1, Registers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRegisters_Values(), ecorePackage.getEInt(), "values", null, 0, -1, Registers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getType_Name(), ecorePackage.getEString(), "name", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -878,6 +874,10 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
     initEClass(buttonRuleEClass, ButtonRule.class, "ButtonRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getButtonRule_SuperType(), this.getButton(), null, "superType", null, 0, 1, ButtonRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getButtonRule_BtnActions(), ecorePackage.getEString(), "btnActions", null, 0, -1, ButtonRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(variablesEClass, Variables.class, "Variables", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getVariables_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variables.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getVariables_Values(), ecorePackage.getEInt(), "values", null, 0, -1, Variables.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(ledEClass, org.eclipse.xtext.botlib.dsl.botDuino.LED.class, "LED", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLED_SuperType(), this.getLED(), null, "superType", null, 0, 1, org.eclipse.xtext.botlib.dsl.botDuino.LED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

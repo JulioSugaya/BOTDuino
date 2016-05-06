@@ -15,12 +15,12 @@ LED::LED(uint8_t pin){
 }
 
 //turn the LED on
-void LED::onLed(){
+void LED::on(){
 	digitalWrite(LED_PIN,HIGH);
 }
 
 //turn the LED off
-void LED::offLed(){
+void LED::off(){
 	digitalWrite(LED_PIN,LOW);
 }
 

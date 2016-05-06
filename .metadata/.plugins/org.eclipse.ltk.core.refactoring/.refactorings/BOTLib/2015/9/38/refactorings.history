@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;BOTLib/ROBOLib.cpp&apos; to &apos;BOTLib.cpp&apos;" description="Rename resource &apos;ROBOLib.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ROBOLib.cpp" name="BOTLib.cpp" stamp="1442164844745" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;BOTLib/ROBOLib.h&apos; to &apos;BOTLib.h&apos;" description="Rename resource &apos;ROBOLib.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ROBOLib.h" name="BOTLib.h" stamp="1442164862456" updateReferences="true"/>
+</session>

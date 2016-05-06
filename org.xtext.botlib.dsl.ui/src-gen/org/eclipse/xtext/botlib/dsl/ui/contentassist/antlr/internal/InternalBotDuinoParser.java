@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalBotDuinoParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_HEX", "RULE_INT", "RULE_DECIMAL", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'='", "'||'", "'&&'", "'+='", "'-='", "'*='", "'/='", "'%='", "'=='", "'!='", "'==='", "'!=='", "'>='", "'>'", "'<'", "'->'", "'..<'", "'..'", "'=>'", "'<>'", "'?:'", "'+'", "'-'", "'*'", "'**'", "'/'", "'%'", "'!'", "'++'", "'--'", "'.'", "'val'", "'extends'", "'static'", "'import'", "'extension'", "'super'", "'false'", "'VAR'", "'when'", "'then'", "'LED'", "'('", "')'", "'Button'", "'Motor'", "','", "'Sensor'", "'BlueTooth'", "'CTRL'", "'Servo'", "'{'", "'}'", "'instanceof'", "'as'", "'#'", "'['", "']'", "';'", "'if'", "'else'", "'switch'", "':'", "'default'", "'case'", "'for'", "'while'", "'do'", "'new'", "'null'", "'typeof'", "'throw'", "'return'", "'try'", "'finally'", "'synchronized'", "'catch'", "'?'", "'&'", "'HIGH'", "'LOW'", "'UP'", "'DOWN'", "'LEFT'", "'RIGHT'", "'PUSH'", "'FREE'", "'on'", "'off'", "'run'", "'stop'", "'reverse'", "'::'", "'?.'", "'|'", "'var'", "'true'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_HEX", "RULE_INT", "RULE_DECIMAL", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'='", "'||'", "'&&'", "'+='", "'-='", "'*='", "'/='", "'%='", "'=='", "'!='", "'==='", "'!=='", "'>='", "'>'", "'<'", "'->'", "'..<'", "'..'", "'=>'", "'<>'", "'?:'", "'+'", "'-'", "'*'", "'**'", "'/'", "'%'", "'!'", "'++'", "'--'", "'.'", "'val'", "'extends'", "'static'", "'import'", "'extension'", "'super'", "'false'", "'when'", "'then'", "'VAR'", "'LED'", "'('", "')'", "'Button'", "'Motor'", "','", "'Sensor'", "'BlueTooth'", "'CTRL'", "'Servo'", "'{'", "'}'", "'instanceof'", "'as'", "'#'", "'['", "']'", "';'", "'if'", "'else'", "'switch'", "':'", "'default'", "'case'", "'for'", "'while'", "'do'", "'new'", "'null'", "'typeof'", "'throw'", "'return'", "'try'", "'finally'", "'synchronized'", "'catch'", "'?'", "'&'", "'HIGH'", "'LOW'", "'UP'", "'DOWN'", "'LEFT'", "'RIGHT'", "'PUSH'", "'FREE'", "'on'", "'off'", "'run'", "'stop'", "'reverse'", "'::'", "'?.'", "'|'", "'var'", "'true'"
     };
     public static final int RULE_HEX=5;
     public static final int T__50=50;
@@ -226,7 +226,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==RULE_ID||LA1_0==51||LA1_0==54||(LA1_0>=57 && LA1_0<=58)||(LA1_0>=60 && LA1_0<=63)) ) {
+                if ( (LA1_0==RULE_ID||(LA1_0>=53 && LA1_0<=54)||(LA1_0>=57 && LA1_0<=58)||(LA1_0>=60 && LA1_0<=63)) ) {
                     alt1=1;
                 }
 
@@ -358,97 +358,12 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "ruleEntity"
 
 
-    // $ANTLR start "entryRuleRegisters"
-    // InternalBotDuino.g:117:1: entryRuleRegisters : ruleRegisters EOF ;
-    public final void entryRuleRegisters() throws RecognitionException {
-        try {
-            // InternalBotDuino.g:118:1: ( ruleRegisters EOF )
-            // InternalBotDuino.g:119:1: ruleRegisters EOF
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRegistersRule()); 
-            }
-            pushFollow(FOLLOW_1);
-            ruleRegisters();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRegistersRule()); 
-            }
-            match(input,EOF,FOLLOW_2); if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleRegisters"
-
-
-    // $ANTLR start "ruleRegisters"
-    // InternalBotDuino.g:126:1: ruleRegisters : ( ( rule__Registers__Group__0 ) ) ;
-    public final void ruleRegisters() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalBotDuino.g:130:2: ( ( ( rule__Registers__Group__0 ) ) )
-            // InternalBotDuino.g:131:1: ( ( rule__Registers__Group__0 ) )
-            {
-            // InternalBotDuino.g:131:1: ( ( rule__Registers__Group__0 ) )
-            // InternalBotDuino.g:132:1: ( rule__Registers__Group__0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRegistersAccess().getGroup()); 
-            }
-            // InternalBotDuino.g:133:1: ( rule__Registers__Group__0 )
-            // InternalBotDuino.g:133:2: rule__Registers__Group__0
-            {
-            pushFollow(FOLLOW_2);
-            rule__Registers__Group__0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRegistersAccess().getGroup()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleRegisters"
-
-
     // $ANTLR start "entryRuleType"
-    // InternalBotDuino.g:145:1: entryRuleType : ruleType EOF ;
+    // InternalBotDuino.g:117:1: entryRuleType : ruleType EOF ;
     public final void entryRuleType() throws RecognitionException {
         try {
-            // InternalBotDuino.g:146:1: ( ruleType EOF )
-            // InternalBotDuino.g:147:1: ruleType EOF
+            // InternalBotDuino.g:118:1: ( ruleType EOF )
+            // InternalBotDuino.g:119:1: ruleType EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeRule()); 
@@ -478,23 +393,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "ruleType"
-    // InternalBotDuino.g:154:1: ruleType : ( ( rule__Type__Alternatives ) ) ;
+    // InternalBotDuino.g:126:1: ruleType : ( ( rule__Type__Alternatives ) ) ;
     public final void ruleType() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:158:2: ( ( ( rule__Type__Alternatives ) ) )
-            // InternalBotDuino.g:159:1: ( ( rule__Type__Alternatives ) )
+            // InternalBotDuino.g:130:2: ( ( ( rule__Type__Alternatives ) ) )
+            // InternalBotDuino.g:131:1: ( ( rule__Type__Alternatives ) )
             {
-            // InternalBotDuino.g:159:1: ( ( rule__Type__Alternatives ) )
-            // InternalBotDuino.g:160:1: ( rule__Type__Alternatives )
+            // InternalBotDuino.g:131:1: ( ( rule__Type__Alternatives ) )
+            // InternalBotDuino.g:132:1: ( rule__Type__Alternatives )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeAccess().getAlternatives()); 
             }
-            // InternalBotDuino.g:161:1: ( rule__Type__Alternatives )
-            // InternalBotDuino.g:161:2: rule__Type__Alternatives
+            // InternalBotDuino.g:133:1: ( rule__Type__Alternatives )
+            // InternalBotDuino.g:133:2: rule__Type__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__Type__Alternatives();
@@ -529,11 +444,11 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "entryRuleRules"
-    // InternalBotDuino.g:173:1: entryRuleRules : ruleRules EOF ;
+    // InternalBotDuino.g:145:1: entryRuleRules : ruleRules EOF ;
     public final void entryRuleRules() throws RecognitionException {
         try {
-            // InternalBotDuino.g:174:1: ( ruleRules EOF )
-            // InternalBotDuino.g:175:1: ruleRules EOF
+            // InternalBotDuino.g:146:1: ( ruleRules EOF )
+            // InternalBotDuino.g:147:1: ruleRules EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRulesRule()); 
@@ -563,23 +478,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "ruleRules"
-    // InternalBotDuino.g:182:1: ruleRules : ( ( rule__Rules__Alternatives ) ) ;
+    // InternalBotDuino.g:154:1: ruleRules : ( ( rule__Rules__Alternatives ) ) ;
     public final void ruleRules() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:186:2: ( ( ( rule__Rules__Alternatives ) ) )
-            // InternalBotDuino.g:187:1: ( ( rule__Rules__Alternatives ) )
+            // InternalBotDuino.g:158:2: ( ( ( rule__Rules__Alternatives ) ) )
+            // InternalBotDuino.g:159:1: ( ( rule__Rules__Alternatives ) )
             {
-            // InternalBotDuino.g:187:1: ( ( rule__Rules__Alternatives ) )
-            // InternalBotDuino.g:188:1: ( rule__Rules__Alternatives )
+            // InternalBotDuino.g:159:1: ( ( rule__Rules__Alternatives ) )
+            // InternalBotDuino.g:160:1: ( rule__Rules__Alternatives )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRulesAccess().getAlternatives()); 
             }
-            // InternalBotDuino.g:189:1: ( rule__Rules__Alternatives )
-            // InternalBotDuino.g:189:2: rule__Rules__Alternatives
+            // InternalBotDuino.g:161:1: ( rule__Rules__Alternatives )
+            // InternalBotDuino.g:161:2: rule__Rules__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__Rules__Alternatives();
@@ -614,11 +529,11 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "entryRuleMethods"
-    // InternalBotDuino.g:201:1: entryRuleMethods : ruleMethods EOF ;
+    // InternalBotDuino.g:173:1: entryRuleMethods : ruleMethods EOF ;
     public final void entryRuleMethods() throws RecognitionException {
         try {
-            // InternalBotDuino.g:202:1: ( ruleMethods EOF )
-            // InternalBotDuino.g:203:1: ruleMethods EOF
+            // InternalBotDuino.g:174:1: ( ruleMethods EOF )
+            // InternalBotDuino.g:175:1: ruleMethods EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodsRule()); 
@@ -648,23 +563,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "ruleMethods"
-    // InternalBotDuino.g:210:1: ruleMethods : ( ( rule__Methods__Alternatives ) ) ;
+    // InternalBotDuino.g:182:1: ruleMethods : ( ( rule__Methods__Alternatives ) ) ;
     public final void ruleMethods() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:214:2: ( ( ( rule__Methods__Alternatives ) ) )
-            // InternalBotDuino.g:215:1: ( ( rule__Methods__Alternatives ) )
+            // InternalBotDuino.g:186:2: ( ( ( rule__Methods__Alternatives ) ) )
+            // InternalBotDuino.g:187:1: ( ( rule__Methods__Alternatives ) )
             {
-            // InternalBotDuino.g:215:1: ( ( rule__Methods__Alternatives ) )
-            // InternalBotDuino.g:216:1: ( rule__Methods__Alternatives )
+            // InternalBotDuino.g:187:1: ( ( rule__Methods__Alternatives ) )
+            // InternalBotDuino.g:188:1: ( rule__Methods__Alternatives )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodsAccess().getAlternatives()); 
             }
-            // InternalBotDuino.g:217:1: ( rule__Methods__Alternatives )
-            // InternalBotDuino.g:217:2: rule__Methods__Alternatives
+            // InternalBotDuino.g:189:1: ( rule__Methods__Alternatives )
+            // InternalBotDuino.g:189:2: rule__Methods__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__Methods__Alternatives();
@@ -699,11 +614,11 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "entryRuleBTRule"
-    // InternalBotDuino.g:229:1: entryRuleBTRule : ruleBTRule EOF ;
+    // InternalBotDuino.g:201:1: entryRuleBTRule : ruleBTRule EOF ;
     public final void entryRuleBTRule() throws RecognitionException {
         try {
-            // InternalBotDuino.g:230:1: ( ruleBTRule EOF )
-            // InternalBotDuino.g:231:1: ruleBTRule EOF
+            // InternalBotDuino.g:202:1: ( ruleBTRule EOF )
+            // InternalBotDuino.g:203:1: ruleBTRule EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBTRuleRule()); 
@@ -733,23 +648,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "ruleBTRule"
-    // InternalBotDuino.g:238:1: ruleBTRule : ( ( rule__BTRule__Group__0 ) ) ;
+    // InternalBotDuino.g:210:1: ruleBTRule : ( ( rule__BTRule__Group__0 ) ) ;
     public final void ruleBTRule() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:242:2: ( ( ( rule__BTRule__Group__0 ) ) )
-            // InternalBotDuino.g:243:1: ( ( rule__BTRule__Group__0 ) )
+            // InternalBotDuino.g:214:2: ( ( ( rule__BTRule__Group__0 ) ) )
+            // InternalBotDuino.g:215:1: ( ( rule__BTRule__Group__0 ) )
             {
-            // InternalBotDuino.g:243:1: ( ( rule__BTRule__Group__0 ) )
-            // InternalBotDuino.g:244:1: ( rule__BTRule__Group__0 )
+            // InternalBotDuino.g:215:1: ( ( rule__BTRule__Group__0 ) )
+            // InternalBotDuino.g:216:1: ( rule__BTRule__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBTRuleAccess().getGroup()); 
             }
-            // InternalBotDuino.g:245:1: ( rule__BTRule__Group__0 )
-            // InternalBotDuino.g:245:2: rule__BTRule__Group__0
+            // InternalBotDuino.g:217:1: ( rule__BTRule__Group__0 )
+            // InternalBotDuino.g:217:2: rule__BTRule__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__BTRule__Group__0();
@@ -784,11 +699,11 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "entryRuleSensorRule"
-    // InternalBotDuino.g:257:1: entryRuleSensorRule : ruleSensorRule EOF ;
+    // InternalBotDuino.g:229:1: entryRuleSensorRule : ruleSensorRule EOF ;
     public final void entryRuleSensorRule() throws RecognitionException {
         try {
-            // InternalBotDuino.g:258:1: ( ruleSensorRule EOF )
-            // InternalBotDuino.g:259:1: ruleSensorRule EOF
+            // InternalBotDuino.g:230:1: ( ruleSensorRule EOF )
+            // InternalBotDuino.g:231:1: ruleSensorRule EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleRule()); 
@@ -818,23 +733,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "ruleSensorRule"
-    // InternalBotDuino.g:266:1: ruleSensorRule : ( ( rule__SensorRule__Group__0 ) ) ;
+    // InternalBotDuino.g:238:1: ruleSensorRule : ( ( rule__SensorRule__Group__0 ) ) ;
     public final void ruleSensorRule() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:270:2: ( ( ( rule__SensorRule__Group__0 ) ) )
-            // InternalBotDuino.g:271:1: ( ( rule__SensorRule__Group__0 ) )
+            // InternalBotDuino.g:242:2: ( ( ( rule__SensorRule__Group__0 ) ) )
+            // InternalBotDuino.g:243:1: ( ( rule__SensorRule__Group__0 ) )
             {
-            // InternalBotDuino.g:271:1: ( ( rule__SensorRule__Group__0 ) )
-            // InternalBotDuino.g:272:1: ( rule__SensorRule__Group__0 )
+            // InternalBotDuino.g:243:1: ( ( rule__SensorRule__Group__0 ) )
+            // InternalBotDuino.g:244:1: ( rule__SensorRule__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleAccess().getGroup()); 
             }
-            // InternalBotDuino.g:273:1: ( rule__SensorRule__Group__0 )
-            // InternalBotDuino.g:273:2: rule__SensorRule__Group__0
+            // InternalBotDuino.g:245:1: ( rule__SensorRule__Group__0 )
+            // InternalBotDuino.g:245:2: rule__SensorRule__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__SensorRule__Group__0();
@@ -869,11 +784,11 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "entryRuleCTRLRule"
-    // InternalBotDuino.g:285:1: entryRuleCTRLRule : ruleCTRLRule EOF ;
+    // InternalBotDuino.g:257:1: entryRuleCTRLRule : ruleCTRLRule EOF ;
     public final void entryRuleCTRLRule() throws RecognitionException {
         try {
-            // InternalBotDuino.g:286:1: ( ruleCTRLRule EOF )
-            // InternalBotDuino.g:287:1: ruleCTRLRule EOF
+            // InternalBotDuino.g:258:1: ( ruleCTRLRule EOF )
+            // InternalBotDuino.g:259:1: ruleCTRLRule EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleRule()); 
@@ -903,23 +818,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "ruleCTRLRule"
-    // InternalBotDuino.g:294:1: ruleCTRLRule : ( ( rule__CTRLRule__Group__0 ) ) ;
+    // InternalBotDuino.g:266:1: ruleCTRLRule : ( ( rule__CTRLRule__Group__0 ) ) ;
     public final void ruleCTRLRule() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:298:2: ( ( ( rule__CTRLRule__Group__0 ) ) )
-            // InternalBotDuino.g:299:1: ( ( rule__CTRLRule__Group__0 ) )
+            // InternalBotDuino.g:270:2: ( ( ( rule__CTRLRule__Group__0 ) ) )
+            // InternalBotDuino.g:271:1: ( ( rule__CTRLRule__Group__0 ) )
             {
-            // InternalBotDuino.g:299:1: ( ( rule__CTRLRule__Group__0 ) )
-            // InternalBotDuino.g:300:1: ( rule__CTRLRule__Group__0 )
+            // InternalBotDuino.g:271:1: ( ( rule__CTRLRule__Group__0 ) )
+            // InternalBotDuino.g:272:1: ( rule__CTRLRule__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getGroup()); 
             }
-            // InternalBotDuino.g:301:1: ( rule__CTRLRule__Group__0 )
-            // InternalBotDuino.g:301:2: rule__CTRLRule__Group__0
+            // InternalBotDuino.g:273:1: ( rule__CTRLRule__Group__0 )
+            // InternalBotDuino.g:273:2: rule__CTRLRule__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__CTRLRule__Group__0();
@@ -954,11 +869,11 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "entryRuleButtonRule"
-    // InternalBotDuino.g:313:1: entryRuleButtonRule : ruleButtonRule EOF ;
+    // InternalBotDuino.g:285:1: entryRuleButtonRule : ruleButtonRule EOF ;
     public final void entryRuleButtonRule() throws RecognitionException {
         try {
-            // InternalBotDuino.g:314:1: ( ruleButtonRule EOF )
-            // InternalBotDuino.g:315:1: ruleButtonRule EOF
+            // InternalBotDuino.g:286:1: ( ruleButtonRule EOF )
+            // InternalBotDuino.g:287:1: ruleButtonRule EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleRule()); 
@@ -988,23 +903,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "ruleButtonRule"
-    // InternalBotDuino.g:322:1: ruleButtonRule : ( ( rule__ButtonRule__Group__0 ) ) ;
+    // InternalBotDuino.g:294:1: ruleButtonRule : ( ( rule__ButtonRule__Group__0 ) ) ;
     public final void ruleButtonRule() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:326:2: ( ( ( rule__ButtonRule__Group__0 ) ) )
-            // InternalBotDuino.g:327:1: ( ( rule__ButtonRule__Group__0 ) )
+            // InternalBotDuino.g:298:2: ( ( ( rule__ButtonRule__Group__0 ) ) )
+            // InternalBotDuino.g:299:1: ( ( rule__ButtonRule__Group__0 ) )
             {
-            // InternalBotDuino.g:327:1: ( ( rule__ButtonRule__Group__0 ) )
-            // InternalBotDuino.g:328:1: ( rule__ButtonRule__Group__0 )
+            // InternalBotDuino.g:299:1: ( ( rule__ButtonRule__Group__0 ) )
+            // InternalBotDuino.g:300:1: ( rule__ButtonRule__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleAccess().getGroup()); 
             }
-            // InternalBotDuino.g:329:1: ( rule__ButtonRule__Group__0 )
-            // InternalBotDuino.g:329:2: rule__ButtonRule__Group__0
+            // InternalBotDuino.g:301:1: ( rule__ButtonRule__Group__0 )
+            // InternalBotDuino.g:301:2: rule__ButtonRule__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__ButtonRule__Group__0();
@@ -1036,6 +951,91 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
         return ;
     }
     // $ANTLR end "ruleButtonRule"
+
+
+    // $ANTLR start "entryRuleVariables"
+    // InternalBotDuino.g:313:1: entryRuleVariables : ruleVariables EOF ;
+    public final void entryRuleVariables() throws RecognitionException {
+        try {
+            // InternalBotDuino.g:314:1: ( ruleVariables EOF )
+            // InternalBotDuino.g:315:1: ruleVariables EOF
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVariablesRule()); 
+            }
+            pushFollow(FOLLOW_1);
+            ruleVariables();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVariablesRule()); 
+            }
+            match(input,EOF,FOLLOW_2); if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleVariables"
+
+
+    // $ANTLR start "ruleVariables"
+    // InternalBotDuino.g:322:1: ruleVariables : ( ( rule__Variables__Group__0 ) ) ;
+    public final void ruleVariables() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalBotDuino.g:326:2: ( ( ( rule__Variables__Group__0 ) ) )
+            // InternalBotDuino.g:327:1: ( ( rule__Variables__Group__0 ) )
+            {
+            // InternalBotDuino.g:327:1: ( ( rule__Variables__Group__0 ) )
+            // InternalBotDuino.g:328:1: ( rule__Variables__Group__0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVariablesAccess().getGroup()); 
+            }
+            // InternalBotDuino.g:329:1: ( rule__Variables__Group__0 )
+            // InternalBotDuino.g:329:2: rule__Variables__Group__0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Variables__Group__0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVariablesAccess().getGroup()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleVariables"
 
 
     // $ANTLR start "entryRuleLED"
@@ -8194,13 +8194,13 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Entity__Alternatives"
-    // InternalBotDuino.g:2720:1: rule__Entity__Alternatives : ( ( ruleType ) | ( ruleRules ) | ( ruleRegisters ) | ( ruleMethods ) );
+    // InternalBotDuino.g:2720:1: rule__Entity__Alternatives : ( ( ruleType ) | ( ruleRules ) | ( ruleMethods ) | ( ruleVariables ) );
     public final void rule__Entity__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:2724:1: ( ( ruleType ) | ( ruleRules ) | ( ruleRegisters ) | ( ruleMethods ) )
+            // InternalBotDuino.g:2724:1: ( ( ruleType ) | ( ruleRules ) | ( ruleMethods ) | ( ruleVariables ) )
             int alt3=4;
             switch ( input.LA(1) ) {
             case 54:
@@ -8218,11 +8218,11 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
                 {
                 int LA3_2 = input.LA(2);
 
-                if ( (LA3_2==52) ) {
-                    alt3=2;
+                if ( (LA3_2==EOF||LA3_2==RULE_ID||LA3_2==43||(LA3_2>=53 && LA3_2<=54)||(LA3_2>=57 && LA3_2<=58)||(LA3_2>=60 && LA3_2<=63)) ) {
+                    alt3=3;
                 }
-                else if ( (LA3_2==EOF||LA3_2==RULE_ID||LA3_2==43||LA3_2==51||LA3_2==54||(LA3_2>=57 && LA3_2<=58)||(LA3_2>=60 && LA3_2<=63)) ) {
-                    alt3=4;
+                else if ( (LA3_2==51) ) {
+                    alt3=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -8233,9 +8233,9 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
                 }
                 }
                 break;
-            case 51:
+            case 53:
                 {
-                alt3=3;
+                alt3=4;
                 }
                 break;
             default:
@@ -8294,21 +8294,21 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 3 :
-                    // InternalBotDuino.g:2737:6: ( ruleRegisters )
+                    // InternalBotDuino.g:2737:6: ( ruleMethods )
                     {
-                    // InternalBotDuino.g:2737:6: ( ruleRegisters )
-                    // InternalBotDuino.g:2738:1: ruleRegisters
+                    // InternalBotDuino.g:2737:6: ( ruleMethods )
+                    // InternalBotDuino.g:2738:1: ruleMethods
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getEntityAccess().getRegistersParserRuleCall_2()); 
+                       before(grammarAccess.getEntityAccess().getMethodsParserRuleCall_2()); 
                     }
                     pushFollow(FOLLOW_2);
-                    ruleRegisters();
+                    ruleMethods();
 
                     state._fsp--;
                     if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getEntityAccess().getRegistersParserRuleCall_2()); 
+                       after(grammarAccess.getEntityAccess().getMethodsParserRuleCall_2()); 
                     }
 
                     }
@@ -8317,21 +8317,21 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 4 :
-                    // InternalBotDuino.g:2743:6: ( ruleMethods )
+                    // InternalBotDuino.g:2743:6: ( ruleVariables )
                     {
-                    // InternalBotDuino.g:2743:6: ( ruleMethods )
-                    // InternalBotDuino.g:2744:1: ruleMethods
+                    // InternalBotDuino.g:2743:6: ( ruleVariables )
+                    // InternalBotDuino.g:2744:1: ruleVariables
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getEntityAccess().getMethodsParserRuleCall_3()); 
+                       before(grammarAccess.getEntityAccess().getVariablesParserRuleCall_3()); 
                     }
                     pushFollow(FOLLOW_2);
-                    ruleMethods();
+                    ruleVariables();
 
                     state._fsp--;
                     if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getEntityAccess().getMethodsParserRuleCall_3()); 
+                       after(grammarAccess.getEntityAccess().getVariablesParserRuleCall_3()); 
                     }
 
                     }
@@ -8602,8 +8602,14 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             if ( (LA5_0==RULE_ID) ) {
                 int LA5_1 = input.LA(2);
 
-                if ( (LA5_1==52) ) {
+                if ( (LA5_1==51) ) {
                     switch ( input.LA(3) ) {
+                    case 98:
+                    case 99:
+                        {
+                        alt5=2;
+                        }
+                        break;
                     case 94:
                     case 95:
                     case 96:
@@ -8621,12 +8627,6 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
                     case RULE_ID:
                         {
                         alt5=4;
-                        }
-                        break;
-                    case 98:
-                    case 99:
-                        {
-                        alt5=2;
                         }
                         break;
                     default:
@@ -8794,7 +8794,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
                         throw nvae;
                     }
                 }
-                else if ( (LA6_1==EOF||LA6_1==RULE_ID||LA6_1==51||LA6_1==54||(LA6_1>=57 && LA6_1<=58)||(LA6_1>=60 && LA6_1<=63)||LA6_1==65) ) {
+                else if ( (LA6_1==EOF||LA6_1==RULE_ID||(LA6_1>=53 && LA6_1<=54)||(LA6_1>=57 && LA6_1<=58)||(LA6_1>=60 && LA6_1<=63)||LA6_1==65) ) {
                     alt6=2;
                 }
                 else {
@@ -9362,7 +9362,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             if ( (LA11_0==RULE_ID) ) {
                 int LA11_1 = input.LA(2);
 
-                if ( (LA11_1==EOF||LA11_1==RULE_ID||LA11_1==51||LA11_1==54||(LA11_1>=57 && LA11_1<=58)||(LA11_1>=60 && LA11_1<=63)||LA11_1==65) ) {
+                if ( (LA11_1==EOF||LA11_1==RULE_ID||(LA11_1>=53 && LA11_1<=54)||(LA11_1>=57 && LA11_1<=58)||(LA11_1>=60 && LA11_1<=63)||LA11_1==65) ) {
                     alt11=1;
                 }
                 else if ( (LA11_1==43) ) {
@@ -14317,366 +14317,17 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__XImportDeclaration__Alternatives_1_0_3"
 
 
-    // $ANTLR start "rule__Registers__Group__0"
-    // InternalBotDuino.g:4212:1: rule__Registers__Group__0 : rule__Registers__Group__0__Impl rule__Registers__Group__1 ;
-    public final void rule__Registers__Group__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalBotDuino.g:4216:1: ( rule__Registers__Group__0__Impl rule__Registers__Group__1 )
-            // InternalBotDuino.g:4217:2: rule__Registers__Group__0__Impl rule__Registers__Group__1
-            {
-            pushFollow(FOLLOW_5);
-            rule__Registers__Group__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_2);
-            rule__Registers__Group__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Registers__Group__0"
-
-
-    // $ANTLR start "rule__Registers__Group__0__Impl"
-    // InternalBotDuino.g:4224:1: rule__Registers__Group__0__Impl : ( 'VAR' ) ;
-    public final void rule__Registers__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalBotDuino.g:4228:1: ( ( 'VAR' ) )
-            // InternalBotDuino.g:4229:1: ( 'VAR' )
-            {
-            // InternalBotDuino.g:4229:1: ( 'VAR' )
-            // InternalBotDuino.g:4230:1: 'VAR'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRegistersAccess().getVARKeyword_0()); 
-            }
-            match(input,51,FOLLOW_2); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRegistersAccess().getVARKeyword_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Registers__Group__0__Impl"
-
-
-    // $ANTLR start "rule__Registers__Group__1"
-    // InternalBotDuino.g:4243:1: rule__Registers__Group__1 : rule__Registers__Group__1__Impl rule__Registers__Group__2 ;
-    public final void rule__Registers__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalBotDuino.g:4247:1: ( rule__Registers__Group__1__Impl rule__Registers__Group__2 )
-            // InternalBotDuino.g:4248:2: rule__Registers__Group__1__Impl rule__Registers__Group__2
-            {
-            pushFollow(FOLLOW_6);
-            rule__Registers__Group__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_2);
-            rule__Registers__Group__2();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Registers__Group__1"
-
-
-    // $ANTLR start "rule__Registers__Group__1__Impl"
-    // InternalBotDuino.g:4255:1: rule__Registers__Group__1__Impl : ( ( rule__Registers__NameAssignment_1 ) ) ;
-    public final void rule__Registers__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalBotDuino.g:4259:1: ( ( ( rule__Registers__NameAssignment_1 ) ) )
-            // InternalBotDuino.g:4260:1: ( ( rule__Registers__NameAssignment_1 ) )
-            {
-            // InternalBotDuino.g:4260:1: ( ( rule__Registers__NameAssignment_1 ) )
-            // InternalBotDuino.g:4261:1: ( rule__Registers__NameAssignment_1 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRegistersAccess().getNameAssignment_1()); 
-            }
-            // InternalBotDuino.g:4262:1: ( rule__Registers__NameAssignment_1 )
-            // InternalBotDuino.g:4262:2: rule__Registers__NameAssignment_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Registers__NameAssignment_1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRegistersAccess().getNameAssignment_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Registers__Group__1__Impl"
-
-
-    // $ANTLR start "rule__Registers__Group__2"
-    // InternalBotDuino.g:4272:1: rule__Registers__Group__2 : rule__Registers__Group__2__Impl rule__Registers__Group__3 ;
-    public final void rule__Registers__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalBotDuino.g:4276:1: ( rule__Registers__Group__2__Impl rule__Registers__Group__3 )
-            // InternalBotDuino.g:4277:2: rule__Registers__Group__2__Impl rule__Registers__Group__3
-            {
-            pushFollow(FOLLOW_7);
-            rule__Registers__Group__2__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_2);
-            rule__Registers__Group__3();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Registers__Group__2"
-
-
-    // $ANTLR start "rule__Registers__Group__2__Impl"
-    // InternalBotDuino.g:4284:1: rule__Registers__Group__2__Impl : ( '=' ) ;
-    public final void rule__Registers__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalBotDuino.g:4288:1: ( ( '=' ) )
-            // InternalBotDuino.g:4289:1: ( '=' )
-            {
-            // InternalBotDuino.g:4289:1: ( '=' )
-            // InternalBotDuino.g:4290:1: '='
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRegistersAccess().getEqualsSignKeyword_2()); 
-            }
-            match(input,13,FOLLOW_2); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRegistersAccess().getEqualsSignKeyword_2()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Registers__Group__2__Impl"
-
-
-    // $ANTLR start "rule__Registers__Group__3"
-    // InternalBotDuino.g:4303:1: rule__Registers__Group__3 : rule__Registers__Group__3__Impl ;
-    public final void rule__Registers__Group__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalBotDuino.g:4307:1: ( rule__Registers__Group__3__Impl )
-            // InternalBotDuino.g:4308:2: rule__Registers__Group__3__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Registers__Group__3__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Registers__Group__3"
-
-
-    // $ANTLR start "rule__Registers__Group__3__Impl"
-    // InternalBotDuino.g:4314:1: rule__Registers__Group__3__Impl : ( ( rule__Registers__ValuesAssignment_3 )* ) ;
-    public final void rule__Registers__Group__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalBotDuino.g:4318:1: ( ( ( rule__Registers__ValuesAssignment_3 )* ) )
-            // InternalBotDuino.g:4319:1: ( ( rule__Registers__ValuesAssignment_3 )* )
-            {
-            // InternalBotDuino.g:4319:1: ( ( rule__Registers__ValuesAssignment_3 )* )
-            // InternalBotDuino.g:4320:1: ( rule__Registers__ValuesAssignment_3 )*
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRegistersAccess().getValuesAssignment_3()); 
-            }
-            // InternalBotDuino.g:4321:1: ( rule__Registers__ValuesAssignment_3 )*
-            loop52:
-            do {
-                int alt52=2;
-                int LA52_0 = input.LA(1);
-
-                if ( (LA52_0==RULE_INT) ) {
-                    alt52=1;
-                }
-
-
-                switch (alt52) {
-            	case 1 :
-            	    // InternalBotDuino.g:4321:2: rule__Registers__ValuesAssignment_3
-            	    {
-            	    pushFollow(FOLLOW_8);
-            	    rule__Registers__ValuesAssignment_3();
-
-            	    state._fsp--;
-            	    if (state.failed) return ;
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop52;
-                }
-            } while (true);
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRegistersAccess().getValuesAssignment_3()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Registers__Group__3__Impl"
-
-
     // $ANTLR start "rule__BTRule__Group__0"
-    // InternalBotDuino.g:4339:1: rule__BTRule__Group__0 : rule__BTRule__Group__0__Impl rule__BTRule__Group__1 ;
+    // InternalBotDuino.g:4212:1: rule__BTRule__Group__0 : rule__BTRule__Group__0__Impl rule__BTRule__Group__1 ;
     public final void rule__BTRule__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4343:1: ( rule__BTRule__Group__0__Impl rule__BTRule__Group__1 )
-            // InternalBotDuino.g:4344:2: rule__BTRule__Group__0__Impl rule__BTRule__Group__1
+            // InternalBotDuino.g:4216:1: ( rule__BTRule__Group__0__Impl rule__BTRule__Group__1 )
+            // InternalBotDuino.g:4217:2: rule__BTRule__Group__0__Impl rule__BTRule__Group__1
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_5);
             rule__BTRule__Group__0__Impl();
 
             state._fsp--;
@@ -14705,23 +14356,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BTRule__Group__0__Impl"
-    // InternalBotDuino.g:4351:1: rule__BTRule__Group__0__Impl : ( ( rule__BTRule__SuperTypeAssignment_0 ) ) ;
+    // InternalBotDuino.g:4224:1: rule__BTRule__Group__0__Impl : ( ( rule__BTRule__SuperTypeAssignment_0 ) ) ;
     public final void rule__BTRule__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4355:1: ( ( ( rule__BTRule__SuperTypeAssignment_0 ) ) )
-            // InternalBotDuino.g:4356:1: ( ( rule__BTRule__SuperTypeAssignment_0 ) )
+            // InternalBotDuino.g:4228:1: ( ( ( rule__BTRule__SuperTypeAssignment_0 ) ) )
+            // InternalBotDuino.g:4229:1: ( ( rule__BTRule__SuperTypeAssignment_0 ) )
             {
-            // InternalBotDuino.g:4356:1: ( ( rule__BTRule__SuperTypeAssignment_0 ) )
-            // InternalBotDuino.g:4357:1: ( rule__BTRule__SuperTypeAssignment_0 )
+            // InternalBotDuino.g:4229:1: ( ( rule__BTRule__SuperTypeAssignment_0 ) )
+            // InternalBotDuino.g:4230:1: ( rule__BTRule__SuperTypeAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBTRuleAccess().getSuperTypeAssignment_0()); 
             }
-            // InternalBotDuino.g:4358:1: ( rule__BTRule__SuperTypeAssignment_0 )
-            // InternalBotDuino.g:4358:2: rule__BTRule__SuperTypeAssignment_0
+            // InternalBotDuino.g:4231:1: ( rule__BTRule__SuperTypeAssignment_0 )
+            // InternalBotDuino.g:4231:2: rule__BTRule__SuperTypeAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__BTRule__SuperTypeAssignment_0();
@@ -14756,16 +14407,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BTRule__Group__1"
-    // InternalBotDuino.g:4368:1: rule__BTRule__Group__1 : rule__BTRule__Group__1__Impl rule__BTRule__Group__2 ;
+    // InternalBotDuino.g:4241:1: rule__BTRule__Group__1 : rule__BTRule__Group__1__Impl rule__BTRule__Group__2 ;
     public final void rule__BTRule__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4372:1: ( rule__BTRule__Group__1__Impl rule__BTRule__Group__2 )
-            // InternalBotDuino.g:4373:2: rule__BTRule__Group__1__Impl rule__BTRule__Group__2
+            // InternalBotDuino.g:4245:1: ( rule__BTRule__Group__1__Impl rule__BTRule__Group__2 )
+            // InternalBotDuino.g:4246:2: rule__BTRule__Group__1__Impl rule__BTRule__Group__2
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__BTRule__Group__1__Impl();
 
             state._fsp--;
@@ -14794,22 +14445,22 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BTRule__Group__1__Impl"
-    // InternalBotDuino.g:4380:1: rule__BTRule__Group__1__Impl : ( 'when' ) ;
+    // InternalBotDuino.g:4253:1: rule__BTRule__Group__1__Impl : ( 'when' ) ;
     public final void rule__BTRule__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4384:1: ( ( 'when' ) )
-            // InternalBotDuino.g:4385:1: ( 'when' )
+            // InternalBotDuino.g:4257:1: ( ( 'when' ) )
+            // InternalBotDuino.g:4258:1: ( 'when' )
             {
-            // InternalBotDuino.g:4385:1: ( 'when' )
-            // InternalBotDuino.g:4386:1: 'when'
+            // InternalBotDuino.g:4258:1: ( 'when' )
+            // InternalBotDuino.g:4259:1: 'when'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBTRuleAccess().getWhenKeyword_1()); 
             }
-            match(input,52,FOLLOW_2); if (state.failed) return ;
+            match(input,51,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBTRuleAccess().getWhenKeyword_1()); 
             }
@@ -14835,16 +14486,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BTRule__Group__2"
-    // InternalBotDuino.g:4399:1: rule__BTRule__Group__2 : rule__BTRule__Group__2__Impl rule__BTRule__Group__3 ;
+    // InternalBotDuino.g:4272:1: rule__BTRule__Group__2 : rule__BTRule__Group__2__Impl rule__BTRule__Group__3 ;
     public final void rule__BTRule__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4403:1: ( rule__BTRule__Group__2__Impl rule__BTRule__Group__3 )
-            // InternalBotDuino.g:4404:2: rule__BTRule__Group__2__Impl rule__BTRule__Group__3
+            // InternalBotDuino.g:4276:1: ( rule__BTRule__Group__2__Impl rule__BTRule__Group__3 )
+            // InternalBotDuino.g:4277:2: rule__BTRule__Group__2__Impl rule__BTRule__Group__3
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_7);
             rule__BTRule__Group__2__Impl();
 
             state._fsp--;
@@ -14873,23 +14524,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BTRule__Group__2__Impl"
-    // InternalBotDuino.g:4411:1: rule__BTRule__Group__2__Impl : ( ( rule__BTRule__NameAssignment_2 ) ) ;
+    // InternalBotDuino.g:4284:1: rule__BTRule__Group__2__Impl : ( ( rule__BTRule__NameAssignment_2 ) ) ;
     public final void rule__BTRule__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4415:1: ( ( ( rule__BTRule__NameAssignment_2 ) ) )
-            // InternalBotDuino.g:4416:1: ( ( rule__BTRule__NameAssignment_2 ) )
+            // InternalBotDuino.g:4288:1: ( ( ( rule__BTRule__NameAssignment_2 ) ) )
+            // InternalBotDuino.g:4289:1: ( ( rule__BTRule__NameAssignment_2 ) )
             {
-            // InternalBotDuino.g:4416:1: ( ( rule__BTRule__NameAssignment_2 ) )
-            // InternalBotDuino.g:4417:1: ( rule__BTRule__NameAssignment_2 )
+            // InternalBotDuino.g:4289:1: ( ( rule__BTRule__NameAssignment_2 ) )
+            // InternalBotDuino.g:4290:1: ( rule__BTRule__NameAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBTRuleAccess().getNameAssignment_2()); 
             }
-            // InternalBotDuino.g:4418:1: ( rule__BTRule__NameAssignment_2 )
-            // InternalBotDuino.g:4418:2: rule__BTRule__NameAssignment_2
+            // InternalBotDuino.g:4291:1: ( rule__BTRule__NameAssignment_2 )
+            // InternalBotDuino.g:4291:2: rule__BTRule__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__BTRule__NameAssignment_2();
@@ -14924,16 +14575,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BTRule__Group__3"
-    // InternalBotDuino.g:4428:1: rule__BTRule__Group__3 : rule__BTRule__Group__3__Impl rule__BTRule__Group__4 ;
+    // InternalBotDuino.g:4301:1: rule__BTRule__Group__3 : rule__BTRule__Group__3__Impl rule__BTRule__Group__4 ;
     public final void rule__BTRule__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4432:1: ( rule__BTRule__Group__3__Impl rule__BTRule__Group__4 )
-            // InternalBotDuino.g:4433:2: rule__BTRule__Group__3__Impl rule__BTRule__Group__4
+            // InternalBotDuino.g:4305:1: ( rule__BTRule__Group__3__Impl rule__BTRule__Group__4 )
+            // InternalBotDuino.g:4306:2: rule__BTRule__Group__3__Impl rule__BTRule__Group__4
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_8);
             rule__BTRule__Group__3__Impl();
 
             state._fsp--;
@@ -14962,22 +14613,22 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BTRule__Group__3__Impl"
-    // InternalBotDuino.g:4440:1: rule__BTRule__Group__3__Impl : ( 'then' ) ;
+    // InternalBotDuino.g:4313:1: rule__BTRule__Group__3__Impl : ( 'then' ) ;
     public final void rule__BTRule__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4444:1: ( ( 'then' ) )
-            // InternalBotDuino.g:4445:1: ( 'then' )
+            // InternalBotDuino.g:4317:1: ( ( 'then' ) )
+            // InternalBotDuino.g:4318:1: ( 'then' )
             {
-            // InternalBotDuino.g:4445:1: ( 'then' )
-            // InternalBotDuino.g:4446:1: 'then'
+            // InternalBotDuino.g:4318:1: ( 'then' )
+            // InternalBotDuino.g:4319:1: 'then'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBTRuleAccess().getThenKeyword_3()); 
             }
-            match(input,53,FOLLOW_2); if (state.failed) return ;
+            match(input,52,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBTRuleAccess().getThenKeyword_3()); 
             }
@@ -15003,14 +14654,14 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BTRule__Group__4"
-    // InternalBotDuino.g:4459:1: rule__BTRule__Group__4 : rule__BTRule__Group__4__Impl ;
+    // InternalBotDuino.g:4332:1: rule__BTRule__Group__4 : rule__BTRule__Group__4__Impl ;
     public final void rule__BTRule__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4463:1: ( rule__BTRule__Group__4__Impl )
-            // InternalBotDuino.g:4464:2: rule__BTRule__Group__4__Impl
+            // InternalBotDuino.g:4336:1: ( rule__BTRule__Group__4__Impl )
+            // InternalBotDuino.g:4337:2: rule__BTRule__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BTRule__Group__4__Impl();
@@ -15036,23 +14687,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BTRule__Group__4__Impl"
-    // InternalBotDuino.g:4470:1: rule__BTRule__Group__4__Impl : ( ( rule__BTRule__ThenPartAssignment_4 ) ) ;
+    // InternalBotDuino.g:4343:1: rule__BTRule__Group__4__Impl : ( ( rule__BTRule__ThenPartAssignment_4 ) ) ;
     public final void rule__BTRule__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4474:1: ( ( ( rule__BTRule__ThenPartAssignment_4 ) ) )
-            // InternalBotDuino.g:4475:1: ( ( rule__BTRule__ThenPartAssignment_4 ) )
+            // InternalBotDuino.g:4347:1: ( ( ( rule__BTRule__ThenPartAssignment_4 ) ) )
+            // InternalBotDuino.g:4348:1: ( ( rule__BTRule__ThenPartAssignment_4 ) )
             {
-            // InternalBotDuino.g:4475:1: ( ( rule__BTRule__ThenPartAssignment_4 ) )
-            // InternalBotDuino.g:4476:1: ( rule__BTRule__ThenPartAssignment_4 )
+            // InternalBotDuino.g:4348:1: ( ( rule__BTRule__ThenPartAssignment_4 ) )
+            // InternalBotDuino.g:4349:1: ( rule__BTRule__ThenPartAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBTRuleAccess().getThenPartAssignment_4()); 
             }
-            // InternalBotDuino.g:4477:1: ( rule__BTRule__ThenPartAssignment_4 )
-            // InternalBotDuino.g:4477:2: rule__BTRule__ThenPartAssignment_4
+            // InternalBotDuino.g:4350:1: ( rule__BTRule__ThenPartAssignment_4 )
+            // InternalBotDuino.g:4350:2: rule__BTRule__ThenPartAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__BTRule__ThenPartAssignment_4();
@@ -15087,16 +14738,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__Group__0"
-    // InternalBotDuino.g:4497:1: rule__SensorRule__Group__0 : rule__SensorRule__Group__0__Impl rule__SensorRule__Group__1 ;
+    // InternalBotDuino.g:4370:1: rule__SensorRule__Group__0 : rule__SensorRule__Group__0__Impl rule__SensorRule__Group__1 ;
     public final void rule__SensorRule__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4501:1: ( rule__SensorRule__Group__0__Impl rule__SensorRule__Group__1 )
-            // InternalBotDuino.g:4502:2: rule__SensorRule__Group__0__Impl rule__SensorRule__Group__1
+            // InternalBotDuino.g:4374:1: ( rule__SensorRule__Group__0__Impl rule__SensorRule__Group__1 )
+            // InternalBotDuino.g:4375:2: rule__SensorRule__Group__0__Impl rule__SensorRule__Group__1
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_5);
             rule__SensorRule__Group__0__Impl();
 
             state._fsp--;
@@ -15125,23 +14776,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__Group__0__Impl"
-    // InternalBotDuino.g:4509:1: rule__SensorRule__Group__0__Impl : ( ( rule__SensorRule__SuperTypeAssignment_0 ) ) ;
+    // InternalBotDuino.g:4382:1: rule__SensorRule__Group__0__Impl : ( ( rule__SensorRule__SuperTypeAssignment_0 ) ) ;
     public final void rule__SensorRule__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4513:1: ( ( ( rule__SensorRule__SuperTypeAssignment_0 ) ) )
-            // InternalBotDuino.g:4514:1: ( ( rule__SensorRule__SuperTypeAssignment_0 ) )
+            // InternalBotDuino.g:4386:1: ( ( ( rule__SensorRule__SuperTypeAssignment_0 ) ) )
+            // InternalBotDuino.g:4387:1: ( ( rule__SensorRule__SuperTypeAssignment_0 ) )
             {
-            // InternalBotDuino.g:4514:1: ( ( rule__SensorRule__SuperTypeAssignment_0 ) )
-            // InternalBotDuino.g:4515:1: ( rule__SensorRule__SuperTypeAssignment_0 )
+            // InternalBotDuino.g:4387:1: ( ( rule__SensorRule__SuperTypeAssignment_0 ) )
+            // InternalBotDuino.g:4388:1: ( rule__SensorRule__SuperTypeAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleAccess().getSuperTypeAssignment_0()); 
             }
-            // InternalBotDuino.g:4516:1: ( rule__SensorRule__SuperTypeAssignment_0 )
-            // InternalBotDuino.g:4516:2: rule__SensorRule__SuperTypeAssignment_0
+            // InternalBotDuino.g:4389:1: ( rule__SensorRule__SuperTypeAssignment_0 )
+            // InternalBotDuino.g:4389:2: rule__SensorRule__SuperTypeAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__SensorRule__SuperTypeAssignment_0();
@@ -15176,16 +14827,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__Group__1"
-    // InternalBotDuino.g:4526:1: rule__SensorRule__Group__1 : rule__SensorRule__Group__1__Impl rule__SensorRule__Group__2 ;
+    // InternalBotDuino.g:4399:1: rule__SensorRule__Group__1 : rule__SensorRule__Group__1__Impl rule__SensorRule__Group__2 ;
     public final void rule__SensorRule__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4530:1: ( rule__SensorRule__Group__1__Impl rule__SensorRule__Group__2 )
-            // InternalBotDuino.g:4531:2: rule__SensorRule__Group__1__Impl rule__SensorRule__Group__2
+            // InternalBotDuino.g:4403:1: ( rule__SensorRule__Group__1__Impl rule__SensorRule__Group__2 )
+            // InternalBotDuino.g:4404:2: rule__SensorRule__Group__1__Impl rule__SensorRule__Group__2
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_9);
             rule__SensorRule__Group__1__Impl();
 
             state._fsp--;
@@ -15214,22 +14865,22 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__Group__1__Impl"
-    // InternalBotDuino.g:4538:1: rule__SensorRule__Group__1__Impl : ( 'when' ) ;
+    // InternalBotDuino.g:4411:1: rule__SensorRule__Group__1__Impl : ( 'when' ) ;
     public final void rule__SensorRule__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4542:1: ( ( 'when' ) )
-            // InternalBotDuino.g:4543:1: ( 'when' )
+            // InternalBotDuino.g:4415:1: ( ( 'when' ) )
+            // InternalBotDuino.g:4416:1: ( 'when' )
             {
-            // InternalBotDuino.g:4543:1: ( 'when' )
-            // InternalBotDuino.g:4544:1: 'when'
+            // InternalBotDuino.g:4416:1: ( 'when' )
+            // InternalBotDuino.g:4417:1: 'when'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleAccess().getWhenKeyword_1()); 
             }
-            match(input,52,FOLLOW_2); if (state.failed) return ;
+            match(input,51,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSensorRuleAccess().getWhenKeyword_1()); 
             }
@@ -15255,16 +14906,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__Group__2"
-    // InternalBotDuino.g:4557:1: rule__SensorRule__Group__2 : rule__SensorRule__Group__2__Impl rule__SensorRule__Group__3 ;
+    // InternalBotDuino.g:4430:1: rule__SensorRule__Group__2 : rule__SensorRule__Group__2__Impl rule__SensorRule__Group__3 ;
     public final void rule__SensorRule__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4561:1: ( rule__SensorRule__Group__2__Impl rule__SensorRule__Group__3 )
-            // InternalBotDuino.g:4562:2: rule__SensorRule__Group__2__Impl rule__SensorRule__Group__3
+            // InternalBotDuino.g:4434:1: ( rule__SensorRule__Group__2__Impl rule__SensorRule__Group__3 )
+            // InternalBotDuino.g:4435:2: rule__SensorRule__Group__2__Impl rule__SensorRule__Group__3
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_7);
             rule__SensorRule__Group__2__Impl();
 
             state._fsp--;
@@ -15293,23 +14944,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__Group__2__Impl"
-    // InternalBotDuino.g:4569:1: rule__SensorRule__Group__2__Impl : ( ( rule__SensorRule__Alternatives_2 ) ) ;
+    // InternalBotDuino.g:4442:1: rule__SensorRule__Group__2__Impl : ( ( rule__SensorRule__Alternatives_2 ) ) ;
     public final void rule__SensorRule__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4573:1: ( ( ( rule__SensorRule__Alternatives_2 ) ) )
-            // InternalBotDuino.g:4574:1: ( ( rule__SensorRule__Alternatives_2 ) )
+            // InternalBotDuino.g:4446:1: ( ( ( rule__SensorRule__Alternatives_2 ) ) )
+            // InternalBotDuino.g:4447:1: ( ( rule__SensorRule__Alternatives_2 ) )
             {
-            // InternalBotDuino.g:4574:1: ( ( rule__SensorRule__Alternatives_2 ) )
-            // InternalBotDuino.g:4575:1: ( rule__SensorRule__Alternatives_2 )
+            // InternalBotDuino.g:4447:1: ( ( rule__SensorRule__Alternatives_2 ) )
+            // InternalBotDuino.g:4448:1: ( rule__SensorRule__Alternatives_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleAccess().getAlternatives_2()); 
             }
-            // InternalBotDuino.g:4576:1: ( rule__SensorRule__Alternatives_2 )
-            // InternalBotDuino.g:4576:2: rule__SensorRule__Alternatives_2
+            // InternalBotDuino.g:4449:1: ( rule__SensorRule__Alternatives_2 )
+            // InternalBotDuino.g:4449:2: rule__SensorRule__Alternatives_2
             {
             pushFollow(FOLLOW_2);
             rule__SensorRule__Alternatives_2();
@@ -15344,16 +14995,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__Group__3"
-    // InternalBotDuino.g:4586:1: rule__SensorRule__Group__3 : rule__SensorRule__Group__3__Impl rule__SensorRule__Group__4 ;
+    // InternalBotDuino.g:4459:1: rule__SensorRule__Group__3 : rule__SensorRule__Group__3__Impl rule__SensorRule__Group__4 ;
     public final void rule__SensorRule__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4590:1: ( rule__SensorRule__Group__3__Impl rule__SensorRule__Group__4 )
-            // InternalBotDuino.g:4591:2: rule__SensorRule__Group__3__Impl rule__SensorRule__Group__4
+            // InternalBotDuino.g:4463:1: ( rule__SensorRule__Group__3__Impl rule__SensorRule__Group__4 )
+            // InternalBotDuino.g:4464:2: rule__SensorRule__Group__3__Impl rule__SensorRule__Group__4
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_8);
             rule__SensorRule__Group__3__Impl();
 
             state._fsp--;
@@ -15382,22 +15033,22 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__Group__3__Impl"
-    // InternalBotDuino.g:4598:1: rule__SensorRule__Group__3__Impl : ( 'then' ) ;
+    // InternalBotDuino.g:4471:1: rule__SensorRule__Group__3__Impl : ( 'then' ) ;
     public final void rule__SensorRule__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4602:1: ( ( 'then' ) )
-            // InternalBotDuino.g:4603:1: ( 'then' )
+            // InternalBotDuino.g:4475:1: ( ( 'then' ) )
+            // InternalBotDuino.g:4476:1: ( 'then' )
             {
-            // InternalBotDuino.g:4603:1: ( 'then' )
-            // InternalBotDuino.g:4604:1: 'then'
+            // InternalBotDuino.g:4476:1: ( 'then' )
+            // InternalBotDuino.g:4477:1: 'then'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleAccess().getThenKeyword_3()); 
             }
-            match(input,53,FOLLOW_2); if (state.failed) return ;
+            match(input,52,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSensorRuleAccess().getThenKeyword_3()); 
             }
@@ -15423,14 +15074,14 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__Group__4"
-    // InternalBotDuino.g:4617:1: rule__SensorRule__Group__4 : rule__SensorRule__Group__4__Impl ;
+    // InternalBotDuino.g:4490:1: rule__SensorRule__Group__4 : rule__SensorRule__Group__4__Impl ;
     public final void rule__SensorRule__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4621:1: ( rule__SensorRule__Group__4__Impl )
-            // InternalBotDuino.g:4622:2: rule__SensorRule__Group__4__Impl
+            // InternalBotDuino.g:4494:1: ( rule__SensorRule__Group__4__Impl )
+            // InternalBotDuino.g:4495:2: rule__SensorRule__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__SensorRule__Group__4__Impl();
@@ -15456,23 +15107,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__Group__4__Impl"
-    // InternalBotDuino.g:4628:1: rule__SensorRule__Group__4__Impl : ( ( rule__SensorRule__ThenPartAssignment_4 ) ) ;
+    // InternalBotDuino.g:4501:1: rule__SensorRule__Group__4__Impl : ( ( rule__SensorRule__ThenPartAssignment_4 ) ) ;
     public final void rule__SensorRule__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4632:1: ( ( ( rule__SensorRule__ThenPartAssignment_4 ) ) )
-            // InternalBotDuino.g:4633:1: ( ( rule__SensorRule__ThenPartAssignment_4 ) )
+            // InternalBotDuino.g:4505:1: ( ( ( rule__SensorRule__ThenPartAssignment_4 ) ) )
+            // InternalBotDuino.g:4506:1: ( ( rule__SensorRule__ThenPartAssignment_4 ) )
             {
-            // InternalBotDuino.g:4633:1: ( ( rule__SensorRule__ThenPartAssignment_4 ) )
-            // InternalBotDuino.g:4634:1: ( rule__SensorRule__ThenPartAssignment_4 )
+            // InternalBotDuino.g:4506:1: ( ( rule__SensorRule__ThenPartAssignment_4 ) )
+            // InternalBotDuino.g:4507:1: ( rule__SensorRule__ThenPartAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleAccess().getThenPartAssignment_4()); 
             }
-            // InternalBotDuino.g:4635:1: ( rule__SensorRule__ThenPartAssignment_4 )
-            // InternalBotDuino.g:4635:2: rule__SensorRule__ThenPartAssignment_4
+            // InternalBotDuino.g:4508:1: ( rule__SensorRule__ThenPartAssignment_4 )
+            // InternalBotDuino.g:4508:2: rule__SensorRule__ThenPartAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__SensorRule__ThenPartAssignment_4();
@@ -15507,16 +15158,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__Group__0"
-    // InternalBotDuino.g:4655:1: rule__CTRLRule__Group__0 : rule__CTRLRule__Group__0__Impl rule__CTRLRule__Group__1 ;
+    // InternalBotDuino.g:4528:1: rule__CTRLRule__Group__0 : rule__CTRLRule__Group__0__Impl rule__CTRLRule__Group__1 ;
     public final void rule__CTRLRule__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4659:1: ( rule__CTRLRule__Group__0__Impl rule__CTRLRule__Group__1 )
-            // InternalBotDuino.g:4660:2: rule__CTRLRule__Group__0__Impl rule__CTRLRule__Group__1
+            // InternalBotDuino.g:4532:1: ( rule__CTRLRule__Group__0__Impl rule__CTRLRule__Group__1 )
+            // InternalBotDuino.g:4533:2: rule__CTRLRule__Group__0__Impl rule__CTRLRule__Group__1
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_5);
             rule__CTRLRule__Group__0__Impl();
 
             state._fsp--;
@@ -15545,23 +15196,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__Group__0__Impl"
-    // InternalBotDuino.g:4667:1: rule__CTRLRule__Group__0__Impl : ( ( rule__CTRLRule__SuperTypeAssignment_0 ) ) ;
+    // InternalBotDuino.g:4540:1: rule__CTRLRule__Group__0__Impl : ( ( rule__CTRLRule__SuperTypeAssignment_0 ) ) ;
     public final void rule__CTRLRule__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4671:1: ( ( ( rule__CTRLRule__SuperTypeAssignment_0 ) ) )
-            // InternalBotDuino.g:4672:1: ( ( rule__CTRLRule__SuperTypeAssignment_0 ) )
+            // InternalBotDuino.g:4544:1: ( ( ( rule__CTRLRule__SuperTypeAssignment_0 ) ) )
+            // InternalBotDuino.g:4545:1: ( ( rule__CTRLRule__SuperTypeAssignment_0 ) )
             {
-            // InternalBotDuino.g:4672:1: ( ( rule__CTRLRule__SuperTypeAssignment_0 ) )
-            // InternalBotDuino.g:4673:1: ( rule__CTRLRule__SuperTypeAssignment_0 )
+            // InternalBotDuino.g:4545:1: ( ( rule__CTRLRule__SuperTypeAssignment_0 ) )
+            // InternalBotDuino.g:4546:1: ( rule__CTRLRule__SuperTypeAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getSuperTypeAssignment_0()); 
             }
-            // InternalBotDuino.g:4674:1: ( rule__CTRLRule__SuperTypeAssignment_0 )
-            // InternalBotDuino.g:4674:2: rule__CTRLRule__SuperTypeAssignment_0
+            // InternalBotDuino.g:4547:1: ( rule__CTRLRule__SuperTypeAssignment_0 )
+            // InternalBotDuino.g:4547:2: rule__CTRLRule__SuperTypeAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__CTRLRule__SuperTypeAssignment_0();
@@ -15596,16 +15247,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__Group__1"
-    // InternalBotDuino.g:4684:1: rule__CTRLRule__Group__1 : rule__CTRLRule__Group__1__Impl rule__CTRLRule__Group__2 ;
+    // InternalBotDuino.g:4557:1: rule__CTRLRule__Group__1 : rule__CTRLRule__Group__1__Impl rule__CTRLRule__Group__2 ;
     public final void rule__CTRLRule__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4688:1: ( rule__CTRLRule__Group__1__Impl rule__CTRLRule__Group__2 )
-            // InternalBotDuino.g:4689:2: rule__CTRLRule__Group__1__Impl rule__CTRLRule__Group__2
+            // InternalBotDuino.g:4561:1: ( rule__CTRLRule__Group__1__Impl rule__CTRLRule__Group__2 )
+            // InternalBotDuino.g:4562:2: rule__CTRLRule__Group__1__Impl rule__CTRLRule__Group__2
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_10);
             rule__CTRLRule__Group__1__Impl();
 
             state._fsp--;
@@ -15634,22 +15285,22 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__Group__1__Impl"
-    // InternalBotDuino.g:4696:1: rule__CTRLRule__Group__1__Impl : ( 'when' ) ;
+    // InternalBotDuino.g:4569:1: rule__CTRLRule__Group__1__Impl : ( 'when' ) ;
     public final void rule__CTRLRule__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4700:1: ( ( 'when' ) )
-            // InternalBotDuino.g:4701:1: ( 'when' )
+            // InternalBotDuino.g:4573:1: ( ( 'when' ) )
+            // InternalBotDuino.g:4574:1: ( 'when' )
             {
-            // InternalBotDuino.g:4701:1: ( 'when' )
-            // InternalBotDuino.g:4702:1: 'when'
+            // InternalBotDuino.g:4574:1: ( 'when' )
+            // InternalBotDuino.g:4575:1: 'when'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getWhenKeyword_1()); 
             }
-            match(input,52,FOLLOW_2); if (state.failed) return ;
+            match(input,51,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCTRLRuleAccess().getWhenKeyword_1()); 
             }
@@ -15675,16 +15326,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__Group__2"
-    // InternalBotDuino.g:4715:1: rule__CTRLRule__Group__2 : rule__CTRLRule__Group__2__Impl rule__CTRLRule__Group__3 ;
+    // InternalBotDuino.g:4588:1: rule__CTRLRule__Group__2 : rule__CTRLRule__Group__2__Impl rule__CTRLRule__Group__3 ;
     public final void rule__CTRLRule__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4719:1: ( rule__CTRLRule__Group__2__Impl rule__CTRLRule__Group__3 )
-            // InternalBotDuino.g:4720:2: rule__CTRLRule__Group__2__Impl rule__CTRLRule__Group__3
+            // InternalBotDuino.g:4592:1: ( rule__CTRLRule__Group__2__Impl rule__CTRLRule__Group__3 )
+            // InternalBotDuino.g:4593:2: rule__CTRLRule__Group__2__Impl rule__CTRLRule__Group__3
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_7);
             rule__CTRLRule__Group__2__Impl();
 
             state._fsp--;
@@ -15713,23 +15364,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__Group__2__Impl"
-    // InternalBotDuino.g:4727:1: rule__CTRLRule__Group__2__Impl : ( ( rule__CTRLRule__Alternatives_2 ) ) ;
+    // InternalBotDuino.g:4600:1: rule__CTRLRule__Group__2__Impl : ( ( rule__CTRLRule__Alternatives_2 ) ) ;
     public final void rule__CTRLRule__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4731:1: ( ( ( rule__CTRLRule__Alternatives_2 ) ) )
-            // InternalBotDuino.g:4732:1: ( ( rule__CTRLRule__Alternatives_2 ) )
+            // InternalBotDuino.g:4604:1: ( ( ( rule__CTRLRule__Alternatives_2 ) ) )
+            // InternalBotDuino.g:4605:1: ( ( rule__CTRLRule__Alternatives_2 ) )
             {
-            // InternalBotDuino.g:4732:1: ( ( rule__CTRLRule__Alternatives_2 ) )
-            // InternalBotDuino.g:4733:1: ( rule__CTRLRule__Alternatives_2 )
+            // InternalBotDuino.g:4605:1: ( ( rule__CTRLRule__Alternatives_2 ) )
+            // InternalBotDuino.g:4606:1: ( rule__CTRLRule__Alternatives_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getAlternatives_2()); 
             }
-            // InternalBotDuino.g:4734:1: ( rule__CTRLRule__Alternatives_2 )
-            // InternalBotDuino.g:4734:2: rule__CTRLRule__Alternatives_2
+            // InternalBotDuino.g:4607:1: ( rule__CTRLRule__Alternatives_2 )
+            // InternalBotDuino.g:4607:2: rule__CTRLRule__Alternatives_2
             {
             pushFollow(FOLLOW_2);
             rule__CTRLRule__Alternatives_2();
@@ -15764,16 +15415,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__Group__3"
-    // InternalBotDuino.g:4744:1: rule__CTRLRule__Group__3 : rule__CTRLRule__Group__3__Impl rule__CTRLRule__Group__4 ;
+    // InternalBotDuino.g:4617:1: rule__CTRLRule__Group__3 : rule__CTRLRule__Group__3__Impl rule__CTRLRule__Group__4 ;
     public final void rule__CTRLRule__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4748:1: ( rule__CTRLRule__Group__3__Impl rule__CTRLRule__Group__4 )
-            // InternalBotDuino.g:4749:2: rule__CTRLRule__Group__3__Impl rule__CTRLRule__Group__4
+            // InternalBotDuino.g:4621:1: ( rule__CTRLRule__Group__3__Impl rule__CTRLRule__Group__4 )
+            // InternalBotDuino.g:4622:2: rule__CTRLRule__Group__3__Impl rule__CTRLRule__Group__4
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_8);
             rule__CTRLRule__Group__3__Impl();
 
             state._fsp--;
@@ -15802,22 +15453,22 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__Group__3__Impl"
-    // InternalBotDuino.g:4756:1: rule__CTRLRule__Group__3__Impl : ( 'then' ) ;
+    // InternalBotDuino.g:4629:1: rule__CTRLRule__Group__3__Impl : ( 'then' ) ;
     public final void rule__CTRLRule__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4760:1: ( ( 'then' ) )
-            // InternalBotDuino.g:4761:1: ( 'then' )
+            // InternalBotDuino.g:4633:1: ( ( 'then' ) )
+            // InternalBotDuino.g:4634:1: ( 'then' )
             {
-            // InternalBotDuino.g:4761:1: ( 'then' )
-            // InternalBotDuino.g:4762:1: 'then'
+            // InternalBotDuino.g:4634:1: ( 'then' )
+            // InternalBotDuino.g:4635:1: 'then'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getThenKeyword_3()); 
             }
-            match(input,53,FOLLOW_2); if (state.failed) return ;
+            match(input,52,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCTRLRuleAccess().getThenKeyword_3()); 
             }
@@ -15843,14 +15494,14 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__Group__4"
-    // InternalBotDuino.g:4775:1: rule__CTRLRule__Group__4 : rule__CTRLRule__Group__4__Impl ;
+    // InternalBotDuino.g:4648:1: rule__CTRLRule__Group__4 : rule__CTRLRule__Group__4__Impl ;
     public final void rule__CTRLRule__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4779:1: ( rule__CTRLRule__Group__4__Impl )
-            // InternalBotDuino.g:4780:2: rule__CTRLRule__Group__4__Impl
+            // InternalBotDuino.g:4652:1: ( rule__CTRLRule__Group__4__Impl )
+            // InternalBotDuino.g:4653:2: rule__CTRLRule__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CTRLRule__Group__4__Impl();
@@ -15876,23 +15527,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__Group__4__Impl"
-    // InternalBotDuino.g:4786:1: rule__CTRLRule__Group__4__Impl : ( ( rule__CTRLRule__ThenPartAssignment_4 ) ) ;
+    // InternalBotDuino.g:4659:1: rule__CTRLRule__Group__4__Impl : ( ( rule__CTRLRule__ThenPartAssignment_4 ) ) ;
     public final void rule__CTRLRule__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4790:1: ( ( ( rule__CTRLRule__ThenPartAssignment_4 ) ) )
-            // InternalBotDuino.g:4791:1: ( ( rule__CTRLRule__ThenPartAssignment_4 ) )
+            // InternalBotDuino.g:4663:1: ( ( ( rule__CTRLRule__ThenPartAssignment_4 ) ) )
+            // InternalBotDuino.g:4664:1: ( ( rule__CTRLRule__ThenPartAssignment_4 ) )
             {
-            // InternalBotDuino.g:4791:1: ( ( rule__CTRLRule__ThenPartAssignment_4 ) )
-            // InternalBotDuino.g:4792:1: ( rule__CTRLRule__ThenPartAssignment_4 )
+            // InternalBotDuino.g:4664:1: ( ( rule__CTRLRule__ThenPartAssignment_4 ) )
+            // InternalBotDuino.g:4665:1: ( rule__CTRLRule__ThenPartAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getThenPartAssignment_4()); 
             }
-            // InternalBotDuino.g:4793:1: ( rule__CTRLRule__ThenPartAssignment_4 )
-            // InternalBotDuino.g:4793:2: rule__CTRLRule__ThenPartAssignment_4
+            // InternalBotDuino.g:4666:1: ( rule__CTRLRule__ThenPartAssignment_4 )
+            // InternalBotDuino.g:4666:2: rule__CTRLRule__ThenPartAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__CTRLRule__ThenPartAssignment_4();
@@ -15927,16 +15578,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__Group__0"
-    // InternalBotDuino.g:4813:1: rule__ButtonRule__Group__0 : rule__ButtonRule__Group__0__Impl rule__ButtonRule__Group__1 ;
+    // InternalBotDuino.g:4686:1: rule__ButtonRule__Group__0 : rule__ButtonRule__Group__0__Impl rule__ButtonRule__Group__1 ;
     public final void rule__ButtonRule__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4817:1: ( rule__ButtonRule__Group__0__Impl rule__ButtonRule__Group__1 )
-            // InternalBotDuino.g:4818:2: rule__ButtonRule__Group__0__Impl rule__ButtonRule__Group__1
+            // InternalBotDuino.g:4690:1: ( rule__ButtonRule__Group__0__Impl rule__ButtonRule__Group__1 )
+            // InternalBotDuino.g:4691:2: rule__ButtonRule__Group__0__Impl rule__ButtonRule__Group__1
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_5);
             rule__ButtonRule__Group__0__Impl();
 
             state._fsp--;
@@ -15965,23 +15616,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__Group__0__Impl"
-    // InternalBotDuino.g:4825:1: rule__ButtonRule__Group__0__Impl : ( ( rule__ButtonRule__SuperTypeAssignment_0 ) ) ;
+    // InternalBotDuino.g:4698:1: rule__ButtonRule__Group__0__Impl : ( ( rule__ButtonRule__SuperTypeAssignment_0 ) ) ;
     public final void rule__ButtonRule__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4829:1: ( ( ( rule__ButtonRule__SuperTypeAssignment_0 ) ) )
-            // InternalBotDuino.g:4830:1: ( ( rule__ButtonRule__SuperTypeAssignment_0 ) )
+            // InternalBotDuino.g:4702:1: ( ( ( rule__ButtonRule__SuperTypeAssignment_0 ) ) )
+            // InternalBotDuino.g:4703:1: ( ( rule__ButtonRule__SuperTypeAssignment_0 ) )
             {
-            // InternalBotDuino.g:4830:1: ( ( rule__ButtonRule__SuperTypeAssignment_0 ) )
-            // InternalBotDuino.g:4831:1: ( rule__ButtonRule__SuperTypeAssignment_0 )
+            // InternalBotDuino.g:4703:1: ( ( rule__ButtonRule__SuperTypeAssignment_0 ) )
+            // InternalBotDuino.g:4704:1: ( rule__ButtonRule__SuperTypeAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleAccess().getSuperTypeAssignment_0()); 
             }
-            // InternalBotDuino.g:4832:1: ( rule__ButtonRule__SuperTypeAssignment_0 )
-            // InternalBotDuino.g:4832:2: rule__ButtonRule__SuperTypeAssignment_0
+            // InternalBotDuino.g:4705:1: ( rule__ButtonRule__SuperTypeAssignment_0 )
+            // InternalBotDuino.g:4705:2: rule__ButtonRule__SuperTypeAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__ButtonRule__SuperTypeAssignment_0();
@@ -16016,16 +15667,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__Group__1"
-    // InternalBotDuino.g:4842:1: rule__ButtonRule__Group__1 : rule__ButtonRule__Group__1__Impl rule__ButtonRule__Group__2 ;
+    // InternalBotDuino.g:4715:1: rule__ButtonRule__Group__1 : rule__ButtonRule__Group__1__Impl rule__ButtonRule__Group__2 ;
     public final void rule__ButtonRule__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4846:1: ( rule__ButtonRule__Group__1__Impl rule__ButtonRule__Group__2 )
-            // InternalBotDuino.g:4847:2: rule__ButtonRule__Group__1__Impl rule__ButtonRule__Group__2
+            // InternalBotDuino.g:4719:1: ( rule__ButtonRule__Group__1__Impl rule__ButtonRule__Group__2 )
+            // InternalBotDuino.g:4720:2: rule__ButtonRule__Group__1__Impl rule__ButtonRule__Group__2
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_11);
             rule__ButtonRule__Group__1__Impl();
 
             state._fsp--;
@@ -16054,22 +15705,22 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__Group__1__Impl"
-    // InternalBotDuino.g:4854:1: rule__ButtonRule__Group__1__Impl : ( 'when' ) ;
+    // InternalBotDuino.g:4727:1: rule__ButtonRule__Group__1__Impl : ( 'when' ) ;
     public final void rule__ButtonRule__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4858:1: ( ( 'when' ) )
-            // InternalBotDuino.g:4859:1: ( 'when' )
+            // InternalBotDuino.g:4731:1: ( ( 'when' ) )
+            // InternalBotDuino.g:4732:1: ( 'when' )
             {
-            // InternalBotDuino.g:4859:1: ( 'when' )
-            // InternalBotDuino.g:4860:1: 'when'
+            // InternalBotDuino.g:4732:1: ( 'when' )
+            // InternalBotDuino.g:4733:1: 'when'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleAccess().getWhenKeyword_1()); 
             }
-            match(input,52,FOLLOW_2); if (state.failed) return ;
+            match(input,51,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getButtonRuleAccess().getWhenKeyword_1()); 
             }
@@ -16095,16 +15746,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__Group__2"
-    // InternalBotDuino.g:4873:1: rule__ButtonRule__Group__2 : rule__ButtonRule__Group__2__Impl rule__ButtonRule__Group__3 ;
+    // InternalBotDuino.g:4746:1: rule__ButtonRule__Group__2 : rule__ButtonRule__Group__2__Impl rule__ButtonRule__Group__3 ;
     public final void rule__ButtonRule__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4877:1: ( rule__ButtonRule__Group__2__Impl rule__ButtonRule__Group__3 )
-            // InternalBotDuino.g:4878:2: rule__ButtonRule__Group__2__Impl rule__ButtonRule__Group__3
+            // InternalBotDuino.g:4750:1: ( rule__ButtonRule__Group__2__Impl rule__ButtonRule__Group__3 )
+            // InternalBotDuino.g:4751:2: rule__ButtonRule__Group__2__Impl rule__ButtonRule__Group__3
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_7);
             rule__ButtonRule__Group__2__Impl();
 
             state._fsp--;
@@ -16133,23 +15784,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__Group__2__Impl"
-    // InternalBotDuino.g:4885:1: rule__ButtonRule__Group__2__Impl : ( ( rule__ButtonRule__Alternatives_2 ) ) ;
+    // InternalBotDuino.g:4758:1: rule__ButtonRule__Group__2__Impl : ( ( rule__ButtonRule__Alternatives_2 ) ) ;
     public final void rule__ButtonRule__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4889:1: ( ( ( rule__ButtonRule__Alternatives_2 ) ) )
-            // InternalBotDuino.g:4890:1: ( ( rule__ButtonRule__Alternatives_2 ) )
+            // InternalBotDuino.g:4762:1: ( ( ( rule__ButtonRule__Alternatives_2 ) ) )
+            // InternalBotDuino.g:4763:1: ( ( rule__ButtonRule__Alternatives_2 ) )
             {
-            // InternalBotDuino.g:4890:1: ( ( rule__ButtonRule__Alternatives_2 ) )
-            // InternalBotDuino.g:4891:1: ( rule__ButtonRule__Alternatives_2 )
+            // InternalBotDuino.g:4763:1: ( ( rule__ButtonRule__Alternatives_2 ) )
+            // InternalBotDuino.g:4764:1: ( rule__ButtonRule__Alternatives_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleAccess().getAlternatives_2()); 
             }
-            // InternalBotDuino.g:4892:1: ( rule__ButtonRule__Alternatives_2 )
-            // InternalBotDuino.g:4892:2: rule__ButtonRule__Alternatives_2
+            // InternalBotDuino.g:4765:1: ( rule__ButtonRule__Alternatives_2 )
+            // InternalBotDuino.g:4765:2: rule__ButtonRule__Alternatives_2
             {
             pushFollow(FOLLOW_2);
             rule__ButtonRule__Alternatives_2();
@@ -16184,16 +15835,16 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__Group__3"
-    // InternalBotDuino.g:4902:1: rule__ButtonRule__Group__3 : rule__ButtonRule__Group__3__Impl rule__ButtonRule__Group__4 ;
+    // InternalBotDuino.g:4775:1: rule__ButtonRule__Group__3 : rule__ButtonRule__Group__3__Impl rule__ButtonRule__Group__4 ;
     public final void rule__ButtonRule__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4906:1: ( rule__ButtonRule__Group__3__Impl rule__ButtonRule__Group__4 )
-            // InternalBotDuino.g:4907:2: rule__ButtonRule__Group__3__Impl rule__ButtonRule__Group__4
+            // InternalBotDuino.g:4779:1: ( rule__ButtonRule__Group__3__Impl rule__ButtonRule__Group__4 )
+            // InternalBotDuino.g:4780:2: rule__ButtonRule__Group__3__Impl rule__ButtonRule__Group__4
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_8);
             rule__ButtonRule__Group__3__Impl();
 
             state._fsp--;
@@ -16222,22 +15873,22 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__Group__3__Impl"
-    // InternalBotDuino.g:4914:1: rule__ButtonRule__Group__3__Impl : ( 'then' ) ;
+    // InternalBotDuino.g:4787:1: rule__ButtonRule__Group__3__Impl : ( 'then' ) ;
     public final void rule__ButtonRule__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4918:1: ( ( 'then' ) )
-            // InternalBotDuino.g:4919:1: ( 'then' )
+            // InternalBotDuino.g:4791:1: ( ( 'then' ) )
+            // InternalBotDuino.g:4792:1: ( 'then' )
             {
-            // InternalBotDuino.g:4919:1: ( 'then' )
-            // InternalBotDuino.g:4920:1: 'then'
+            // InternalBotDuino.g:4792:1: ( 'then' )
+            // InternalBotDuino.g:4793:1: 'then'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleAccess().getThenKeyword_3()); 
             }
-            match(input,53,FOLLOW_2); if (state.failed) return ;
+            match(input,52,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getButtonRuleAccess().getThenKeyword_3()); 
             }
@@ -16263,14 +15914,14 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__Group__4"
-    // InternalBotDuino.g:4933:1: rule__ButtonRule__Group__4 : rule__ButtonRule__Group__4__Impl ;
+    // InternalBotDuino.g:4806:1: rule__ButtonRule__Group__4 : rule__ButtonRule__Group__4__Impl ;
     public final void rule__ButtonRule__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4937:1: ( rule__ButtonRule__Group__4__Impl )
-            // InternalBotDuino.g:4938:2: rule__ButtonRule__Group__4__Impl
+            // InternalBotDuino.g:4810:1: ( rule__ButtonRule__Group__4__Impl )
+            // InternalBotDuino.g:4811:2: rule__ButtonRule__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ButtonRule__Group__4__Impl();
@@ -16296,23 +15947,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__Group__4__Impl"
-    // InternalBotDuino.g:4944:1: rule__ButtonRule__Group__4__Impl : ( ( rule__ButtonRule__ThenPartAssignment_4 ) ) ;
+    // InternalBotDuino.g:4817:1: rule__ButtonRule__Group__4__Impl : ( ( rule__ButtonRule__ThenPartAssignment_4 ) ) ;
     public final void rule__ButtonRule__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:4948:1: ( ( ( rule__ButtonRule__ThenPartAssignment_4 ) ) )
-            // InternalBotDuino.g:4949:1: ( ( rule__ButtonRule__ThenPartAssignment_4 ) )
+            // InternalBotDuino.g:4821:1: ( ( ( rule__ButtonRule__ThenPartAssignment_4 ) ) )
+            // InternalBotDuino.g:4822:1: ( ( rule__ButtonRule__ThenPartAssignment_4 ) )
             {
-            // InternalBotDuino.g:4949:1: ( ( rule__ButtonRule__ThenPartAssignment_4 ) )
-            // InternalBotDuino.g:4950:1: ( rule__ButtonRule__ThenPartAssignment_4 )
+            // InternalBotDuino.g:4822:1: ( ( rule__ButtonRule__ThenPartAssignment_4 ) )
+            // InternalBotDuino.g:4823:1: ( rule__ButtonRule__ThenPartAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleAccess().getThenPartAssignment_4()); 
             }
-            // InternalBotDuino.g:4951:1: ( rule__ButtonRule__ThenPartAssignment_4 )
-            // InternalBotDuino.g:4951:2: rule__ButtonRule__ThenPartAssignment_4
+            // InternalBotDuino.g:4824:1: ( rule__ButtonRule__ThenPartAssignment_4 )
+            // InternalBotDuino.g:4824:2: rule__ButtonRule__ThenPartAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__ButtonRule__ThenPartAssignment_4();
@@ -16346,6 +15997,355 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__ButtonRule__Group__4__Impl"
 
 
+    // $ANTLR start "rule__Variables__Group__0"
+    // InternalBotDuino.g:4844:1: rule__Variables__Group__0 : rule__Variables__Group__0__Impl rule__Variables__Group__1 ;
+    public final void rule__Variables__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalBotDuino.g:4848:1: ( rule__Variables__Group__0__Impl rule__Variables__Group__1 )
+            // InternalBotDuino.g:4849:2: rule__Variables__Group__0__Impl rule__Variables__Group__1
+            {
+            pushFollow(FOLLOW_6);
+            rule__Variables__Group__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_2);
+            rule__Variables__Group__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Variables__Group__0"
+
+
+    // $ANTLR start "rule__Variables__Group__0__Impl"
+    // InternalBotDuino.g:4856:1: rule__Variables__Group__0__Impl : ( 'VAR' ) ;
+    public final void rule__Variables__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalBotDuino.g:4860:1: ( ( 'VAR' ) )
+            // InternalBotDuino.g:4861:1: ( 'VAR' )
+            {
+            // InternalBotDuino.g:4861:1: ( 'VAR' )
+            // InternalBotDuino.g:4862:1: 'VAR'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVariablesAccess().getVARKeyword_0()); 
+            }
+            match(input,53,FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVariablesAccess().getVARKeyword_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Variables__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Variables__Group__1"
+    // InternalBotDuino.g:4875:1: rule__Variables__Group__1 : rule__Variables__Group__1__Impl rule__Variables__Group__2 ;
+    public final void rule__Variables__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalBotDuino.g:4879:1: ( rule__Variables__Group__1__Impl rule__Variables__Group__2 )
+            // InternalBotDuino.g:4880:2: rule__Variables__Group__1__Impl rule__Variables__Group__2
+            {
+            pushFollow(FOLLOW_12);
+            rule__Variables__Group__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_2);
+            rule__Variables__Group__2();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Variables__Group__1"
+
+
+    // $ANTLR start "rule__Variables__Group__1__Impl"
+    // InternalBotDuino.g:4887:1: rule__Variables__Group__1__Impl : ( ( rule__Variables__NameAssignment_1 ) ) ;
+    public final void rule__Variables__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalBotDuino.g:4891:1: ( ( ( rule__Variables__NameAssignment_1 ) ) )
+            // InternalBotDuino.g:4892:1: ( ( rule__Variables__NameAssignment_1 ) )
+            {
+            // InternalBotDuino.g:4892:1: ( ( rule__Variables__NameAssignment_1 ) )
+            // InternalBotDuino.g:4893:1: ( rule__Variables__NameAssignment_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVariablesAccess().getNameAssignment_1()); 
+            }
+            // InternalBotDuino.g:4894:1: ( rule__Variables__NameAssignment_1 )
+            // InternalBotDuino.g:4894:2: rule__Variables__NameAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Variables__NameAssignment_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVariablesAccess().getNameAssignment_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Variables__Group__1__Impl"
+
+
+    // $ANTLR start "rule__Variables__Group__2"
+    // InternalBotDuino.g:4904:1: rule__Variables__Group__2 : rule__Variables__Group__2__Impl rule__Variables__Group__3 ;
+    public final void rule__Variables__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalBotDuino.g:4908:1: ( rule__Variables__Group__2__Impl rule__Variables__Group__3 )
+            // InternalBotDuino.g:4909:2: rule__Variables__Group__2__Impl rule__Variables__Group__3
+            {
+            pushFollow(FOLLOW_13);
+            rule__Variables__Group__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_2);
+            rule__Variables__Group__3();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Variables__Group__2"
+
+
+    // $ANTLR start "rule__Variables__Group__2__Impl"
+    // InternalBotDuino.g:4916:1: rule__Variables__Group__2__Impl : ( '=' ) ;
+    public final void rule__Variables__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalBotDuino.g:4920:1: ( ( '=' ) )
+            // InternalBotDuino.g:4921:1: ( '=' )
+            {
+            // InternalBotDuino.g:4921:1: ( '=' )
+            // InternalBotDuino.g:4922:1: '='
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVariablesAccess().getEqualsSignKeyword_2()); 
+            }
+            match(input,13,FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVariablesAccess().getEqualsSignKeyword_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Variables__Group__2__Impl"
+
+
+    // $ANTLR start "rule__Variables__Group__3"
+    // InternalBotDuino.g:4935:1: rule__Variables__Group__3 : rule__Variables__Group__3__Impl ;
+    public final void rule__Variables__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalBotDuino.g:4939:1: ( rule__Variables__Group__3__Impl )
+            // InternalBotDuino.g:4940:2: rule__Variables__Group__3__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Variables__Group__3__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Variables__Group__3"
+
+
+    // $ANTLR start "rule__Variables__Group__3__Impl"
+    // InternalBotDuino.g:4946:1: rule__Variables__Group__3__Impl : ( ( rule__Variables__ValuesAssignment_3 )* ) ;
+    public final void rule__Variables__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalBotDuino.g:4950:1: ( ( ( rule__Variables__ValuesAssignment_3 )* ) )
+            // InternalBotDuino.g:4951:1: ( ( rule__Variables__ValuesAssignment_3 )* )
+            {
+            // InternalBotDuino.g:4951:1: ( ( rule__Variables__ValuesAssignment_3 )* )
+            // InternalBotDuino.g:4952:1: ( rule__Variables__ValuesAssignment_3 )*
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVariablesAccess().getValuesAssignment_3()); 
+            }
+            // InternalBotDuino.g:4953:1: ( rule__Variables__ValuesAssignment_3 )*
+            loop52:
+            do {
+                int alt52=2;
+                int LA52_0 = input.LA(1);
+
+                if ( (LA52_0==RULE_INT) ) {
+                    alt52=1;
+                }
+
+
+                switch (alt52) {
+            	case 1 :
+            	    // InternalBotDuino.g:4953:2: rule__Variables__ValuesAssignment_3
+            	    {
+            	    pushFollow(FOLLOW_14);
+            	    rule__Variables__ValuesAssignment_3();
+
+            	    state._fsp--;
+            	    if (state.failed) return ;
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop52;
+                }
+            } while (true);
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVariablesAccess().getValuesAssignment_3()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Variables__Group__3__Impl"
+
+
     // $ANTLR start "rule__LED__Group__0"
     // InternalBotDuino.g:4971:1: rule__LED__Group__0 : rule__LED__Group__0__Impl rule__LED__Group__1 ;
     public final void rule__LED__Group__0() throws RecognitionException {
@@ -16356,7 +16356,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:4975:1: ( rule__LED__Group__0__Impl rule__LED__Group__1 )
             // InternalBotDuino.g:4976:2: rule__LED__Group__0__Impl rule__LED__Group__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__LED__Group__0__Impl();
 
             state._fsp--;
@@ -16762,7 +16762,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:5110:2: rule__LED__ValuesAssignment_4
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__LED__ValuesAssignment_4();
 
             	    state._fsp--;
@@ -16884,7 +16884,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:5166:1: ( rule__LED__Group_2__0__Impl rule__LED__Group_2__1 )
             // InternalBotDuino.g:5167:2: rule__LED__Group_2__0__Impl rule__LED__Group_2__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__LED__Group_2__0__Impl();
 
             state._fsp--;
@@ -17047,7 +17047,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:5229:1: ( rule__Button__Group__0__Impl rule__Button__Group__1 )
             // InternalBotDuino.g:5230:2: rule__Button__Group__0__Impl rule__Button__Group__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__Button__Group__0__Impl();
 
             state._fsp--;
@@ -17453,7 +17453,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:5364:2: rule__Button__ValuesAssignment_4
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__Button__ValuesAssignment_4();
 
             	    state._fsp--;
@@ -17575,7 +17575,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:5420:1: ( rule__Button__Group_2__0__Impl rule__Button__Group_2__1 )
             // InternalBotDuino.g:5421:2: rule__Button__Group_2__0__Impl rule__Button__Group_2__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__Button__Group_2__0__Impl();
 
             state._fsp--;
@@ -17738,7 +17738,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:5483:1: ( rule__Motor__Group__0__Impl rule__Motor__Group__1 )
             // InternalBotDuino.g:5484:2: rule__Motor__Group__0__Impl rule__Motor__Group__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__Motor__Group__0__Impl();
 
             state._fsp--;
@@ -18144,7 +18144,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:5618:2: rule__Motor__ValuesAssignment_4
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__Motor__ValuesAssignment_4();
 
             	    state._fsp--;
@@ -18330,7 +18330,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:5678:2: rule__Motor__ValuesAssignment_6
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__Motor__ValuesAssignment_6();
 
             	    state._fsp--;
@@ -18516,7 +18516,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:5738:2: rule__Motor__ValuesAssignment_8
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__Motor__ValuesAssignment_8();
 
             	    state._fsp--;
@@ -18638,7 +18638,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:5802:1: ( rule__Motor__Group_2__0__Impl rule__Motor__Group_2__1 )
             // InternalBotDuino.g:5803:2: rule__Motor__Group_2__0__Impl rule__Motor__Group_2__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__Motor__Group_2__0__Impl();
 
             state._fsp--;
@@ -18801,7 +18801,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:5865:1: ( rule__Sensor__Group__0__Impl rule__Sensor__Group__1 )
             // InternalBotDuino.g:5866:2: rule__Sensor__Group__0__Impl rule__Sensor__Group__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__Sensor__Group__0__Impl();
 
             state._fsp--;
@@ -19207,7 +19207,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:6000:2: rule__Sensor__ValuesAssignment_4
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__Sensor__ValuesAssignment_4();
 
             	    state._fsp--;
@@ -19393,7 +19393,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:6060:2: rule__Sensor__ValuesAssignment_6
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__Sensor__ValuesAssignment_6();
 
             	    state._fsp--;
@@ -19515,7 +19515,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:6120:1: ( rule__Sensor__Group_2__0__Impl rule__Sensor__Group_2__1 )
             // InternalBotDuino.g:6121:2: rule__Sensor__Group_2__0__Impl rule__Sensor__Group_2__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__Sensor__Group_2__0__Impl();
 
             state._fsp--;
@@ -19678,7 +19678,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:6183:1: ( rule__BlueTooth__Group__0__Impl rule__BlueTooth__Group__1 )
             // InternalBotDuino.g:6184:2: rule__BlueTooth__Group__0__Impl rule__BlueTooth__Group__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__BlueTooth__Group__0__Impl();
 
             state._fsp--;
@@ -20084,7 +20084,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:6318:2: rule__BlueTooth__ValuesAssignment_4
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__BlueTooth__ValuesAssignment_4();
 
             	    state._fsp--;
@@ -20270,7 +20270,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:6378:2: rule__BlueTooth__ValuesAssignment_6
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__BlueTooth__ValuesAssignment_6();
 
             	    state._fsp--;
@@ -20392,7 +20392,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:6438:1: ( rule__BlueTooth__Group_2__0__Impl rule__BlueTooth__Group_2__1 )
             // InternalBotDuino.g:6439:2: rule__BlueTooth__Group_2__0__Impl rule__BlueTooth__Group_2__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__BlueTooth__Group_2__0__Impl();
 
             state._fsp--;
@@ -20555,7 +20555,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:6501:1: ( rule__CTRL__Group__0__Impl rule__CTRL__Group__1 )
             // InternalBotDuino.g:6502:2: rule__CTRL__Group__0__Impl rule__CTRL__Group__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__CTRL__Group__0__Impl();
 
             state._fsp--;
@@ -20961,7 +20961,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:6636:2: rule__CTRL__ValuesAssignment_4
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__CTRL__ValuesAssignment_4();
 
             	    state._fsp--;
@@ -21147,7 +21147,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:6696:2: rule__CTRL__ValuesAssignment_6
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__CTRL__ValuesAssignment_6();
 
             	    state._fsp--;
@@ -21333,7 +21333,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:6756:2: rule__CTRL__ValuesAssignment_8
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__CTRL__ValuesAssignment_8();
 
             	    state._fsp--;
@@ -21519,7 +21519,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:6816:2: rule__CTRL__ValuesAssignment_10
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__CTRL__ValuesAssignment_10();
 
             	    state._fsp--;
@@ -21705,7 +21705,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:6876:2: rule__CTRL__ValuesAssignment_12
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__CTRL__ValuesAssignment_12();
 
             	    state._fsp--;
@@ -21827,7 +21827,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:6948:1: ( rule__CTRL__Group_2__0__Impl rule__CTRL__Group_2__1 )
             // InternalBotDuino.g:6949:2: rule__CTRL__Group_2__0__Impl rule__CTRL__Group_2__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__CTRL__Group_2__0__Impl();
 
             state._fsp--;
@@ -21990,7 +21990,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:7011:1: ( rule__Servo__Group__0__Impl rule__Servo__Group__1 )
             // InternalBotDuino.g:7012:2: rule__Servo__Group__0__Impl rule__Servo__Group__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__Servo__Group__0__Impl();
 
             state._fsp--;
@@ -22396,7 +22396,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:7146:2: rule__Servo__ValuesAssignment_4
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__Servo__ValuesAssignment_4();
 
             	    state._fsp--;
@@ -22582,7 +22582,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:7206:2: rule__Servo__ValuesAssignment_6
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__Servo__ValuesAssignment_6();
 
             	    state._fsp--;
@@ -22768,7 +22768,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:7266:2: rule__Servo__ValuesAssignment_8
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_14);
             	    rule__Servo__ValuesAssignment_8();
 
             	    state._fsp--;
@@ -22890,7 +22890,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:7330:1: ( rule__Servo__Group_2__0__Impl rule__Servo__Group_2__1 )
             // InternalBotDuino.g:7331:2: rule__Servo__Group_2__0__Impl rule__Servo__Group_2__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__Servo__Group_2__0__Impl();
 
             state._fsp--;
@@ -23557,7 +23557,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:7581:1: ( rule__XBlockExpression__Group__0__Impl rule__XBlockExpression__Group__1 )
             // InternalBotDuino.g:7582:2: rule__XBlockExpression__Group__0__Impl rule__XBlockExpression__Group__1
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_8);
             rule__XBlockExpression__Group__0__Impl();
 
             state._fsp--;
@@ -23774,7 +23774,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             	case 1 :
             	    // InternalBotDuino.g:7658:2: rule__XBlockExpression__ExpressionsAssignment_2
             	    {
-            	    pushFollow(FOLLOW_3);
+            	    pushFollow(FOLLOW_4);
             	    rule__XBlockExpression__ExpressionsAssignment_2();
 
             	    state._fsp--;
@@ -23975,7 +23975,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:7741:1: ( rule__XAssignment__Group_0__1__Impl rule__XAssignment__Group_0__2 )
             // InternalBotDuino.g:7742:2: rule__XAssignment__Group_0__1__Impl rule__XAssignment__Group_0__2
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_12);
             rule__XAssignment__Group_0__1__Impl();
 
             state._fsp--;
@@ -24904,7 +24904,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:8081:1: ( rule__OpMultiAssign__Group_5__1__Impl rule__OpMultiAssign__Group_5__2 )
             // InternalBotDuino.g:8082:2: rule__OpMultiAssign__Group_5__1__Impl rule__OpMultiAssign__Group_5__2
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_12);
             rule__OpMultiAssign__Group_5__1__Impl();
 
             state._fsp--;
@@ -28230,7 +28230,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:9262:1: ( rule__OpCompare__Group_1__0__Impl rule__OpCompare__Group_1__1 )
             // InternalBotDuino.g:9263:2: rule__OpCompare__Group_1__0__Impl rule__OpCompare__Group_1__1
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_12);
             rule__OpCompare__Group_1__0__Impl();
 
             state._fsp--;
@@ -33130,7 +33130,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:11030:1: ( rule__XMemberFeatureCall__Group_1_0_0_0__2__Impl rule__XMemberFeatureCall__Group_1_0_0_0__3 )
             // InternalBotDuino.g:11031:2: rule__XMemberFeatureCall__Group_1_0_0_0__2__Impl rule__XMemberFeatureCall__Group_1_0_0_0__3
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_12);
             rule__XMemberFeatureCall__Group_1_0_0_0__2__Impl();
 
             state._fsp--;
@@ -35217,7 +35217,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:11781:1: ( rule__XSetLiteral__Group__1__Impl rule__XSetLiteral__Group__2 )
             // InternalBotDuino.g:11782:2: rule__XSetLiteral__Group__1__Impl rule__XSetLiteral__Group__2
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_8);
             rule__XSetLiteral__Group__1__Impl();
 
             state._fsp--;
@@ -40266,7 +40266,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:13637:1: ( rule__XSwitchExpression__Group__2__Impl rule__XSwitchExpression__Group__3 )
             // InternalBotDuino.g:13638:2: rule__XSwitchExpression__Group__2__Impl rule__XSwitchExpression__Group__3
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_8);
             rule__XSwitchExpression__Group__2__Impl();
 
             state._fsp--;
@@ -46267,7 +46267,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:15885:1: ( rule__XVariableDeclaration__Group__2__Impl rule__XVariableDeclaration__Group__3 )
             // InternalBotDuino.g:15886:2: rule__XVariableDeclaration__Group__2__Impl rule__XVariableDeclaration__Group__3
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_12);
             rule__XVariableDeclaration__Group__2__Impl();
 
             state._fsp--;
@@ -46535,7 +46535,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:15980:1: ( rule__XVariableDeclaration__Group_2_0_0__0__Impl rule__XVariableDeclaration__Group_2_0_0__1 )
             // InternalBotDuino.g:15981:2: rule__XVariableDeclaration__Group_2_0_0__0__Impl rule__XVariableDeclaration__Group_2_0_0__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__XVariableDeclaration__Group_2_0_0__0__Impl();
 
             state._fsp--;
@@ -47062,7 +47062,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:16165:1: ( rule__FullJvmFormalParameter__Group__0__Impl rule__FullJvmFormalParameter__Group__1 )
             // InternalBotDuino.g:16166:2: rule__FullJvmFormalParameter__Group__0__Impl rule__FullJvmFormalParameter__Group__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__FullJvmFormalParameter__Group__0__Impl();
 
             state._fsp--;
@@ -48898,7 +48898,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:16821:1: ( rule__XConstructorCall__Group__1__Impl rule__XConstructorCall__Group__2 )
             // InternalBotDuino.g:16822:2: rule__XConstructorCall__Group__1__Impl rule__XConstructorCall__Group__2
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__XConstructorCall__Group__1__Impl();
 
             state._fsp--;
@@ -51284,7 +51284,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:17703:1: ( rule__XTypeLiteral__Group__2__Impl rule__XTypeLiteral__Group__3 )
             // InternalBotDuino.g:17704:2: rule__XTypeLiteral__Group__2__Impl rule__XTypeLiteral__Group__3
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__XTypeLiteral__Group__2__Impl();
 
             state._fsp--;
@@ -54298,7 +54298,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:18821:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
             // InternalBotDuino.g:18822:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__QualifiedName__Group_1__0__Impl();
 
             state._fsp--;
@@ -57090,7 +57090,7 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
             // InternalBotDuino.g:19824:1: ( rule__JvmParameterizedTypeReference__Group_1_4__0__Impl rule__JvmParameterizedTypeReference__Group_1_4__1 )
             // InternalBotDuino.g:19825:2: rule__JvmParameterizedTypeReference__Group_1_4__0__Impl rule__JvmParameterizedTypeReference__Group_1_4__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__JvmParameterizedTypeReference__Group_1_4__0__Impl();
 
             state._fsp--;
@@ -60450,106 +60450,24 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__DomainModel__ElementsAssignment"
 
 
-    // $ANTLR start "rule__Registers__NameAssignment_1"
-    // InternalBotDuino.g:21063:1: rule__Registers__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Registers__NameAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalBotDuino.g:21067:1: ( ( RULE_ID ) )
-            // InternalBotDuino.g:21068:1: ( RULE_ID )
-            {
-            // InternalBotDuino.g:21068:1: ( RULE_ID )
-            // InternalBotDuino.g:21069:1: RULE_ID
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRegistersAccess().getNameIDTerminalRuleCall_1_0()); 
-            }
-            match(input,RULE_ID,FOLLOW_2); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRegistersAccess().getNameIDTerminalRuleCall_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Registers__NameAssignment_1"
-
-
-    // $ANTLR start "rule__Registers__ValuesAssignment_3"
-    // InternalBotDuino.g:21078:1: rule__Registers__ValuesAssignment_3 : ( RULE_INT ) ;
-    public final void rule__Registers__ValuesAssignment_3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalBotDuino.g:21082:1: ( ( RULE_INT ) )
-            // InternalBotDuino.g:21083:1: ( RULE_INT )
-            {
-            // InternalBotDuino.g:21083:1: ( RULE_INT )
-            // InternalBotDuino.g:21084:1: RULE_INT
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRegistersAccess().getValuesINTTerminalRuleCall_3_0()); 
-            }
-            match(input,RULE_INT,FOLLOW_2); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRegistersAccess().getValuesINTTerminalRuleCall_3_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Registers__ValuesAssignment_3"
-
-
     // $ANTLR start "rule__BTRule__SuperTypeAssignment_0"
-    // InternalBotDuino.g:21093:1: rule__BTRule__SuperTypeAssignment_0 : ( ( RULE_ID ) ) ;
+    // InternalBotDuino.g:21063:1: rule__BTRule__SuperTypeAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__BTRule__SuperTypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21097:1: ( ( ( RULE_ID ) ) )
-            // InternalBotDuino.g:21098:1: ( ( RULE_ID ) )
+            // InternalBotDuino.g:21067:1: ( ( ( RULE_ID ) ) )
+            // InternalBotDuino.g:21068:1: ( ( RULE_ID ) )
             {
-            // InternalBotDuino.g:21098:1: ( ( RULE_ID ) )
-            // InternalBotDuino.g:21099:1: ( RULE_ID )
+            // InternalBotDuino.g:21068:1: ( ( RULE_ID ) )
+            // InternalBotDuino.g:21069:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBTRuleAccess().getSuperTypeBlueToothCrossReference_0_0()); 
             }
-            // InternalBotDuino.g:21100:1: ( RULE_ID )
-            // InternalBotDuino.g:21101:1: RULE_ID
+            // InternalBotDuino.g:21070:1: ( RULE_ID )
+            // InternalBotDuino.g:21071:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBTRuleAccess().getSuperTypeBlueToothIDTerminalRuleCall_0_0_1()); 
@@ -60586,17 +60504,17 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BTRule__NameAssignment_2"
-    // InternalBotDuino.g:21112:1: rule__BTRule__NameAssignment_2 : ( RULE_ID ) ;
+    // InternalBotDuino.g:21082:1: rule__BTRule__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__BTRule__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21116:1: ( ( RULE_ID ) )
-            // InternalBotDuino.g:21117:1: ( RULE_ID )
+            // InternalBotDuino.g:21086:1: ( ( RULE_ID ) )
+            // InternalBotDuino.g:21087:1: ( RULE_ID )
             {
-            // InternalBotDuino.g:21117:1: ( RULE_ID )
-            // InternalBotDuino.g:21118:1: RULE_ID
+            // InternalBotDuino.g:21087:1: ( RULE_ID )
+            // InternalBotDuino.g:21088:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBTRuleAccess().getNameIDTerminalRuleCall_2_0()); 
@@ -60627,17 +60545,17 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BTRule__ThenPartAssignment_4"
-    // InternalBotDuino.g:21127:1: rule__BTRule__ThenPartAssignment_4 : ( ruleXBlockExpression ) ;
+    // InternalBotDuino.g:21097:1: rule__BTRule__ThenPartAssignment_4 : ( ruleXBlockExpression ) ;
     public final void rule__BTRule__ThenPartAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21131:1: ( ( ruleXBlockExpression ) )
-            // InternalBotDuino.g:21132:1: ( ruleXBlockExpression )
+            // InternalBotDuino.g:21101:1: ( ( ruleXBlockExpression ) )
+            // InternalBotDuino.g:21102:1: ( ruleXBlockExpression )
             {
-            // InternalBotDuino.g:21132:1: ( ruleXBlockExpression )
-            // InternalBotDuino.g:21133:1: ruleXBlockExpression
+            // InternalBotDuino.g:21102:1: ( ruleXBlockExpression )
+            // InternalBotDuino.g:21103:1: ruleXBlockExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBTRuleAccess().getThenPartXBlockExpressionParserRuleCall_4_0()); 
@@ -60672,23 +60590,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__SuperTypeAssignment_0"
-    // InternalBotDuino.g:21142:1: rule__SensorRule__SuperTypeAssignment_0 : ( ( RULE_ID ) ) ;
+    // InternalBotDuino.g:21112:1: rule__SensorRule__SuperTypeAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__SensorRule__SuperTypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21146:1: ( ( ( RULE_ID ) ) )
-            // InternalBotDuino.g:21147:1: ( ( RULE_ID ) )
+            // InternalBotDuino.g:21116:1: ( ( ( RULE_ID ) ) )
+            // InternalBotDuino.g:21117:1: ( ( RULE_ID ) )
             {
-            // InternalBotDuino.g:21147:1: ( ( RULE_ID ) )
-            // InternalBotDuino.g:21148:1: ( RULE_ID )
+            // InternalBotDuino.g:21117:1: ( ( RULE_ID ) )
+            // InternalBotDuino.g:21118:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleAccess().getSuperTypeSensorCrossReference_0_0()); 
             }
-            // InternalBotDuino.g:21149:1: ( RULE_ID )
-            // InternalBotDuino.g:21150:1: RULE_ID
+            // InternalBotDuino.g:21119:1: ( RULE_ID )
+            // InternalBotDuino.g:21120:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleAccess().getSuperTypeSensorIDTerminalRuleCall_0_0_1()); 
@@ -60725,23 +60643,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__SensorActionsAssignment_2_0"
-    // InternalBotDuino.g:21161:1: rule__SensorRule__SensorActionsAssignment_2_0 : ( ( 'HIGH' ) ) ;
+    // InternalBotDuino.g:21131:1: rule__SensorRule__SensorActionsAssignment_2_0 : ( ( 'HIGH' ) ) ;
     public final void rule__SensorRule__SensorActionsAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21165:1: ( ( ( 'HIGH' ) ) )
-            // InternalBotDuino.g:21166:1: ( ( 'HIGH' ) )
+            // InternalBotDuino.g:21135:1: ( ( ( 'HIGH' ) ) )
+            // InternalBotDuino.g:21136:1: ( ( 'HIGH' ) )
             {
-            // InternalBotDuino.g:21166:1: ( ( 'HIGH' ) )
-            // InternalBotDuino.g:21167:1: ( 'HIGH' )
+            // InternalBotDuino.g:21136:1: ( ( 'HIGH' ) )
+            // InternalBotDuino.g:21137:1: ( 'HIGH' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleAccess().getSensorActionsHIGHKeyword_2_0_0()); 
             }
-            // InternalBotDuino.g:21168:1: ( 'HIGH' )
-            // InternalBotDuino.g:21169:1: 'HIGH'
+            // InternalBotDuino.g:21138:1: ( 'HIGH' )
+            // InternalBotDuino.g:21139:1: 'HIGH'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleAccess().getSensorActionsHIGHKeyword_2_0_0()); 
@@ -60778,23 +60696,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__SensorActionsAssignment_2_1"
-    // InternalBotDuino.g:21184:1: rule__SensorRule__SensorActionsAssignment_2_1 : ( ( 'LOW' ) ) ;
+    // InternalBotDuino.g:21154:1: rule__SensorRule__SensorActionsAssignment_2_1 : ( ( 'LOW' ) ) ;
     public final void rule__SensorRule__SensorActionsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21188:1: ( ( ( 'LOW' ) ) )
-            // InternalBotDuino.g:21189:1: ( ( 'LOW' ) )
+            // InternalBotDuino.g:21158:1: ( ( ( 'LOW' ) ) )
+            // InternalBotDuino.g:21159:1: ( ( 'LOW' ) )
             {
-            // InternalBotDuino.g:21189:1: ( ( 'LOW' ) )
-            // InternalBotDuino.g:21190:1: ( 'LOW' )
+            // InternalBotDuino.g:21159:1: ( ( 'LOW' ) )
+            // InternalBotDuino.g:21160:1: ( 'LOW' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleAccess().getSensorActionsLOWKeyword_2_1_0()); 
             }
-            // InternalBotDuino.g:21191:1: ( 'LOW' )
-            // InternalBotDuino.g:21192:1: 'LOW'
+            // InternalBotDuino.g:21161:1: ( 'LOW' )
+            // InternalBotDuino.g:21162:1: 'LOW'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleAccess().getSensorActionsLOWKeyword_2_1_0()); 
@@ -60831,17 +60749,17 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SensorRule__ThenPartAssignment_4"
-    // InternalBotDuino.g:21207:1: rule__SensorRule__ThenPartAssignment_4 : ( ruleXBlockExpression ) ;
+    // InternalBotDuino.g:21177:1: rule__SensorRule__ThenPartAssignment_4 : ( ruleXBlockExpression ) ;
     public final void rule__SensorRule__ThenPartAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21211:1: ( ( ruleXBlockExpression ) )
-            // InternalBotDuino.g:21212:1: ( ruleXBlockExpression )
+            // InternalBotDuino.g:21181:1: ( ( ruleXBlockExpression ) )
+            // InternalBotDuino.g:21182:1: ( ruleXBlockExpression )
             {
-            // InternalBotDuino.g:21212:1: ( ruleXBlockExpression )
-            // InternalBotDuino.g:21213:1: ruleXBlockExpression
+            // InternalBotDuino.g:21182:1: ( ruleXBlockExpression )
+            // InternalBotDuino.g:21183:1: ruleXBlockExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSensorRuleAccess().getThenPartXBlockExpressionParserRuleCall_4_0()); 
@@ -60876,23 +60794,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__SuperTypeAssignment_0"
-    // InternalBotDuino.g:21222:1: rule__CTRLRule__SuperTypeAssignment_0 : ( ( RULE_ID ) ) ;
+    // InternalBotDuino.g:21192:1: rule__CTRLRule__SuperTypeAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__CTRLRule__SuperTypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21226:1: ( ( ( RULE_ID ) ) )
-            // InternalBotDuino.g:21227:1: ( ( RULE_ID ) )
+            // InternalBotDuino.g:21196:1: ( ( ( RULE_ID ) ) )
+            // InternalBotDuino.g:21197:1: ( ( RULE_ID ) )
             {
-            // InternalBotDuino.g:21227:1: ( ( RULE_ID ) )
-            // InternalBotDuino.g:21228:1: ( RULE_ID )
+            // InternalBotDuino.g:21197:1: ( ( RULE_ID ) )
+            // InternalBotDuino.g:21198:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getSuperTypeCTRLCrossReference_0_0()); 
             }
-            // InternalBotDuino.g:21229:1: ( RULE_ID )
-            // InternalBotDuino.g:21230:1: RULE_ID
+            // InternalBotDuino.g:21199:1: ( RULE_ID )
+            // InternalBotDuino.g:21200:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getSuperTypeCTRLIDTerminalRuleCall_0_0_1()); 
@@ -60929,23 +60847,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__CtrlActionsAssignment_2_0"
-    // InternalBotDuino.g:21241:1: rule__CTRLRule__CtrlActionsAssignment_2_0 : ( ( 'UP' ) ) ;
+    // InternalBotDuino.g:21211:1: rule__CTRLRule__CtrlActionsAssignment_2_0 : ( ( 'UP' ) ) ;
     public final void rule__CTRLRule__CtrlActionsAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21245:1: ( ( ( 'UP' ) ) )
-            // InternalBotDuino.g:21246:1: ( ( 'UP' ) )
+            // InternalBotDuino.g:21215:1: ( ( ( 'UP' ) ) )
+            // InternalBotDuino.g:21216:1: ( ( 'UP' ) )
             {
-            // InternalBotDuino.g:21246:1: ( ( 'UP' ) )
-            // InternalBotDuino.g:21247:1: ( 'UP' )
+            // InternalBotDuino.g:21216:1: ( ( 'UP' ) )
+            // InternalBotDuino.g:21217:1: ( 'UP' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getCtrlActionsUPKeyword_2_0_0()); 
             }
-            // InternalBotDuino.g:21248:1: ( 'UP' )
-            // InternalBotDuino.g:21249:1: 'UP'
+            // InternalBotDuino.g:21218:1: ( 'UP' )
+            // InternalBotDuino.g:21219:1: 'UP'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getCtrlActionsUPKeyword_2_0_0()); 
@@ -60982,23 +60900,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__CtrlActionsAssignment_2_1"
-    // InternalBotDuino.g:21264:1: rule__CTRLRule__CtrlActionsAssignment_2_1 : ( ( 'DOWN' ) ) ;
+    // InternalBotDuino.g:21234:1: rule__CTRLRule__CtrlActionsAssignment_2_1 : ( ( 'DOWN' ) ) ;
     public final void rule__CTRLRule__CtrlActionsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21268:1: ( ( ( 'DOWN' ) ) )
-            // InternalBotDuino.g:21269:1: ( ( 'DOWN' ) )
+            // InternalBotDuino.g:21238:1: ( ( ( 'DOWN' ) ) )
+            // InternalBotDuino.g:21239:1: ( ( 'DOWN' ) )
             {
-            // InternalBotDuino.g:21269:1: ( ( 'DOWN' ) )
-            // InternalBotDuino.g:21270:1: ( 'DOWN' )
+            // InternalBotDuino.g:21239:1: ( ( 'DOWN' ) )
+            // InternalBotDuino.g:21240:1: ( 'DOWN' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getCtrlActionsDOWNKeyword_2_1_0()); 
             }
-            // InternalBotDuino.g:21271:1: ( 'DOWN' )
-            // InternalBotDuino.g:21272:1: 'DOWN'
+            // InternalBotDuino.g:21241:1: ( 'DOWN' )
+            // InternalBotDuino.g:21242:1: 'DOWN'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getCtrlActionsDOWNKeyword_2_1_0()); 
@@ -61035,23 +60953,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__CtrlActionsAssignment_2_2"
-    // InternalBotDuino.g:21287:1: rule__CTRLRule__CtrlActionsAssignment_2_2 : ( ( 'LEFT' ) ) ;
+    // InternalBotDuino.g:21257:1: rule__CTRLRule__CtrlActionsAssignment_2_2 : ( ( 'LEFT' ) ) ;
     public final void rule__CTRLRule__CtrlActionsAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21291:1: ( ( ( 'LEFT' ) ) )
-            // InternalBotDuino.g:21292:1: ( ( 'LEFT' ) )
+            // InternalBotDuino.g:21261:1: ( ( ( 'LEFT' ) ) )
+            // InternalBotDuino.g:21262:1: ( ( 'LEFT' ) )
             {
-            // InternalBotDuino.g:21292:1: ( ( 'LEFT' ) )
-            // InternalBotDuino.g:21293:1: ( 'LEFT' )
+            // InternalBotDuino.g:21262:1: ( ( 'LEFT' ) )
+            // InternalBotDuino.g:21263:1: ( 'LEFT' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getCtrlActionsLEFTKeyword_2_2_0()); 
             }
-            // InternalBotDuino.g:21294:1: ( 'LEFT' )
-            // InternalBotDuino.g:21295:1: 'LEFT'
+            // InternalBotDuino.g:21264:1: ( 'LEFT' )
+            // InternalBotDuino.g:21265:1: 'LEFT'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getCtrlActionsLEFTKeyword_2_2_0()); 
@@ -61088,23 +61006,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__CtrlActionsAssignment_2_3"
-    // InternalBotDuino.g:21310:1: rule__CTRLRule__CtrlActionsAssignment_2_3 : ( ( 'RIGHT' ) ) ;
+    // InternalBotDuino.g:21280:1: rule__CTRLRule__CtrlActionsAssignment_2_3 : ( ( 'RIGHT' ) ) ;
     public final void rule__CTRLRule__CtrlActionsAssignment_2_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21314:1: ( ( ( 'RIGHT' ) ) )
-            // InternalBotDuino.g:21315:1: ( ( 'RIGHT' ) )
+            // InternalBotDuino.g:21284:1: ( ( ( 'RIGHT' ) ) )
+            // InternalBotDuino.g:21285:1: ( ( 'RIGHT' ) )
             {
-            // InternalBotDuino.g:21315:1: ( ( 'RIGHT' ) )
-            // InternalBotDuino.g:21316:1: ( 'RIGHT' )
+            // InternalBotDuino.g:21285:1: ( ( 'RIGHT' ) )
+            // InternalBotDuino.g:21286:1: ( 'RIGHT' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getCtrlActionsRIGHTKeyword_2_3_0()); 
             }
-            // InternalBotDuino.g:21317:1: ( 'RIGHT' )
-            // InternalBotDuino.g:21318:1: 'RIGHT'
+            // InternalBotDuino.g:21287:1: ( 'RIGHT' )
+            // InternalBotDuino.g:21288:1: 'RIGHT'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getCtrlActionsRIGHTKeyword_2_3_0()); 
@@ -61141,17 +61059,17 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CTRLRule__ThenPartAssignment_4"
-    // InternalBotDuino.g:21333:1: rule__CTRLRule__ThenPartAssignment_4 : ( ruleXBlockExpression ) ;
+    // InternalBotDuino.g:21303:1: rule__CTRLRule__ThenPartAssignment_4 : ( ruleXBlockExpression ) ;
     public final void rule__CTRLRule__ThenPartAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21337:1: ( ( ruleXBlockExpression ) )
-            // InternalBotDuino.g:21338:1: ( ruleXBlockExpression )
+            // InternalBotDuino.g:21307:1: ( ( ruleXBlockExpression ) )
+            // InternalBotDuino.g:21308:1: ( ruleXBlockExpression )
             {
-            // InternalBotDuino.g:21338:1: ( ruleXBlockExpression )
-            // InternalBotDuino.g:21339:1: ruleXBlockExpression
+            // InternalBotDuino.g:21308:1: ( ruleXBlockExpression )
+            // InternalBotDuino.g:21309:1: ruleXBlockExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCTRLRuleAccess().getThenPartXBlockExpressionParserRuleCall_4_0()); 
@@ -61186,23 +61104,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__SuperTypeAssignment_0"
-    // InternalBotDuino.g:21348:1: rule__ButtonRule__SuperTypeAssignment_0 : ( ( RULE_ID ) ) ;
+    // InternalBotDuino.g:21318:1: rule__ButtonRule__SuperTypeAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__ButtonRule__SuperTypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21352:1: ( ( ( RULE_ID ) ) )
-            // InternalBotDuino.g:21353:1: ( ( RULE_ID ) )
+            // InternalBotDuino.g:21322:1: ( ( ( RULE_ID ) ) )
+            // InternalBotDuino.g:21323:1: ( ( RULE_ID ) )
             {
-            // InternalBotDuino.g:21353:1: ( ( RULE_ID ) )
-            // InternalBotDuino.g:21354:1: ( RULE_ID )
+            // InternalBotDuino.g:21323:1: ( ( RULE_ID ) )
+            // InternalBotDuino.g:21324:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleAccess().getSuperTypeButtonCrossReference_0_0()); 
             }
-            // InternalBotDuino.g:21355:1: ( RULE_ID )
-            // InternalBotDuino.g:21356:1: RULE_ID
+            // InternalBotDuino.g:21325:1: ( RULE_ID )
+            // InternalBotDuino.g:21326:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleAccess().getSuperTypeButtonIDTerminalRuleCall_0_0_1()); 
@@ -61239,23 +61157,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__BtnActionsAssignment_2_0"
-    // InternalBotDuino.g:21367:1: rule__ButtonRule__BtnActionsAssignment_2_0 : ( ( 'PUSH' ) ) ;
+    // InternalBotDuino.g:21337:1: rule__ButtonRule__BtnActionsAssignment_2_0 : ( ( 'PUSH' ) ) ;
     public final void rule__ButtonRule__BtnActionsAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21371:1: ( ( ( 'PUSH' ) ) )
-            // InternalBotDuino.g:21372:1: ( ( 'PUSH' ) )
+            // InternalBotDuino.g:21341:1: ( ( ( 'PUSH' ) ) )
+            // InternalBotDuino.g:21342:1: ( ( 'PUSH' ) )
             {
-            // InternalBotDuino.g:21372:1: ( ( 'PUSH' ) )
-            // InternalBotDuino.g:21373:1: ( 'PUSH' )
+            // InternalBotDuino.g:21342:1: ( ( 'PUSH' ) )
+            // InternalBotDuino.g:21343:1: ( 'PUSH' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleAccess().getBtnActionsPUSHKeyword_2_0_0()); 
             }
-            // InternalBotDuino.g:21374:1: ( 'PUSH' )
-            // InternalBotDuino.g:21375:1: 'PUSH'
+            // InternalBotDuino.g:21344:1: ( 'PUSH' )
+            // InternalBotDuino.g:21345:1: 'PUSH'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleAccess().getBtnActionsPUSHKeyword_2_0_0()); 
@@ -61292,23 +61210,23 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__BtnActionsAssignment_2_1"
-    // InternalBotDuino.g:21390:1: rule__ButtonRule__BtnActionsAssignment_2_1 : ( ( 'FREE' ) ) ;
+    // InternalBotDuino.g:21360:1: rule__ButtonRule__BtnActionsAssignment_2_1 : ( ( 'FREE' ) ) ;
     public final void rule__ButtonRule__BtnActionsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21394:1: ( ( ( 'FREE' ) ) )
-            // InternalBotDuino.g:21395:1: ( ( 'FREE' ) )
+            // InternalBotDuino.g:21364:1: ( ( ( 'FREE' ) ) )
+            // InternalBotDuino.g:21365:1: ( ( 'FREE' ) )
             {
-            // InternalBotDuino.g:21395:1: ( ( 'FREE' ) )
-            // InternalBotDuino.g:21396:1: ( 'FREE' )
+            // InternalBotDuino.g:21365:1: ( ( 'FREE' ) )
+            // InternalBotDuino.g:21366:1: ( 'FREE' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleAccess().getBtnActionsFREEKeyword_2_1_0()); 
             }
-            // InternalBotDuino.g:21397:1: ( 'FREE' )
-            // InternalBotDuino.g:21398:1: 'FREE'
+            // InternalBotDuino.g:21367:1: ( 'FREE' )
+            // InternalBotDuino.g:21368:1: 'FREE'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleAccess().getBtnActionsFREEKeyword_2_1_0()); 
@@ -61345,17 +61263,17 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ButtonRule__ThenPartAssignment_4"
-    // InternalBotDuino.g:21413:1: rule__ButtonRule__ThenPartAssignment_4 : ( ruleXBlockExpression ) ;
+    // InternalBotDuino.g:21383:1: rule__ButtonRule__ThenPartAssignment_4 : ( ruleXBlockExpression ) ;
     public final void rule__ButtonRule__ThenPartAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalBotDuino.g:21417:1: ( ( ruleXBlockExpression ) )
-            // InternalBotDuino.g:21418:1: ( ruleXBlockExpression )
+            // InternalBotDuino.g:21387:1: ( ( ruleXBlockExpression ) )
+            // InternalBotDuino.g:21388:1: ( ruleXBlockExpression )
             {
-            // InternalBotDuino.g:21418:1: ( ruleXBlockExpression )
-            // InternalBotDuino.g:21419:1: ruleXBlockExpression
+            // InternalBotDuino.g:21388:1: ( ruleXBlockExpression )
+            // InternalBotDuino.g:21389:1: ruleXBlockExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getButtonRuleAccess().getThenPartXBlockExpressionParserRuleCall_4_0()); 
@@ -61387,6 +61305,88 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
         return ;
     }
     // $ANTLR end "rule__ButtonRule__ThenPartAssignment_4"
+
+
+    // $ANTLR start "rule__Variables__NameAssignment_1"
+    // InternalBotDuino.g:21398:1: rule__Variables__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Variables__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalBotDuino.g:21402:1: ( ( RULE_ID ) )
+            // InternalBotDuino.g:21403:1: ( RULE_ID )
+            {
+            // InternalBotDuino.g:21403:1: ( RULE_ID )
+            // InternalBotDuino.g:21404:1: RULE_ID
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVariablesAccess().getNameIDTerminalRuleCall_1_0()); 
+            }
+            match(input,RULE_ID,FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVariablesAccess().getNameIDTerminalRuleCall_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Variables__NameAssignment_1"
+
+
+    // $ANTLR start "rule__Variables__ValuesAssignment_3"
+    // InternalBotDuino.g:21413:1: rule__Variables__ValuesAssignment_3 : ( RULE_INT ) ;
+    public final void rule__Variables__ValuesAssignment_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalBotDuino.g:21417:1: ( ( RULE_INT ) )
+            // InternalBotDuino.g:21418:1: ( RULE_INT )
+            {
+            // InternalBotDuino.g:21418:1: ( RULE_INT )
+            // InternalBotDuino.g:21419:1: RULE_INT
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVariablesAccess().getValuesINTTerminalRuleCall_3_0()); 
+            }
+            match(input,RULE_INT,FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVariablesAccess().getValuesINTTerminalRuleCall_3_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Variables__ValuesAssignment_3"
 
 
     // $ANTLR start "rule__LED__NameAssignment_1"
@@ -73495,25 +73495,25 @@ public class InternalBotDuinoParser extends AbstractInternalContentAssistParser 
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0xF648000000000012L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0xF660000000000012L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000000L,0x0000000030000000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000000L,0x00000003C0000000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000000L,0x0000000C00000000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0008000000000000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000000L,0x0000000030000000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000000L,0x00000003C0000000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000000L,0x0000000C00000000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000042L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0080200000000000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0100000000000040L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0800000000000040L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000080000000000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000000000L,0x0000003000000000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000000000L,0x000001C000000000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0xF648000000000010L,0x0000000000000002L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000000010L,0x0000000000000002L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0001E00000000010L});
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0087E10C080001F0L,0x00002000017FC531L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x000000000C1F0000L});

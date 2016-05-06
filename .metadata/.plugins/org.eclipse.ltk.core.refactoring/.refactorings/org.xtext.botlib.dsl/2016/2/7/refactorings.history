@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BotDuinoGenerator.xtend&apos; to &apos;org.xtext.arduinotopia.dsl/src/org.eclipse.xtext.botlib.dsl.generator&apos;&#x0A;- Original project: &apos;org.xtext.botlib.dsl&apos;&#x0A;- Destination element: &apos;org.xtext.arduinotopia.dsl/src/org.eclipse.xtext.botlib.dsl.generator&apos;&#x0A;- Original element: &apos;BotDuinoGenerator.xtend&apos;" description="Copy file" destination="=org.xtext.arduinotopia.dsl/src&lt;org.eclipse.xtext.botlib.dsl.generator" element1="src/org/eclipse/xtext/botlib/dsl/generator/BotDuinoGenerator.xtend" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1455231952089" units="0" version="1.0"/>
+</session>

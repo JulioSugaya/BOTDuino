@@ -114,21 +114,16 @@ public class generatorHandler extends AbstractHandler {
 		if(cppPath != ""){
 			//System.out.println("meu cpp : " + cppPath);
 			// /avr/bin/avr-g++ -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=10605 -DARDUINO_AVR_MEGA -DARDUINO_ARCH_AVR -I./lib/arduino -I./lib/arduino/variants/mega -I./lib/arduino/Release -I./lib/SoftwareSerial ./teste.bot.cpp -o ./test.cpp.o
-			execCmd( avrPath + "/hardware/tools/avr/bin/avr-g++ -c -g -Os -Wall -Wextra -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10605 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -I " + avrPath + "/Release -I " + avrPath + "/hardware/arduino/avr/cores/arduino -I " + avrPath + "/hardware/arduino/avr/variants/eightanaloginputs -I " + avrPath + "/hardware/arduino/avr/libraries/SoftwareSerial " + cppPath + " -o " + avrPath + "/test.cpp.o");
-			// /avr/bin/avr-ar rcs ./arduino.ar ./lib/arduino/Release/BOTLib.cpp.o
+			execCmd( avrPath + "/hardware/tools/avr/bin/avr-g++ -c -g -Os -Wall -Wextra -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10605 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -I " + avrPath + "/Release -I " + avrPath + "/hardware/arduino/avr/cores/arduino -I " + avrPath + "/hardware/arduino/avr/variants/eightanaloginputs -I " + avrPath + "/hardware/arduino/avr/libraries/SoftwareSerial -I " + avrPath + "/hardware/arduino/avr/libraries/LiquidCrystal/src " + cppPath + " -o " + avrPath + "/test.cpp.o");
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/BOTLib.cpp.o");
-			// /avr/bin/avr-ar rcs ./arduino.ar ./lib/arduino/Release/BlueTooth.cpp.o
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/BlueTooth.cpp.o");
-			// /avr/bin/avr-ar rcs ./arduino.ar ./lib/arduino/Release/LED.cpp.o
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/LED.cpp.o");
-			// /avr/bin/avr-ar rcs ./arduino.ar ./lib/arduino/Release/Motor.cpp.o
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/Motor.cpp.o");
-			// /avr/bin/avr-ar rcs ./arduino.ar ./lib/arduino/Release/Button.cpp.o
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/Button.cpp.o");
-			// /avr/bin/avr-ar rcs ./arduino.ar ./lib/arduino/Release/Debug.cpp.o
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/Debug.cpp.o");
-			// /avr/bin/avr-ar rcs ./arduino.ar ./lib/arduino/Release/Libraries/SoftwareSerial/SoftwareSerial.cpp.o
+			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/SensorSR04.cpp.o");
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/Libraries/SoftwareSerial/SoftwareSerial.cpp.o");
+			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/Libraries/LiquidCrystal/src/LiquidCrystal.cpp.o");
 			// /avr/bin/avr-gcc -w -Os -Wl,--gc-sections -mmcu=atmega1280 -o test.cpp.elf test.cpp.o arduino.ar -L -lm
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-gcc -Wall -Wextra -Os -Wl,--gc-sections -mmcu=atmega328p -o " + avrPath + "/test.cpp.elf " + avrPath + "/test.cpp.o " + avrPath + "/arduino.ar -L -lm");
 			// /avr/bin/avr-objcopy -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0 test.cpp.elf test.cpp.eep

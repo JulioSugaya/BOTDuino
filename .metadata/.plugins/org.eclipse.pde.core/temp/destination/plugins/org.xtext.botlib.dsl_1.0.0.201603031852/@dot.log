@@ -1,0 +1,515 @@
+# 3/3/16 6:52:13 PM BRT
+# Eclipse Compiler for Java(TM) v20150902-1521, 3.11.1, Copyright IBM Corp 2000, 2015. All rights reserved.
+----------
+1. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 15)
+	import org.eclipse.xtext.xbase.services.XbaseGrammarAccess;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+2. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 16)
+	import org.eclipse.xtext.xbase.services.XtypeGrammarAccess;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XtypeGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+3. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1031)
+	private final XbaseGrammarAccess gaXbase;
+	              ^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+4. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1033)
+	private final XtypeGrammarAccess gaXtype;
+	              ^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XtypeGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+5. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1037)
+	XbaseGrammarAccess gaXbase,
+	^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+6. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1038)
+	XtypeGrammarAccess gaXtype) {
+	^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XtypeGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+7. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1086)
+	public XbaseGrammarAccess getXbaseGrammarAccess() {
+	       ^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+8. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1090)
+	public XtypeGrammarAccess getXtypeGrammarAccess() {
+	       ^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XtypeGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+9. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1313)
+	public XbaseGrammarAccess.XExpressionElements getXExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+10. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1313)
+	public XbaseGrammarAccess.XExpressionElements getXExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.XExpressionElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+11. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1314)
+	return gaXbase.getXExpressionAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getXExpressionAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+12. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1318)
+	return getXExpressionAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.XExpressionElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+13. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1325)
+	public XbaseGrammarAccess.XAssignmentElements getXAssignmentAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.XAssignmentElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+14. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1325)
+	public XbaseGrammarAccess.XAssignmentElements getXAssignmentAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+15. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1326)
+	return gaXbase.getXAssignmentAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getXAssignmentAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+16. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1330)
+	return getXAssignmentAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.XAssignmentElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+17. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1335)
+	public XbaseGrammarAccess.OpSingleAssignElements getOpSingleAssignAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+18. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1335)
+	public XbaseGrammarAccess.OpSingleAssignElements getOpSingleAssignAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.OpSingleAssignElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+19. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1336)
+	return gaXbase.getOpSingleAssignAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getOpSingleAssignAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+20. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1340)
+	return getOpSingleAssignAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.OpSingleAssignElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+21. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1347)
+	public XbaseGrammarAccess.OpMultiAssignElements getOpMultiAssignAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.OpMultiAssignElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+22. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1347)
+	public XbaseGrammarAccess.OpMultiAssignElements getOpMultiAssignAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+23. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1348)
+	return gaXbase.getOpMultiAssignAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getOpMultiAssignAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+24. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1352)
+	return getOpMultiAssignAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.OpMultiAssignElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+25. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1358)
+	public XbaseGrammarAccess.XOrExpressionElements getXOrExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+26. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1358)
+	public XbaseGrammarAccess.XOrExpressionElements getXOrExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.XOrExpressionElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+27. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1359)
+	return gaXbase.getXOrExpressionAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getXOrExpressionAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+28. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1363)
+	return getXOrExpressionAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.XOrExpressionElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+29. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1368)
+	public XbaseGrammarAccess.OpOrElements getOpOrAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.OpOrElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+30. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1368)
+	public XbaseGrammarAccess.OpOrElements getOpOrAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+31. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1369)
+	return gaXbase.getOpOrAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getOpOrAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+32. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1373)
+	return getOpOrAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.OpOrElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+33. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1379)
+	public XbaseGrammarAccess.XAndExpressionElements getXAndExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+34. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1379)
+	public XbaseGrammarAccess.XAndExpressionElements getXAndExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.XAndExpressionElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+35. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1380)
+	return gaXbase.getXAndExpressionAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getXAndExpressionAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+36. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1384)
+	return getXAndExpressionAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.XAndExpressionElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+37. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1389)
+	public XbaseGrammarAccess.OpAndElements getOpAndAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.OpAndElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+38. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1389)
+	public XbaseGrammarAccess.OpAndElements getOpAndAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+39. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1390)
+	return gaXbase.getOpAndAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getOpAndAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+40. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1394)
+	return getOpAndAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.OpAndElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+41. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1400)
+	public XbaseGrammarAccess.XEqualityExpressionElements getXEqualityExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+42. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1400)
+	public XbaseGrammarAccess.XEqualityExpressionElements getXEqualityExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.XEqualityExpressionElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+43. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1401)
+	return gaXbase.getXEqualityExpressionAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getXEqualityExpressionAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+44. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1405)
+	return getXEqualityExpressionAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.XEqualityExpressionElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+45. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1410)
+	public XbaseGrammarAccess.OpEqualityElements getOpEqualityAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.OpEqualityElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+46. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1410)
+	public XbaseGrammarAccess.OpEqualityElements getOpEqualityAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+47. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1411)
+	return gaXbase.getOpEqualityAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getOpEqualityAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+48. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1415)
+	return getOpEqualityAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.OpEqualityElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+49. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1422)
+	public XbaseGrammarAccess.XRelationalExpressionElements getXRelationalExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+50. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1422)
+	public XbaseGrammarAccess.XRelationalExpressionElements getXRelationalExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.XRelationalExpressionElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+51. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1423)
+	return gaXbase.getXRelationalExpressionAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getXRelationalExpressionAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+52. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1427)
+	return getXRelationalExpressionAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.XRelationalExpressionElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+53. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1432)
+	public XbaseGrammarAccess.OpCompareElements getOpCompareAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.OpCompareElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+54. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1432)
+	public XbaseGrammarAccess.OpCompareElements getOpCompareAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+55. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1433)
+	return gaXbase.getOpCompareAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getOpCompareAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+56. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1437)
+	return getOpCompareAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.OpCompareElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+57. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1443)
+	public XbaseGrammarAccess.XOtherOperatorExpressionElements getXOtherOperatorExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+58. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1443)
+	public XbaseGrammarAccess.XOtherOperatorExpressionElements getXOtherOperatorExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.XOtherOperatorExpressionElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+59. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1444)
+	return gaXbase.getXOtherOperatorExpressionAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getXOtherOperatorExpressionAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+60. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1448)
+	return getXOtherOperatorExpressionAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.XOtherOperatorExpressionElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+61. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1459)
+	public XbaseGrammarAccess.OpOtherElements getOpOtherAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.OpOtherElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+62. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1459)
+	public XbaseGrammarAccess.OpOtherElements getOpOtherAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+63. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1460)
+	return gaXbase.getOpOtherAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getOpOtherAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+64. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1464)
+	return getOpOtherAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.OpOtherElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+65. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1470)
+	public XbaseGrammarAccess.XAdditiveExpressionElements getXAdditiveExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+66. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1470)
+	public XbaseGrammarAccess.XAdditiveExpressionElements getXAdditiveExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.XAdditiveExpressionElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+67. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1471)
+	return gaXbase.getXAdditiveExpressionAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getXAdditiveExpressionAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+68. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1475)
+	return getXAdditiveExpressionAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.XAdditiveExpressionElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+69. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1480)
+	public XbaseGrammarAccess.OpAddElements getOpAddAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.OpAddElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+70. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1480)
+	public XbaseGrammarAccess.OpAddElements getOpAddAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+71. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1481)
+	return gaXbase.getOpAddAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getOpAddAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+72. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1485)
+	return getOpAddAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.OpAddElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+73. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1491)
+	public XbaseGrammarAccess.XMultiplicativeExpressionElements getXMultiplicativeExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+74. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1491)
+	public XbaseGrammarAccess.XMultiplicativeExpressionElements getXMultiplicativeExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.XMultiplicativeExpressionElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+75. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1492)
+	return gaXbase.getXMultiplicativeExpressionAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getXMultiplicativeExpressionAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+76. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1496)
+	return getXMultiplicativeExpressionAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.XMultiplicativeExpressionElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+77. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1501)
+	public XbaseGrammarAccess.OpMultiElements getOpMultiAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.OpMultiElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+78. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1501)
+	public XbaseGrammarAccess.OpMultiElements getOpMultiAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+79. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1502)
+	return gaXbase.getOpMultiAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getOpMultiAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+80. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1506)
+	return getOpMultiAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.OpMultiElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+81. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1512)
+	public XbaseGrammarAccess.XUnaryOperationElements getXUnaryOperationAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+82. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1512)
+	public XbaseGrammarAccess.XUnaryOperationElements getXUnaryOperationAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.XUnaryOperationElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+83. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1513)
+	return gaXbase.getXUnaryOperationAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getXUnaryOperationAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+84. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1517)
+	return getXUnaryOperationAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.XUnaryOperationElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+85. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1522)
+	public XbaseGrammarAccess.OpUnaryElements getOpUnaryAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.OpUnaryElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+86. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1522)
+	public XbaseGrammarAccess.OpUnaryElements getOpUnaryAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+87. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1523)
+	return gaXbase.getOpUnaryAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getOpUnaryAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+88. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1527)
+	return getOpUnaryAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.OpUnaryElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+89. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1532)
+	public XbaseGrammarAccess.XCastedExpressionElements getXCastedExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+90. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1532)
+	public XbaseGrammarAccess.XCastedExpressionElements getXCastedExpressionAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.XCastedExpressionElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+91. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1533)
+	return gaXbase.getXCastedExpressionAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getXCastedExpressionAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+92. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1537)
+	return getXCastedExpressionAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.XCastedExpressionElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+93. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1542)
+	public XbaseGrammarAccess.XPostfixOperationElements getXPostfixOperationAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.XPostfixOperationElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+94. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1542)
+	public XbaseGrammarAccess.XPostfixOperationElements getXPostfixOperationAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+95. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1543)
+	return gaXbase.getXPostfixOperationAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getXPostfixOperationAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+96. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1547)
+	return getXPostfixOperationAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.XPostfixOperationElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+97. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1552)
+	public XbaseGrammarAccess.OpPostfixElements getOpPostfixAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+98. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1552)
+	public XbaseGrammarAccess.OpPostfixElements getOpPostfixAccess() {
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseGrammarAccess.OpPostfixElements' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+99. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1553)
+	return gaXbase.getOpPostfixAccess();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.getOpPostfixAccess()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+100. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/services/BotDuinoGrammarAccess.java (at line 1557)
+	return getOpPostfixAccess().getRule();
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseGrammarAccess.OpPostfixElements.getRule()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+----------
+101. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/validation/AbstractBotDuinoValidator.java (at line 10)
+	public class AbstractBotDuinoValidator extends org.eclipse.xtext.xbase.validation.XbaseValidator {
+	                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The type 'XbaseValidator' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+102. WARNING in /Users/juliosugaya/_projects_ccp/org.xtext.botlib.dsl/src-gen/org/eclipse/xtext/botlib/dsl/validation/AbstractBotDuinoValidator.java (at line 14)
+	List<EPackage> result = new ArrayList<EPackage>(super.getEPackages());
+	                                                ^^^^^^^^^^^^^^^^^^^^
+Discouraged access: The method 'XbaseValidator.getEPackages()' is not API (restriction on classpath entry '/Users/juliosugaya/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xbase_2.9.1.v201512180746.jar')
+----------
+102 problems (102 warnings)

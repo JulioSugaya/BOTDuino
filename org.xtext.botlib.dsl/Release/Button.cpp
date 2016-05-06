@@ -16,5 +16,6 @@ Button::Button(uint8_t pin) {
 }
 
 int Button::getState(){
-	return digitalRead(Button_PIN);
+	Button_State = digitalRead(Button_PIN);
+	return Button_State;
 }

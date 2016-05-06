@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="3.5 or greater" key="targetName"/>
+	<item value="false" key="uiPlugin"/>
+	<item value="false" key="OrganizeManifests.ExportedPackages.removeUnresolved"/>
+	<item value="false" key="rcpPlugin"/>
+	<item value="false" key="OrganizeManifests.RequireImport.modifyDep"/>
+	<item value="false" key="osgiProject"/>
+	<item value="false" key="OrganizeManifests.General.cleanup.removeUselessFiles"/>
+	<item value="false" key="OrganizeManifests.RequireImport.findRemoveUnused"/>
+	<item value="0" key="org.eclipse.pde.ui.synchronizeVersions.mode"/>
+	<item value="false" key="OrganizeManifests.calculateUses"/>
+	<item value="false" key="generateActivator"/>
+	<item value="false" key="OrganizeManifests.ExportedPackages.addMissing"/>
+	<item value="false" key="OrganizeManifests.General.cleanup"/>
+	<item value="false" key="OrganizeManifests.Translation.nls"/>
+	<item value="false" key="apiAnalysis"/>
+	<item value="*.internal*" key="OrganizeManifests.ExportedPackages.packageFilter"/>
+	<item value="false" key="OrganizeManifests.AddDependencies"/>
+	<item value="false" key="OrganizeManifests.Translation.unusedKeys"/>
+	<item value="false" key="OrganizeManifests.ExportedPackages.makeInternal"/>
+	<item value="false" key="OrganizeManifests.RequireImport.resolve:markOptional"/>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+	</section>
+	<section name="dependenciesView">
+	</section>
+	<section name="PDEFormActionManager">
+		<list key="RecentLaunches">
+			<item value="org.eclipse.pde.ui.runtimeWorkbenchShortcut"/>
+		</list>
+	</section>
+	<section name="pde_compiler_errorwarnings_block">
+		<item value="true" key="0"/>
+		<item value="false" key="1"/>
+		<item value="false" key="2"/>
+		<item value="false" key="3"/>
+		<item value="false" key="4"/>
+	</section>
+	<section name="org.eclipse.pde.ui.dialogs.PluginSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="292" key="DIALOG_X_ORIGIN"/>
+			<item value="96" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+	<section name="targetStateView">
+	</section>
+	<section name="UpdateBuildpathWizard">
+	</section>
+	<section name="RefactoringWizard.Organize Manifests">
+		<item value="600" key="width"/>
+		<item value="450" key="height"/>
+	</section>
+	<section name="org.eclipse.pde.ui.dialogs.FeatureSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="420" key="DIALOG_X_ORIGIN"/>
+			<item value="84" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+	<section name="pde-form-editor">
+		<item value="plugin-context" key="org.eclipse.pde.ui.manifestEditor"/>
+		<item value="overview" key="org.eclipse.pde.ui.schemaEditor"/>
+	</section>
+	<section name="org.eclipse.pde.ui.dialogs.FilteredPluginArtifactsSelectionDialog">
+		<item value="true" key="showExtensionPoints"/>
+		<item value="true" key="showExtensions"/>
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode/&gt;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="true" key="showFeatures"/>
+		<item value="true" key="showExportedPackages"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="420" key="DIALOG_X_ORIGIN"/>
+			<item value="84" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+	<section name="PluginExportWizard">
+		<item value="" key="keypass"/>
+		<item value="Include source in exported plug-ins" key="exportSourceFormat"/>
+		<item value="true" key="exportUpdate"/>
+		<item value="false" key="saveAsAnt"/>
+		<item value="true" key="exportSource"/>
+		<item value="/Users/juliosugaya/meu plugin/:Users:juliosugaya:meu plugin:BOTDuinoPlugin.zip" key="zipFileName4"/>
+		<item value="/Users/juliosugaya/meu plugin/BOTDuinoPlugin.zip" key="zipFileName5"/>
+		<item value="" key="password"/>
+		<item value="false" key="useWorkspaceCompiledClasses"/>
+		<item value="/Users/juliosugaya/meu plugin/botduino.jar" key="zipFileName0"/>
+		<item value="/Users/juliosugaya/meu plugin/botduino.jar" key="zipFileName1"/>
+		<item value="/Users/juliosugaya/meu plugin/:Users:juliosugaya:botduino.jar" key="zipFileName2"/>
+		<item value="/Users/juliosugaya/meu plugin/:Users:juliosugaya:_projects_ccp.zip" key="zipFileName3"/>
+		<item value="" key="alias"/>
+		<item value="" key="keystore"/>
+		<item value="/Users/juliosugaya/_projects_ccp/.metadata/.plugins/org.eclipse.pde.core/install/" key="installDestination0"/>
+		<item value="/Users/juliosugaya/_projects_ccp/.metadata/.plugins/org.eclipse.pde.core/install/" key="installDestination1"/>
+		<item value="/Users/juliosugaya/meu plugin" key="destination0"/>
+		<item value="/Users/juliosugaya/meu plugin" key="destination1"/>
+		<item value="/Users/juliosugaya/Eclipse 2.app" key="destination4"/>
+		<item value="false" key="signJAR"/>
+		<item value="/Users/juliosugaya/Eclipse.app/Contents" key="destination2"/>
+		<item value="/Users/juliosugaya/Eclipse.app" key="destination3"/>
+		<item value="false" key="allowBinaryCycles"/>
+		<item value="201602022208" key="qualifierName"/>
+		<item value="1" key="exportType"/>
+		<item value="false" key="qualifier"/>
+	</section>
+	<section name="ProductExportWizard">
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="FeatureExportWizard">
+		<item value="" key="keypass"/>
+		<item value="" key="siteURL"/>
+		<item value="Generate source bundles" key="exportSourceFormat"/>
+		<item value="true" key="exportUpdate"/>
+		<item value="false" key="saveAsAnt"/>
+		<item value="true" key="exportSource"/>
+		<item value="botduino_plugin" key="zipFileName4"/>
+		<item value="" key="password"/>
+		<item value="/Users/juliosugaya/meu plugin/botduino.jar" key="zipFileName0"/>
+		<item value="false" key="useWorkspaceCompiledClasses"/>
+		<item value="/Users/juliosugaya/meu plugin/botduino.jar" key="zipFileName1"/>
+		<item value="/Users/juliosugaya/meu plugin/:Users:juliosugaya:meu plugin.zip" key="zipFileName2"/>
+		<item value="/Users/juliosugaya/botduino_plugin.zip" key="zipFileName3"/>
+		<item value="" key="alias"/>
+		<item value="" key="keystore"/>
+		<item value="" key="jre"/>
+		<item value="true" key="p2metadata"/>
+		<item value="/Users/juliosugaya/meu plugin" key="destination0"/>
+		<item value="/Users/juliosugaya/meu plugin" key="destination1"/>
+		<item value="true" key="create_categories"/>
+		<item value="false" key="signJAR"/>
+		<item value="" key="category_file"/>
+		<item value="true" key="allowBinaryCycles"/>
+		<item value="201602241957" key="qualifierName"/>
+		<item value="2" key="exportType"/>
+		<item value="false" key="qualifier"/>
+		<item value="false" key="jnlp"/>
+	</section>
+</section>

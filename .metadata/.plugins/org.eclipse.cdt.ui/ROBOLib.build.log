@@ -1,0 +1,27 @@
+14:06:55 **** Incremental Build of configuration Release for project ROBOLib ****
+make all 
+Building target: ROBOLib
+Printing size:
+"/Users/juliosugaya/Arduino 1.5.7.app/Contents/Resources/Java/hardware/tools/avr/bin/avr-size" -A "/Users/juliosugaya/_projects_ccp/ROBOLib/Release/ROBOLib.elf"
+/Users/juliosugaya/_projects_ccp/ROBOLib/Release/ROBOLib.elf  :
+section           size      addr
+.data                0   8389120
+.text             1646         0
+.bss                14   8389120
+.comment            17         0
+.debug_aranges     336         0
+.debug_info       5448         0
+.debug_abbrev     2144         0
+.debug_line       2916         0
+.debug_frame       612         0
+.debug_str        1461         0
+.debug_loc        2749         0
+.debug_ranges      248         0
+Total            17591
+
+
+Finished building target: ROBOLib
+ 
+
+14:06:55 Build Finished (took 84ms)
+

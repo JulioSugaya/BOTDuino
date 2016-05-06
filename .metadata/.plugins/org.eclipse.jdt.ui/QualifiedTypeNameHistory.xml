@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.eclipse.xtext.botlib.dsl.generator.BotDuinoGenerator"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.xbase.impl.XFeatureCallImplCustom"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.xbase.XMemberFeatureCall"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.xbase.XFeatureCall"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.xbase.XExpression"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.EReference"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.mwe2.language.mwe2.Value"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.xbase.services.XbaseGrammarAccess.XMemberFeatureCallElements"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.xbase.impl.XMemberFeatureCallImplCustom"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.botlib.dsl.botDuino.impl.BTRuleImpl"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.botlib.dsl.botDuino.impl.RegistersImpl"/>
+<fullyQualifiedTypeName name="javax.inject.Inject"/>
+<fullyQualifiedTypeName name="org.eclipse.e4.core.di.annotations.Execute"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Shell"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.dialogs.MessageDialog"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Display"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.botlib.dsl.BotDuinoRuntimeModule"/>
+<fullyQualifiedTypeName name="java.lang.Runtime"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.PrintStream"/>
+<fullyQualifiedTypeName name="org.eclipse.core.resources.ResourcesPlugin"/>
+<fullyQualifiedTypeName name="org.eclipse.core.resources.IFile"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.viewers.IStructuredSelection"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.PlatformUI"/>
+<fullyQualifiedTypeName name="org.eclipse.core.runtime.IAdaptable"/>
+<fullyQualifiedTypeName name="org.eclipse.core.resources.IProject"/>
+<fullyQualifiedTypeName name="org.eclipse.core.runtime.IPath"/>
+<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+<fullyQualifiedTypeName name="jssc.SerialPort"/>
+<fullyQualifiedTypeName name="jssc.SerialPortList"/>
+</qualifiedTypeNameHistroy>

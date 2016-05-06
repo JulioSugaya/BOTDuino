@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="org.xtext.botlib.dsl" modificationStamp="46152" version="1.2">
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src&lt;org.eclipse.xtext.botlib"/>
+        <fragment handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib"/>
+        <fragment handle="=org.xtext.botlib.dsl/xtend-gen&lt;org.eclipse.xtext.botlib"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src&lt;org.eclipse.xtext.botlib.dsl"/>
+        <fragment handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl"/>
+        <fragment handle="=org.xtext.botlib.dsl/xtend-gen&lt;org.eclipse.xtext.botlib.dsl"/>
+        <type handle="=org.xtext.botlib.dsl/src&lt;org.eclipse.xtext.botlib.dsl{BotDuinoStandaloneSetup.java[BotDuinoStandaloneSetup" modificationStamp="46419" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl{AbstractBotDuinoRuntimeModule.java[AbstractBotDuinoRuntimeModule" modificationStamp="1168075" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src&lt;org.eclipse.xtext.botlib.dsl{BotDuinoRuntimeModule.java[BotDuinoRuntimeModule" modificationStamp="46431" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl{BotDuinoStandaloneSetupGenerated.java[BotDuinoStandaloneSetupGenerated" modificationStamp="1168076" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.serializer"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.serializer{BotDuinoSemanticSequencer.java[BotDuinoSemanticSequencer" modificationStamp="1161537" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.serializer{BotDuinoSyntacticSequencer.java[BotDuinoSyntacticSequencer" modificationStamp="1161538" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.services"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.services{BotDuinoGrammarAccess.java[BotDuinoGrammarAccess" modificationStamp="1161539" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src&lt;org.xtext.botlib.dsl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src&lt;org.eclipse.xtext"/>
+        <fragment handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext"/>
+        <fragment handle="=org.xtext.botlib.dsl/xtend-gen&lt;org.eclipse.xtext"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{LED.java[LED" modificationStamp="1161524" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{Servo.java[Servo" modificationStamp="1161535" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{CTRLRule.java[CTRLRule" modificationStamp="1161521" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{Sensor.java[Sensor" modificationStamp="1161533" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{Variables.java[Variables" modificationStamp="1163086" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{Button.java[Button" modificationStamp="1161518" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{SensorRule.java[SensorRule" modificationStamp="1161534" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{MotorMethods.java[MotorMethods" modificationStamp="1161528" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{BTRule.java[BTRule" modificationStamp="1161514" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{Type.java[Type" modificationStamp="1161536" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{ObjectLiteral.java[ObjectLiteral" modificationStamp="1161529" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{BotDuinoPackage.java[BotDuinoPackage" modificationStamp="1161517" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{Entity.java[Entity" modificationStamp="1161523" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{LEDMethods.java[LEDMethods" modificationStamp="1161525" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{Motor.java[Motor" modificationStamp="1161527" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{BotDuinoFactory.java[BotDuinoFactory" modificationStamp="1161516" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{Methods.java[Methods" modificationStamp="1161526" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{CTRL.java[CTRL" modificationStamp="1161520" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{BlueTooth.java[BlueTooth" modificationStamp="1161515" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{DomainModel.java[DomainModel" modificationStamp="1161522" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{ButtonRule.java[ButtonRule" modificationStamp="1161519" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino{Rules.java[Rules" modificationStamp="1161532" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{DomainModelImpl.java[DomainModelImpl" modificationStamp="1161549" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{SensorImpl.java[SensorImpl" modificationStamp="1161560" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{ServoImpl.java[ServoImpl" modificationStamp="1161562" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{ButtonImpl.java[ButtonImpl" modificationStamp="1161545" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{MotorImpl.java[MotorImpl" modificationStamp="1161554" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{ObjectLiteralImpl.java[ObjectLiteralImpl" modificationStamp="1161556" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{BlueToothImpl.java[BlueToothImpl" modificationStamp="1161542" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{MethodsImpl.java[MethodsImpl" modificationStamp="1161553" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{SensorRuleImpl.java[SensorRuleImpl" modificationStamp="1161561" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{TypeImpl.java[TypeImpl" modificationStamp="1161563" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{BotDuinoPackageImpl.java[BotDuinoPackageImpl" modificationStamp="1161544" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{ButtonRuleImpl.java[ButtonRuleImpl" modificationStamp="1161546" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{LEDImpl.java[LEDImpl" modificationStamp="1161551" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{EntityImpl.java[EntityImpl" modificationStamp="1161550" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{CTRLImpl.java[CTRLImpl" modificationStamp="1161547" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{CTRLRuleImpl.java[CTRLRuleImpl" modificationStamp="1161548" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{VariablesImpl.java[VariablesImpl" modificationStamp="1163088" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{LEDMethodsImpl.java[LEDMethodsImpl" modificationStamp="1161552" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{BotDuinoFactoryImpl.java[BotDuinoFactoryImpl" modificationStamp="1161543" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{RulesImpl.java[RulesImpl" modificationStamp="1161559" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{BTRuleImpl.java[BTRuleImpl" modificationStamp="1161541" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.impl{MotorMethodsImpl.java[MotorMethodsImpl" modificationStamp="1161555" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src&lt;org.xtext.botlib.dsl.handlers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src&lt;org"/>
+        <fragment handle="=org.xtext.botlib.dsl/src-gen&lt;org"/>
+        <fragment handle="=org.xtext.botlib.dsl/xtend-gen&lt;org"/>
+        <fragment handle="=org.xtext.botlib.dsl/\/Users\/juliosugaya\/Eclipse 2.app\/Contents\/Eclipse\/plugins\/org.apache.log4j_1.2.15.v201012070815.jar&lt;org"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src&lt;org.eclipse.xtext.botlib.dsl.jvmmodel"/>
+        <fragment handle="=org.xtext.botlib.dsl/xtend-gen&lt;org.eclipse.xtext.botlib.dsl.jvmmodel"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.util"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.util{BotDuinoSwitch.java[BotDuinoSwitch" modificationStamp="1161565" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.botDuino.util{BotDuinoAdapterFactory.java[BotDuinoAdapterFactory" modificationStamp="1161564" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src&lt;org.eclipse.xtext.botlib.dsl.validation"/>
+        <fragment handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.validation"/>
+        <fragment handle="=org.xtext.botlib.dsl/xtend-gen&lt;org.eclipse.xtext.botlib.dsl.validation"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.validation{AbstractBotDuinoValidator.java[AbstractBotDuinoValidator" modificationStamp="1161540" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/xtend-gen&lt;org.eclipse.xtext.botlib.dsl.validation{BotDuinoValidator.java[BotDuinoValidator" modificationStamp="1163234" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src&lt;org.eclipse.xtext.botlib.dsl.formatting"/>
+        <fragment handle="=org.xtext.botlib.dsl/xtend-gen&lt;org.eclipse.xtext.botlib.dsl.formatting"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src&lt;org.xtext.botlib"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.parser.antlr"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.parser.antlr{BotDuinoParser.java[BotDuinoParser" modificationStamp="1161567" restrictions="0" visibility="0"/>
+        <type handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse.xtext.botlib.dsl.parser.antlr{BotDuinoAntlrTokenFileProvider.java[BotDuinoAntlrTokenFileProvider" modificationStamp="1161566" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src&lt;org.eclipse"/>
+        <fragment handle="=org.xtext.botlib.dsl/src-gen&lt;org.eclipse"/>
+        <fragment handle="=org.xtext.botlib.dsl/xtend-gen&lt;org.eclipse"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src&lt;org.eclipse.xtext.botlib.dsl.generator"/>
+        <fragment handle="=org.xtext.botlib.dsl/xtend-gen&lt;org.eclipse.xtext.botlib.dsl.generator"/>
+        <type handle="=org.xtext.botlib.dsl/xtend-gen&lt;org.eclipse.xtext.botlib.dsl.generator{BotDuinoGenerator.java[BotDuinoGenerator" modificationStamp="1163257" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=org.xtext.botlib.dsl/src&lt;org.xtext"/>
+    </package>
+</component>

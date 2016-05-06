@@ -22,7 +22,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_HEX", "RULE_DECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'VAR'", "'='", "'when'", "'then'", "'HIGH'", "'LOW'", "'UP'", "'DOWN'", "'LEFT'", "'RIGHT'", "'PUSH'", "'FREE'", "'LED'", "'extends'", "'('", "')'", "'Button'", "'Motor'", "','", "'Sensor'", "'BlueTooth'", "'CTRL'", "'Servo'", "'.'", "'on'", "'off'", "'run'", "'stop'", "'reverse'", "'{'", "'}'", "'+='", "'-='", "'*='", "'/='", "'%='", "'<'", "'>'", "'>='", "'||'", "'&&'", "'=='", "'!='", "'==='", "'!=='", "'instanceof'", "'->'", "'..<'", "'..'", "'=>'", "'<>'", "'?:'", "'+'", "'-'", "'*'", "'**'", "'/'", "'%'", "'!'", "'as'", "'++'", "'--'", "'::'", "'?.'", "'#'", "'['", "']'", "'|'", "';'", "'if'", "'else'", "'switch'", "':'", "'default'", "'case'", "'for'", "'while'", "'do'", "'var'", "'val'", "'static'", "'import'", "'extension'", "'super'", "'new'", "'false'", "'true'", "'null'", "'typeof'", "'throw'", "'return'", "'try'", "'finally'", "'synchronized'", "'catch'", "'?'", "'&'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_HEX", "RULE_DECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'when'", "'then'", "'HIGH'", "'LOW'", "'UP'", "'DOWN'", "'LEFT'", "'RIGHT'", "'PUSH'", "'FREE'", "'VAR'", "'='", "'LED'", "'extends'", "'('", "')'", "'Button'", "'Motor'", "','", "'Sensor'", "'BlueTooth'", "'CTRL'", "'Servo'", "'.'", "'on'", "'off'", "'run'", "'stop'", "'reverse'", "'{'", "'}'", "'+='", "'-='", "'*='", "'/='", "'%='", "'<'", "'>'", "'>='", "'||'", "'&&'", "'=='", "'!='", "'==='", "'!=='", "'instanceof'", "'->'", "'..<'", "'..'", "'=>'", "'<>'", "'?:'", "'+'", "'-'", "'*'", "'**'", "'/'", "'%'", "'!'", "'as'", "'++'", "'--'", "'::'", "'?.'", "'#'", "'['", "']'", "'|'", "';'", "'if'", "'else'", "'switch'", "':'", "'default'", "'case'", "'for'", "'while'", "'do'", "'var'", "'val'", "'static'", "'import'", "'extension'", "'super'", "'new'", "'false'", "'true'", "'null'", "'typeof'", "'throw'", "'return'", "'try'", "'finally'", "'synchronized'", "'catch'", "'?'", "'&'"
     };
     public static final int RULE_HEX=7;
     public static final int T__50=50;
@@ -230,7 +230,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==RULE_ID||LA1_0==13||LA1_0==25||(LA1_0>=29 && LA1_0<=30)||(LA1_0>=32 && LA1_0<=35)) ) {
+                if ( (LA1_0==RULE_ID||LA1_0==23||LA1_0==25||(LA1_0>=29 && LA1_0<=30)||(LA1_0>=32 && LA1_0<=35)) ) {
                     alt1=1;
                 }
 
@@ -337,7 +337,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEntity"
-    // InternalBotDuino.g:115:1: ruleEntity returns [EObject current=null] : (this_Type_0= ruleType | this_Rules_1= ruleRules | this_Registers_2= ruleRegisters | this_Methods_3= ruleMethods ) ;
+    // InternalBotDuino.g:115:1: ruleEntity returns [EObject current=null] : (this_Type_0= ruleType | this_Rules_1= ruleRules | this_Methods_2= ruleMethods | this_Variables_3= ruleVariables ) ;
     public final EObject ruleEntity() throws RecognitionException {
         EObject current = null;
 
@@ -345,18 +345,18 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
         EObject this_Rules_1 = null;
 
-        EObject this_Registers_2 = null;
+        EObject this_Methods_2 = null;
 
-        EObject this_Methods_3 = null;
+        EObject this_Variables_3 = null;
 
 
          enterRule(); 
             
         try {
-            // InternalBotDuino.g:118:28: ( (this_Type_0= ruleType | this_Rules_1= ruleRules | this_Registers_2= ruleRegisters | this_Methods_3= ruleMethods ) )
-            // InternalBotDuino.g:119:1: (this_Type_0= ruleType | this_Rules_1= ruleRules | this_Registers_2= ruleRegisters | this_Methods_3= ruleMethods )
+            // InternalBotDuino.g:118:28: ( (this_Type_0= ruleType | this_Rules_1= ruleRules | this_Methods_2= ruleMethods | this_Variables_3= ruleVariables ) )
+            // InternalBotDuino.g:119:1: (this_Type_0= ruleType | this_Rules_1= ruleRules | this_Methods_2= ruleMethods | this_Variables_3= ruleVariables )
             {
-            // InternalBotDuino.g:119:1: (this_Type_0= ruleType | this_Rules_1= ruleRules | this_Registers_2= ruleRegisters | this_Methods_3= ruleMethods )
+            // InternalBotDuino.g:119:1: (this_Type_0= ruleType | this_Rules_1= ruleRules | this_Methods_2= ruleMethods | this_Variables_3= ruleVariables )
             int alt2=4;
             switch ( input.LA(1) ) {
             case 25:
@@ -374,11 +374,11 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 {
                 int LA2_2 = input.LA(2);
 
-                if ( (LA2_2==15) ) {
+                if ( (LA2_2==13) ) {
                     alt2=2;
                 }
-                else if ( (LA2_2==EOF||LA2_2==RULE_ID||LA2_2==13||LA2_2==25||(LA2_2>=29 && LA2_2<=30)||(LA2_2>=32 && LA2_2<=36)) ) {
-                    alt2=4;
+                else if ( (LA2_2==EOF||LA2_2==RULE_ID||LA2_2==23||LA2_2==25||(LA2_2>=29 && LA2_2<=30)||(LA2_2>=32 && LA2_2<=36)) ) {
+                    alt2=3;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -389,9 +389,9 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 }
                 }
                 break;
-            case 13:
+            case 23:
                 {
-                alt2=3;
+                alt2=4;
                 }
                 break;
             default:
@@ -448,21 +448,21 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBotDuino.g:140:5: this_Registers_2= ruleRegisters
+                    // InternalBotDuino.g:140:5: this_Methods_2= ruleMethods
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getEntityAccess().getRegistersParserRuleCall_2()); 
+                              newCompositeNode(grammarAccess.getEntityAccess().getMethodsParserRuleCall_2()); 
                           
                     }
                     pushFollow(FOLLOW_2);
-                    this_Registers_2=ruleRegisters();
+                    this_Methods_2=ruleMethods();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
                        
-                              current = this_Registers_2; 
+                              current = this_Methods_2; 
                               afterParserOrEnumRuleCall();
                           
                     }
@@ -470,21 +470,21 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBotDuino.g:150:5: this_Methods_3= ruleMethods
+                    // InternalBotDuino.g:150:5: this_Variables_3= ruleVariables
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getEntityAccess().getMethodsParserRuleCall_3()); 
+                              newCompositeNode(grammarAccess.getEntityAccess().getVariablesParserRuleCall_3()); 
                           
                     }
                     pushFollow(FOLLOW_2);
-                    this_Methods_3=ruleMethods();
+                    this_Variables_3=ruleVariables();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
                        
-                              current = this_Methods_3; 
+                              current = this_Variables_3; 
                               afterParserOrEnumRuleCall();
                           
                     }
@@ -513,179 +513,8 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleEntity"
 
 
-    // $ANTLR start "entryRuleRegisters"
-    // InternalBotDuino.g:166:1: entryRuleRegisters returns [EObject current=null] : iv_ruleRegisters= ruleRegisters EOF ;
-    public final EObject entryRuleRegisters() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleRegisters = null;
-
-
-        try {
-            // InternalBotDuino.g:167:2: (iv_ruleRegisters= ruleRegisters EOF )
-            // InternalBotDuino.g:168:2: iv_ruleRegisters= ruleRegisters EOF
-            {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getRegistersRule()); 
-            }
-            pushFollow(FOLLOW_1);
-            iv_ruleRegisters=ruleRegisters();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleRegisters; 
-            }
-            match(input,EOF,FOLLOW_2); if (state.failed) return current;
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleRegisters"
-
-
-    // $ANTLR start "ruleRegisters"
-    // InternalBotDuino.g:175:1: ruleRegisters returns [EObject current=null] : (otherlv_0= 'VAR' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_values_3_0= RULE_INT ) )* ) ;
-    public final EObject ruleRegisters() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_0=null;
-        Token lv_name_1_0=null;
-        Token otherlv_2=null;
-        Token lv_values_3_0=null;
-
-         enterRule(); 
-            
-        try {
-            // InternalBotDuino.g:178:28: ( (otherlv_0= 'VAR' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_values_3_0= RULE_INT ) )* ) )
-            // InternalBotDuino.g:179:1: (otherlv_0= 'VAR' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_values_3_0= RULE_INT ) )* )
-            {
-            // InternalBotDuino.g:179:1: (otherlv_0= 'VAR' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_values_3_0= RULE_INT ) )* )
-            // InternalBotDuino.g:179:3: otherlv_0= 'VAR' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_values_3_0= RULE_INT ) )*
-            {
-            otherlv_0=(Token)match(input,13,FOLLOW_4); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-                  	newLeafNode(otherlv_0, grammarAccess.getRegistersAccess().getVARKeyword_0());
-                  
-            }
-            // InternalBotDuino.g:183:1: ( (lv_name_1_0= RULE_ID ) )
-            // InternalBotDuino.g:184:1: (lv_name_1_0= RULE_ID )
-            {
-            // InternalBotDuino.g:184:1: (lv_name_1_0= RULE_ID )
-            // InternalBotDuino.g:185:3: lv_name_1_0= RULE_ID
-            {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_5); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              			newLeafNode(lv_name_1_0, grammarAccess.getRegistersAccess().getNameIDTerminalRuleCall_1_0()); 
-              		
-            }
-            if ( state.backtracking==0 ) {
-
-              	        if (current==null) {
-              	            current = createModelElement(grammarAccess.getRegistersRule());
-              	        }
-                     		setWithLastConsumed(
-                     			current, 
-                     			"name",
-                      		lv_name_1_0, 
-                      		"org.eclipse.xtext.xbase.Xtype.ID");
-              	    
-            }
-
-            }
-
-
-            }
-
-            otherlv_2=(Token)match(input,14,FOLLOW_6); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-                  	newLeafNode(otherlv_2, grammarAccess.getRegistersAccess().getEqualsSignKeyword_2());
-                  
-            }
-            // InternalBotDuino.g:205:1: ( (lv_values_3_0= RULE_INT ) )*
-            loop3:
-            do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
-
-                if ( (LA3_0==RULE_INT) ) {
-                    alt3=1;
-                }
-
-
-                switch (alt3) {
-            	case 1 :
-            	    // InternalBotDuino.g:206:1: (lv_values_3_0= RULE_INT )
-            	    {
-            	    // InternalBotDuino.g:206:1: (lv_values_3_0= RULE_INT )
-            	    // InternalBotDuino.g:207:3: lv_values_3_0= RULE_INT
-            	    {
-            	    lv_values_3_0=(Token)match(input,RULE_INT,FOLLOW_6); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      			newLeafNode(lv_values_3_0, grammarAccess.getRegistersAccess().getValuesINTTerminalRuleCall_3_0()); 
-            	      		
-            	    }
-            	    if ( state.backtracking==0 ) {
-
-            	      	        if (current==null) {
-            	      	            current = createModelElement(grammarAccess.getRegistersRule());
-            	      	        }
-            	             		addWithLastConsumed(
-            	             			current, 
-            	             			"values",
-            	              		lv_values_3_0, 
-            	              		"org.eclipse.xtext.botlib.dsl.BotDuino.INT");
-            	      	    
-            	    }
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop3;
-                }
-            } while (true);
-
-
-            }
-
-
-            }
-
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleRegisters"
-
-
     // $ANTLR start "entryRuleType"
-    // InternalBotDuino.g:231:1: entryRuleType returns [EObject current=null] : iv_ruleType= ruleType EOF ;
+    // InternalBotDuino.g:166:1: entryRuleType returns [EObject current=null] : iv_ruleType= ruleType EOF ;
     public final EObject entryRuleType() throws RecognitionException {
         EObject current = null;
 
@@ -693,8 +522,8 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBotDuino.g:232:2: (iv_ruleType= ruleType EOF )
-            // InternalBotDuino.g:233:2: iv_ruleType= ruleType EOF
+            // InternalBotDuino.g:167:2: (iv_ruleType= ruleType EOF )
+            // InternalBotDuino.g:168:2: iv_ruleType= ruleType EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTypeRule()); 
@@ -725,7 +554,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleType"
-    // InternalBotDuino.g:240:1: ruleType returns [EObject current=null] : (this_Button_0= ruleButton | this_Sensor_1= ruleSensor | this_BlueTooth_2= ruleBlueTooth | this_CTRL_3= ruleCTRL | this_LED_4= ruleLED | this_Motor_5= ruleMotor | this_Servo_6= ruleServo ) ;
+    // InternalBotDuino.g:175:1: ruleType returns [EObject current=null] : (this_Button_0= ruleButton | this_Sensor_1= ruleSensor | this_BlueTooth_2= ruleBlueTooth | this_CTRL_3= ruleCTRL | this_LED_4= ruleLED | this_Motor_5= ruleMotor | this_Servo_6= ruleServo ) ;
     public final EObject ruleType() throws RecognitionException {
         EObject current = null;
 
@@ -747,58 +576,58 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalBotDuino.g:243:28: ( (this_Button_0= ruleButton | this_Sensor_1= ruleSensor | this_BlueTooth_2= ruleBlueTooth | this_CTRL_3= ruleCTRL | this_LED_4= ruleLED | this_Motor_5= ruleMotor | this_Servo_6= ruleServo ) )
-            // InternalBotDuino.g:244:1: (this_Button_0= ruleButton | this_Sensor_1= ruleSensor | this_BlueTooth_2= ruleBlueTooth | this_CTRL_3= ruleCTRL | this_LED_4= ruleLED | this_Motor_5= ruleMotor | this_Servo_6= ruleServo )
+            // InternalBotDuino.g:178:28: ( (this_Button_0= ruleButton | this_Sensor_1= ruleSensor | this_BlueTooth_2= ruleBlueTooth | this_CTRL_3= ruleCTRL | this_LED_4= ruleLED | this_Motor_5= ruleMotor | this_Servo_6= ruleServo ) )
+            // InternalBotDuino.g:179:1: (this_Button_0= ruleButton | this_Sensor_1= ruleSensor | this_BlueTooth_2= ruleBlueTooth | this_CTRL_3= ruleCTRL | this_LED_4= ruleLED | this_Motor_5= ruleMotor | this_Servo_6= ruleServo )
             {
-            // InternalBotDuino.g:244:1: (this_Button_0= ruleButton | this_Sensor_1= ruleSensor | this_BlueTooth_2= ruleBlueTooth | this_CTRL_3= ruleCTRL | this_LED_4= ruleLED | this_Motor_5= ruleMotor | this_Servo_6= ruleServo )
-            int alt4=7;
+            // InternalBotDuino.g:179:1: (this_Button_0= ruleButton | this_Sensor_1= ruleSensor | this_BlueTooth_2= ruleBlueTooth | this_CTRL_3= ruleCTRL | this_LED_4= ruleLED | this_Motor_5= ruleMotor | this_Servo_6= ruleServo )
+            int alt3=7;
             switch ( input.LA(1) ) {
             case 29:
                 {
-                alt4=1;
+                alt3=1;
                 }
                 break;
             case 32:
                 {
-                alt4=2;
+                alt3=2;
                 }
                 break;
             case 33:
                 {
-                alt4=3;
+                alt3=3;
                 }
                 break;
             case 34:
                 {
-                alt4=4;
+                alt3=4;
                 }
                 break;
             case 25:
                 {
-                alt4=5;
+                alt3=5;
                 }
                 break;
             case 30:
                 {
-                alt4=6;
+                alt3=6;
                 }
                 break;
             case 35:
                 {
-                alt4=7;
+                alt3=7;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 3, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt4) {
+            switch (alt3) {
                 case 1 :
-                    // InternalBotDuino.g:245:5: this_Button_0= ruleButton
+                    // InternalBotDuino.g:180:5: this_Button_0= ruleButton
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -820,7 +649,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBotDuino.g:255:5: this_Sensor_1= ruleSensor
+                    // InternalBotDuino.g:190:5: this_Sensor_1= ruleSensor
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -842,7 +671,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBotDuino.g:265:5: this_BlueTooth_2= ruleBlueTooth
+                    // InternalBotDuino.g:200:5: this_BlueTooth_2= ruleBlueTooth
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -864,7 +693,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBotDuino.g:275:5: this_CTRL_3= ruleCTRL
+                    // InternalBotDuino.g:210:5: this_CTRL_3= ruleCTRL
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -886,7 +715,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalBotDuino.g:285:5: this_LED_4= ruleLED
+                    // InternalBotDuino.g:220:5: this_LED_4= ruleLED
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -908,7 +737,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalBotDuino.g:295:5: this_Motor_5= ruleMotor
+                    // InternalBotDuino.g:230:5: this_Motor_5= ruleMotor
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -930,7 +759,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalBotDuino.g:305:5: this_Servo_6= ruleServo
+                    // InternalBotDuino.g:240:5: this_Servo_6= ruleServo
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -974,7 +803,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRules"
-    // InternalBotDuino.g:321:1: entryRuleRules returns [EObject current=null] : iv_ruleRules= ruleRules EOF ;
+    // InternalBotDuino.g:256:1: entryRuleRules returns [EObject current=null] : iv_ruleRules= ruleRules EOF ;
     public final EObject entryRuleRules() throws RecognitionException {
         EObject current = null;
 
@@ -982,8 +811,8 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBotDuino.g:322:2: (iv_ruleRules= ruleRules EOF )
-            // InternalBotDuino.g:323:2: iv_ruleRules= ruleRules EOF
+            // InternalBotDuino.g:257:2: (iv_ruleRules= ruleRules EOF )
+            // InternalBotDuino.g:258:2: iv_ruleRules= ruleRules EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRulesRule()); 
@@ -1014,7 +843,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRules"
-    // InternalBotDuino.g:330:1: ruleRules returns [EObject current=null] : (this_SensorRule_0= ruleSensorRule | this_ButtonRule_1= ruleButtonRule | this_CTRLRule_2= ruleCTRLRule | this_BTRule_3= ruleBTRule ) ;
+    // InternalBotDuino.g:265:1: ruleRules returns [EObject current=null] : (this_SensorRule_0= ruleSensorRule | this_ButtonRule_1= ruleButtonRule | this_CTRLRule_2= ruleCTRLRule | this_BTRule_3= ruleBTRule ) ;
     public final EObject ruleRules() throws RecognitionException {
         EObject current = null;
 
@@ -1030,47 +859,47 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalBotDuino.g:333:28: ( (this_SensorRule_0= ruleSensorRule | this_ButtonRule_1= ruleButtonRule | this_CTRLRule_2= ruleCTRLRule | this_BTRule_3= ruleBTRule ) )
-            // InternalBotDuino.g:334:1: (this_SensorRule_0= ruleSensorRule | this_ButtonRule_1= ruleButtonRule | this_CTRLRule_2= ruleCTRLRule | this_BTRule_3= ruleBTRule )
+            // InternalBotDuino.g:268:28: ( (this_SensorRule_0= ruleSensorRule | this_ButtonRule_1= ruleButtonRule | this_CTRLRule_2= ruleCTRLRule | this_BTRule_3= ruleBTRule ) )
+            // InternalBotDuino.g:269:1: (this_SensorRule_0= ruleSensorRule | this_ButtonRule_1= ruleButtonRule | this_CTRLRule_2= ruleCTRLRule | this_BTRule_3= ruleBTRule )
             {
-            // InternalBotDuino.g:334:1: (this_SensorRule_0= ruleSensorRule | this_ButtonRule_1= ruleButtonRule | this_CTRLRule_2= ruleCTRLRule | this_BTRule_3= ruleBTRule )
-            int alt5=4;
-            int LA5_0 = input.LA(1);
+            // InternalBotDuino.g:269:1: (this_SensorRule_0= ruleSensorRule | this_ButtonRule_1= ruleButtonRule | this_CTRLRule_2= ruleCTRLRule | this_BTRule_3= ruleBTRule )
+            int alt4=4;
+            int LA4_0 = input.LA(1);
 
-            if ( (LA5_0==RULE_ID) ) {
-                int LA5_1 = input.LA(2);
+            if ( (LA4_0==RULE_ID) ) {
+                int LA4_1 = input.LA(2);
 
-                if ( (LA5_1==15) ) {
+                if ( (LA4_1==13) ) {
                     switch ( input.LA(3) ) {
-                    case 23:
-                    case 24:
+                    case 21:
+                    case 22:
                         {
-                        alt5=2;
+                        alt4=2;
                         }
                         break;
                     case RULE_ID:
                         {
-                        alt5=4;
+                        alt4=4;
+                        }
+                        break;
+                    case 15:
+                    case 16:
+                        {
+                        alt4=1;
                         }
                         break;
                     case 17:
                     case 18:
-                        {
-                        alt5=1;
-                        }
-                        break;
                     case 19:
                     case 20:
-                    case 21:
-                    case 22:
                         {
-                        alt5=3;
+                        alt4=3;
                         }
                         break;
                     default:
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 5, 2, input);
+                            new NoViableAltException("", 4, 2, input);
 
                         throw nvae;
                     }
@@ -1079,7 +908,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 5, 1, input);
+                        new NoViableAltException("", 4, 1, input);
 
                     throw nvae;
                 }
@@ -1087,13 +916,13 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 4, 0, input);
 
                 throw nvae;
             }
-            switch (alt5) {
+            switch (alt4) {
                 case 1 :
-                    // InternalBotDuino.g:335:5: this_SensorRule_0= ruleSensorRule
+                    // InternalBotDuino.g:270:5: this_SensorRule_0= ruleSensorRule
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -1115,7 +944,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBotDuino.g:345:5: this_ButtonRule_1= ruleButtonRule
+                    // InternalBotDuino.g:280:5: this_ButtonRule_1= ruleButtonRule
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -1137,7 +966,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBotDuino.g:355:5: this_CTRLRule_2= ruleCTRLRule
+                    // InternalBotDuino.g:290:5: this_CTRLRule_2= ruleCTRLRule
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -1159,7 +988,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBotDuino.g:365:5: this_BTRule_3= ruleBTRule
+                    // InternalBotDuino.g:300:5: this_BTRule_3= ruleBTRule
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -1203,7 +1032,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMethods"
-    // InternalBotDuino.g:381:1: entryRuleMethods returns [EObject current=null] : iv_ruleMethods= ruleMethods EOF ;
+    // InternalBotDuino.g:316:1: entryRuleMethods returns [EObject current=null] : iv_ruleMethods= ruleMethods EOF ;
     public final EObject entryRuleMethods() throws RecognitionException {
         EObject current = null;
 
@@ -1211,8 +1040,8 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBotDuino.g:382:2: (iv_ruleMethods= ruleMethods EOF )
-            // InternalBotDuino.g:383:2: iv_ruleMethods= ruleMethods EOF
+            // InternalBotDuino.g:317:2: (iv_ruleMethods= ruleMethods EOF )
+            // InternalBotDuino.g:318:2: iv_ruleMethods= ruleMethods EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMethodsRule()); 
@@ -1243,7 +1072,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMethods"
-    // InternalBotDuino.g:390:1: ruleMethods returns [EObject current=null] : (this_LEDMethods_0= ruleLEDMethods | this_MotorMethods_1= ruleMotorMethods ) ;
+    // InternalBotDuino.g:325:1: ruleMethods returns [EObject current=null] : (this_LEDMethods_0= ruleLEDMethods | this_MotorMethods_1= ruleMotorMethods ) ;
     public final EObject ruleMethods() throws RecognitionException {
         EObject current = null;
 
@@ -1255,40 +1084,40 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalBotDuino.g:393:28: ( (this_LEDMethods_0= ruleLEDMethods | this_MotorMethods_1= ruleMotorMethods ) )
-            // InternalBotDuino.g:394:1: (this_LEDMethods_0= ruleLEDMethods | this_MotorMethods_1= ruleMotorMethods )
+            // InternalBotDuino.g:328:28: ( (this_LEDMethods_0= ruleLEDMethods | this_MotorMethods_1= ruleMotorMethods ) )
+            // InternalBotDuino.g:329:1: (this_LEDMethods_0= ruleLEDMethods | this_MotorMethods_1= ruleMotorMethods )
             {
-            // InternalBotDuino.g:394:1: (this_LEDMethods_0= ruleLEDMethods | this_MotorMethods_1= ruleMotorMethods )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // InternalBotDuino.g:329:1: (this_LEDMethods_0= ruleLEDMethods | this_MotorMethods_1= ruleMotorMethods )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA6_0==RULE_ID) ) {
-                int LA6_1 = input.LA(2);
+            if ( (LA5_0==RULE_ID) ) {
+                int LA5_1 = input.LA(2);
 
-                if ( (LA6_1==EOF||LA6_1==RULE_ID||LA6_1==13||LA6_1==25||(LA6_1>=29 && LA6_1<=30)||(LA6_1>=32 && LA6_1<=35)||LA6_1==43) ) {
-                    alt6=2;
-                }
-                else if ( (LA6_1==36) ) {
-                    int LA6_3 = input.LA(3);
+                if ( (LA5_1==36) ) {
+                    int LA5_2 = input.LA(3);
 
-                    if ( ((LA6_3>=37 && LA6_3<=38)) ) {
-                        alt6=1;
+                    if ( ((LA5_2>=39 && LA5_2<=41)) ) {
+                        alt5=2;
                     }
-                    else if ( ((LA6_3>=39 && LA6_3<=41)) ) {
-                        alt6=2;
+                    else if ( ((LA5_2>=37 && LA5_2<=38)) ) {
+                        alt5=1;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 6, 3, input);
+                            new NoViableAltException("", 5, 2, input);
 
                         throw nvae;
                     }
                 }
+                else if ( (LA5_1==EOF||LA5_1==RULE_ID||LA5_1==23||LA5_1==25||(LA5_1>=29 && LA5_1<=30)||(LA5_1>=32 && LA5_1<=35)||LA5_1==43) ) {
+                    alt5=2;
+                }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 6, 1, input);
+                        new NoViableAltException("", 5, 1, input);
 
                     throw nvae;
                 }
@@ -1296,13 +1125,13 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt6) {
+            switch (alt5) {
                 case 1 :
-                    // InternalBotDuino.g:395:5: this_LEDMethods_0= ruleLEDMethods
+                    // InternalBotDuino.g:330:5: this_LEDMethods_0= ruleLEDMethods
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -1324,7 +1153,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBotDuino.g:405:5: this_MotorMethods_1= ruleMotorMethods
+                    // InternalBotDuino.g:340:5: this_MotorMethods_1= ruleMotorMethods
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -1368,7 +1197,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBTRule"
-    // InternalBotDuino.g:421:1: entryRuleBTRule returns [EObject current=null] : iv_ruleBTRule= ruleBTRule EOF ;
+    // InternalBotDuino.g:356:1: entryRuleBTRule returns [EObject current=null] : iv_ruleBTRule= ruleBTRule EOF ;
     public final EObject entryRuleBTRule() throws RecognitionException {
         EObject current = null;
 
@@ -1376,8 +1205,8 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBotDuino.g:422:2: (iv_ruleBTRule= ruleBTRule EOF )
-            // InternalBotDuino.g:423:2: iv_ruleBTRule= ruleBTRule EOF
+            // InternalBotDuino.g:357:2: (iv_ruleBTRule= ruleBTRule EOF )
+            // InternalBotDuino.g:358:2: iv_ruleBTRule= ruleBTRule EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBTRuleRule()); 
@@ -1408,7 +1237,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBTRule"
-    // InternalBotDuino.g:430:1: ruleBTRule returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'then' ( (lv_thenPart_4_0= ruleXBlockExpression ) ) ) ;
+    // InternalBotDuino.g:365:1: ruleBTRule returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'then' ( (lv_thenPart_4_0= ruleXBlockExpression ) ) ) ;
     public final EObject ruleBTRule() throws RecognitionException {
         EObject current = null;
 
@@ -1422,17 +1251,17 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalBotDuino.g:433:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'then' ( (lv_thenPart_4_0= ruleXBlockExpression ) ) ) )
-            // InternalBotDuino.g:434:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'then' ( (lv_thenPart_4_0= ruleXBlockExpression ) ) )
+            // InternalBotDuino.g:368:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'then' ( (lv_thenPart_4_0= ruleXBlockExpression ) ) ) )
+            // InternalBotDuino.g:369:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'then' ( (lv_thenPart_4_0= ruleXBlockExpression ) ) )
             {
-            // InternalBotDuino.g:434:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'then' ( (lv_thenPart_4_0= ruleXBlockExpression ) ) )
-            // InternalBotDuino.g:434:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'then' ( (lv_thenPart_4_0= ruleXBlockExpression ) )
+            // InternalBotDuino.g:369:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'then' ( (lv_thenPart_4_0= ruleXBlockExpression ) ) )
+            // InternalBotDuino.g:369:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'then' ( (lv_thenPart_4_0= ruleXBlockExpression ) )
             {
-            // InternalBotDuino.g:434:2: ( (otherlv_0= RULE_ID ) )
-            // InternalBotDuino.g:435:1: (otherlv_0= RULE_ID )
+            // InternalBotDuino.g:369:2: ( (otherlv_0= RULE_ID ) )
+            // InternalBotDuino.g:370:1: (otherlv_0= RULE_ID )
             {
-            // InternalBotDuino.g:435:1: (otherlv_0= RULE_ID )
-            // InternalBotDuino.g:436:3: otherlv_0= RULE_ID
+            // InternalBotDuino.g:370:1: (otherlv_0= RULE_ID )
+            // InternalBotDuino.g:371:3: otherlv_0= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -1441,7 +1270,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
               	        }
                       
             }
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		newLeafNode(otherlv_0, grammarAccess.getBTRuleAccess().getSuperTypeBlueToothCrossReference_0_0()); 
@@ -1453,19 +1282,19 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,15,FOLLOW_4); if (state.failed) return current;
+            otherlv_1=(Token)match(input,13,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getBTRuleAccess().getWhenKeyword_1());
                   
             }
-            // InternalBotDuino.g:451:1: ( (lv_name_2_0= RULE_ID ) )
-            // InternalBotDuino.g:452:1: (lv_name_2_0= RULE_ID )
+            // InternalBotDuino.g:386:1: ( (lv_name_2_0= RULE_ID ) )
+            // InternalBotDuino.g:387:1: (lv_name_2_0= RULE_ID )
             {
-            // InternalBotDuino.g:452:1: (lv_name_2_0= RULE_ID )
-            // InternalBotDuino.g:453:3: lv_name_2_0= RULE_ID
+            // InternalBotDuino.g:387:1: (lv_name_2_0= RULE_ID )
+            // InternalBotDuino.g:388:3: lv_name_2_0= RULE_ID
             {
-            lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_8); if (state.failed) return current;
+            lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_name_2_0, grammarAccess.getBTRuleAccess().getNameIDTerminalRuleCall_2_0()); 
@@ -1489,17 +1318,17 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,16,FOLLOW_9); if (state.failed) return current;
+            otherlv_3=(Token)match(input,14,FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getBTRuleAccess().getThenKeyword_3());
                   
             }
-            // InternalBotDuino.g:473:1: ( (lv_thenPart_4_0= ruleXBlockExpression ) )
-            // InternalBotDuino.g:474:1: (lv_thenPart_4_0= ruleXBlockExpression )
+            // InternalBotDuino.g:408:1: ( (lv_thenPart_4_0= ruleXBlockExpression ) )
+            // InternalBotDuino.g:409:1: (lv_thenPart_4_0= ruleXBlockExpression )
             {
-            // InternalBotDuino.g:474:1: (lv_thenPart_4_0= ruleXBlockExpression )
-            // InternalBotDuino.g:475:3: lv_thenPart_4_0= ruleXBlockExpression
+            // InternalBotDuino.g:409:1: (lv_thenPart_4_0= ruleXBlockExpression )
+            // InternalBotDuino.g:410:3: lv_thenPart_4_0= ruleXBlockExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -1553,7 +1382,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSensorRule"
-    // InternalBotDuino.g:499:1: entryRuleSensorRule returns [EObject current=null] : iv_ruleSensorRule= ruleSensorRule EOF ;
+    // InternalBotDuino.g:434:1: entryRuleSensorRule returns [EObject current=null] : iv_ruleSensorRule= ruleSensorRule EOF ;
     public final EObject entryRuleSensorRule() throws RecognitionException {
         EObject current = null;
 
@@ -1561,8 +1390,8 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBotDuino.g:500:2: (iv_ruleSensorRule= ruleSensorRule EOF )
-            // InternalBotDuino.g:501:2: iv_ruleSensorRule= ruleSensorRule EOF
+            // InternalBotDuino.g:435:2: (iv_ruleSensorRule= ruleSensorRule EOF )
+            // InternalBotDuino.g:436:2: iv_ruleSensorRule= ruleSensorRule EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSensorRuleRule()); 
@@ -1593,7 +1422,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSensorRule"
-    // InternalBotDuino.g:508:1: ruleSensorRule returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_sensorActions_2_0= 'HIGH' ) ) | ( (lv_sensorActions_3_0= 'LOW' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) ) ;
+    // InternalBotDuino.g:443:1: ruleSensorRule returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_sensorActions_2_0= 'HIGH' ) ) | ( (lv_sensorActions_3_0= 'LOW' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) ) ;
     public final EObject ruleSensorRule() throws RecognitionException {
         EObject current = null;
 
@@ -1608,17 +1437,17 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalBotDuino.g:511:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_sensorActions_2_0= 'HIGH' ) ) | ( (lv_sensorActions_3_0= 'LOW' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) ) )
-            // InternalBotDuino.g:512:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_sensorActions_2_0= 'HIGH' ) ) | ( (lv_sensorActions_3_0= 'LOW' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) )
+            // InternalBotDuino.g:446:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_sensorActions_2_0= 'HIGH' ) ) | ( (lv_sensorActions_3_0= 'LOW' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) ) )
+            // InternalBotDuino.g:447:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_sensorActions_2_0= 'HIGH' ) ) | ( (lv_sensorActions_3_0= 'LOW' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) )
             {
-            // InternalBotDuino.g:512:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_sensorActions_2_0= 'HIGH' ) ) | ( (lv_sensorActions_3_0= 'LOW' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) )
-            // InternalBotDuino.g:512:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_sensorActions_2_0= 'HIGH' ) ) | ( (lv_sensorActions_3_0= 'LOW' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) )
+            // InternalBotDuino.g:447:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_sensorActions_2_0= 'HIGH' ) ) | ( (lv_sensorActions_3_0= 'LOW' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) )
+            // InternalBotDuino.g:447:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_sensorActions_2_0= 'HIGH' ) ) | ( (lv_sensorActions_3_0= 'LOW' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) )
             {
-            // InternalBotDuino.g:512:2: ( (otherlv_0= RULE_ID ) )
-            // InternalBotDuino.g:513:1: (otherlv_0= RULE_ID )
+            // InternalBotDuino.g:447:2: ( (otherlv_0= RULE_ID ) )
+            // InternalBotDuino.g:448:1: (otherlv_0= RULE_ID )
             {
-            // InternalBotDuino.g:513:1: (otherlv_0= RULE_ID )
-            // InternalBotDuino.g:514:3: otherlv_0= RULE_ID
+            // InternalBotDuino.g:448:1: (otherlv_0= RULE_ID )
+            // InternalBotDuino.g:449:3: otherlv_0= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -1627,7 +1456,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
               	        }
                       
             }
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		newLeafNode(otherlv_0, grammarAccess.getSensorRuleAccess().getSuperTypeSensorCrossReference_0_0()); 
@@ -1639,40 +1468,40 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,15,FOLLOW_10); if (state.failed) return current;
+            otherlv_1=(Token)match(input,13,FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getSensorRuleAccess().getWhenKeyword_1());
                   
             }
-            // InternalBotDuino.g:529:1: ( ( (lv_sensorActions_2_0= 'HIGH' ) ) | ( (lv_sensorActions_3_0= 'LOW' ) ) )
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // InternalBotDuino.g:464:1: ( ( (lv_sensorActions_2_0= 'HIGH' ) ) | ( (lv_sensorActions_3_0= 'LOW' ) ) )
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA7_0==17) ) {
-                alt7=1;
+            if ( (LA6_0==15) ) {
+                alt6=1;
             }
-            else if ( (LA7_0==18) ) {
-                alt7=2;
+            else if ( (LA6_0==16) ) {
+                alt6=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
-            switch (alt7) {
+            switch (alt6) {
                 case 1 :
-                    // InternalBotDuino.g:529:2: ( (lv_sensorActions_2_0= 'HIGH' ) )
+                    // InternalBotDuino.g:464:2: ( (lv_sensorActions_2_0= 'HIGH' ) )
                     {
-                    // InternalBotDuino.g:529:2: ( (lv_sensorActions_2_0= 'HIGH' ) )
-                    // InternalBotDuino.g:530:1: (lv_sensorActions_2_0= 'HIGH' )
+                    // InternalBotDuino.g:464:2: ( (lv_sensorActions_2_0= 'HIGH' ) )
+                    // InternalBotDuino.g:465:1: (lv_sensorActions_2_0= 'HIGH' )
                     {
-                    // InternalBotDuino.g:530:1: (lv_sensorActions_2_0= 'HIGH' )
-                    // InternalBotDuino.g:531:3: lv_sensorActions_2_0= 'HIGH'
+                    // InternalBotDuino.g:465:1: (lv_sensorActions_2_0= 'HIGH' )
+                    // InternalBotDuino.g:466:3: lv_sensorActions_2_0= 'HIGH'
                     {
-                    lv_sensorActions_2_0=(Token)match(input,17,FOLLOW_8); if (state.failed) return current;
+                    lv_sensorActions_2_0=(Token)match(input,15,FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_sensorActions_2_0, grammarAccess.getSensorRuleAccess().getSensorActionsHIGHKeyword_2_0_0());
@@ -1696,15 +1525,15 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBotDuino.g:545:6: ( (lv_sensorActions_3_0= 'LOW' ) )
+                    // InternalBotDuino.g:480:6: ( (lv_sensorActions_3_0= 'LOW' ) )
                     {
-                    // InternalBotDuino.g:545:6: ( (lv_sensorActions_3_0= 'LOW' ) )
-                    // InternalBotDuino.g:546:1: (lv_sensorActions_3_0= 'LOW' )
+                    // InternalBotDuino.g:480:6: ( (lv_sensorActions_3_0= 'LOW' ) )
+                    // InternalBotDuino.g:481:1: (lv_sensorActions_3_0= 'LOW' )
                     {
-                    // InternalBotDuino.g:546:1: (lv_sensorActions_3_0= 'LOW' )
-                    // InternalBotDuino.g:547:3: lv_sensorActions_3_0= 'LOW'
+                    // InternalBotDuino.g:481:1: (lv_sensorActions_3_0= 'LOW' )
+                    // InternalBotDuino.g:482:3: lv_sensorActions_3_0= 'LOW'
                     {
-                    lv_sensorActions_3_0=(Token)match(input,18,FOLLOW_8); if (state.failed) return current;
+                    lv_sensorActions_3_0=(Token)match(input,16,FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_sensorActions_3_0, grammarAccess.getSensorRuleAccess().getSensorActionsLOWKeyword_2_1_0());
@@ -1730,17 +1559,17 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,16,FOLLOW_9); if (state.failed) return current;
+            otherlv_4=(Token)match(input,14,FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getSensorRuleAccess().getThenKeyword_3());
                   
             }
-            // InternalBotDuino.g:564:1: ( (lv_thenPart_5_0= ruleXBlockExpression ) )
-            // InternalBotDuino.g:565:1: (lv_thenPart_5_0= ruleXBlockExpression )
+            // InternalBotDuino.g:499:1: ( (lv_thenPart_5_0= ruleXBlockExpression ) )
+            // InternalBotDuino.g:500:1: (lv_thenPart_5_0= ruleXBlockExpression )
             {
-            // InternalBotDuino.g:565:1: (lv_thenPart_5_0= ruleXBlockExpression )
-            // InternalBotDuino.g:566:3: lv_thenPart_5_0= ruleXBlockExpression
+            // InternalBotDuino.g:500:1: (lv_thenPart_5_0= ruleXBlockExpression )
+            // InternalBotDuino.g:501:3: lv_thenPart_5_0= ruleXBlockExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -1794,7 +1623,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCTRLRule"
-    // InternalBotDuino.g:590:1: entryRuleCTRLRule returns [EObject current=null] : iv_ruleCTRLRule= ruleCTRLRule EOF ;
+    // InternalBotDuino.g:525:1: entryRuleCTRLRule returns [EObject current=null] : iv_ruleCTRLRule= ruleCTRLRule EOF ;
     public final EObject entryRuleCTRLRule() throws RecognitionException {
         EObject current = null;
 
@@ -1802,8 +1631,8 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBotDuino.g:591:2: (iv_ruleCTRLRule= ruleCTRLRule EOF )
-            // InternalBotDuino.g:592:2: iv_ruleCTRLRule= ruleCTRLRule EOF
+            // InternalBotDuino.g:526:2: (iv_ruleCTRLRule= ruleCTRLRule EOF )
+            // InternalBotDuino.g:527:2: iv_ruleCTRLRule= ruleCTRLRule EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCTRLRuleRule()); 
@@ -1834,7 +1663,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCTRLRule"
-    // InternalBotDuino.g:599:1: ruleCTRLRule returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_ctrlActions_2_0= 'UP' ) ) | ( (lv_ctrlActions_3_0= 'DOWN' ) ) | ( (lv_ctrlActions_4_0= 'LEFT' ) ) | ( (lv_ctrlActions_5_0= 'RIGHT' ) ) ) otherlv_6= 'then' ( (lv_thenPart_7_0= ruleXBlockExpression ) ) ) ;
+    // InternalBotDuino.g:534:1: ruleCTRLRule returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_ctrlActions_2_0= 'UP' ) ) | ( (lv_ctrlActions_3_0= 'DOWN' ) ) | ( (lv_ctrlActions_4_0= 'LEFT' ) ) | ( (lv_ctrlActions_5_0= 'RIGHT' ) ) ) otherlv_6= 'then' ( (lv_thenPart_7_0= ruleXBlockExpression ) ) ) ;
     public final EObject ruleCTRLRule() throws RecognitionException {
         EObject current = null;
 
@@ -1851,17 +1680,17 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalBotDuino.g:602:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_ctrlActions_2_0= 'UP' ) ) | ( (lv_ctrlActions_3_0= 'DOWN' ) ) | ( (lv_ctrlActions_4_0= 'LEFT' ) ) | ( (lv_ctrlActions_5_0= 'RIGHT' ) ) ) otherlv_6= 'then' ( (lv_thenPart_7_0= ruleXBlockExpression ) ) ) )
-            // InternalBotDuino.g:603:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_ctrlActions_2_0= 'UP' ) ) | ( (lv_ctrlActions_3_0= 'DOWN' ) ) | ( (lv_ctrlActions_4_0= 'LEFT' ) ) | ( (lv_ctrlActions_5_0= 'RIGHT' ) ) ) otherlv_6= 'then' ( (lv_thenPart_7_0= ruleXBlockExpression ) ) )
+            // InternalBotDuino.g:537:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_ctrlActions_2_0= 'UP' ) ) | ( (lv_ctrlActions_3_0= 'DOWN' ) ) | ( (lv_ctrlActions_4_0= 'LEFT' ) ) | ( (lv_ctrlActions_5_0= 'RIGHT' ) ) ) otherlv_6= 'then' ( (lv_thenPart_7_0= ruleXBlockExpression ) ) ) )
+            // InternalBotDuino.g:538:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_ctrlActions_2_0= 'UP' ) ) | ( (lv_ctrlActions_3_0= 'DOWN' ) ) | ( (lv_ctrlActions_4_0= 'LEFT' ) ) | ( (lv_ctrlActions_5_0= 'RIGHT' ) ) ) otherlv_6= 'then' ( (lv_thenPart_7_0= ruleXBlockExpression ) ) )
             {
-            // InternalBotDuino.g:603:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_ctrlActions_2_0= 'UP' ) ) | ( (lv_ctrlActions_3_0= 'DOWN' ) ) | ( (lv_ctrlActions_4_0= 'LEFT' ) ) | ( (lv_ctrlActions_5_0= 'RIGHT' ) ) ) otherlv_6= 'then' ( (lv_thenPart_7_0= ruleXBlockExpression ) ) )
-            // InternalBotDuino.g:603:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_ctrlActions_2_0= 'UP' ) ) | ( (lv_ctrlActions_3_0= 'DOWN' ) ) | ( (lv_ctrlActions_4_0= 'LEFT' ) ) | ( (lv_ctrlActions_5_0= 'RIGHT' ) ) ) otherlv_6= 'then' ( (lv_thenPart_7_0= ruleXBlockExpression ) )
+            // InternalBotDuino.g:538:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_ctrlActions_2_0= 'UP' ) ) | ( (lv_ctrlActions_3_0= 'DOWN' ) ) | ( (lv_ctrlActions_4_0= 'LEFT' ) ) | ( (lv_ctrlActions_5_0= 'RIGHT' ) ) ) otherlv_6= 'then' ( (lv_thenPart_7_0= ruleXBlockExpression ) ) )
+            // InternalBotDuino.g:538:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_ctrlActions_2_0= 'UP' ) ) | ( (lv_ctrlActions_3_0= 'DOWN' ) ) | ( (lv_ctrlActions_4_0= 'LEFT' ) ) | ( (lv_ctrlActions_5_0= 'RIGHT' ) ) ) otherlv_6= 'then' ( (lv_thenPart_7_0= ruleXBlockExpression ) )
             {
-            // InternalBotDuino.g:603:2: ( (otherlv_0= RULE_ID ) )
-            // InternalBotDuino.g:604:1: (otherlv_0= RULE_ID )
+            // InternalBotDuino.g:538:2: ( (otherlv_0= RULE_ID ) )
+            // InternalBotDuino.g:539:1: (otherlv_0= RULE_ID )
             {
-            // InternalBotDuino.g:604:1: (otherlv_0= RULE_ID )
-            // InternalBotDuino.g:605:3: otherlv_0= RULE_ID
+            // InternalBotDuino.g:539:1: (otherlv_0= RULE_ID )
+            // InternalBotDuino.g:540:3: otherlv_0= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -1870,7 +1699,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
               	        }
                       
             }
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		newLeafNode(otherlv_0, grammarAccess.getCTRLRuleAccess().getSuperTypeCTRLCrossReference_0_0()); 
@@ -1882,54 +1711,54 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,15,FOLLOW_11); if (state.failed) return current;
+            otherlv_1=(Token)match(input,13,FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getCTRLRuleAccess().getWhenKeyword_1());
                   
             }
-            // InternalBotDuino.g:620:1: ( ( (lv_ctrlActions_2_0= 'UP' ) ) | ( (lv_ctrlActions_3_0= 'DOWN' ) ) | ( (lv_ctrlActions_4_0= 'LEFT' ) ) | ( (lv_ctrlActions_5_0= 'RIGHT' ) ) )
-            int alt8=4;
+            // InternalBotDuino.g:555:1: ( ( (lv_ctrlActions_2_0= 'UP' ) ) | ( (lv_ctrlActions_3_0= 'DOWN' ) ) | ( (lv_ctrlActions_4_0= 'LEFT' ) ) | ( (lv_ctrlActions_5_0= 'RIGHT' ) ) )
+            int alt7=4;
             switch ( input.LA(1) ) {
+            case 17:
+                {
+                alt7=1;
+                }
+                break;
+            case 18:
+                {
+                alt7=2;
+                }
+                break;
             case 19:
                 {
-                alt8=1;
+                alt7=3;
                 }
                 break;
             case 20:
                 {
-                alt8=2;
-                }
-                break;
-            case 21:
-                {
-                alt8=3;
-                }
-                break;
-            case 22:
-                {
-                alt8=4;
+                alt7=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt8) {
+            switch (alt7) {
                 case 1 :
-                    // InternalBotDuino.g:620:2: ( (lv_ctrlActions_2_0= 'UP' ) )
+                    // InternalBotDuino.g:555:2: ( (lv_ctrlActions_2_0= 'UP' ) )
                     {
-                    // InternalBotDuino.g:620:2: ( (lv_ctrlActions_2_0= 'UP' ) )
-                    // InternalBotDuino.g:621:1: (lv_ctrlActions_2_0= 'UP' )
+                    // InternalBotDuino.g:555:2: ( (lv_ctrlActions_2_0= 'UP' ) )
+                    // InternalBotDuino.g:556:1: (lv_ctrlActions_2_0= 'UP' )
                     {
-                    // InternalBotDuino.g:621:1: (lv_ctrlActions_2_0= 'UP' )
-                    // InternalBotDuino.g:622:3: lv_ctrlActions_2_0= 'UP'
+                    // InternalBotDuino.g:556:1: (lv_ctrlActions_2_0= 'UP' )
+                    // InternalBotDuino.g:557:3: lv_ctrlActions_2_0= 'UP'
                     {
-                    lv_ctrlActions_2_0=(Token)match(input,19,FOLLOW_8); if (state.failed) return current;
+                    lv_ctrlActions_2_0=(Token)match(input,17,FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_ctrlActions_2_0, grammarAccess.getCTRLRuleAccess().getCtrlActionsUPKeyword_2_0_0());
@@ -1953,15 +1782,15 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBotDuino.g:636:6: ( (lv_ctrlActions_3_0= 'DOWN' ) )
+                    // InternalBotDuino.g:571:6: ( (lv_ctrlActions_3_0= 'DOWN' ) )
                     {
-                    // InternalBotDuino.g:636:6: ( (lv_ctrlActions_3_0= 'DOWN' ) )
-                    // InternalBotDuino.g:637:1: (lv_ctrlActions_3_0= 'DOWN' )
+                    // InternalBotDuino.g:571:6: ( (lv_ctrlActions_3_0= 'DOWN' ) )
+                    // InternalBotDuino.g:572:1: (lv_ctrlActions_3_0= 'DOWN' )
                     {
-                    // InternalBotDuino.g:637:1: (lv_ctrlActions_3_0= 'DOWN' )
-                    // InternalBotDuino.g:638:3: lv_ctrlActions_3_0= 'DOWN'
+                    // InternalBotDuino.g:572:1: (lv_ctrlActions_3_0= 'DOWN' )
+                    // InternalBotDuino.g:573:3: lv_ctrlActions_3_0= 'DOWN'
                     {
-                    lv_ctrlActions_3_0=(Token)match(input,20,FOLLOW_8); if (state.failed) return current;
+                    lv_ctrlActions_3_0=(Token)match(input,18,FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_ctrlActions_3_0, grammarAccess.getCTRLRuleAccess().getCtrlActionsDOWNKeyword_2_1_0());
@@ -1985,15 +1814,15 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBotDuino.g:652:6: ( (lv_ctrlActions_4_0= 'LEFT' ) )
+                    // InternalBotDuino.g:587:6: ( (lv_ctrlActions_4_0= 'LEFT' ) )
                     {
-                    // InternalBotDuino.g:652:6: ( (lv_ctrlActions_4_0= 'LEFT' ) )
-                    // InternalBotDuino.g:653:1: (lv_ctrlActions_4_0= 'LEFT' )
+                    // InternalBotDuino.g:587:6: ( (lv_ctrlActions_4_0= 'LEFT' ) )
+                    // InternalBotDuino.g:588:1: (lv_ctrlActions_4_0= 'LEFT' )
                     {
-                    // InternalBotDuino.g:653:1: (lv_ctrlActions_4_0= 'LEFT' )
-                    // InternalBotDuino.g:654:3: lv_ctrlActions_4_0= 'LEFT'
+                    // InternalBotDuino.g:588:1: (lv_ctrlActions_4_0= 'LEFT' )
+                    // InternalBotDuino.g:589:3: lv_ctrlActions_4_0= 'LEFT'
                     {
-                    lv_ctrlActions_4_0=(Token)match(input,21,FOLLOW_8); if (state.failed) return current;
+                    lv_ctrlActions_4_0=(Token)match(input,19,FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_ctrlActions_4_0, grammarAccess.getCTRLRuleAccess().getCtrlActionsLEFTKeyword_2_2_0());
@@ -2017,15 +1846,15 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBotDuino.g:668:6: ( (lv_ctrlActions_5_0= 'RIGHT' ) )
+                    // InternalBotDuino.g:603:6: ( (lv_ctrlActions_5_0= 'RIGHT' ) )
                     {
-                    // InternalBotDuino.g:668:6: ( (lv_ctrlActions_5_0= 'RIGHT' ) )
-                    // InternalBotDuino.g:669:1: (lv_ctrlActions_5_0= 'RIGHT' )
+                    // InternalBotDuino.g:603:6: ( (lv_ctrlActions_5_0= 'RIGHT' ) )
+                    // InternalBotDuino.g:604:1: (lv_ctrlActions_5_0= 'RIGHT' )
                     {
-                    // InternalBotDuino.g:669:1: (lv_ctrlActions_5_0= 'RIGHT' )
-                    // InternalBotDuino.g:670:3: lv_ctrlActions_5_0= 'RIGHT'
+                    // InternalBotDuino.g:604:1: (lv_ctrlActions_5_0= 'RIGHT' )
+                    // InternalBotDuino.g:605:3: lv_ctrlActions_5_0= 'RIGHT'
                     {
-                    lv_ctrlActions_5_0=(Token)match(input,22,FOLLOW_8); if (state.failed) return current;
+                    lv_ctrlActions_5_0=(Token)match(input,20,FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_ctrlActions_5_0, grammarAccess.getCTRLRuleAccess().getCtrlActionsRIGHTKeyword_2_3_0());
@@ -2051,17 +1880,17 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,16,FOLLOW_9); if (state.failed) return current;
+            otherlv_6=(Token)match(input,14,FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getCTRLRuleAccess().getThenKeyword_3());
                   
             }
-            // InternalBotDuino.g:687:1: ( (lv_thenPart_7_0= ruleXBlockExpression ) )
-            // InternalBotDuino.g:688:1: (lv_thenPart_7_0= ruleXBlockExpression )
+            // InternalBotDuino.g:622:1: ( (lv_thenPart_7_0= ruleXBlockExpression ) )
+            // InternalBotDuino.g:623:1: (lv_thenPart_7_0= ruleXBlockExpression )
             {
-            // InternalBotDuino.g:688:1: (lv_thenPart_7_0= ruleXBlockExpression )
-            // InternalBotDuino.g:689:3: lv_thenPart_7_0= ruleXBlockExpression
+            // InternalBotDuino.g:623:1: (lv_thenPart_7_0= ruleXBlockExpression )
+            // InternalBotDuino.g:624:3: lv_thenPart_7_0= ruleXBlockExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -2115,7 +1944,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleButtonRule"
-    // InternalBotDuino.g:713:1: entryRuleButtonRule returns [EObject current=null] : iv_ruleButtonRule= ruleButtonRule EOF ;
+    // InternalBotDuino.g:648:1: entryRuleButtonRule returns [EObject current=null] : iv_ruleButtonRule= ruleButtonRule EOF ;
     public final EObject entryRuleButtonRule() throws RecognitionException {
         EObject current = null;
 
@@ -2123,8 +1952,8 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBotDuino.g:714:2: (iv_ruleButtonRule= ruleButtonRule EOF )
-            // InternalBotDuino.g:715:2: iv_ruleButtonRule= ruleButtonRule EOF
+            // InternalBotDuino.g:649:2: (iv_ruleButtonRule= ruleButtonRule EOF )
+            // InternalBotDuino.g:650:2: iv_ruleButtonRule= ruleButtonRule EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getButtonRuleRule()); 
@@ -2155,7 +1984,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleButtonRule"
-    // InternalBotDuino.g:722:1: ruleButtonRule returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_btnActions_2_0= 'PUSH' ) ) | ( (lv_btnActions_3_0= 'FREE' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) ) ;
+    // InternalBotDuino.g:657:1: ruleButtonRule returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_btnActions_2_0= 'PUSH' ) ) | ( (lv_btnActions_3_0= 'FREE' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) ) ;
     public final EObject ruleButtonRule() throws RecognitionException {
         EObject current = null;
 
@@ -2170,17 +1999,17 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalBotDuino.g:725:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_btnActions_2_0= 'PUSH' ) ) | ( (lv_btnActions_3_0= 'FREE' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) ) )
-            // InternalBotDuino.g:726:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_btnActions_2_0= 'PUSH' ) ) | ( (lv_btnActions_3_0= 'FREE' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) )
+            // InternalBotDuino.g:660:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_btnActions_2_0= 'PUSH' ) ) | ( (lv_btnActions_3_0= 'FREE' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) ) )
+            // InternalBotDuino.g:661:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_btnActions_2_0= 'PUSH' ) ) | ( (lv_btnActions_3_0= 'FREE' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) )
             {
-            // InternalBotDuino.g:726:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_btnActions_2_0= 'PUSH' ) ) | ( (lv_btnActions_3_0= 'FREE' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) )
-            // InternalBotDuino.g:726:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_btnActions_2_0= 'PUSH' ) ) | ( (lv_btnActions_3_0= 'FREE' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) )
+            // InternalBotDuino.g:661:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_btnActions_2_0= 'PUSH' ) ) | ( (lv_btnActions_3_0= 'FREE' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) ) )
+            // InternalBotDuino.g:661:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= 'when' ( ( (lv_btnActions_2_0= 'PUSH' ) ) | ( (lv_btnActions_3_0= 'FREE' ) ) ) otherlv_4= 'then' ( (lv_thenPart_5_0= ruleXBlockExpression ) )
             {
-            // InternalBotDuino.g:726:2: ( (otherlv_0= RULE_ID ) )
-            // InternalBotDuino.g:727:1: (otherlv_0= RULE_ID )
+            // InternalBotDuino.g:661:2: ( (otherlv_0= RULE_ID ) )
+            // InternalBotDuino.g:662:1: (otherlv_0= RULE_ID )
             {
-            // InternalBotDuino.g:727:1: (otherlv_0= RULE_ID )
-            // InternalBotDuino.g:728:3: otherlv_0= RULE_ID
+            // InternalBotDuino.g:662:1: (otherlv_0= RULE_ID )
+            // InternalBotDuino.g:663:3: otherlv_0= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -2189,7 +2018,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
               	        }
                       
             }
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		newLeafNode(otherlv_0, grammarAccess.getButtonRuleAccess().getSuperTypeButtonCrossReference_0_0()); 
@@ -2201,40 +2030,40 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,15,FOLLOW_12); if (state.failed) return current;
+            otherlv_1=(Token)match(input,13,FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getButtonRuleAccess().getWhenKeyword_1());
                   
             }
-            // InternalBotDuino.g:743:1: ( ( (lv_btnActions_2_0= 'PUSH' ) ) | ( (lv_btnActions_3_0= 'FREE' ) ) )
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // InternalBotDuino.g:678:1: ( ( (lv_btnActions_2_0= 'PUSH' ) ) | ( (lv_btnActions_3_0= 'FREE' ) ) )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA9_0==23) ) {
-                alt9=1;
+            if ( (LA8_0==21) ) {
+                alt8=1;
             }
-            else if ( (LA9_0==24) ) {
-                alt9=2;
+            else if ( (LA8_0==22) ) {
+                alt8=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
-            switch (alt9) {
+            switch (alt8) {
                 case 1 :
-                    // InternalBotDuino.g:743:2: ( (lv_btnActions_2_0= 'PUSH' ) )
+                    // InternalBotDuino.g:678:2: ( (lv_btnActions_2_0= 'PUSH' ) )
                     {
-                    // InternalBotDuino.g:743:2: ( (lv_btnActions_2_0= 'PUSH' ) )
-                    // InternalBotDuino.g:744:1: (lv_btnActions_2_0= 'PUSH' )
+                    // InternalBotDuino.g:678:2: ( (lv_btnActions_2_0= 'PUSH' ) )
+                    // InternalBotDuino.g:679:1: (lv_btnActions_2_0= 'PUSH' )
                     {
-                    // InternalBotDuino.g:744:1: (lv_btnActions_2_0= 'PUSH' )
-                    // InternalBotDuino.g:745:3: lv_btnActions_2_0= 'PUSH'
+                    // InternalBotDuino.g:679:1: (lv_btnActions_2_0= 'PUSH' )
+                    // InternalBotDuino.g:680:3: lv_btnActions_2_0= 'PUSH'
                     {
-                    lv_btnActions_2_0=(Token)match(input,23,FOLLOW_8); if (state.failed) return current;
+                    lv_btnActions_2_0=(Token)match(input,21,FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_btnActions_2_0, grammarAccess.getButtonRuleAccess().getBtnActionsPUSHKeyword_2_0_0());
@@ -2258,15 +2087,15 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBotDuino.g:759:6: ( (lv_btnActions_3_0= 'FREE' ) )
+                    // InternalBotDuino.g:694:6: ( (lv_btnActions_3_0= 'FREE' ) )
                     {
-                    // InternalBotDuino.g:759:6: ( (lv_btnActions_3_0= 'FREE' ) )
-                    // InternalBotDuino.g:760:1: (lv_btnActions_3_0= 'FREE' )
+                    // InternalBotDuino.g:694:6: ( (lv_btnActions_3_0= 'FREE' ) )
+                    // InternalBotDuino.g:695:1: (lv_btnActions_3_0= 'FREE' )
                     {
-                    // InternalBotDuino.g:760:1: (lv_btnActions_3_0= 'FREE' )
-                    // InternalBotDuino.g:761:3: lv_btnActions_3_0= 'FREE'
+                    // InternalBotDuino.g:695:1: (lv_btnActions_3_0= 'FREE' )
+                    // InternalBotDuino.g:696:3: lv_btnActions_3_0= 'FREE'
                     {
-                    lv_btnActions_3_0=(Token)match(input,24,FOLLOW_8); if (state.failed) return current;
+                    lv_btnActions_3_0=(Token)match(input,22,FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_btnActions_3_0, grammarAccess.getButtonRuleAccess().getBtnActionsFREEKeyword_2_1_0());
@@ -2292,17 +2121,17 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,16,FOLLOW_9); if (state.failed) return current;
+            otherlv_4=(Token)match(input,14,FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getButtonRuleAccess().getThenKeyword_3());
                   
             }
-            // InternalBotDuino.g:778:1: ( (lv_thenPart_5_0= ruleXBlockExpression ) )
-            // InternalBotDuino.g:779:1: (lv_thenPart_5_0= ruleXBlockExpression )
+            // InternalBotDuino.g:713:1: ( (lv_thenPart_5_0= ruleXBlockExpression ) )
+            // InternalBotDuino.g:714:1: (lv_thenPart_5_0= ruleXBlockExpression )
             {
-            // InternalBotDuino.g:779:1: (lv_thenPart_5_0= ruleXBlockExpression )
-            // InternalBotDuino.g:780:3: lv_thenPart_5_0= ruleXBlockExpression
+            // InternalBotDuino.g:714:1: (lv_thenPart_5_0= ruleXBlockExpression )
+            // InternalBotDuino.g:715:3: lv_thenPart_5_0= ruleXBlockExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -2353,6 +2182,177 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
         return current;
     }
     // $ANTLR end "ruleButtonRule"
+
+
+    // $ANTLR start "entryRuleVariables"
+    // InternalBotDuino.g:739:1: entryRuleVariables returns [EObject current=null] : iv_ruleVariables= ruleVariables EOF ;
+    public final EObject entryRuleVariables() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleVariables = null;
+
+
+        try {
+            // InternalBotDuino.g:740:2: (iv_ruleVariables= ruleVariables EOF )
+            // InternalBotDuino.g:741:2: iv_ruleVariables= ruleVariables EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getVariablesRule()); 
+            }
+            pushFollow(FOLLOW_1);
+            iv_ruleVariables=ruleVariables();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleVariables; 
+            }
+            match(input,EOF,FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleVariables"
+
+
+    // $ANTLR start "ruleVariables"
+    // InternalBotDuino.g:748:1: ruleVariables returns [EObject current=null] : (otherlv_0= 'VAR' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_values_3_0= RULE_INT ) )* ) ;
+    public final EObject ruleVariables() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token lv_name_1_0=null;
+        Token otherlv_2=null;
+        Token lv_values_3_0=null;
+
+         enterRule(); 
+            
+        try {
+            // InternalBotDuino.g:751:28: ( (otherlv_0= 'VAR' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_values_3_0= RULE_INT ) )* ) )
+            // InternalBotDuino.g:752:1: (otherlv_0= 'VAR' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_values_3_0= RULE_INT ) )* )
+            {
+            // InternalBotDuino.g:752:1: (otherlv_0= 'VAR' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_values_3_0= RULE_INT ) )* )
+            // InternalBotDuino.g:752:3: otherlv_0= 'VAR' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_values_3_0= RULE_INT ) )*
+            {
+            otherlv_0=(Token)match(input,23,FOLLOW_5); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+                  	newLeafNode(otherlv_0, grammarAccess.getVariablesAccess().getVARKeyword_0());
+                  
+            }
+            // InternalBotDuino.g:756:1: ( (lv_name_1_0= RULE_ID ) )
+            // InternalBotDuino.g:757:1: (lv_name_1_0= RULE_ID )
+            {
+            // InternalBotDuino.g:757:1: (lv_name_1_0= RULE_ID )
+            // InternalBotDuino.g:758:3: lv_name_1_0= RULE_ID
+            {
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_11); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(lv_name_1_0, grammarAccess.getVariablesAccess().getNameIDTerminalRuleCall_1_0()); 
+              		
+            }
+            if ( state.backtracking==0 ) {
+
+              	        if (current==null) {
+              	            current = createModelElement(grammarAccess.getVariablesRule());
+              	        }
+                     		setWithLastConsumed(
+                     			current, 
+                     			"name",
+                      		lv_name_1_0, 
+                      		"org.eclipse.xtext.xbase.Xtype.ID");
+              	    
+            }
+
+            }
+
+
+            }
+
+            otherlv_2=(Token)match(input,24,FOLLOW_12); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+                  	newLeafNode(otherlv_2, grammarAccess.getVariablesAccess().getEqualsSignKeyword_2());
+                  
+            }
+            // InternalBotDuino.g:778:1: ( (lv_values_3_0= RULE_INT ) )*
+            loop9:
+            do {
+                int alt9=2;
+                int LA9_0 = input.LA(1);
+
+                if ( (LA9_0==RULE_INT) ) {
+                    alt9=1;
+                }
+
+
+                switch (alt9) {
+            	case 1 :
+            	    // InternalBotDuino.g:779:1: (lv_values_3_0= RULE_INT )
+            	    {
+            	    // InternalBotDuino.g:779:1: (lv_values_3_0= RULE_INT )
+            	    // InternalBotDuino.g:780:3: lv_values_3_0= RULE_INT
+            	    {
+            	    lv_values_3_0=(Token)match(input,RULE_INT,FOLLOW_12); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      			newLeafNode(lv_values_3_0, grammarAccess.getVariablesAccess().getValuesINTTerminalRuleCall_3_0()); 
+            	      		
+            	    }
+            	    if ( state.backtracking==0 ) {
+
+            	      	        if (current==null) {
+            	      	            current = createModelElement(grammarAccess.getVariablesRule());
+            	      	        }
+            	             		addWithLastConsumed(
+            	             			current, 
+            	             			"values",
+            	              		lv_values_3_0, 
+            	              		"org.eclipse.xtext.botlib.dsl.BotDuino.INT");
+            	      	    
+            	    }
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop9;
+                }
+            } while (true);
+
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+               leaveRule(); 
+            }
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleVariables"
 
 
     // $ANTLR start "entryRuleLED"
@@ -2417,7 +2417,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             // InternalBotDuino.g:817:1: (otherlv_0= 'LED' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ')' )
             // InternalBotDuino.g:817:3: otherlv_0= 'LED' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ')'
             {
-            otherlv_0=(Token)match(input,25,FOLLOW_4); if (state.failed) return current;
+            otherlv_0=(Token)match(input,25,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getLEDAccess().getLEDKeyword_0());
@@ -2464,7 +2464,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalBotDuino.g:839:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) )
                     {
-                    otherlv_2=(Token)match(input,26,FOLLOW_4); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,26,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getLEDAccess().getExtendsKeyword_2_0());
@@ -2645,7 +2645,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             // InternalBotDuino.g:903:1: (otherlv_0= 'Button' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ')' )
             // InternalBotDuino.g:903:3: otherlv_0= 'Button' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ')'
             {
-            otherlv_0=(Token)match(input,29,FOLLOW_4); if (state.failed) return current;
+            otherlv_0=(Token)match(input,29,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getButtonAccess().getButtonKeyword_0());
@@ -2692,7 +2692,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalBotDuino.g:925:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) )
                     {
-                    otherlv_2=(Token)match(input,26,FOLLOW_4); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,26,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getButtonAccess().getExtendsKeyword_2_0());
@@ -2877,7 +2877,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             // InternalBotDuino.g:989:1: (otherlv_0= 'Motor' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ',' ( (lv_values_7_0= RULE_INT ) )* otherlv_8= ',' ( (lv_values_9_0= RULE_INT ) )* otherlv_10= ')' )
             // InternalBotDuino.g:989:3: otherlv_0= 'Motor' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ',' ( (lv_values_7_0= RULE_INT ) )* otherlv_8= ',' ( (lv_values_9_0= RULE_INT ) )* otherlv_10= ')'
             {
-            otherlv_0=(Token)match(input,30,FOLLOW_4); if (state.failed) return current;
+            otherlv_0=(Token)match(input,30,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getMotorAccess().getMotorKeyword_0());
@@ -2924,7 +2924,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalBotDuino.g:1011:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) )
                     {
-                    otherlv_2=(Token)match(input,26,FOLLOW_4); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,26,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getMotorAccess().getExtendsKeyword_2_0());
@@ -3215,7 +3215,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             // InternalBotDuino.g:1119:1: (otherlv_0= 'Sensor' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ',' ( (lv_values_7_0= RULE_INT ) )* otherlv_8= ')' )
             // InternalBotDuino.g:1119:3: otherlv_0= 'Sensor' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ',' ( (lv_values_7_0= RULE_INT ) )* otherlv_8= ')'
             {
-            otherlv_0=(Token)match(input,32,FOLLOW_4); if (state.failed) return current;
+            otherlv_0=(Token)match(input,32,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getSensorAccess().getSensorKeyword_0());
@@ -3262,7 +3262,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalBotDuino.g:1141:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) )
                     {
-                    otherlv_2=(Token)match(input,26,FOLLOW_4); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,26,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getSensorAccess().getExtendsKeyword_2_0());
@@ -3499,7 +3499,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             // InternalBotDuino.g:1227:1: (otherlv_0= 'BlueTooth' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ',' ( (lv_values_7_0= RULE_INT ) )* otherlv_8= ')' )
             // InternalBotDuino.g:1227:3: otherlv_0= 'BlueTooth' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ',' ( (lv_values_7_0= RULE_INT ) )* otherlv_8= ')'
             {
-            otherlv_0=(Token)match(input,33,FOLLOW_4); if (state.failed) return current;
+            otherlv_0=(Token)match(input,33,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getBlueToothAccess().getBlueToothKeyword_0());
@@ -3546,7 +3546,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalBotDuino.g:1249:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) )
                     {
-                    otherlv_2=(Token)match(input,26,FOLLOW_4); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,26,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getBlueToothAccess().getExtendsKeyword_2_0());
@@ -3789,7 +3789,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             // InternalBotDuino.g:1335:1: (otherlv_0= 'CTRL' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ',' ( (lv_values_7_0= RULE_INT ) )* otherlv_8= ',' ( (lv_values_9_0= RULE_INT ) )* otherlv_10= ',' ( (lv_values_11_0= RULE_INT ) )* otherlv_12= ',' ( (lv_values_13_0= RULE_INT ) )* otherlv_14= ')' )
             // InternalBotDuino.g:1335:3: otherlv_0= 'CTRL' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ',' ( (lv_values_7_0= RULE_INT ) )* otherlv_8= ',' ( (lv_values_9_0= RULE_INT ) )* otherlv_10= ',' ( (lv_values_11_0= RULE_INT ) )* otherlv_12= ',' ( (lv_values_13_0= RULE_INT ) )* otherlv_14= ')'
             {
-            otherlv_0=(Token)match(input,34,FOLLOW_4); if (state.failed) return current;
+            otherlv_0=(Token)match(input,34,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getCTRLAccess().getCTRLKeyword_0());
@@ -3836,7 +3836,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalBotDuino.g:1357:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) )
                     {
-                    otherlv_2=(Token)match(input,26,FOLLOW_4); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,26,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getCTRLAccess().getExtendsKeyword_2_0());
@@ -4237,7 +4237,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             // InternalBotDuino.g:1509:1: (otherlv_0= 'Servo' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ',' ( (lv_values_7_0= RULE_INT ) )* otherlv_8= ',' ( (lv_values_9_0= RULE_INT ) )* otherlv_10= ')' )
             // InternalBotDuino.g:1509:3: otherlv_0= 'Servo' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '(' ( (lv_values_5_0= RULE_INT ) )* otherlv_6= ',' ( (lv_values_7_0= RULE_INT ) )* otherlv_8= ',' ( (lv_values_9_0= RULE_INT ) )* otherlv_10= ')'
             {
-            otherlv_0=(Token)match(input,35,FOLLOW_4); if (state.failed) return current;
+            otherlv_0=(Token)match(input,35,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getServoAccess().getServoKeyword_0());
@@ -4284,7 +4284,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalBotDuino.g:1531:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) )
                     {
-                    otherlv_2=(Token)match(input,26,FOLLOW_4); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,26,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getServoAccess().getExtendsKeyword_2_0());
@@ -4773,7 +4773,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             if ( (LA36_0==RULE_ID) ) {
                 int LA36_1 = input.LA(2);
 
-                if ( (LA36_1==EOF||LA36_1==RULE_ID||LA36_1==13||LA36_1==25||(LA36_1>=29 && LA36_1<=30)||(LA36_1>=32 && LA36_1<=35)||LA36_1==43) ) {
+                if ( (LA36_1==EOF||LA36_1==RULE_ID||LA36_1==23||LA36_1==25||(LA36_1>=29 && LA36_1<=30)||(LA36_1>=32 && LA36_1<=35)||LA36_1==43) ) {
                     alt36=1;
                 }
                 else if ( (LA36_1==36) ) {
@@ -5333,7 +5333,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 if ( (LA39_1==EOF||(LA39_1>=RULE_ID && LA39_1<=RULE_DECIMAL)||(LA39_1>=26 && LA39_1<=28)||LA39_1==31||LA39_1==36||(LA39_1>=42 && LA39_1<=79)||(LA39_1>=81 && LA39_1<=107)) ) {
                     alt39=2;
                 }
-                else if ( (LA39_1==14) ) {
+                else if ( (LA39_1==24) ) {
                     alt39=1;
                 }
                 else {
@@ -5352,7 +5352,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 if ( (LA39_2==EOF||(LA39_2>=RULE_ID && LA39_2<=RULE_DECIMAL)||(LA39_2>=26 && LA39_2<=28)||LA39_2==31||LA39_2==36||(LA39_2>=42 && LA39_2<=79)||(LA39_2>=81 && LA39_2<=107)) ) {
                     alt39=2;
                 }
-                else if ( (LA39_2==14) ) {
+                else if ( (LA39_2==24) ) {
                     alt39=1;
                 }
                 else {
@@ -5371,7 +5371,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 if ( (LA39_3==EOF||(LA39_3>=RULE_ID && LA39_3<=RULE_DECIMAL)||(LA39_3>=26 && LA39_3<=28)||LA39_3==31||LA39_3==36||(LA39_3>=42 && LA39_3<=79)||(LA39_3>=81 && LA39_3<=107)) ) {
                     alt39=2;
                 }
-                else if ( (LA39_3==14) ) {
+                else if ( (LA39_3==24) ) {
                     alt39=1;
                 }
                 else {
@@ -5390,7 +5390,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 if ( (LA39_4==EOF||(LA39_4>=RULE_ID && LA39_4<=RULE_DECIMAL)||(LA39_4>=26 && LA39_4<=28)||LA39_4==31||LA39_4==36||(LA39_4>=42 && LA39_4<=79)||(LA39_4>=81 && LA39_4<=107)) ) {
                     alt39=2;
                 }
-                else if ( (LA39_4==14) ) {
+                else if ( (LA39_4==24) ) {
                     alt39=1;
                 }
                 else {
@@ -5406,7 +5406,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 {
                 int LA39_5 = input.LA(2);
 
-                if ( (LA39_5==14) ) {
+                if ( (LA39_5==24) ) {
                     alt39=1;
                 }
                 else if ( (LA39_5==EOF||(LA39_5>=RULE_ID && LA39_5<=RULE_DECIMAL)||(LA39_5>=26 && LA39_5<=28)||LA39_5==31||LA39_5==36||(LA39_5>=42 && LA39_5<=79)||(LA39_5>=81 && LA39_5<=107)) ) {
@@ -5498,7 +5498,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getXAssignmentAccess().getFeatureJvmIdentifiableElementCrossReference_0_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_5);
+                    pushFollow(FOLLOW_11);
                     ruleFeatureCallID();
 
                     state._fsp--;
@@ -5780,7 +5780,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             // InternalBotDuino.g:2011:28: (kw= '=' )
             // InternalBotDuino.g:2013:2: kw= '='
             {
-            kw=(Token)match(input,14,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,24,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -5984,14 +5984,14 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                               newLeafNode(kw, grammarAccess.getOpMultiAssignAccess().getLessThanSignKeyword_5_0()); 
                           
                     }
-                    kw=(Token)match(input,49,FOLLOW_5); if (state.failed) return current;
+                    kw=(Token)match(input,49,FOLLOW_11); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
                               newLeafNode(kw, grammarAccess.getOpMultiAssignAccess().getLessThanSignKeyword_5_1()); 
                           
                     }
-                    kw=(Token)match(input,14,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,24,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -7502,7 +7502,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                 if ( (LA47_2==EOF||(LA47_2>=RULE_ID && LA47_2<=RULE_DECIMAL)||(LA47_2>=26 && LA47_2<=27)||LA47_2==42||LA47_2==49||(LA47_2>=65 && LA47_2<=66)||LA47_2==71||(LA47_2>=77 && LA47_2<=78)||LA47_2==82||LA47_2==84||(LA47_2>=88 && LA47_2<=90)||(LA47_2>=93 && LA47_2<=104)||LA47_2==106) ) {
                     alt47=4;
                 }
-                else if ( (LA47_2==14) ) {
+                else if ( (LA47_2==24) ) {
                     alt47=2;
                 }
                 else {
@@ -7547,14 +7547,14 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                     // InternalBotDuino.g:2568:6: (kw= '<' kw= '=' )
                     // InternalBotDuino.g:2569:2: kw= '<' kw= '='
                     {
-                    kw=(Token)match(input,49,FOLLOW_5); if (state.failed) return current;
+                    kw=(Token)match(input,49,FOLLOW_11); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
                               newLeafNode(kw, grammarAccess.getOpCompareAccess().getLessThanSignKeyword_1_0()); 
                           
                     }
-                    kw=(Token)match(input,14,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,24,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -10075,7 +10075,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getXMemberFeatureCallAccess().getFeatureJvmIdentifiableElementCrossReference_1_0_0_0_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_5);
+            	    pushFollow(FOLLOW_11);
             	    ruleFeatureCallID();
 
             	    state._fsp--;
@@ -11692,7 +11692,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,77,FOLLOW_9); if (state.failed) return current;
+            otherlv_1=(Token)match(input,77,FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXSetLiteralAccess().getNumberSignKeyword_1());
@@ -13430,7 +13430,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_6=(Token)match(input,28,FOLLOW_9); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,28,FOLLOW_7); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getXSwitchExpressionAccess().getRightParenthesisKeyword_2_0_2());
@@ -13519,7 +13519,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getXSwitchExpressionAccess().getSwitchXExpressionParserRuleCall_2_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_9);
+                    pushFollow(FOLLOW_7);
                     lv_switch_9_0=ruleXExpression();
 
                     state._fsp--;
@@ -15423,7 +15423,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getXVariableDeclarationAccess().getTypeJvmTypeReferenceParserRuleCall_2_0_0_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_4);
+                    pushFollow(FOLLOW_5);
                     lv_type_3_0=ruleJvmTypeReference();
 
                     state._fsp--;
@@ -15539,14 +15539,14 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             int alt100=2;
             int LA100_0 = input.LA(1);
 
-            if ( (LA100_0==14) ) {
+            if ( (LA100_0==24) ) {
                 alt100=1;
             }
             switch (alt100) {
                 case 1 :
                     // InternalBotDuino.g:5410:5: otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) )
                     {
-                    otherlv_6=(Token)match(input,14,FOLLOW_21); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,24,FOLLOW_21); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getXVariableDeclarationAccess().getEqualsSignKeyword_3_0());
@@ -15700,7 +15700,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getJvmFormalParameterAccess().getParameterTypeJvmTypeReferenceParserRuleCall_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_4);
+                    pushFollow(FOLLOW_5);
                     lv_parameterType_0_0=ruleJvmTypeReference();
 
                     state._fsp--;
@@ -15854,7 +15854,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getFullJvmFormalParameterAccess().getParameterTypeJvmTypeReferenceParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_5);
             lv_parameterType_0_0=ruleJvmTypeReference();
 
             state._fsp--;
@@ -16866,7 +16866,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,97,FOLLOW_4); if (state.failed) return current;
+            otherlv_1=(Token)match(input,97,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXConstructorCallAccess().getNewKeyword_1());
@@ -17887,7 +17887,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_1, grammarAccess.getXTypeLiteralAccess().getTypeofKeyword_1());
                   
             }
-            otherlv_2=(Token)match(input,27,FOLLOW_4); if (state.failed) return current;
+            otherlv_2=(Token)match(input,27,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getXTypeLiteralAccess().getLeftParenthesisKeyword_2());
@@ -19129,7 +19129,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
             	    // InternalBotDuino.g:6729:2: ( ( '.' )=>kw= '.' )
             	    // InternalBotDuino.g:6729:3: ( '.' )=>kw= '.'
             	    {
-            	    kw=(Token)match(input,36,FOLLOW_4); if (state.failed) return current;
+            	    kw=(Token)match(input,36,FOLLOW_5); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              current.merge(kw);
@@ -20322,7 +20322,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_7=(Token)match(input,36,FOLLOW_4); if (state.failed) return current;
+                    	    otherlv_7=(Token)match(input,36,FOLLOW_5); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_7, grammarAccess.getJvmParameterizedTypeReferenceAccess().getFullStopKeyword_1_4_0_0_1());
@@ -22706,7 +22706,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
         // InternalBotDuino.g:3341:1: ( ruleFeatureCallID )
         // InternalBotDuino.g:3342:3: ruleFeatureCallID
         {
-        pushFollow(FOLLOW_5);
+        pushFollow(FOLLOW_11);
         ruleFeatureCallID();
 
         state._fsp--;
@@ -23260,7 +23260,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
         // InternalBotDuino.g:5348:1: ( ruleJvmTypeReference )
         // InternalBotDuino.g:5349:1: ruleJvmTypeReference
         {
-        pushFollow(FOLLOW_4);
+        pushFollow(FOLLOW_5);
         ruleJvmTypeReference();
 
         state._fsp--;
@@ -26871,16 +26871,16 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000F62002012L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000060000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000780000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000001800000L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000F62800012L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000018000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x00000000001E0000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000600000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000022L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x000000000C000000L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000010000020L});
@@ -26888,7 +26888,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000001000000000L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000006000000000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000038000000000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000080F62002010L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000080000000010L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x000204000C0001F0L,0x000005FFE7146086L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0007F00000000002L});
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0002000000000000L});
@@ -26942,7 +26942,7 @@ public class InternalBotDuinoParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
     public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x000204001C0001F0L,0x000005FFE7146086L});
     public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-    public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x0000000000004002L});
+    public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x0000000001000002L});
     public static final BitSet FOLLOW_75 = new BitSet(new long[]{0x0000000008000002L,0x0000000000004000L});
     public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0000000000000002L,0x0000000000004000L});
     public static final BitSet FOLLOW_77 = new BitSet(new long[]{0x0002000008000002L,0x0000000000004000L});

@@ -7,7 +7,6 @@ import org.eclipse.xtext.botlib.dsl.botDuino.BTRule
 import org.eclipse.xtext.botlib.dsl.botDuino.ButtonRule
 import org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods
 import org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods
-import org.eclipse.xtext.botlib.dsl.botDuino.Registers
 import org.eclipse.xtext.botlib.dsl.botDuino.Rules
 import org.eclipse.xtext.botlib.dsl.botDuino.Type
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.BTRuleImpl
@@ -19,6 +18,7 @@ import org.eclipse.xtext.botlib.dsl.botDuino.impl.ObjectLiteralImpl
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.naming.IQualifiedNameProvider
+import org.eclipse.xtext.botlib.dsl.botDuino.Variables
 
 class BotDuinoGenerator implements IGenerator {
 	
@@ -34,7 +34,7 @@ class BotDuinoGenerator implements IGenerator {
 	  var String c_loop = "void loop() {" + ql
 	  var String bt_block = ""
 	  var String context = ""
-	  var boolean bt_test = false
+	  var String bt_test = ""
 	  	  
 	  override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 
@@ -42,9 +42,10 @@ class BotDuinoGenerator implements IGenerator {
 			e.process
 	    }
 	    //
-	    if(bt_test){
-	    	c_loop += bt_block + "}" + ql
-	    }
+//	    if(bt_test){
+//	    	c_loop += bt_block + ind1 + "}" + ql
+//	    }
+     	c_loop += bt_block + ql
 		context = c_includes + ql + c_vars + ql + c_setup + "}" + ql + c_loop + "}"
     	fsa.generateFile( resource.URI.lastSegment + ".cpp", context)
 	  }
@@ -57,7 +58,7 @@ class BotDuinoGenerator implements IGenerator {
 	  	if(e instanceof Rules){
 	  		e.compile	
 	  	}
-	  	if(e instanceof Registers){
+	  	if(e instanceof Variables){
 	  		e.compile	
 	  	}
 	  }
@@ -67,11 +68,11 @@ class BotDuinoGenerator implements IGenerator {
 	  def compile(Type e) {
 	  	c_vars += '''«e.eClass.name» «e.name»(«e.values.join(",")»);''' + ql
 	  	if(e instanceof BlueToothImpl){
-	  		c_vars += "int " + e.name + "Response;" + ql
+	  		c_vars += '''String «e.name»Response = "";''' + ql
 	  	}
 	  }
 
-	  def compile(Registers e) {
+	  def compile(Variables e) {
 	  	c_vars += '''byte «e.name» = «e.values.last»;''' + ql
 
 	  }
@@ -82,15 +83,27 @@ class BotDuinoGenerator implements IGenerator {
 	  
 	  // Methods
 	  def compile(Rules e) {
+//	  	if(e.eClass.name == BTRule.simpleName){
+//			var btClass = e as BTRuleImpl
+//
+//			bt_block = ind1 + btClass.superType.name + "Response = " + btClass.superType.name + ".read();" + ql
+//	  		bt_block = ind1 + '''if( «btClass.superType.name»Response == '«e.fullyQualifiedName»' ){''' + ql
+//	  		bt_block += ind2 + splitExp(e.thenPart as ObjectLiteralImpl) + ql
+//	  		bt_block += ind1 + "}" + ql
+//	  	}
 	  	if(e.eClass.name == BTRule.simpleName){
 			var btClass = e as BTRuleImpl
-	  		if(!bt_test){
-		  	    bt_block = ind1 + "if(" + btClass.superType.name + ".available()){ "+ ql
-    					 + btClass.superType.name + "Response = " + btClass.superType.name + ".read();" + ql
-		  		bt_test = true
+	  		if(bt_test != btClass.superType.name){
+    			bt_block += ind1 + '''«btClass.superType.name»Response = "";''' + ql
+		  	    bt_block += ind1 + '''if(«btClass.superType.name».received()){ '''+ ql
+		  		bt_block += ind2 + '''while( «btClass.superType.name».received()){''' + ql
+		  		bt_block += ind3 + '''«btClass.superType.name»Response += (char)«btClass.superType.name».read();''' + ql
+		  		bt_block += ind2 + "}" + ql
+		  		bt_block += ind1 + "}" + ql
+		  		bt_test = btClass.superType.name
 			}
-	  		bt_block += ind1 + "if(" + btClass.superType.name + "Response =='" + e.fullyQualifiedName + "'){" + ql
-	  		bt_block += splitExp(e.thenPart as ObjectLiteralImpl) + ql
+	  		bt_block += ind1 + '''if( «btClass.superType.name»Response == "«e.fullyQualifiedName»" ){''' + ql
+	  		bt_block += ind2 + splitExp(e.thenPart as ObjectLiteralImpl) + ql
 	  		bt_block += ind1 + "}" + ql
 	  	}
 	  	if(e.eClass.name == ButtonRule.simpleName){
@@ -100,7 +113,7 @@ class BotDuinoGenerator implements IGenerator {
 	  		    	state = "LOW";
 	  		    }
 		  	    c_loop += ind1 + "if(" + ruleClass.superType.name + ".getState() == " + state + "){ "+ ql
-		  		c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
+		  		c_loop += ind2 + splitExp(e.thenPart as ObjectLiteralImpl) + ql
 		  		c_loop += ind1 + "}" + ql
 	  		
 	  	}
@@ -131,12 +144,12 @@ class BotDuinoGenerator implements IGenerator {
 	  
 	  def String buildExp(MotorMethods exp){
 	  	val x = exp as MotorMethodsImpl
-	  	return ind2 + x.superType.name + "." + x.motorFunctions.get(0) + "();" + ql
+	  	return x.superType.name + "." + x.motorFunctions.get(0) + "();" + ql
 	  }
 	  	  
 	  def String buildExp(LEDMethods exp){
 	  	val x = exp as LEDMethodsImpl
-	  	return ind2 + x.superType.name + "." + x.ledFunctions.get(0) + "();" + ql
+	  	return x.superType.name + "." + x.ledFunctions.get(0) + "();" + ql
 	  }
 	
 }

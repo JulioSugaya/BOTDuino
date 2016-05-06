@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.1.0'?>
+<repository name='file:/Users/juliosugaya/_projects_ccp/.metadata/.plugins/org.eclipse.pde.core/tempp2metadata - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1457044401488'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <units size='8'>
+    <unit id='org.xtext.botlib.dsl.sdk.feature.jar' version='1.0.0.201603031933'>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.name' value='BotDuino SDK Feature '/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl.sdk.feature.jar' version='1.0.0.201603031933'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.xtext.botlib.dsl.sdk' version='1.0.0.201603031933'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.xtext.botlib.dsl.sdk' version='1.0.0.201603031933'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.xtext.botlib.dsl.ui.source' version='1.0.0.201603031933' singleton='false'>
+      <update id='org.xtext.botlib.dsl.ui.source' range='[0.0.0,1.0.0.201603031933)' severity='0'/>
+      <properties size='3'>
+        <property name='df_LT.pluginName' value='org.xtext.botlib.dsl.ui.source'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl.ui.source' version='1.0.0.201603031933'/>
+        <provided namespace='osgi.bundle' name='org.xtext.botlib.dsl.ui.source' version='1.0.0.201603031933'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='source' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.xtext.botlib.dsl.ui.source' version='1.0.0.201603031933'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.xtext.botlib.dsl.ui.source&#xA;Bundle-Version: 1.0.0.201603031933
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.xtext.botlib.dsl.ui' version='1.0.0.201603031933'>
+      <update id='org.xtext.botlib.dsl.ui' range='[0.0.0,1.0.0.201603031933)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='org.xtext.botlib.dsl.ui'/>
+        <property name='org.eclipse.equinox.p2.provider' value='My Company'/>
+      </properties>
+      <provides size='8'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl.ui' version='1.0.0.201603031933'/>
+        <provided namespace='osgi.bundle' name='org.xtext.botlib.dsl.ui' version='1.0.0.201603031933'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.ui.quickfix' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.ui.contentassist' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.ui.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.ui.contentassist.antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.ui.contentassist.antlr.internal' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='16'>
+        <required namespace='osgi.bundle' name='org.xtext.botlib.dsl' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='3.5.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='3.5.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.shared' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.builder' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.common.types.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.debug.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.codetemplates.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.compare' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.ecore' range='2.9.1'/>
+        <required namespace='java.package' name='org.apache.log4j' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.xtext.botlib.dsl.ui' version='1.0.0.201603031933'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.xtext.botlib.dsl.ui; singleton:=true&#xA;Bundle-Version: 1.0.0.201603031933
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.xtext.botlib.dsl.sdk.feature.group' version='1.0.0.201603031933' singleton='false'>
+      <update id='org.xtext.botlib.dsl.sdk.feature.group' range='[0.0.0,1.0.0.201603031933)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='BotDuino SDK Feature '/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl.sdk.feature.group' version='1.0.0.201603031933'/>
+      </provides>
+      <requires size='31'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.common' range='3.5.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.util' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.emf.ecore' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.emf.common' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.antlr.runtime' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.common.types' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xbase' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.model.workbench' range='1.1.100.v20150407-1430'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.swt' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.core.di.annotations' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.apache.log4j' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jface' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.editors' range='3.5.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='3.5.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.ui.shared' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xbase.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.builder' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.common.types.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.debug.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.ui.codetemplates.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.compare' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.workbench' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.ui.ecore' range='2.9.1'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl' range='[1.0.0.201603031933,1.0.0.201603031933]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl.ui' range='[1.0.0.201603031933,1.0.0.201603031933]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl.sdk.feature.jar' range='[1.0.0.201603031933,1.0.0.201603031933]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.xtext.botlib.dsl.sdk.source.feature.group' version='1.0.0.201603031933' singleton='false'>
+      <update id='org.xtext.botlib.dsl.sdk.source.feature.group' range='[0.0.0,1.0.0.201603031933)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='BotDuino SDK Feature'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl.sdk.source.feature.group' version='1.0.0.201603031933'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl.source' range='[1.0.0.201603031933,1.0.0.201603031933]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl.ui.source' range='[1.0.0.201603031933,1.0.0.201603031933]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl.sdk.source.feature.jar' range='[1.0.0.201603031933,1.0.0.201603031933]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.xtext.botlib.dsl.sdk.source.feature.jar' version='1.0.0.201603031933'>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.name' value='BotDuino SDK Feature'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl.sdk.source.feature.jar' version='1.0.0.201603031933'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.xtext.botlib.dsl.sdk.source' version='1.0.0.201603031933'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.xtext.botlib.dsl.sdk.source' version='1.0.0.201603031933'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.xtext.botlib.dsl' version='1.0.0.201603031933'>
+      <update id='org.xtext.botlib.dsl' range='[0.0.0,1.0.0.201603031933)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='org.xtext.botlib.dsl'/>
+        <property name='org.eclipse.equinox.p2.provider' value='My Company'/>
+      </properties>
+      <provides size='23'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl' version='1.0.0.201603031933'/>
+        <provided namespace='osgi.bundle' name='org.xtext.botlib.dsl' version='1.0.0.201603031933'/>
+        <provided namespace='java.package' name='org' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.botDuino' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.botDuino.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.botDuino.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.formatting' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.generator' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.jvmmodel' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.parser.antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.parser.antlr.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.serializer' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.services' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.botlib.dsl.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.botlib' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.botlib.dsl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.botlib.dsl.handlers' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='17'>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='3.5.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.util' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.antlr.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.common.types' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.objectweb.asm' range='[5.0.1,6.0.0)' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.e4.ui.model.workbench' range='1.1.100.v20150407-1430'/>
+        <required namespace='osgi.bundle' name='org.eclipse.swt' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.e4.core.di.annotations' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.log4j' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.jface.dialogs' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.xtext.botlib.dsl' version='1.0.0.201603031933'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.xtext.botlib.dsl;singleton:=true&#xA;Bundle-Version: 1.0.0.201603031933
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.xtext.botlib.dsl.source' version='1.0.0.201603031933' singleton='false'>
+      <update id='org.xtext.botlib.dsl.source' range='[0.0.0,1.0.0.201603031933)' severity='0'/>
+      <properties size='3'>
+        <property name='df_LT.pluginName' value='org.xtext.botlib.dsl.source'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.xtext.botlib.dsl.source' version='1.0.0.201603031933'/>
+        <provided namespace='osgi.bundle' name='org.xtext.botlib.dsl.source' version='1.0.0.201603031933'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='source' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.xtext.botlib.dsl.source' version='1.0.0.201603031933'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.xtext.botlib.dsl.source&#xA;Bundle-Version: 1.0.0.201603031933
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

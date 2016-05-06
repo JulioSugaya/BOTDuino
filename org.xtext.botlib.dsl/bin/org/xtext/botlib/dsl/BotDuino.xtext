@@ -14,11 +14,8 @@ DomainModel :
  (elements+=Entity)*;
 
 Entity:
- Type | Rules | Registers | Methods;
+ Type | Rules | Methods | Variables;
 
- 
-Registers:
- 'VAR' name=ID '=' values+=INT*;
 
 Type:
  Button | Sensor | BlueTooth | CTRL | LED | Motor | Servo;
@@ -35,6 +32,7 @@ BTRule:
  'when' name=ID
  'then' thenPart=XBlockExpression;
  
+ 
 SensorRule:
  superType=[Sensor] 
  'when' (sensorActions+= 'HIGH' | sensorActions+= 'LOW')
@@ -49,7 +47,10 @@ ButtonRule:
  superType=[Button] 
  'when' ( btnActions+= 'PUSH' | btnActions+= 'FREE')
  'then' thenPart=XBlockExpression;
-
+ 
+Variables:
+ 'VAR' name=ID '=' values+=INT*;
+ 
 LED:
  'LED' name=ID ('extends' superType=[LED])? '('
  values+=INT*

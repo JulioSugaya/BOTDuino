@@ -66,7 +66,6 @@ public class BotDuinoFactoryImpl extends EFactoryImpl implements BotDuinoFactory
     {
       case BotDuinoPackage.DOMAIN_MODEL: return createDomainModel();
       case BotDuinoPackage.ENTITY: return createEntity();
-      case BotDuinoPackage.REGISTERS: return createRegisters();
       case BotDuinoPackage.TYPE: return createType();
       case BotDuinoPackage.RULES: return createRules();
       case BotDuinoPackage.METHODS: return createMethods();
@@ -74,6 +73,7 @@ public class BotDuinoFactoryImpl extends EFactoryImpl implements BotDuinoFactory
       case BotDuinoPackage.SENSOR_RULE: return createSensorRule();
       case BotDuinoPackage.CTRL_RULE: return createCTRLRule();
       case BotDuinoPackage.BUTTON_RULE: return createButtonRule();
+      case BotDuinoPackage.VARIABLES: return createVariables();
       case BotDuinoPackage.LED: return createLED();
       case BotDuinoPackage.BUTTON: return createButton();
       case BotDuinoPackage.MOTOR: return createMotor();
@@ -109,17 +109,6 @@ public class BotDuinoFactoryImpl extends EFactoryImpl implements BotDuinoFactory
   {
     EntityImpl entity = new EntityImpl();
     return entity;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Registers createRegisters()
-  {
-    RegistersImpl registers = new RegistersImpl();
-    return registers;
   }
 
   /**
@@ -197,6 +186,17 @@ public class BotDuinoFactoryImpl extends EFactoryImpl implements BotDuinoFactory
   {
     ButtonRuleImpl buttonRule = new ButtonRuleImpl();
     return buttonRule;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Variables createVariables()
+  {
+    VariablesImpl variables = new VariablesImpl();
+    return variables;
   }
 
   /**

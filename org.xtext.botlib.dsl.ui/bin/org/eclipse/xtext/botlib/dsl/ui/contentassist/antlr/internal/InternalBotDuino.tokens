@@ -53,7 +53,7 @@
 'Sensor'=60
 'Servo'=63
 'UP'=94
-'VAR'=51
+'VAR'=53
 '['=69
 ']'=70
 'as'=67
@@ -82,14 +82,14 @@
 'super'=49
 'switch'=74
 'synchronized'=88
-'then'=53
+'then'=52
 'throw'=84
 'true'=109
 'try'=86
 'typeof'=83
 'val'=44
 'var'=108
-'when'=52
+'when'=51
 'while'=79
 '{'=64
 '|'=107

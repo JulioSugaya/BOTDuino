@@ -106,43 +106,6 @@ public interface BotDuinoPackage extends EPackage
   int ENTITY_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.RegistersImpl <em>Registers</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.RegistersImpl
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getRegisters()
-   * @generated
-   */
-  int REGISTERS = 2;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REGISTERS__NAME = ENTITY_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Values</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REGISTERS__VALUES = ENTITY_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Registers</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REGISTERS_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 2;
-
-  /**
    * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.TypeImpl <em>Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -150,7 +113,7 @@ public interface BotDuinoPackage extends EPackage
    * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getType()
    * @generated
    */
-  int TYPE = 3;
+  int TYPE = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -187,7 +150,7 @@ public interface BotDuinoPackage extends EPackage
    * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getRules()
    * @generated
    */
-  int RULES = 4;
+  int RULES = 3;
 
   /**
    * The feature id for the '<em><b>Then Part</b></em>' containment reference.
@@ -215,7 +178,7 @@ public interface BotDuinoPackage extends EPackage
    * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getMethods()
    * @generated
    */
-  int METHODS = 5;
+  int METHODS = 4;
 
   /**
    * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -243,7 +206,7 @@ public interface BotDuinoPackage extends EPackage
    * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getBTRule()
    * @generated
    */
-  int BT_RULE = 6;
+  int BT_RULE = 5;
 
   /**
    * The feature id for the '<em><b>Then Part</b></em>' containment reference.
@@ -289,7 +252,7 @@ public interface BotDuinoPackage extends EPackage
    * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getSensorRule()
    * @generated
    */
-  int SENSOR_RULE = 7;
+  int SENSOR_RULE = 6;
 
   /**
    * The feature id for the '<em><b>Then Part</b></em>' containment reference.
@@ -335,7 +298,7 @@ public interface BotDuinoPackage extends EPackage
    * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getCTRLRule()
    * @generated
    */
-  int CTRL_RULE = 8;
+  int CTRL_RULE = 7;
 
   /**
    * The feature id for the '<em><b>Then Part</b></em>' containment reference.
@@ -381,7 +344,7 @@ public interface BotDuinoPackage extends EPackage
    * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getButtonRule()
    * @generated
    */
-  int BUTTON_RULE = 9;
+  int BUTTON_RULE = 8;
 
   /**
    * The feature id for the '<em><b>Then Part</b></em>' containment reference.
@@ -418,6 +381,43 @@ public interface BotDuinoPackage extends EPackage
    * @ordered
    */
   int BUTTON_RULE_FEATURE_COUNT = RULES_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.VariablesImpl <em>Variables</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.VariablesImpl
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getVariables()
+   * @generated
+   */
+  int VARIABLES = 9;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLES__NAME = ENTITY_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Values</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLES__VALUES = ENTITY_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Variables</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLES_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDImpl <em>LED</em>}' class.
@@ -876,38 +876,6 @@ public interface BotDuinoPackage extends EPackage
   EClass getEntity();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.Registers <em>Registers</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Registers</em>'.
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.Registers
-   * @generated
-   */
-  EClass getRegisters();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipse.xtext.botlib.dsl.botDuino.Registers#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.Registers#getName()
-   * @see #getRegisters()
-   * @generated
-   */
-  EAttribute getRegisters_Name();
-
-  /**
-   * Returns the meta object for the attribute list '{@link org.eclipse.xtext.botlib.dsl.botDuino.Registers#getValues <em>Values</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Values</em>'.
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.Registers#getValues()
-   * @see #getRegisters()
-   * @generated
-   */
-  EAttribute getRegisters_Values();
-
-  /**
    * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.Type <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1108,6 +1076,38 @@ public interface BotDuinoPackage extends EPackage
    * @generated
    */
   EAttribute getButtonRule_BtnActions();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.Variables <em>Variables</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Variables</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.Variables
+   * @generated
+   */
+  EClass getVariables();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipse.xtext.botlib.dsl.botDuino.Variables#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.Variables#getName()
+   * @see #getVariables()
+   * @generated
+   */
+  EAttribute getVariables_Name();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.eclipse.xtext.botlib.dsl.botDuino.Variables#getValues <em>Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Values</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.Variables#getValues()
+   * @see #getVariables()
+   * @generated
+   */
+  EAttribute getVariables_Values();
 
   /**
    * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.LED <em>LED</em>}'.
@@ -1371,32 +1371,6 @@ public interface BotDuinoPackage extends EPackage
     EClass ENTITY = eINSTANCE.getEntity();
 
     /**
-     * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.RegistersImpl <em>Registers</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.RegistersImpl
-     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getRegisters()
-     * @generated
-     */
-    EClass REGISTERS = eINSTANCE.getRegisters();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REGISTERS__NAME = eINSTANCE.getRegisters_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REGISTERS__VALUES = eINSTANCE.getRegisters_Values();
-
-    /**
      * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.TypeImpl <em>Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1561,6 +1535,32 @@ public interface BotDuinoPackage extends EPackage
      * @generated
      */
     EAttribute BUTTON_RULE__BTN_ACTIONS = eINSTANCE.getButtonRule_BtnActions();
+
+    /**
+     * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.VariablesImpl <em>Variables</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.VariablesImpl
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getVariables()
+     * @generated
+     */
+    EClass VARIABLES = eINSTANCE.getVariables();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VARIABLES__NAME = eINSTANCE.getVariables_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VARIABLES__VALUES = eINSTANCE.getVariables_Values();
 
     /**
      * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDImpl <em>LED</em>}' class.

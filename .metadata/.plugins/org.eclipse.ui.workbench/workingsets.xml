@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.pde.ui.pluginWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1452735249680_1" label="teste" name="teste">
+<item factoryID="org.eclipse.pde.ui.elementFactory" org.eclipse.pde.workingSetKey="org.eclipse.e4.ui.workbench"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1439940104207_0" label="Window Working Set" name="Aggregate for window 1439940104207"/>
+</workingSetManager>

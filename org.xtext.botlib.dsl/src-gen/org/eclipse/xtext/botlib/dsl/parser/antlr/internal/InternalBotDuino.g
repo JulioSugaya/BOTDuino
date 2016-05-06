@@ -138,89 +138,24 @@ ruleEntity returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getEntityAccess().getRegistersParserRuleCall_2()); 
+        newCompositeNode(grammarAccess.getEntityAccess().getMethodsParserRuleCall_2()); 
     }
-    this_Registers_2=ruleRegisters
+    this_Methods_2=ruleMethods
     { 
-        $current = $this_Registers_2.current; 
+        $current = $this_Methods_2.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getEntityAccess().getMethodsParserRuleCall_3()); 
+        newCompositeNode(grammarAccess.getEntityAccess().getVariablesParserRuleCall_3()); 
     }
-    this_Methods_3=ruleMethods
+    this_Variables_3=ruleVariables
     { 
-        $current = $this_Methods_3.current; 
+        $current = $this_Variables_3.current; 
         afterParserOrEnumRuleCall();
     }
 )
-;
-
-
-
-
-
-// Entry rule entryRuleRegisters
-entryRuleRegisters returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getRegistersRule()); }
-	 iv_ruleRegisters=ruleRegisters 
-	 { $current=$iv_ruleRegisters.current; } 
-	 EOF 
-;
-
-// Rule Registers
-ruleRegisters returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(	otherlv_0='VAR' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getRegistersAccess().getVARKeyword_0());
-    }
-(
-(
-		lv_name_1_0=RULE_ID
-		{
-			newLeafNode(lv_name_1_0, grammarAccess.getRegistersAccess().getNameIDTerminalRuleCall_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getRegistersRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_1_0, 
-        		"org.eclipse.xtext.xbase.Xtype.ID");
-	    }
-
-)
-)	otherlv_2='=' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getRegistersAccess().getEqualsSignKeyword_2());
-    }
-(
-(
-		lv_values_3_0=RULE_INT
-		{
-			newLeafNode(lv_values_3_0, grammarAccess.getRegistersAccess().getValuesINTTerminalRuleCall_3_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getRegistersRule());
-	        }
-       		addWithLastConsumed(
-       			$current, 
-       			"values",
-        		lv_values_3_0, 
-        		"org.eclipse.xtext.botlib.dsl.BotDuino.INT");
-	    }
-
-)
-)*)
 ;
 
 
@@ -794,6 +729,71 @@ ruleButtonRule returns [EObject current=null]
 
 )
 ))
+;
+
+
+
+
+
+// Entry rule entryRuleVariables
+entryRuleVariables returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getVariablesRule()); }
+	 iv_ruleVariables=ruleVariables 
+	 { $current=$iv_ruleVariables.current; } 
+	 EOF 
+;
+
+// Rule Variables
+ruleVariables returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='VAR' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getVariablesAccess().getVARKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getVariablesAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getVariablesRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.xtext.xbase.Xtype.ID");
+	    }
+
+)
+)	otherlv_2='=' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getVariablesAccess().getEqualsSignKeyword_2());
+    }
+(
+(
+		lv_values_3_0=RULE_INT
+		{
+			newLeafNode(lv_values_3_0, grammarAccess.getVariablesAccess().getValuesINTTerminalRuleCall_3_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getVariablesRule());
+	        }
+       		addWithLastConsumed(
+       			$current, 
+       			"values",
+        		lv_values_3_0, 
+        		"org.eclipse.xtext.botlib.dsl.BotDuino.INT");
+	    }
+
+)
+)*)
 ;
 
 

@@ -86,11 +86,11 @@ public class BotDuinoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getJvmWildcardTypeReferenceAccess().getAlternatives_2(), "rule__JvmWildcardTypeReference__Alternatives_2");
 					put(grammarAccess.getXImportDeclarationAccess().getAlternatives_1(), "rule__XImportDeclaration__Alternatives_1");
 					put(grammarAccess.getXImportDeclarationAccess().getAlternatives_1_0_3(), "rule__XImportDeclaration__Alternatives_1_0_3");
-					put(grammarAccess.getRegistersAccess().getGroup(), "rule__Registers__Group__0");
 					put(grammarAccess.getBTRuleAccess().getGroup(), "rule__BTRule__Group__0");
 					put(grammarAccess.getSensorRuleAccess().getGroup(), "rule__SensorRule__Group__0");
 					put(grammarAccess.getCTRLRuleAccess().getGroup(), "rule__CTRLRule__Group__0");
 					put(grammarAccess.getButtonRuleAccess().getGroup(), "rule__ButtonRule__Group__0");
+					put(grammarAccess.getVariablesAccess().getGroup(), "rule__Variables__Group__0");
 					put(grammarAccess.getLEDAccess().getGroup(), "rule__LED__Group__0");
 					put(grammarAccess.getLEDAccess().getGroup_2(), "rule__LED__Group_2__0");
 					put(grammarAccess.getButtonAccess().getGroup(), "rule__Button__Group__0");
@@ -286,8 +286,6 @@ public class BotDuinoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getXImportDeclarationAccess().getGroup_1_0(), "rule__XImportDeclaration__Group_1_0__0");
 					put(grammarAccess.getQualifiedNameInStaticImportAccess().getGroup(), "rule__QualifiedNameInStaticImport__Group__0");
 					put(grammarAccess.getDomainModelAccess().getElementsAssignment(), "rule__DomainModel__ElementsAssignment");
-					put(grammarAccess.getRegistersAccess().getNameAssignment_1(), "rule__Registers__NameAssignment_1");
-					put(grammarAccess.getRegistersAccess().getValuesAssignment_3(), "rule__Registers__ValuesAssignment_3");
 					put(grammarAccess.getBTRuleAccess().getSuperTypeAssignment_0(), "rule__BTRule__SuperTypeAssignment_0");
 					put(grammarAccess.getBTRuleAccess().getNameAssignment_2(), "rule__BTRule__NameAssignment_2");
 					put(grammarAccess.getBTRuleAccess().getThenPartAssignment_4(), "rule__BTRule__ThenPartAssignment_4");
@@ -305,6 +303,8 @@ public class BotDuinoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getButtonRuleAccess().getBtnActionsAssignment_2_0(), "rule__ButtonRule__BtnActionsAssignment_2_0");
 					put(grammarAccess.getButtonRuleAccess().getBtnActionsAssignment_2_1(), "rule__ButtonRule__BtnActionsAssignment_2_1");
 					put(grammarAccess.getButtonRuleAccess().getThenPartAssignment_4(), "rule__ButtonRule__ThenPartAssignment_4");
+					put(grammarAccess.getVariablesAccess().getNameAssignment_1(), "rule__Variables__NameAssignment_1");
+					put(grammarAccess.getVariablesAccess().getValuesAssignment_3(), "rule__Variables__ValuesAssignment_3");
 					put(grammarAccess.getLEDAccess().getNameAssignment_1(), "rule__LED__NameAssignment_1");
 					put(grammarAccess.getLEDAccess().getSuperTypeAssignment_2_1(), "rule__LED__SuperTypeAssignment_2_1");
 					put(grammarAccess.getLEDAccess().getValuesAssignment_4(), "rule__LED__ValuesAssignment_4");

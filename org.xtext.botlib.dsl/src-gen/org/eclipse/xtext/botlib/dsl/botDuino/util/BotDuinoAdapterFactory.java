@@ -87,11 +87,6 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
         return createEntityAdapter();
       }
       @Override
-      public Adapter caseRegisters(Registers object)
-      {
-        return createRegistersAdapter();
-      }
-      @Override
       public Adapter caseType(Type object)
       {
         return createTypeAdapter();
@@ -125,6 +120,11 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
       public Adapter caseButtonRule(ButtonRule object)
       {
         return createButtonRuleAdapter();
+      }
+      @Override
+      public Adapter caseVariables(Variables object)
+      {
+        return createVariablesAdapter();
       }
       @Override
       public Adapter caseLED(LED object)
@@ -234,21 +234,6 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.botlib.dsl.botDuino.Registers <em>Registers</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.Registers
-   * @generated
-   */
-  public Adapter createRegistersAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.eclipse.xtext.botlib.dsl.botDuino.Type <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -349,6 +334,21 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createButtonRuleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.botlib.dsl.botDuino.Variables <em>Variables</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.Variables
+   * @generated
+   */
+  public Adapter createVariablesAdapter()
   {
     return null;
   }

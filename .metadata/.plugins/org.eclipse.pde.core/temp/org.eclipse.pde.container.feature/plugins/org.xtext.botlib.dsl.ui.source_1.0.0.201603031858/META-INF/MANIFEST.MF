@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.xtext.botlib.dsl.ui.source
+Bundle-Version: 1.0.0.201603031858
+Bundle-Name: %pluginName
+Bundle-Localization: plugin
+Bundle-ManifestVersion: 2
+Eclipse-SourceBundle: org.xtext.botlib.dsl.ui;version="1.0.0.201603031
+ 858";roots:="."
+

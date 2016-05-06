@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;org.xtext.botlib.dsl&apos;&#x0A;- Original project: &apos;org.xtext.botlib.dsl&apos;&#x0A;- Original element: &apos;org.xtext.botlib.dsl/jSSC-2.7.0&apos;" description="Delete element" element1="/jSSC-2.7.0" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1459975795064" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;org.eclipse.xtext.botlib.dslmodel/src/org/eclipse/xtext/example/homeautomation/RuleEngine.xtext&apos; to &apos;botlibGrammar.xtext&apos;" description="Rename resource &apos;RuleEngine.xtext&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/org/eclipse/xtext/example/homeautomation/RuleEngine.xtext" name="botlibGrammar.xtext" stamp="1442182467210" updateReferences="true"/>
+</session>

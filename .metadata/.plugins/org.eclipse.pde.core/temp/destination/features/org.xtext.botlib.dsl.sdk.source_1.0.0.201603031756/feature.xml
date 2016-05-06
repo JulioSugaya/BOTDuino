@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.xtext.botlib.dsl.sdk.source" version="1.0.0.201603031756" label="BotDuino SDK Feature "      >
+	<plugin id="org.xtext.botlib.dsl.source" version="1.0.0.201603031756"     unpack="false"/>
+	<plugin id="org.xtext.botlib.dsl.ui.source" version="1.0.0.201603031756"     unpack="false"/>
+</feature>

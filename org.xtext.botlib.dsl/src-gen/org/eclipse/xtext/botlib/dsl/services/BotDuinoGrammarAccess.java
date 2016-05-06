@@ -40,14 +40,14 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cTypeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cRulesParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cRegistersParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cMethodsParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cMethodsParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cVariablesParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//Entity:
-		//	Type | Rules | Registers | Methods;
+		//	Type | Rules | Methods | Variables;
 		@Override public ParserRule getRule() { return rule; }
 
-		//Type | Rules | Registers | Methods
+		//Type | Rules | Methods | Variables
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Type
@@ -56,47 +56,11 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		//Rules
 		public RuleCall getRulesParserRuleCall_1() { return cRulesParserRuleCall_1; }
 
-		//Registers
-		public RuleCall getRegistersParserRuleCall_2() { return cRegistersParserRuleCall_2; }
-
 		//Methods
-		public RuleCall getMethodsParserRuleCall_3() { return cMethodsParserRuleCall_3; }
-	}
+		public RuleCall getMethodsParserRuleCall_2() { return cMethodsParserRuleCall_2; }
 
-	public class RegistersElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.Registers");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cVARKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cValuesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cValuesINTTerminalRuleCall_3_0 = (RuleCall)cValuesAssignment_3.eContents().get(0);
-		
-		//Registers:
-		//	'VAR' name=ID '=' values+=INT*;
-		@Override public ParserRule getRule() { return rule; }
-
-		//'VAR' name=ID '=' values+=INT*
-		public Group getGroup() { return cGroup; }
-
-		//'VAR'
-		public Keyword getVARKeyword_0() { return cVARKeyword_0; }
-
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//'='
-		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
-
-		//values+=INT*
-		public Assignment getValuesAssignment_3() { return cValuesAssignment_3; }
-
-		//INT
-		public RuleCall getValuesINTTerminalRuleCall_3_0() { return cValuesINTTerminalRuleCall_3_0; }
+		//Variables
+		public RuleCall getVariablesParserRuleCall_3() { return cVariablesParserRuleCall_3; }
 	}
 
 	public class TypeElements extends AbstractParserRuleElementFinder {
@@ -438,6 +402,42 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 
 		//XBlockExpression
 		public RuleCall getThenPartXBlockExpressionParserRuleCall_4_0() { return cThenPartXBlockExpressionParserRuleCall_4_0; }
+	}
+
+	public class VariablesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.Variables");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cVARKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cValuesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cValuesINTTerminalRuleCall_3_0 = (RuleCall)cValuesAssignment_3.eContents().get(0);
+		
+		//Variables:
+		//	'VAR' name=ID '=' values+=INT*;
+		@Override public ParserRule getRule() { return rule; }
+
+		//'VAR' name=ID '=' values+=INT*
+		public Group getGroup() { return cGroup; }
+
+		//'VAR'
+		public Keyword getVARKeyword_0() { return cVARKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//'='
+		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
+
+		//values+=INT*
+		public Assignment getValuesAssignment_3() { return cValuesAssignment_3; }
+
+		//INT
+		public RuleCall getValuesINTTerminalRuleCall_3_0() { return cValuesINTTerminalRuleCall_3_0; }
 	}
 
 	public class LEDElements extends AbstractParserRuleElementFinder {
@@ -1156,7 +1156,6 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private final DomainModelElements pDomainModel;
 	private final EntityElements pEntity;
-	private final RegistersElements pRegisters;
 	private final TypeElements pType;
 	private final RulesElements pRules;
 	private final MethodsElements pMethods;
@@ -1164,6 +1163,7 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	private final SensorRuleElements pSensorRule;
 	private final CTRLRuleElements pCTRLRule;
 	private final ButtonRuleElements pButtonRule;
+	private final VariablesElements pVariables;
 	private final LEDElements pLED;
 	private final ButtonElements pButton;
 	private final MotorElements pMotor;
@@ -1192,7 +1192,6 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		this.gaXtype = gaXtype;
 		this.pDomainModel = new DomainModelElements();
 		this.pEntity = new EntityElements();
-		this.pRegisters = new RegistersElements();
 		this.pType = new TypeElements();
 		this.pRules = new RulesElements();
 		this.pMethods = new MethodsElements();
@@ -1200,6 +1199,7 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		this.pSensorRule = new SensorRuleElements();
 		this.pCTRLRule = new CTRLRuleElements();
 		this.pButtonRule = new ButtonRuleElements();
+		this.pVariables = new VariablesElements();
 		this.pLED = new LEDElements();
 		this.pButton = new ButtonElements();
 		this.pMotor = new MotorElements();
@@ -1256,23 +1256,13 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Entity:
-	//	Type | Rules | Registers | Methods;
+	//	Type | Rules | Methods | Variables;
 	public EntityElements getEntityAccess() {
 		return pEntity;
 	}
 	
 	public ParserRule getEntityRule() {
 		return getEntityAccess().getRule();
-	}
-
-	//Registers:
-	//	'VAR' name=ID '=' values+=INT*;
-	public RegistersElements getRegistersAccess() {
-		return pRegisters;
-	}
-	
-	public ParserRule getRegistersRule() {
-		return getRegistersAccess().getRule();
 	}
 
 	//Type:
@@ -1351,6 +1341,16 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getButtonRuleRule() {
 		return getButtonRuleAccess().getRule();
+	}
+
+	//Variables:
+	//	'VAR' name=ID '=' values+=INT*;
+	public VariablesElements getVariablesAccess() {
+		return pVariables;
+	}
+	
+	public ParserRule getVariablesRule() {
+		return getVariablesAccess().getRule();
 	}
 
 	//LED:

@@ -16,9 +16,9 @@ import org.eclipse.xtext.botlib.dsl.botDuino.ButtonRule;
 import org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods;
 import org.eclipse.xtext.botlib.dsl.botDuino.Methods;
 import org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods;
-import org.eclipse.xtext.botlib.dsl.botDuino.Registers;
 import org.eclipse.xtext.botlib.dsl.botDuino.Rules;
 import org.eclipse.xtext.botlib.dsl.botDuino.Type;
+import org.eclipse.xtext.botlib.dsl.botDuino.Variables;
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.BTRuleImpl;
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.BlueToothImpl;
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.ButtonRuleImpl;
@@ -60,7 +60,7 @@ public class BotDuinoGenerator implements IGenerator {
   
   private String context = "";
   
-  private boolean bt_test = false;
+  private String bt_test = "";
   
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
@@ -70,10 +70,8 @@ public class BotDuinoGenerator implements IGenerator {
     for (final EObject e : _filterNull) {
       this.process(e);
     }
-    if (this.bt_test) {
-      String _c_loop = this.c_loop;
-      this.c_loop = (_c_loop + ((this.bt_block + "}") + this.ql));
-    }
+    String _c_loop = this.c_loop;
+    this.c_loop = (_c_loop + (this.bt_block + this.ql));
     this.context = ((((((((this.c_includes + this.ql) + this.c_vars) + this.ql) + this.c_setup) + "}") + this.ql) + this.c_loop) + "}");
     URI _uRI = resource.getURI();
     String _lastSegment = _uRI.lastSegment();
@@ -91,8 +89,8 @@ public class BotDuinoGenerator implements IGenerator {
         this.compile(((Rules)e));
       }
       String _xifexpression = null;
-      if ((e instanceof Registers)) {
-        _xifexpression = this.compile(((Registers)e));
+      if ((e instanceof Variables)) {
+        _xifexpression = this.compile(((Variables)e));
       }
       _xblockexpression = _xifexpression;
     }
@@ -120,18 +118,20 @@ public class BotDuinoGenerator implements IGenerator {
       String _xifexpression = null;
       if ((e instanceof BlueToothImpl)) {
         String _c_vars_1 = this.c_vars;
+        StringConcatenation _builder_1 = new StringConcatenation();
+        _builder_1.append("String ");
         String _name_2 = ((BlueToothImpl)e).getName();
-        String _plus_1 = ("int " + _name_2);
-        String _plus_2 = (_plus_1 + "Response;");
-        String _plus_3 = (_plus_2 + this.ql);
-        _xifexpression = this.c_vars = (_c_vars_1 + _plus_3);
+        _builder_1.append(_name_2, "");
+        _builder_1.append("Response = \"\";");
+        String _plus_1 = (_builder_1.toString() + this.ql);
+        _xifexpression = this.c_vars = (_c_vars_1 + _plus_1);
       }
       _xblockexpression = _xifexpression;
     }
     return _xblockexpression;
   }
   
-  public String compile(final Registers e) {
+  public String compile(final Variables e) {
     String _c_vars = this.c_vars;
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("byte ");
@@ -155,47 +155,87 @@ public class BotDuinoGenerator implements IGenerator {
       boolean _equals = Objects.equal(_name, _simpleName);
       if (_equals) {
         BTRuleImpl btClass = ((BTRuleImpl) e);
-        if ((!this.bt_test)) {
-          BlueTooth _superType = btClass.getSuperType();
-          String _name_1 = _superType.getName();
-          String _plus = ((this.ind1 + "if(") + _name_1);
-          String _plus_1 = (_plus + ".available()){ ");
-          String _plus_2 = (_plus_1 + this.ql);
+        BlueTooth _superType = btClass.getSuperType();
+        String _name_1 = _superType.getName();
+        boolean _notEquals = (!Objects.equal(this.bt_test, _name_1));
+        if (_notEquals) {
+          String _bt_block = this.bt_block;
+          StringConcatenation _builder = new StringConcatenation();
           BlueTooth _superType_1 = btClass.getSuperType();
           String _name_2 = _superType_1.getName();
-          String _plus_3 = (_plus_2 + _name_2);
-          String _plus_4 = (_plus_3 + "Response = ");
+          _builder.append(_name_2, "");
+          _builder.append("Response = \"\";");
+          String _plus = (this.ind1 + _builder);
+          String _plus_1 = (_plus + this.ql);
+          this.bt_block = (_bt_block + _plus_1);
+          String _bt_block_1 = this.bt_block;
+          StringConcatenation _builder_1 = new StringConcatenation();
+          _builder_1.append("if(");
           BlueTooth _superType_2 = btClass.getSuperType();
           String _name_3 = _superType_2.getName();
-          String _plus_5 = (_plus_4 + _name_3);
-          String _plus_6 = (_plus_5 + ".read();");
+          _builder_1.append(_name_3, "");
+          _builder_1.append(".received()){ ");
+          String _plus_2 = (this.ind1 + _builder_1);
+          String _plus_3 = (_plus_2 + this.ql);
+          this.bt_block = (_bt_block_1 + _plus_3);
+          String _bt_block_2 = this.bt_block;
+          StringConcatenation _builder_2 = new StringConcatenation();
+          _builder_2.append("while( ");
+          BlueTooth _superType_3 = btClass.getSuperType();
+          String _name_4 = _superType_3.getName();
+          _builder_2.append(_name_4, "");
+          _builder_2.append(".received()){");
+          String _plus_4 = (this.ind2 + _builder_2);
+          String _plus_5 = (_plus_4 + this.ql);
+          this.bt_block = (_bt_block_2 + _plus_5);
+          String _bt_block_3 = this.bt_block;
+          StringConcatenation _builder_3 = new StringConcatenation();
+          BlueTooth _superType_4 = btClass.getSuperType();
+          String _name_5 = _superType_4.getName();
+          _builder_3.append(_name_5, "");
+          _builder_3.append("Response += (char)");
+          BlueTooth _superType_5 = btClass.getSuperType();
+          String _name_6 = _superType_5.getName();
+          _builder_3.append(_name_6, "");
+          _builder_3.append(".read();");
+          String _plus_6 = (this.ind3 + _builder_3);
           String _plus_7 = (_plus_6 + this.ql);
-          this.bt_block = _plus_7;
-          this.bt_test = true;
+          this.bt_block = (_bt_block_3 + _plus_7);
+          String _bt_block_4 = this.bt_block;
+          this.bt_block = (_bt_block_4 + ((this.ind2 + "}") + this.ql));
+          String _bt_block_5 = this.bt_block;
+          this.bt_block = (_bt_block_5 + ((this.ind1 + "}") + this.ql));
+          BlueTooth _superType_6 = btClass.getSuperType();
+          String _name_7 = _superType_6.getName();
+          this.bt_test = _name_7;
         }
-        String _bt_block = this.bt_block;
-        BlueTooth _superType_3 = btClass.getSuperType();
-        String _name_4 = _superType_3.getName();
-        String _plus_8 = ((this.ind1 + "if(") + _name_4);
-        String _plus_9 = (_plus_8 + "Response ==\'");
+        String _bt_block_6 = this.bt_block;
+        StringConcatenation _builder_4 = new StringConcatenation();
+        _builder_4.append("if( ");
+        BlueTooth _superType_7 = btClass.getSuperType();
+        String _name_8 = _superType_7.getName();
+        _builder_4.append(_name_8, "");
+        _builder_4.append("Response == \"");
         QualifiedName _fullyQualifiedName = this._iQualifiedNameProvider.getFullyQualifiedName(e);
-        String _plus_10 = (_plus_9 + _fullyQualifiedName);
-        String _plus_11 = (_plus_10 + "\'){");
-        String _plus_12 = (_plus_11 + this.ql);
-        this.bt_block = (_bt_block + _plus_12);
-        String _bt_block_1 = this.bt_block;
+        _builder_4.append(_fullyQualifiedName, "");
+        _builder_4.append("\" ){");
+        String _plus_8 = (this.ind1 + _builder_4);
+        String _plus_9 = (_plus_8 + this.ql);
+        this.bt_block = (_bt_block_6 + _plus_9);
+        String _bt_block_7 = this.bt_block;
         XExpression _thenPart = e.getThenPart();
         String _splitExp = this.splitExp(((ObjectLiteralImpl) _thenPart));
-        String _plus_13 = (_splitExp + this.ql);
-        this.bt_block = (_bt_block_1 + _plus_13);
-        String _bt_block_2 = this.bt_block;
-        this.bt_block = (_bt_block_2 + ((this.ind1 + "}") + this.ql));
+        String _plus_10 = (this.ind2 + _splitExp);
+        String _plus_11 = (_plus_10 + this.ql);
+        this.bt_block = (_bt_block_7 + _plus_11);
+        String _bt_block_8 = this.bt_block;
+        this.bt_block = (_bt_block_8 + ((this.ind1 + "}") + this.ql));
       }
       String _xifexpression = null;
       EClass _eClass_1 = e.eClass();
-      String _name_5 = _eClass_1.getName();
+      String _name_9 = _eClass_1.getName();
       String _simpleName_1 = ButtonRule.class.getSimpleName();
-      boolean _equals_1 = Objects.equal(_name_5, _simpleName_1);
+      boolean _equals_1 = Objects.equal(_name_9, _simpleName_1);
       if (_equals_1) {
         String _xblockexpression_1 = null;
         {
@@ -208,19 +248,20 @@ public class BotDuinoGenerator implements IGenerator {
             state = "LOW";
           }
           String _c_loop = this.c_loop;
-          Button _superType_4 = ruleClass.getSuperType();
-          String _name_6 = _superType_4.getName();
-          String _plus_14 = ((this.ind1 + "if(") + _name_6);
-          String _plus_15 = (_plus_14 + ".getState() == ");
-          String _plus_16 = (_plus_15 + state);
-          String _plus_17 = (_plus_16 + "){ ");
-          String _plus_18 = (_plus_17 + this.ql);
-          this.c_loop = (_c_loop + _plus_18);
+          Button _superType_8 = ruleClass.getSuperType();
+          String _name_10 = _superType_8.getName();
+          String _plus_12 = ((this.ind1 + "if(") + _name_10);
+          String _plus_13 = (_plus_12 + ".getState() == ");
+          String _plus_14 = (_plus_13 + state);
+          String _plus_15 = (_plus_14 + "){ ");
+          String _plus_16 = (_plus_15 + this.ql);
+          this.c_loop = (_c_loop + _plus_16);
           String _c_loop_1 = this.c_loop;
           XExpression _thenPart_1 = e.getThenPart();
           String _splitExp_1 = this.splitExp(((ObjectLiteralImpl) _thenPart_1));
-          String _plus_19 = (_splitExp_1 + this.ql);
-          this.c_loop = (_c_loop_1 + _plus_19);
+          String _plus_17 = (this.ind2 + _splitExp_1);
+          String _plus_18 = (_plus_17 + this.ql);
+          this.c_loop = (_c_loop_1 + _plus_18);
           String _c_loop_2 = this.c_loop;
           _xblockexpression_1 = this.c_loop = (_c_loop_2 + ((this.ind1 + "}") + this.ql));
         }
@@ -255,25 +296,23 @@ public class BotDuinoGenerator implements IGenerator {
     final MotorMethodsImpl x = ((MotorMethodsImpl) exp);
     Type _superType = x.getSuperType();
     String _name = _superType.getName();
-    String _plus = (this.ind2 + _name);
-    String _plus_1 = (_plus + ".");
+    String _plus = (_name + ".");
     EList<String> _motorFunctions = x.getMotorFunctions();
     String _get = _motorFunctions.get(0);
-    String _plus_2 = (_plus_1 + _get);
-    String _plus_3 = (_plus_2 + "();");
-    return (_plus_3 + this.ql);
+    String _plus_1 = (_plus + _get);
+    String _plus_2 = (_plus_1 + "();");
+    return (_plus_2 + this.ql);
   }
   
   public String buildExp(final LEDMethods exp) {
     final LEDMethodsImpl x = ((LEDMethodsImpl) exp);
     Type _superType = x.getSuperType();
     String _name = _superType.getName();
-    String _plus = (this.ind2 + _name);
-    String _plus_1 = (_plus + ".");
+    String _plus = (_name + ".");
     EList<String> _ledFunctions = x.getLedFunctions();
     String _get = _ledFunctions.get(0);
-    String _plus_2 = (_plus_1 + _get);
-    String _plus_3 = (_plus_2 + "();");
-    return (_plus_3 + this.ql);
+    String _plus_1 = (_plus + _get);
+    String _plus_2 = (_plus_1 + "();");
+    return (_plus_2 + this.ql);
   }
 }

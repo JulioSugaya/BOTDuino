@@ -88,14 +88,6 @@ public class BotDuinoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BotDuinoPackage.REGISTERS:
-      {
-        Registers registers = (Registers)theEObject;
-        T result = caseRegisters(registers);
-        if (result == null) result = caseEntity(registers);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case BotDuinoPackage.TYPE:
       {
         Type type = (Type)theEObject;
@@ -153,6 +145,14 @@ public class BotDuinoSwitch<T> extends Switch<T>
         T result = caseButtonRule(buttonRule);
         if (result == null) result = caseRules(buttonRule);
         if (result == null) result = caseEntity(buttonRule);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BotDuinoPackage.VARIABLES:
+      {
+        Variables variables = (Variables)theEObject;
+        T result = caseVariables(variables);
+        if (result == null) result = caseEntity(variables);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -282,22 +282,6 @@ public class BotDuinoSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Registers</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Registers</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRegisters(Registers object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -405,6 +389,22 @@ public class BotDuinoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseButtonRule(ButtonRule object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Variables</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Variables</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVariables(Variables object)
   {
     return null;
   }

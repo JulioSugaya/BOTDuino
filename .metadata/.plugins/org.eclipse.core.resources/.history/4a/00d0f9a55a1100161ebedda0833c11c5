@@ -1,0 +1,112 @@
+/*******************************************************************************
+*
+* Author: Júlio Sugaya 
+* 
+ *******************************************************************************/
+grammar org.eclipse.xtext.botlib.dsl.BotDuino with org.eclipse.xtext.xbase.Xbase
+
+import "http://www.eclipse.org/xtext/xbase/Xbase" as xbase
+
+generate botDuino "http://www.eclipse.org/Xtext/botlib/dsl/BotDuino"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+DomainModel :
+ (elements+=Entity)*;
+
+Entity:
+ Type | Rules | Registers | Methods;
+
+ 
+Registers:
+ 'VAR' name=ID '=' values+=INT*;
+
+Type:
+ Button | Sensor | BlueTooth | CTRL | LED | Motor | Servo;
+
+
+Rules:
+	SensorRule | ButtonRule | CTRLRule | BTRule | RegRule;
+
+Methods:
+  LEDMethods | MotorMethods;	
+
+BTRule:
+ superType=[BlueTooth] 
+ 'when' name=ID
+ 'then' thenPart=XBlockExpression;
+ 
+RegRule:
+ superType=[BlueTooth] 
+ 'when' name=ID
+ 'then' thenPart=XBlockExpression;
+ 
+SensorRule:
+ superType=[Sensor] 
+ 'when' (sensorActions+= 'HIGH' | sensorActions+= 'LOW')
+ 'then' thenPart=XBlockExpression;
+ 
+CTRLRule:
+ superType=[CTRL] 
+ 'when' (ctrlActions+= 'UP' | ctrlActions+= 'DOWN' | ctrlActions+= 'LEFT' | ctrlActions+= 'RIGHT')
+ 'then' thenPart=XBlockExpression;
+ 
+ButtonRule:
+ superType=[Button] 
+ 'when' ( btnActions+= 'PUSH' | btnActions+= 'FREE')
+ 'then' thenPart=XBlockExpression;
+
+LED:
+ 'LED' name=ID ('extends' superType=[LED])? '('
+ values+=INT*
+ ')';
+
+Button:
+ 'Button' name=ID ('extends' superType=[Button])? '('
+ values+=INT*
+ ')';
+
+Motor:
+ 'Motor' name=ID ('extends' superType=[Motor])? '('
+ values+=INT* ',' values+=INT* ',' values+=INT*
+ ')';
+
+Sensor:
+ 'Sensor' name=ID ('extends' superType=[Sensor])? '('
+ values+=INT* ',' values+=INT*
+ ')';
+ 
+BlueTooth:
+ 'BlueTooth' name=ID ('extends' superType=[BlueTooth])? '('
+ values+=INT* ',' values+=INT*
+ ')'; 
+ 
+CTRL:
+ 'CTRL' name=ID ('extends' superType=[CTRL])? '('
+ values+=INT* ',' values+=INT* ',' values+=INT* ',' values+=INT* ',' values+=INT*
+ ')';
+  
+Servo:
+ 'Servo' name=ID ('extends' superType=[Servo])? '('
+ values+=INT* ',' values+=INT* ',' values+=INT*
+ ')';
+
+
+LEDMethods:	
+  //superType=[Type]'.'name=ID; 
+  superType=[LED]'.'( ledFunctions+= 'on' | ledFunctions+= 'off');
+
+MotorMethods:	
+  superType=[Motor] | superType=[Servo]'.'( motorFunctions+= 'run' | motorFunctions+= 'stop' | motorFunctions+= 'reverse');
+
+
+terminal INT returns ecore::EInt : ('0'..'9')+;
+ 
+terminal ML_COMMENT : '/*' -> '*/';
+
+XBlockExpression returns xbase::XExpression:
+ {ObjectLiteral}
+ '{'
+   expressions+=Methods*
+ '}';
+
+

@@ -17,6 +17,7 @@
 #include <inttypes.h>
 #include <Stream.h>
 #include <SoftwareSerial.h>
+#include <LiquidCrystal.h>
 //add your includes for the project BOTLib here
 
 //end of add your includes here
@@ -33,8 +34,18 @@ extern "C++" {
 			byte LED_PIN;
 		public:
 			LED(uint8_t pin);
-			void onLed();
-			void offLed();
+			void on();
+			void off();
+	};
+	// SensorSR04 Class
+	class SR04{
+		private:
+			byte TRIG_PIN;
+			byte ECHO_PIN;
+			long duration; // Duration used to calculate distance
+		public:
+			SR04(uint8_t trigPin, uint8_t echoPin);
+			long getDistanceCM();
 	};
 	// Button Class
 	class Button{
@@ -59,33 +70,24 @@ extern "C++" {
 			void reverse();
 	};
 
-	class BlueTooth : public Stream{
+	class BlueTooth{
 		private:
-			int _bufsize;
-			char _buffer[32];
-
+		    SoftwareSerial* btSerial;
 		public:
 			BlueTooth(uint8_t pinTX, uint8_t pinRX);
-
-		    unsigned long findBaud();
-		    void setBaud(unsigned long baud);  // always no parity, one stop bit
-		    void setBaud(unsigned long baud, unsigned long stopbits, unsigned long parity);
-
-		    virtual int available(void);
-		    virtual void begin(unsigned long);
-		    virtual int peek(void);
-		    virtual int read(void);
-		    virtual void flush(void);
-		    virtual size_t write(uint8_t);
-		    SoftwareSerial _btSerial;
+		    char read();
+		    void write(char t);
+		    int received();
+//		    char getMessage();
 	};
 
 	// Debug Class
 	class Debug{
 		private:
+		    LiquidCrystal* lcd;
 		public:
-			Debug();
-			void print(uint8_t t);
+			Debug(uint8_t pin1, uint8_t pin2, uint8_t pin3, uint8_t pin4, uint8_t pin5, uint8_t pin6);
+			void print(char t);
 	};
 
 // end facade

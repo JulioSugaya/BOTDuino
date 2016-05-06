@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;BOTLib/OLED.cpp&apos;" deleteContents="false" description="Delete resource &apos;BOTLib/OLED.cpp&apos;" element1="/BOTLib/OLED.cpp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1451829729592"/>&#x0A;<refactoring comment="Delete resource &apos;BOTLib/U8glib&apos;" deleteContents="false" description="Delete resource &apos;BOTLib/U8glib&apos;" element1="/BOTLib/U8glib" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1451849967195"/>
+</session>

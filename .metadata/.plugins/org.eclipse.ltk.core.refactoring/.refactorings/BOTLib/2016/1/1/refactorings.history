@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BOTLib/OLED.ccp&apos; to &apos;OLED.cpp&apos;" description="Rename resource &apos;OLED.ccp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="OLED.ccp" name="OLED.cpp" stamp="1451761051022" updateReferences="true"/>
+</session>
