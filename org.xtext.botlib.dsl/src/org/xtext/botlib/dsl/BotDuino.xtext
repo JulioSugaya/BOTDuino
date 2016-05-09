@@ -16,22 +16,20 @@ DomainModel :
 Entity:
  Type | Rules | Methods | Variables;
 
-
 Type:
  Button | Sensor | BlueTooth | CTRL | LED | Motor | Servo;
 
 
 Rules:
-	SensorRule | ButtonRule | CTRLRule | BTRule;
+	SensorRule | ButtonRule | CTRLRule | BTRule | Proc;
 
 Methods:
-  LEDMethods | MotorMethods;	
+  LEDMethods | MotorMethods | CallProc;	
 
 BTRule:
  superType=[BlueTooth] 
  'when' name=ID
  'then' thenPart=XBlockExpression;
- 
  
 SensorRule:
  superType=[Sensor] 
@@ -86,15 +84,21 @@ Servo:
  values+=INT* ',' values+=INT* ',' values+=INT*
  ')';
 
+Proc:
+ 'Procedure'
+  name=ID ('extends' superType=[Proc])?
+  thenPart=XBlockExpression
+;
 
 LEDMethods:	
-  //superType=[Type]'.'name=ID; 
   superType=[LED]'.'( ledFunctions+= 'on' | ledFunctions+= 'off');
 
 MotorMethods:	
   superType=[Motor] | superType=[Servo]'.'( motorFunctions+= 'run' | motorFunctions+= 'stop' | motorFunctions+= 'reverse');
 
-
+CallProc:
+  'Exec' superType=[Proc];
+  
 terminal INT returns ecore::EInt : ('0'..'9')+;
  
 terminal ML_COMMENT : '/*' -> '*/';
@@ -102,7 +106,13 @@ terminal ML_COMMENT : '/*' -> '*/';
 XBlockExpression returns xbase::XExpression:
  {ObjectLiteral}
  '{'
-   expressions+=Methods*
+   expressions+=(Methods)*
  '}';
+
+//XBlockProcedure returns xbase::XExpression:
+// {ObjectLiteral}
+// '{'
+//   execute+=(Methods)*
+// '}';
 
 

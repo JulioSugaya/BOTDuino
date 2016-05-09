@@ -181,22 +181,13 @@ public interface BotDuinoPackage extends EPackage
   int METHODS = 4;
 
   /**
-   * The feature id for the '<em><b>Super Type</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int METHODS__SUPER_TYPE = ENTITY_FEATURE_COUNT + 0;
-
-  /**
    * The number of structural features of the '<em>Methods</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int METHODS_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 1;
+  int METHODS_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.BTRuleImpl <em>BT Rule</em>}' class.
@@ -742,14 +733,32 @@ public interface BotDuinoPackage extends EPackage
   int SERVO_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDMethodsImpl <em>LED Methods</em>}' class.
+   * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.ProcImpl <em>Proc</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDMethodsImpl
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getLEDMethods()
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.ProcImpl
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getProc()
    * @generated
    */
-  int LED_METHODS = 17;
+  int PROC = 17;
+
+  /**
+   * The feature id for the '<em><b>Then Part</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROC__THEN_PART = RULES__THEN_PART;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROC__NAME = RULES_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -758,7 +767,35 @@ public interface BotDuinoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LED_METHODS__SUPER_TYPE = METHODS__SUPER_TYPE;
+  int PROC__SUPER_TYPE = RULES_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Proc</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROC_FEATURE_COUNT = RULES_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDMethodsImpl <em>LED Methods</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDMethodsImpl
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getLEDMethods()
+   * @generated
+   */
+  int LED_METHODS = 18;
+
+  /**
+   * The feature id for the '<em><b>Super Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LED_METHODS__SUPER_TYPE = METHODS_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Led Functions</b></em>' attribute list.
@@ -767,7 +804,7 @@ public interface BotDuinoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LED_METHODS__LED_FUNCTIONS = METHODS_FEATURE_COUNT + 0;
+  int LED_METHODS__LED_FUNCTIONS = METHODS_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>LED Methods</em>' class.
@@ -776,7 +813,7 @@ public interface BotDuinoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LED_METHODS_FEATURE_COUNT = METHODS_FEATURE_COUNT + 1;
+  int LED_METHODS_FEATURE_COUNT = METHODS_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.MotorMethodsImpl <em>Motor Methods</em>}' class.
@@ -786,7 +823,7 @@ public interface BotDuinoPackage extends EPackage
    * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getMotorMethods()
    * @generated
    */
-  int MOTOR_METHODS = 18;
+  int MOTOR_METHODS = 19;
 
   /**
    * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -795,7 +832,7 @@ public interface BotDuinoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MOTOR_METHODS__SUPER_TYPE = METHODS__SUPER_TYPE;
+  int MOTOR_METHODS__SUPER_TYPE = METHODS_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Motor Functions</b></em>' attribute list.
@@ -804,7 +841,7 @@ public interface BotDuinoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MOTOR_METHODS__MOTOR_FUNCTIONS = METHODS_FEATURE_COUNT + 0;
+  int MOTOR_METHODS__MOTOR_FUNCTIONS = METHODS_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Motor Methods</em>' class.
@@ -813,7 +850,35 @@ public interface BotDuinoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MOTOR_METHODS_FEATURE_COUNT = METHODS_FEATURE_COUNT + 1;
+  int MOTOR_METHODS_FEATURE_COUNT = METHODS_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.CallProcImpl <em>Call Proc</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.CallProcImpl
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getCallProc()
+   * @generated
+   */
+  int CALL_PROC = 20;
+
+  /**
+   * The feature id for the '<em><b>Super Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CALL_PROC__SUPER_TYPE = METHODS_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Call Proc</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CALL_PROC_FEATURE_COUNT = METHODS_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.ObjectLiteralImpl <em>Object Literal</em>}' class.
@@ -823,7 +888,7 @@ public interface BotDuinoPackage extends EPackage
    * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getObjectLiteral()
    * @generated
    */
-  int OBJECT_LITERAL = 19;
+  int OBJECT_LITERAL = 21;
 
   /**
    * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
@@ -937,17 +1002,6 @@ public interface BotDuinoPackage extends EPackage
    * @generated
    */
   EClass getMethods();
-
-  /**
-   * Returns the meta object for the reference '{@link org.eclipse.xtext.botlib.dsl.botDuino.Methods#getSuperType <em>Super Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Super Type</em>'.
-   * @see org.eclipse.xtext.botlib.dsl.botDuino.Methods#getSuperType()
-   * @see #getMethods()
-   * @generated
-   */
-  EReference getMethods_SuperType();
 
   /**
    * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.BTRule <em>BT Rule</em>}'.
@@ -1257,6 +1311,38 @@ public interface BotDuinoPackage extends EPackage
   EReference getServo_SuperType();
 
   /**
+   * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.Proc <em>Proc</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Proc</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.Proc
+   * @generated
+   */
+  EClass getProc();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipse.xtext.botlib.dsl.botDuino.Proc#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.Proc#getName()
+   * @see #getProc()
+   * @generated
+   */
+  EAttribute getProc_Name();
+
+  /**
+   * Returns the meta object for the reference '{@link org.eclipse.xtext.botlib.dsl.botDuino.Proc#getSuperType <em>Super Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Super Type</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.Proc#getSuperType()
+   * @see #getProc()
+   * @generated
+   */
+  EReference getProc_SuperType();
+
+  /**
    * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods <em>LED Methods</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1265,6 +1351,17 @@ public interface BotDuinoPackage extends EPackage
    * @generated
    */
   EClass getLEDMethods();
+
+  /**
+   * Returns the meta object for the reference '{@link org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods#getSuperType <em>Super Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Super Type</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods#getSuperType()
+   * @see #getLEDMethods()
+   * @generated
+   */
+  EReference getLEDMethods_SuperType();
 
   /**
    * Returns the meta object for the attribute list '{@link org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods#getLedFunctions <em>Led Functions</em>}'.
@@ -1288,6 +1385,17 @@ public interface BotDuinoPackage extends EPackage
   EClass getMotorMethods();
 
   /**
+   * Returns the meta object for the reference '{@link org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods#getSuperType <em>Super Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Super Type</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods#getSuperType()
+   * @see #getMotorMethods()
+   * @generated
+   */
+  EReference getMotorMethods_SuperType();
+
+  /**
    * Returns the meta object for the attribute list '{@link org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods#getMotorFunctions <em>Motor Functions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1297,6 +1405,27 @@ public interface BotDuinoPackage extends EPackage
    * @generated
    */
   EAttribute getMotorMethods_MotorFunctions();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.CallProc <em>Call Proc</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Call Proc</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.CallProc
+   * @generated
+   */
+  EClass getCallProc();
+
+  /**
+   * Returns the meta object for the reference '{@link org.eclipse.xtext.botlib.dsl.botDuino.CallProc#getSuperType <em>Super Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Super Type</em>'.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.CallProc#getSuperType()
+   * @see #getCallProc()
+   * @generated
+   */
+  EReference getCallProc_SuperType();
 
   /**
    * Returns the meta object for class '{@link org.eclipse.xtext.botlib.dsl.botDuino.ObjectLiteral <em>Object Literal</em>}'.
@@ -1423,14 +1552,6 @@ public interface BotDuinoPackage extends EPackage
      * @generated
      */
     EClass METHODS = eINSTANCE.getMethods();
-
-    /**
-     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference METHODS__SUPER_TYPE = eINSTANCE.getMethods_SuperType();
 
     /**
      * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.BTRuleImpl <em>BT Rule</em>}' class.
@@ -1689,6 +1810,32 @@ public interface BotDuinoPackage extends EPackage
     EReference SERVO__SUPER_TYPE = eINSTANCE.getServo_SuperType();
 
     /**
+     * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.ProcImpl <em>Proc</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.ProcImpl
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getProc()
+     * @generated
+     */
+    EClass PROC = eINSTANCE.getProc();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROC__NAME = eINSTANCE.getProc_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROC__SUPER_TYPE = eINSTANCE.getProc_SuperType();
+
+    /**
      * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDMethodsImpl <em>LED Methods</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1697,6 +1844,14 @@ public interface BotDuinoPackage extends EPackage
      * @generated
      */
     EClass LED_METHODS = eINSTANCE.getLEDMethods();
+
+    /**
+     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LED_METHODS__SUPER_TYPE = eINSTANCE.getLEDMethods_SuperType();
 
     /**
      * The meta object literal for the '<em><b>Led Functions</b></em>' attribute list feature.
@@ -1717,12 +1872,38 @@ public interface BotDuinoPackage extends EPackage
     EClass MOTOR_METHODS = eINSTANCE.getMotorMethods();
 
     /**
+     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MOTOR_METHODS__SUPER_TYPE = eINSTANCE.getMotorMethods_SuperType();
+
+    /**
      * The meta object literal for the '<em><b>Motor Functions</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute MOTOR_METHODS__MOTOR_FUNCTIONS = eINSTANCE.getMotorMethods_MotorFunctions();
+
+    /**
+     * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.CallProcImpl <em>Call Proc</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.CallProcImpl
+     * @see org.eclipse.xtext.botlib.dsl.botDuino.impl.BotDuinoPackageImpl#getCallProc()
+     * @generated
+     */
+    EClass CALL_PROC = eINSTANCE.getCallProc();
+
+    /**
+     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CALL_PROC__SUPER_TYPE = eINSTANCE.getCallProc_SuperType();
 
     /**
      * The meta object literal for the '{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.ObjectLiteralImpl <em>Object Literal</em>}' class.

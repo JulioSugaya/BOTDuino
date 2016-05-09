@@ -81,8 +81,10 @@ public class BotDuinoFactoryImpl extends EFactoryImpl implements BotDuinoFactory
       case BotDuinoPackage.BLUE_TOOTH: return createBlueTooth();
       case BotDuinoPackage.CTRL: return createCTRL();
       case BotDuinoPackage.SERVO: return createServo();
+      case BotDuinoPackage.PROC: return createProc();
       case BotDuinoPackage.LED_METHODS: return createLEDMethods();
       case BotDuinoPackage.MOTOR_METHODS: return createMotorMethods();
+      case BotDuinoPackage.CALL_PROC: return createCallProc();
       case BotDuinoPackage.OBJECT_LITERAL: return createObjectLiteral();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -281,6 +283,17 @@ public class BotDuinoFactoryImpl extends EFactoryImpl implements BotDuinoFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Proc createProc()
+  {
+    ProcImpl proc = new ProcImpl();
+    return proc;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public LEDMethods createLEDMethods()
   {
     LEDMethodsImpl ledMethods = new LEDMethodsImpl();
@@ -296,6 +309,17 @@ public class BotDuinoFactoryImpl extends EFactoryImpl implements BotDuinoFactory
   {
     MotorMethodsImpl motorMethods = new MotorMethodsImpl();
     return motorMethods;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CallProc createCallProc()
+  {
+    CallProcImpl callProc = new CallProcImpl();
+    return callProc;
   }
 
   /**

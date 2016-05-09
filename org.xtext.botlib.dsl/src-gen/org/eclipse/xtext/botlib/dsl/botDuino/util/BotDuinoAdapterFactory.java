@@ -162,6 +162,11 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
         return createServoAdapter();
       }
       @Override
+      public Adapter caseProc(Proc object)
+      {
+        return createProcAdapter();
+      }
+      @Override
       public Adapter caseLEDMethods(LEDMethods object)
       {
         return createLEDMethodsAdapter();
@@ -170,6 +175,11 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
       public Adapter caseMotorMethods(MotorMethods object)
       {
         return createMotorMethodsAdapter();
+      }
+      @Override
+      public Adapter caseCallProc(CallProc object)
+      {
+        return createCallProcAdapter();
       }
       @Override
       public Adapter caseObjectLiteral(ObjectLiteral object)
@@ -459,6 +469,21 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.botlib.dsl.botDuino.Proc <em>Proc</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.Proc
+   * @generated
+   */
+  public Adapter createProcAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods <em>LED Methods</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -484,6 +509,21 @@ public class BotDuinoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMotorMethodsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.botlib.dsl.botDuino.CallProc <em>Call Proc</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipse.xtext.botlib.dsl.botDuino.CallProc
+   * @generated
+   */
+  public Adapter createCallProcAdapter()
   {
     return null;
   }

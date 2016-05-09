@@ -19,25 +19,38 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.naming.IQualifiedNameProvider
 import org.eclipse.xtext.botlib.dsl.botDuino.Variables
+import org.eclipse.xtext.botlib.dsl.botDuino.Proc
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.ProcImpl
+import org.eclipse.xtext.botlib.dsl.botDuino.CallProc
+import java.io.File
 
 class BotDuinoGenerator implements IGenerator {
 	
 	  @Inject extension IQualifiedNameProvider
 	  
-	  var String ql = System.getProperty("line.separator")
-	  var String ind1 = "	"
-	  var String ind2 = "		"
-	  var String ind3 = "			"
-	  var String c_includes = "#include <BOTLib.h>" + ql
-	  var String c_vars = ""
-	  var String c_setup = "void setup() {" + ql
-	  var String c_loop = "void loop() {" + ql
-	  var String bt_block = ""
-	  var String context = ""
-	  var String bt_test = ""
+	var String ql = System.getProperty("line.separator")
+	var String ind1 = "	"
+	var String ind2 = "		"
+	var String ind3 = "			"
+	var String c_includes = "#include <BOTLib.h>" + ql
+	var String c_vars = ""
+	var String c_setup = "void setup() {" + ql
+	var String c_loop = "void loop() {" + ql
+	var String proc_block = ""
+	var String bt_block = ""
+	var String context = ""
+	var String bt_test = ""
 	  	  
 	  override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-
+	  	
+	  	c_vars = ""
+	  	bt_block = ""
+	  	proc_block = ""
+	  	c_setup = "void setup() {" + ql
+	  	c_loop = "void loop() {" + ql
+	  	context = ""
+	  	bt_test = ""
+	  	
 	    for(e: resource.allContents.toIterable.filterNull) {
 			e.process
 	    }
@@ -46,7 +59,8 @@ class BotDuinoGenerator implements IGenerator {
 //	    	c_loop += bt_block + ind1 + "}" + ql
 //	    }
      	c_loop += bt_block + ql
-		context = c_includes + ql + c_vars + ql + c_setup + "}" + ql + c_loop + "}"
+		context = c_includes + ql + c_vars + ql + c_setup + "}" + ql + c_loop + "}" + ql + proc_block
+		fsa.deleteFile(resource.URI.lastSegment + ".cpp")
     	fsa.generateFile( resource.URI.lastSegment + ".cpp", context)
 	  }
 	  
@@ -103,7 +117,7 @@ class BotDuinoGenerator implements IGenerator {
 		  		bt_test = btClass.superType.name
 			}
 	  		bt_block += ind1 + '''if( «btClass.superType.name»Response == "«e.fullyQualifiedName»" ){''' + ql
-	  		bt_block += ind2 + splitExp(e.thenPart as ObjectLiteralImpl) + ql
+	  		bt_block += splitExp(e.thenPart as ObjectLiteralImpl) + ql
 	  		bt_block += ind1 + "}" + ql
 	  	}
 	  	if(e.eClass.name == ButtonRule.simpleName){
@@ -113,9 +127,15 @@ class BotDuinoGenerator implements IGenerator {
 	  		    	state = "LOW";
 	  		    }
 		  	    c_loop += ind1 + "if(" + ruleClass.superType.name + ".getState() == " + state + "){ "+ ql
-		  		c_loop += ind2 + splitExp(e.thenPart as ObjectLiteralImpl) + ql
+		  		c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
 		  		c_loop += ind1 + "}" + ql
 	  		
+	  	}
+	  	if(e.eClass.name == Proc.simpleName){
+			var proc = e as ProcImpl
+		  	proc_block += '''void «proc.name»(){ '''+ ql
+	  		proc_block += splitExp(e.thenPart as ObjectLiteralImpl) + ql
+		  	proc_block += "}" + ql
 	  	}
 	  } 
 	  
@@ -132,10 +152,13 @@ class BotDuinoGenerator implements IGenerator {
 	  	var String s = ""
 	  	for ( c : exp.expressions) {
 	  		if(c instanceof LEDMethods){
-	  			s += c.buildExp()
+	  			s += ind2 + c.buildExp()
 	  		}
 	  		if(c instanceof MotorMethods){
-	  			s += c.buildExp()
+	  			s += ind2 + c.buildExp()
+	  		}
+	  		if(c instanceof CallProc){
+	  			s += ind2 + c.superType.name + "();" + ql
 	  		}
 	  		
 	  	}

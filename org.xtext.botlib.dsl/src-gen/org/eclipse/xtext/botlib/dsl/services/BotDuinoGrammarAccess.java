@@ -110,12 +110,13 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cButtonRuleParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cCTRLRuleParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cBTRuleParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cProcParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		
 		//Rules:
-		//	SensorRule | ButtonRule | CTRLRule | BTRule;
+		//	SensorRule | ButtonRule | CTRLRule | BTRule | Proc;
 		@Override public ParserRule getRule() { return rule; }
 
-		//SensorRule | ButtonRule | CTRLRule | BTRule
+		//SensorRule | ButtonRule | CTRLRule | BTRule | Proc
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//SensorRule
@@ -129,6 +130,9 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 
 		//BTRule
 		public RuleCall getBTRuleParserRuleCall_3() { return cBTRuleParserRuleCall_3; }
+
+		//Proc
+		public RuleCall getProcParserRuleCall_4() { return cProcParserRuleCall_4; }
 	}
 
 	public class MethodsElements extends AbstractParserRuleElementFinder {
@@ -136,12 +140,13 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cLEDMethodsParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cMotorMethodsParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cCallProcParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//Methods:
-		//	LEDMethods | MotorMethods;
+		//	LEDMethods | MotorMethods | CallProc;
 		@Override public ParserRule getRule() { return rule; }
 
-		//LEDMethods | MotorMethods
+		//LEDMethods | MotorMethods | CallProc
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//LEDMethods
@@ -149,6 +154,9 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 
 		//MotorMethods
 		public RuleCall getMotorMethodsParserRuleCall_1() { return cMotorMethodsParserRuleCall_1; }
+
+		//CallProc
+		public RuleCall getCallProcParserRuleCall_2() { return cCallProcParserRuleCall_2; }
 	}
 
 	public class BTRuleElements extends AbstractParserRuleElementFinder {
@@ -995,6 +1003,60 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightParenthesisKeyword_9() { return cRightParenthesisKeyword_9; }
 	}
 
+	public class ProcElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.Proc");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cProcedureKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cExtendsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cSuperTypeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final CrossReference cSuperTypeProcCrossReference_2_1_0 = (CrossReference)cSuperTypeAssignment_2_1.eContents().get(0);
+		private final RuleCall cSuperTypeProcIDTerminalRuleCall_2_1_0_1 = (RuleCall)cSuperTypeProcCrossReference_2_1_0.eContents().get(1);
+		private final Assignment cThenPartAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cThenPartXBlockExpressionParserRuleCall_3_0 = (RuleCall)cThenPartAssignment_3.eContents().get(0);
+		
+		//Proc:
+		//	'Procedure'
+		//	name=ID ('extends' superType=[Proc])?
+		//	thenPart=XBlockExpression;
+		@Override public ParserRule getRule() { return rule; }
+
+		//'Procedure' name=ID ('extends' superType=[Proc])? thenPart=XBlockExpression
+		public Group getGroup() { return cGroup; }
+
+		//'Procedure'
+		public Keyword getProcedureKeyword_0() { return cProcedureKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//('extends' superType=[Proc])?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//'extends'
+		public Keyword getExtendsKeyword_2_0() { return cExtendsKeyword_2_0; }
+
+		//superType=[Proc]
+		public Assignment getSuperTypeAssignment_2_1() { return cSuperTypeAssignment_2_1; }
+
+		//[Proc]
+		public CrossReference getSuperTypeProcCrossReference_2_1_0() { return cSuperTypeProcCrossReference_2_1_0; }
+
+		//ID
+		public RuleCall getSuperTypeProcIDTerminalRuleCall_2_1_0_1() { return cSuperTypeProcIDTerminalRuleCall_2_1_0_1; }
+
+		//thenPart=XBlockExpression
+		public Assignment getThenPartAssignment_3() { return cThenPartAssignment_3; }
+
+		//XBlockExpression
+		public RuleCall getThenPartXBlockExpressionParserRuleCall_3_0() { return cThenPartXBlockExpressionParserRuleCall_3_0; }
+	}
+
 	public class LEDMethodsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.LEDMethods");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1012,11 +1074,9 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		//	superType=[LED] '.' (ledFunctions+='on' | ledFunctions+='off');
 		@Override public ParserRule getRule() { return rule; }
 
-		////superType=[Type]'.'name=ID; 
 		//superType=[LED] '.' (ledFunctions+='on' | ledFunctions+='off')
 		public Group getGroup() { return cGroup; }
 
-		////superType=[Type]'.'name=ID; 
 		//superType=[LED]
 		public Assignment getSuperTypeAssignment_0() { return cSuperTypeAssignment_0; }
 
@@ -1118,6 +1178,34 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getMotorFunctionsReverseKeyword_1_2_2_0() { return cMotorFunctionsReverseKeyword_1_2_2_0; }
 	}
 
+	public class CallProcElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.CallProc");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cExecKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cSuperTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cSuperTypeProcCrossReference_1_0 = (CrossReference)cSuperTypeAssignment_1.eContents().get(0);
+		private final RuleCall cSuperTypeProcIDTerminalRuleCall_1_0_1 = (RuleCall)cSuperTypeProcCrossReference_1_0.eContents().get(1);
+		
+		//CallProc:
+		//	'Exec' superType=[Proc];
+		@Override public ParserRule getRule() { return rule; }
+
+		//'Exec' superType=[Proc]
+		public Group getGroup() { return cGroup; }
+
+		//'Exec'
+		public Keyword getExecKeyword_0() { return cExecKeyword_0; }
+
+		//superType=[Proc]
+		public Assignment getSuperTypeAssignment_1() { return cSuperTypeAssignment_1; }
+
+		//[Proc]
+		public CrossReference getSuperTypeProcCrossReference_1_0() { return cSuperTypeProcCrossReference_1_0; }
+
+		//ID
+		public RuleCall getSuperTypeProcIDTerminalRuleCall_1_0_1() { return cSuperTypeProcIDTerminalRuleCall_1_0_1; }
+	}
+
 	public class XBlockExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.XBlockExpression");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1171,8 +1259,10 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	private final BlueToothElements pBlueTooth;
 	private final CTRLElements pCTRL;
 	private final ServoElements pServo;
+	private final ProcElements pProc;
 	private final LEDMethodsElements pLEDMethods;
 	private final MotorMethodsElements pMotorMethods;
+	private final CallProcElements pCallProc;
 	private final TerminalRule tINT;
 	private final TerminalRule tML_COMMENT;
 	private final XBlockExpressionElements pXBlockExpression;
@@ -1207,8 +1297,10 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		this.pBlueTooth = new BlueToothElements();
 		this.pCTRL = new CTRLElements();
 		this.pServo = new ServoElements();
+		this.pProc = new ProcElements();
 		this.pLEDMethods = new LEDMethodsElements();
 		this.pMotorMethods = new MotorMethodsElements();
+		this.pCallProc = new CallProcElements();
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.INT");
 		this.tML_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.botlib.dsl.BotDuino.ML_COMMENT");
 		this.pXBlockExpression = new XBlockExpressionElements();
@@ -1276,7 +1368,7 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Rules:
-	//	SensorRule | ButtonRule | CTRLRule | BTRule;
+	//	SensorRule | ButtonRule | CTRLRule | BTRule | Proc;
 	public RulesElements getRulesAccess() {
 		return pRules;
 	}
@@ -1286,7 +1378,7 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Methods:
-	//	LEDMethods | MotorMethods;
+	//	LEDMethods | MotorMethods | CallProc;
 	public MethodsElements getMethodsAccess() {
 		return pMethods;
 	}
@@ -1437,6 +1529,18 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 		return getServoAccess().getRule();
 	}
 
+	//Proc:
+	//	'Procedure'
+	//	name=ID ('extends' superType=[Proc])?
+	//	thenPart=XBlockExpression;
+	public ProcElements getProcAccess() {
+		return pProc;
+	}
+	
+	public ParserRule getProcRule() {
+		return getProcAccess().getRule();
+	}
+
 	//LEDMethods:
 	//	superType=[LED] '.' (ledFunctions+='on' | ledFunctions+='off');
 	public LEDMethodsElements getLEDMethodsAccess() {
@@ -1456,6 +1560,16 @@ public class BotDuinoGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getMotorMethodsRule() {
 		return getMotorMethodsAccess().getRule();
+	}
+
+	//CallProc:
+	//	'Exec' superType=[Proc];
+	public CallProcElements getCallProcAccess() {
+		return pCallProc;
+	}
+	
+	public ParserRule getCallProcRule() {
+		return getCallProcAccess().getRule();
 	}
 
 	//terminal INT returns ecore::EInt:

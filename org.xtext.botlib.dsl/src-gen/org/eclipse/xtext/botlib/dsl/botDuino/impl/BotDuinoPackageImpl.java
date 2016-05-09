@@ -16,6 +16,7 @@ import org.eclipse.xtext.botlib.dsl.botDuino.BotDuinoPackage;
 import org.eclipse.xtext.botlib.dsl.botDuino.Button;
 import org.eclipse.xtext.botlib.dsl.botDuino.ButtonRule;
 import org.eclipse.xtext.botlib.dsl.botDuino.CTRLRule;
+import org.eclipse.xtext.botlib.dsl.botDuino.CallProc;
 import org.eclipse.xtext.botlib.dsl.botDuino.DomainModel;
 import org.eclipse.xtext.botlib.dsl.botDuino.Entity;
 import org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods;
@@ -23,6 +24,7 @@ import org.eclipse.xtext.botlib.dsl.botDuino.Methods;
 import org.eclipse.xtext.botlib.dsl.botDuino.Motor;
 import org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods;
 import org.eclipse.xtext.botlib.dsl.botDuino.ObjectLiteral;
+import org.eclipse.xtext.botlib.dsl.botDuino.Proc;
 import org.eclipse.xtext.botlib.dsl.botDuino.Rules;
 import org.eclipse.xtext.botlib.dsl.botDuino.Sensor;
 import org.eclipse.xtext.botlib.dsl.botDuino.SensorRule;
@@ -164,6 +166,13 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass procEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass ledMethodsEClass = null;
 
   /**
@@ -172,6 +181,13 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
    * @generated
    */
   private EClass motorMethodsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass callProcEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -334,16 +350,6 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
   public EClass getMethods()
   {
     return methodsEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMethods_SuperType()
-  {
-    return (EReference)methodsEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -641,6 +647,36 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getProc()
+  {
+    return procEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProc_Name()
+  {
+    return (EAttribute)procEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getProc_SuperType()
+  {
+    return (EReference)procEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLEDMethods()
   {
     return ledMethodsEClass;
@@ -651,9 +687,19 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getLEDMethods_SuperType()
+  {
+    return (EReference)ledMethodsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getLEDMethods_LedFunctions()
   {
-    return (EAttribute)ledMethodsEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)ledMethodsEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -671,9 +717,39 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getMotorMethods_SuperType()
+  {
+    return (EReference)motorMethodsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getMotorMethods_MotorFunctions()
   {
-    return (EAttribute)motorMethodsEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)motorMethodsEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCallProc()
+  {
+    return callProcEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCallProc_SuperType()
+  {
+    return (EReference)callProcEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -739,7 +815,6 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
     createEReference(rulesEClass, RULES__THEN_PART);
 
     methodsEClass = createEClass(METHODS);
-    createEReference(methodsEClass, METHODS__SUPER_TYPE);
 
     btRuleEClass = createEClass(BT_RULE);
     createEReference(btRuleEClass, BT_RULE__SUPER_TYPE);
@@ -782,11 +857,20 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
     servoEClass = createEClass(SERVO);
     createEReference(servoEClass, SERVO__SUPER_TYPE);
 
+    procEClass = createEClass(PROC);
+    createEAttribute(procEClass, PROC__NAME);
+    createEReference(procEClass, PROC__SUPER_TYPE);
+
     ledMethodsEClass = createEClass(LED_METHODS);
+    createEReference(ledMethodsEClass, LED_METHODS__SUPER_TYPE);
     createEAttribute(ledMethodsEClass, LED_METHODS__LED_FUNCTIONS);
 
     motorMethodsEClass = createEClass(MOTOR_METHODS);
+    createEReference(motorMethodsEClass, MOTOR_METHODS__SUPER_TYPE);
     createEAttribute(motorMethodsEClass, MOTOR_METHODS__MOTOR_FUNCTIONS);
+
+    callProcEClass = createEClass(CALL_PROC);
+    createEReference(callProcEClass, CALL_PROC__SUPER_TYPE);
 
     objectLiteralEClass = createEClass(OBJECT_LITERAL);
     createEReference(objectLiteralEClass, OBJECT_LITERAL__EXPRESSIONS);
@@ -839,8 +923,10 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
     blueToothEClass.getESuperTypes().add(this.getType());
     ctrlEClass.getESuperTypes().add(this.getType());
     servoEClass.getESuperTypes().add(this.getType());
+    procEClass.getESuperTypes().add(this.getRules());
     ledMethodsEClass.getESuperTypes().add(this.getMethods());
     motorMethodsEClass.getESuperTypes().add(this.getMethods());
+    callProcEClass.getESuperTypes().add(this.getMethods());
     objectLiteralEClass.getESuperTypes().add(theXbasePackage.getXExpression());
 
     // Initialize classes and features; add operations and parameters
@@ -857,7 +943,6 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
     initEReference(getRules_ThenPart(), theXbasePackage.getXExpression(), null, "thenPart", null, 0, 1, Rules.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(methodsEClass, Methods.class, "Methods", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMethods_SuperType(), this.getType(), null, "superType", null, 0, 1, Methods.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(btRuleEClass, BTRule.class, "BTRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBTRule_SuperType(), this.getBlueTooth(), null, "superType", null, 0, 1, BTRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -900,11 +985,20 @@ public class BotDuinoPackageImpl extends EPackageImpl implements BotDuinoPackage
     initEClass(servoEClass, Servo.class, "Servo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getServo_SuperType(), this.getServo(), null, "superType", null, 0, 1, Servo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(procEClass, Proc.class, "Proc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getProc_Name(), ecorePackage.getEString(), "name", null, 0, 1, Proc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProc_SuperType(), this.getProc(), null, "superType", null, 0, 1, Proc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(ledMethodsEClass, LEDMethods.class, "LEDMethods", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLEDMethods_SuperType(), this.getLED(), null, "superType", null, 0, 1, LEDMethods.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getLEDMethods_LedFunctions(), ecorePackage.getEString(), "ledFunctions", null, 0, -1, LEDMethods.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(motorMethodsEClass, MotorMethods.class, "MotorMethods", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMotorMethods_SuperType(), this.getType(), null, "superType", null, 0, 1, MotorMethods.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMotorMethods_MotorFunctions(), ecorePackage.getEString(), "motorFunctions", null, 0, -1, MotorMethods.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(callProcEClass, CallProc.class, "CallProc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCallProc_SuperType(), this.getProc(), null, "superType", null, 0, 1, CallProc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(objectLiteralEClass, ObjectLiteral.class, "ObjectLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getObjectLiteral_Expressions(), this.getMethods(), null, "expressions", null, 0, -1, ObjectLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

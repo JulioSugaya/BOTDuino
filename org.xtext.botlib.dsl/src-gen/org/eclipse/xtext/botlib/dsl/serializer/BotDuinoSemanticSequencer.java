@@ -17,12 +17,14 @@ import org.eclipse.xtext.botlib.dsl.botDuino.Button;
 import org.eclipse.xtext.botlib.dsl.botDuino.ButtonRule;
 import org.eclipse.xtext.botlib.dsl.botDuino.CTRL;
 import org.eclipse.xtext.botlib.dsl.botDuino.CTRLRule;
+import org.eclipse.xtext.botlib.dsl.botDuino.CallProc;
 import org.eclipse.xtext.botlib.dsl.botDuino.DomainModel;
 import org.eclipse.xtext.botlib.dsl.botDuino.LED;
 import org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods;
 import org.eclipse.xtext.botlib.dsl.botDuino.Motor;
 import org.eclipse.xtext.botlib.dsl.botDuino.MotorMethods;
 import org.eclipse.xtext.botlib.dsl.botDuino.ObjectLiteral;
+import org.eclipse.xtext.botlib.dsl.botDuino.Proc;
 import org.eclipse.xtext.botlib.dsl.botDuino.Sensor;
 import org.eclipse.xtext.botlib.dsl.botDuino.SensorRule;
 import org.eclipse.xtext.botlib.dsl.botDuino.Servo;
@@ -110,6 +112,9 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 			case BotDuinoPackage.CTRL_RULE:
 				sequence_CTRLRule(context, (CTRLRule) semanticObject); 
 				return; 
+			case BotDuinoPackage.CALL_PROC:
+				sequence_CallProc(context, (CallProc) semanticObject); 
+				return; 
 			case BotDuinoPackage.DOMAIN_MODEL:
 				sequence_DomainModel(context, (DomainModel) semanticObject); 
 				return; 
@@ -127,6 +132,9 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 				return; 
 			case BotDuinoPackage.OBJECT_LITERAL:
 				sequence_XBlockExpression(context, (ObjectLiteral) semanticObject); 
+				return; 
+			case BotDuinoPackage.PROC:
+				sequence_Proc(context, (Proc) semanticObject); 
 				return; 
 			case BotDuinoPackage.SENSOR:
 				sequence_Sensor(context, (Sensor) semanticObject); 
@@ -454,6 +462,26 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Entity returns CallProc
+	 *     Methods returns CallProc
+	 *     CallProc returns CallProc
+	 *
+	 * Constraint:
+	 *     superType=[Proc|ID]
+	 */
+	protected void sequence_CallProc(ISerializationContext context, CallProc semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, BotDuinoPackage.Literals.CALL_PROC__SUPER_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BotDuinoPackage.Literals.CALL_PROC__SUPER_TYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCallProcAccess().getSuperTypeProcIDTerminalRuleCall_1_0_1(), semanticObject.getSuperType());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     DomainModel returns DomainModel
 	 *
 	 * Constraint:
@@ -516,6 +544,20 @@ public class BotDuinoSemanticSequencer extends XbaseSemanticSequencer {
 	 *     (name=ID superType=[Motor|ID]? values+=INT* values+=INT* values+=INT*)
 	 */
 	protected void sequence_Motor(ISerializationContext context, Motor semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Entity returns Proc
+	 *     Rules returns Proc
+	 *     Proc returns Proc
+	 *
+	 * Constraint:
+	 *     (name=ID superType=[Proc|ID]? thenPart=XBlockExpression)
+	 */
+	protected void sequence_Proc(ISerializationContext context, Proc semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

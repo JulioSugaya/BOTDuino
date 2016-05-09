@@ -176,6 +176,15 @@ public interface BotDuinoFactory extends EFactory
   Servo createServo();
 
   /**
+   * Returns a new object of class '<em>Proc</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Proc</em>'.
+   * @generated
+   */
+  Proc createProc();
+
+  /**
    * Returns a new object of class '<em>LED Methods</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -192,6 +201,15 @@ public interface BotDuinoFactory extends EFactory
    * @generated
    */
   MotorMethods createMotorMethods();
+
+  /**
+   * Returns a new object of class '<em>Call Proc</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Call Proc</em>'.
+   * @generated
+   */
+  CallProc createCallProc();
 
   /**
    * Returns a new object of class '<em>Object Literal</em>'.

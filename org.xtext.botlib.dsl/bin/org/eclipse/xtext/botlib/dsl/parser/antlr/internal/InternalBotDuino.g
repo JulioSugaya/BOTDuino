@@ -305,6 +305,16 @@ ruleRules returns [EObject current=null]
         $current = $this_BTRule_3.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRulesAccess().getProcParserRuleCall_4()); 
+    }
+    this_Proc_4=ruleProc
+    { 
+        $current = $this_Proc_4.current; 
+        afterParserOrEnumRuleCall();
+    }
 )
 ;
 
@@ -343,6 +353,16 @@ ruleMethods returns [EObject current=null]
     this_MotorMethods_1=ruleMotorMethods
     { 
         $current = $this_MotorMethods_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getMethodsAccess().getCallProcParserRuleCall_2()); 
+    }
+    this_CallProc_2=ruleCallProc
+    { 
+        $current = $this_CallProc_2.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -1622,6 +1642,84 @@ ruleServo returns [EObject current=null]
 
 
 
+// Entry rule entryRuleProc
+entryRuleProc returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getProcRule()); }
+	 iv_ruleProc=ruleProc 
+	 { $current=$iv_ruleProc.current; } 
+	 EOF 
+;
+
+// Rule Proc
+ruleProc returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='Procedure' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getProcAccess().getProcedureKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getProcAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getProcRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.xtext.xbase.Xtype.ID");
+	    }
+
+)
+)(	otherlv_2='extends' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getProcAccess().getExtendsKeyword_2_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getProcRule());
+	        }
+        }
+	otherlv_3=RULE_ID
+	{
+		newLeafNode(otherlv_3, grammarAccess.getProcAccess().getSuperTypeProcCrossReference_2_1_0()); 
+	}
+
+)
+))?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getProcAccess().getThenPartXBlockExpressionParserRuleCall_3_0()); 
+	    }
+		lv_thenPart_4_0=ruleXBlockExpression		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getProcRule());
+	        }
+       		set(
+       			$current, 
+       			"thenPart",
+        		lv_thenPart_4_0, 
+        		"org.eclipse.xtext.botlib.dsl.BotDuino.XBlockExpression");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
+;
+
+
+
+
+
 // Entry rule entryRuleLEDMethods
 entryRuleLEDMethods returns [EObject current=null] 
 	:
@@ -1784,6 +1882,44 @@ ruleMotorMethods returns [EObject current=null]
 
 )
 ))))
+;
+
+
+
+
+
+// Entry rule entryRuleCallProc
+entryRuleCallProc returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getCallProcRule()); }
+	 iv_ruleCallProc=ruleCallProc 
+	 { $current=$iv_ruleCallProc.current; } 
+	 EOF 
+;
+
+// Rule CallProc
+ruleCallProc returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='Exec' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getCallProcAccess().getExecKeyword_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getCallProcRule());
+	        }
+        }
+	otherlv_1=RULE_ID
+	{
+		newLeafNode(otherlv_1, grammarAccess.getCallProcAccess().getSuperTypeProcCrossReference_1_0()); 
+	}
+
+)
+))
 ;
 
 

@@ -18,9 +18,7 @@
     <genClasses ecoreClass="BotDuino.ecore#//Rules">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Rules/thenPart"/>
     </genClasses>
-    <genClasses ecoreClass="BotDuino.ecore#//Methods">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Methods/superType"/>
-    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//Methods"/>
     <genClasses ecoreClass="BotDuino.ecore#//BTRule">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//BTRule/superType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//BTRule/name"/>
@@ -62,11 +60,20 @@
     <genClasses ecoreClass="BotDuino.ecore#//Servo">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Servo/superType"/>
     </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//Proc">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//Proc/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//Proc/superType"/>
+    </genClasses>
     <genClasses ecoreClass="BotDuino.ecore#//LEDMethods">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//LEDMethods/superType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//LEDMethods/ledFunctions"/>
     </genClasses>
     <genClasses ecoreClass="BotDuino.ecore#//MotorMethods">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//MotorMethods/superType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BotDuino.ecore#//MotorMethods/motorFunctions"/>
+    </genClasses>
+    <genClasses ecoreClass="BotDuino.ecore#//CallProc">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BotDuino.ecore#//CallProc/superType"/>
     </genClasses>
     <genClasses ecoreClass="BotDuino.ecore#//ObjectLiteral">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BotDuino.ecore#//ObjectLiteral/expressions"/>

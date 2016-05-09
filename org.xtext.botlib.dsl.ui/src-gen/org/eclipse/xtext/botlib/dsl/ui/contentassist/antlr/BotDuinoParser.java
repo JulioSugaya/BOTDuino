@@ -105,8 +105,11 @@ public class BotDuinoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCTRLAccess().getGroup_2(), "rule__CTRL__Group_2__0");
 					put(grammarAccess.getServoAccess().getGroup(), "rule__Servo__Group__0");
 					put(grammarAccess.getServoAccess().getGroup_2(), "rule__Servo__Group_2__0");
+					put(grammarAccess.getProcAccess().getGroup(), "rule__Proc__Group__0");
+					put(grammarAccess.getProcAccess().getGroup_2(), "rule__Proc__Group_2__0");
 					put(grammarAccess.getLEDMethodsAccess().getGroup(), "rule__LEDMethods__Group__0");
 					put(grammarAccess.getMotorMethodsAccess().getGroup_1(), "rule__MotorMethods__Group_1__0");
+					put(grammarAccess.getCallProcAccess().getGroup(), "rule__CallProc__Group__0");
 					put(grammarAccess.getXBlockExpressionAccess().getGroup(), "rule__XBlockExpression__Group__0");
 					put(grammarAccess.getXAssignmentAccess().getGroup_0(), "rule__XAssignment__Group_0__0");
 					put(grammarAccess.getXAssignmentAccess().getGroup_1(), "rule__XAssignment__Group_1__0");
@@ -336,6 +339,9 @@ public class BotDuinoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getServoAccess().getValuesAssignment_4(), "rule__Servo__ValuesAssignment_4");
 					put(grammarAccess.getServoAccess().getValuesAssignment_6(), "rule__Servo__ValuesAssignment_6");
 					put(grammarAccess.getServoAccess().getValuesAssignment_8(), "rule__Servo__ValuesAssignment_8");
+					put(grammarAccess.getProcAccess().getNameAssignment_1(), "rule__Proc__NameAssignment_1");
+					put(grammarAccess.getProcAccess().getSuperTypeAssignment_2_1(), "rule__Proc__SuperTypeAssignment_2_1");
+					put(grammarAccess.getProcAccess().getThenPartAssignment_3(), "rule__Proc__ThenPartAssignment_3");
 					put(grammarAccess.getLEDMethodsAccess().getSuperTypeAssignment_0(), "rule__LEDMethods__SuperTypeAssignment_0");
 					put(grammarAccess.getLEDMethodsAccess().getLedFunctionsAssignment_2_0(), "rule__LEDMethods__LedFunctionsAssignment_2_0");
 					put(grammarAccess.getLEDMethodsAccess().getLedFunctionsAssignment_2_1(), "rule__LEDMethods__LedFunctionsAssignment_2_1");
@@ -344,6 +350,7 @@ public class BotDuinoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMotorMethodsAccess().getMotorFunctionsAssignment_1_2_0(), "rule__MotorMethods__MotorFunctionsAssignment_1_2_0");
 					put(grammarAccess.getMotorMethodsAccess().getMotorFunctionsAssignment_1_2_1(), "rule__MotorMethods__MotorFunctionsAssignment_1_2_1");
 					put(grammarAccess.getMotorMethodsAccess().getMotorFunctionsAssignment_1_2_2(), "rule__MotorMethods__MotorFunctionsAssignment_1_2_2");
+					put(grammarAccess.getCallProcAccess().getSuperTypeAssignment_1(), "rule__CallProc__SuperTypeAssignment_1");
 					put(grammarAccess.getXBlockExpressionAccess().getExpressionsAssignment_2(), "rule__XBlockExpression__ExpressionsAssignment_2");
 					put(grammarAccess.getXAssignmentAccess().getFeatureAssignment_0_1(), "rule__XAssignment__FeatureAssignment_0_1");
 					put(grammarAccess.getXAssignmentAccess().getValueAssignment_0_3(), "rule__XAssignment__ValueAssignment_0_3");

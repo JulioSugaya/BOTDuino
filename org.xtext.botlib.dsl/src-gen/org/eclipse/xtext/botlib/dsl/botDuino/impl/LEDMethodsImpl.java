@@ -4,13 +4,19 @@ package org.eclipse.xtext.botlib.dsl.botDuino.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 import org.eclipse.xtext.botlib.dsl.botDuino.BotDuinoPackage;
+import org.eclipse.xtext.botlib.dsl.botDuino.LED;
 import org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods;
 
 /**
@@ -21,6 +27,7 @@ import org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDMethodsImpl#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.eclipse.xtext.botlib.dsl.botDuino.impl.LEDMethodsImpl#getLedFunctions <em>Led Functions</em>}</li>
  * </ul>
  *
@@ -28,6 +35,16 @@ import org.eclipse.xtext.botlib.dsl.botDuino.LEDMethods;
  */
 public class LEDMethodsImpl extends MethodsImpl implements LEDMethods
 {
+  /**
+   * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSuperType()
+   * @generated
+   * @ordered
+   */
+  protected LED superType;
+
   /**
    * The cached value of the '{@link #getLedFunctions() <em>Led Functions</em>}' attribute list.
    * <!-- begin-user-doc -->
@@ -64,6 +81,49 @@ public class LEDMethodsImpl extends MethodsImpl implements LEDMethods
    * <!-- end-user-doc -->
    * @generated
    */
+  public LED getSuperType()
+  {
+    if (superType != null && superType.eIsProxy())
+    {
+      InternalEObject oldSuperType = (InternalEObject)superType;
+      superType = (LED)eResolveProxy(oldSuperType);
+      if (superType != oldSuperType)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, BotDuinoPackage.LED_METHODS__SUPER_TYPE, oldSuperType, superType));
+      }
+    }
+    return superType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LED basicGetSuperType()
+  {
+    return superType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSuperType(LED newSuperType)
+  {
+    LED oldSuperType = superType;
+    superType = newSuperType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BotDuinoPackage.LED_METHODS__SUPER_TYPE, oldSuperType, superType));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<String> getLedFunctions()
   {
     if (ledFunctions == null)
@@ -83,6 +143,9 @@ public class LEDMethodsImpl extends MethodsImpl implements LEDMethods
   {
     switch (featureID)
     {
+      case BotDuinoPackage.LED_METHODS__SUPER_TYPE:
+        if (resolve) return getSuperType();
+        return basicGetSuperType();
       case BotDuinoPackage.LED_METHODS__LED_FUNCTIONS:
         return getLedFunctions();
     }
@@ -100,6 +163,9 @@ public class LEDMethodsImpl extends MethodsImpl implements LEDMethods
   {
     switch (featureID)
     {
+      case BotDuinoPackage.LED_METHODS__SUPER_TYPE:
+        setSuperType((LED)newValue);
+        return;
       case BotDuinoPackage.LED_METHODS__LED_FUNCTIONS:
         getLedFunctions().clear();
         getLedFunctions().addAll((Collection<? extends String>)newValue);
@@ -118,6 +184,9 @@ public class LEDMethodsImpl extends MethodsImpl implements LEDMethods
   {
     switch (featureID)
     {
+      case BotDuinoPackage.LED_METHODS__SUPER_TYPE:
+        setSuperType((LED)null);
+        return;
       case BotDuinoPackage.LED_METHODS__LED_FUNCTIONS:
         getLedFunctions().clear();
         return;
@@ -135,6 +204,8 @@ public class LEDMethodsImpl extends MethodsImpl implements LEDMethods
   {
     switch (featureID)
     {
+      case BotDuinoPackage.LED_METHODS__SUPER_TYPE:
+        return superType != null;
       case BotDuinoPackage.LED_METHODS__LED_FUNCTIONS:
         return ledFunctions != null && !ledFunctions.isEmpty();
     }

@@ -219,6 +219,15 @@ public class BotDuinoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BotDuinoPackage.PROC:
+      {
+        Proc proc = (Proc)theEObject;
+        T result = caseProc(proc);
+        if (result == null) result = caseRules(proc);
+        if (result == null) result = caseEntity(proc);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BotDuinoPackage.LED_METHODS:
       {
         LEDMethods ledMethods = (LEDMethods)theEObject;
@@ -234,6 +243,15 @@ public class BotDuinoSwitch<T> extends Switch<T>
         T result = caseMotorMethods(motorMethods);
         if (result == null) result = caseMethods(motorMethods);
         if (result == null) result = caseEntity(motorMethods);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BotDuinoPackage.CALL_PROC:
+      {
+        CallProc callProc = (CallProc)theEObject;
+        T result = caseCallProc(callProc);
+        if (result == null) result = caseMethods(callProc);
+        if (result == null) result = caseEntity(callProc);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -522,6 +540,22 @@ public class BotDuinoSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Proc</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Proc</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseProc(Proc object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>LED Methods</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -549,6 +583,22 @@ public class BotDuinoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseMotorMethods(MotorMethods object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Call Proc</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Call Proc</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCallProc(CallProc object)
   {
     return null;
   }
