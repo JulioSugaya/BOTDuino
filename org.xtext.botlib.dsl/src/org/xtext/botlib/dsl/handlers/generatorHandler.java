@@ -122,6 +122,7 @@ public class generatorHandler extends AbstractHandler {
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/Button.cpp.o");
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/Debug.cpp.o");
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/SensorSR04.cpp.o");
+			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/SensorIR.cpp.o");
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/Libraries/SoftwareSerial/SoftwareSerial.cpp.o");
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-ar rcs " + avrPath + "/arduino.ar " + avrPath + "/Release/Libraries/LiquidCrystal/src/LiquidCrystal.cpp.o");
 			// /avr/bin/avr-gcc -w -Os -Wl,--gc-sections -mmcu=atmega1280 -o test.cpp.elf test.cpp.o arduino.ar -L -lm

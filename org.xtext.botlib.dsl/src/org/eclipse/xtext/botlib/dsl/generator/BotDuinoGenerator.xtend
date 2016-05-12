@@ -23,6 +23,8 @@ import org.eclipse.xtext.botlib.dsl.botDuino.Proc
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.ProcImpl
 import org.eclipse.xtext.botlib.dsl.botDuino.CallProc
 import java.io.File
+import org.eclipse.xtext.botlib.dsl.botDuino.SensorRule
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.SensorRuleImpl
 
 class BotDuinoGenerator implements IGenerator {
 	
@@ -131,6 +133,13 @@ class BotDuinoGenerator implements IGenerator {
 		  		c_loop += ind1 + "}" + ql
 	  		
 	  	}
+	  	if(e.eClass.name == SensorRule.simpleName){
+	  		    var ruleClass = e as SensorRuleImpl
+		  	    c_loop += ind1 + "if(" + ruleClass.superType.name + ".getState() == " + ruleClass.sensorActions.get(0) + "){ "+ ql
+		  		c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
+		  		c_loop += ind1 + "}" + ql
+	  		
+	  	}	  	
 	  	if(e.eClass.name == Proc.simpleName){
 			var proc = e as ProcImpl
 		  	proc_block += '''void «proc.name»(){ '''+ ql
