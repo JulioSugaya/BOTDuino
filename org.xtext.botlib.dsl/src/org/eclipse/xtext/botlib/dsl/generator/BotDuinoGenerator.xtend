@@ -22,9 +22,11 @@ import org.eclipse.xtext.botlib.dsl.botDuino.Variables
 import org.eclipse.xtext.botlib.dsl.botDuino.Proc
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.ProcImpl
 import org.eclipse.xtext.botlib.dsl.botDuino.CallProc
-import java.io.File
 import org.eclipse.xtext.botlib.dsl.botDuino.SensorRule
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.SensorRuleImpl
+import org.eclipse.xtext.botlib.dsl.botDuino.Methods
+import org.eclipse.xtext.botlib.dsl.botDuino.Loop
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.LoopImpl
 
 class BotDuinoGenerator implements IGenerator {
 	
@@ -43,31 +45,28 @@ class BotDuinoGenerator implements IGenerator {
 	var String context = ""
 	var String bt_test = ""
 	  	  
-	  override void doGenerate(Resource resource, IFileSystemAccess fsa) {
+	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 	  	
 	  	c_vars = ""
 	  	bt_block = ""
 	  	proc_block = ""
-	  	c_setup = "void setup() {" + ql
-	  	c_loop = "void loop() {" + ql
+	  	c_setup = "void setup() {" + ql + ql
+	  	c_loop = "void loop() {" + ql + ql
 	  	context = ""
 	  	bt_test = ""
 	  	
 	    for(e: resource.allContents.toIterable.filterNull) {
 			e.process
 	    }
-	    //
-//	    if(bt_test){
-//	    	c_loop += bt_block + ind1 + "}" + ql
-//	    }
+
      	c_loop += bt_block + ql
 		context = c_includes + ql + c_vars + ql + c_setup + "}" + ql + c_loop + "}" + ql + proc_block
 		fsa.deleteFile(resource.URI.lastSegment + ".cpp")
     	fsa.generateFile( resource.URI.lastSegment + ".cpp", context)
-	  }
+	}
 	  
-	  // process whole grammar
-	  def process(EObject e){
+	// process whole grammar
+	def process(EObject e){
 	  	if(e instanceof Type){
 	  		e.compile	
 	  	}
@@ -77,88 +76,80 @@ class BotDuinoGenerator implements IGenerator {
 	  	if(e instanceof Variables){
 	  		e.compile	
 	  	}
-	  }
+	  	if(e instanceof Loop){
+	  		e.compile	
+	  	}
+	}
 
-	  // Includes  
-	  // Instance & Vars
-	  def compile(Type e) {
+	// Includes  
+	// Instance & Vars
+	def compile(Type e) {
 	  	c_vars += '''«e.eClass.name» «e.name»(«e.values.join(",")»);''' + ql
 	  	if(e instanceof BlueToothImpl){
 	  		c_vars += '''String «e.name»Response = "";''' + ql
 	  	}
-	  }
+	}
 
-	  def compile(Variables e) {
+	def compile(Variables e) {
 	  	c_vars += '''byte «e.name» = «e.values.last»;''' + ql
+	}
 
-	  }
+	def compile(Loop e) {
+	  	
+	  	c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
 
-	  // Setup
+	}
+
+	// Setup
 	  
-	  // Loop
+	// Loop
 	  
-	  // Methods
-	  def compile(Rules e) {
-//	  	if(e.eClass.name == BTRule.simpleName){
-//			var btClass = e as BTRuleImpl
-//
-//			bt_block = ind1 + btClass.superType.name + "Response = " + btClass.superType.name + ".read();" + ql
-//	  		bt_block = ind1 + '''if( «btClass.superType.name»Response == '«e.fullyQualifiedName»' ){''' + ql
-//	  		bt_block += ind2 + splitExp(e.thenPart as ObjectLiteralImpl) + ql
-//	  		bt_block += ind1 + "}" + ql
-//	  	}
-	  	if(e.eClass.name == BTRule.simpleName){
+	// Methods
+	def compile(Rules e) {
+
+		if(e.eClass.name == BTRule.simpleName){
 			var btClass = e as BTRuleImpl
-	  		if(bt_test != btClass.superType.name){
-    			bt_block += ind1 + '''«btClass.superType.name»Response = "";''' + ql
-		  	    bt_block += ind1 + '''if(«btClass.superType.name».received()){ '''+ ql
+		  	if(bt_test != btClass.superType.name){
+	    		bt_block += ind1 + '''«btClass.superType.name»Response = "";''' + ql
+			  	bt_block += ind1 + '''if(«btClass.superType.name».received()){ '''+ ql
 		  		bt_block += ind2 + '''while( «btClass.superType.name».received()){''' + ql
 		  		bt_block += ind3 + '''«btClass.superType.name»Response += (char)«btClass.superType.name».read();''' + ql
 		  		bt_block += ind2 + "}" + ql
 		  		bt_block += ind1 + "}" + ql
 		  		bt_test = btClass.superType.name
 			}
-	  		bt_block += ind1 + '''if( «btClass.superType.name»Response == "«e.fullyQualifiedName»" ){''' + ql
-	  		bt_block += splitExp(e.thenPart as ObjectLiteralImpl) + ql
-	  		bt_block += ind1 + "}" + ql
-	  	}
-	  	if(e.eClass.name == ButtonRule.simpleName){
-	  		    var ruleClass = e as ButtonRuleImpl
-	  		    var state = "HIGH"
-	  		    if(ruleClass.btnActions.get(0) == "FREE"){
-	  		    	state = "LOW";
-	  		    }
-		  	    c_loop += ind1 + "if(" + ruleClass.superType.name + ".getState() == " + state + "){ "+ ql
-		  		c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
-		  		c_loop += ind1 + "}" + ql
-	  		
-	  	}
-	  	if(e.eClass.name == SensorRule.simpleName){
-	  		    var ruleClass = e as SensorRuleImpl
-		  	    c_loop += ind1 + "if(" + ruleClass.superType.name + ".getState() == " + ruleClass.sensorActions.get(0) + "){ "+ ql
-		  		c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
-		  		c_loop += ind1 + "}" + ql
-	  		
-	  	}	  	
-	  	if(e.eClass.name == Proc.simpleName){
+		  	bt_block += ind1 + '''if( «btClass.superType.name»Response == "«e.fullyQualifiedName»" ){''' + ql
+		  	bt_block += splitExp(e.thenPart as ObjectLiteralImpl) + ql
+		  	bt_block += ind1 + "}" + ql
+		}
+		if(e.eClass.name == ButtonRule.simpleName){
+		  	var ruleClass = e as ButtonRuleImpl
+		  	var state = "HIGH"
+		  	if(ruleClass.btnActions.get(0) == "FREE"){
+		  		 state = "LOW";
+		  	}
+			c_loop += ind1 + "if(" + ruleClass.superType.name + ".getState() == " + state + "){ "+ ql
+			c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
+			c_loop += ind1 + "}" + ql
+		  		
+		}
+		if(e.eClass.name == SensorRule.simpleName){
+		  	var ruleClass = e as SensorRuleImpl
+			c_loop += ind1 + "if(" + ruleClass.superType.name + ".getState() == " + ruleClass.sensorActions.get(0) + "){ "+ ql
+			c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
+			c_loop += ind1 + "}" + ql
+		  		
+		}	  	
+		if(e.eClass.name == Proc.simpleName){
 			var proc = e as ProcImpl
-		  	proc_block += '''void «proc.name»(){ '''+ ql
-	  		proc_block += splitExp(e.thenPart as ObjectLiteralImpl) + ql
-		  	proc_block += "}" + ql
-	  	}
-	  } 
+			proc_block += '''void «proc.name»(){ '''+ ql
+		  	proc_block += splitExp(e.thenPart as ObjectLiteralImpl) + ql
+			proc_block += "}" + ql
+		}
+	} 
 	  
-//	  def compile(Rules e) ''' 
-//	    «IF e.eClass.name == BTRule.simpleName»
-//	    	// bt_msg
-//	    	«e.fullyQualifiedName»«ql»  
-//	    	// cmd
-//	    	«splitExp(e.thenPart as XBlockExpression)»«ql»
-//	    «ENDIF»	    
-//	  '''
-	  
-	  def String splitExp(ObjectLiteralImpl exp){
-	  	var String s = ""
+	def String splitExp(ObjectLiteralImpl exp){
+	    var String s = ""
 	  	for ( c : exp.expressions) {
 	  		if(c instanceof LEDMethods){
 	  			s += ind2 + c.buildExp()
@@ -172,16 +163,16 @@ class BotDuinoGenerator implements IGenerator {
 	  		
 	  	}
 	  	return s
-	  }
+	}
 	  
-	  def String buildExp(MotorMethods exp){
+	def String buildExp(MotorMethods exp){
 	  	val x = exp as MotorMethodsImpl
 	  	return x.superType.name + "." + x.motorFunctions.get(0) + "();" + ql
-	  }
+	}
 	  	  
-	  def String buildExp(LEDMethods exp){
+    def String buildExp(LEDMethods exp){
 	  	val x = exp as LEDMethodsImpl
 	  	return x.superType.name + "." + x.ledFunctions.get(0) + "();" + ql
-	  }
+	}
 	
 }

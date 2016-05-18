@@ -21,7 +21,7 @@ Type:
 
 
 Rules:
-	SensorRule | ButtonRule | CTRLRule | BTRule | Proc;
+	SensorRule | ButtonRule | CTRLRule | BTRule | Proc | Loop;
 
 Methods:
   LEDMethods | MotorMethods | CallProc;	
@@ -87,8 +87,11 @@ Servo:
 Proc:
  'Procedure'
   name=ID ('extends' superType=[Proc])?
-  thenPart=XBlockExpression
-;
+  thenPart=XBlockExpression;
+  
+Loop:
+  'Always' thenPart=XBlockExpression
+  ;
 
 LEDMethods:	
   superType=[LED]'.'( ledFunctions+= 'on' | ledFunctions+= 'off');
@@ -98,6 +101,7 @@ MotorMethods:
 
 CallProc:
   'Exec' superType=[Proc];
+
   
 terminal INT returns ecore::EInt : ('0'..'9')+;
  
@@ -108,11 +112,5 @@ XBlockExpression returns xbase::XExpression:
  '{'
    expressions+=(Methods)*
  '}';
-
-//XBlockProcedure returns xbase::XExpression:
-// {ObjectLiteral}
-// '{'
-//   execute+=(Methods)*
-// '}';
 
 

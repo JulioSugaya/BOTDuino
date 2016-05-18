@@ -8,6 +8,8 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.regex.Pattern;
 
+import javax.swing.filechooser.FileSystemView;
+
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
@@ -74,6 +76,48 @@ public class generatorHandler extends AbstractHandler {
 		}
 	}
 	
+	private static String getUSBName(){
+//		String[] portNames = SerialPortList.getPortNames();
+//		SerialPort serialPort = new SerialPort(portNames[0]);
+//		try {
+//			serialPort.openPort();
+//			serialPort.closePort();
+//		} catch (SerialPortException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		return portNames[0];
+		String port = "";
+		
+		File[] roots = null;//cria um vetor de file aonde ficara os dispositivos
+		 
+		FileSystemView fs = FileSystemView.getFileSystemView();
+		 System.out.println(System.getProperties().getProperty("os.name"));
+		//verifica se o so eh windows
+		if (System.getProperties().getProperty("os.name").toLowerCase().contains("windows")) {
+		     
+		    roots = File.listRoots();//lista os diretorios raiz
+		     
+		    for (File file : roots) {//percorre o vetor roots
+		        String descricao = fs.getSystemTypeDescription(file);//pega a descrição dos diretorios
+		        if (descricao != null) {//se for diferente de nulo
+		            if (descricao.endsWith("removível")) {//verifica se é um disco removivel
+		                System.out.println(file.getAbsolutePath());//mostra dispositivo
+		            }
+		        }
+		    }       //verifica se eh linux
+		} else if (System.getProperties().getProperty("os.name").toLowerCase().contains("mac")) {
+		     
+		    roots = fs.getFiles(new File("/dev/"), true);//pega todos os diretorios montados em /media/
+		     
+		    for (File file : roots) {//percorre o vetor roots
+		    			if(file.getAbsolutePath().contains("tty.usbserial")){
+		                   port = file.getAbsolutePath();//mostra dispositivo
+		    			}
+		    }
+		}
+		return port;
+	}
 	
 	public static void main(String[] args) {
 		//./avr/bin/avrdude -C ./avr/etc/avrdude.conf -v -v -v -v -p atmega1280 -c arduino -P\\.\/dev/cu.usbserial-AH00PD34 -b 115200 -D -U flash:w: <path> test.cpp.hex:i
@@ -82,7 +126,8 @@ public class generatorHandler extends AbstractHandler {
 //      	execCmd("./avr/bin/avr-gcc -g -O -mmcu=atmega1280 -c test.ino");
 //        	
      	//execCmd("java -version");
-        	
+        String s = getUSBName();
+        System.out.println(s);
 	}
 	/**
 	 * The constructor.
@@ -99,16 +144,6 @@ public class generatorHandler extends AbstractHandler {
 		String avrPath = "/Users/juliosugaya/_projects/org.xtext.botlib.dsl";
 		IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 
-//		String[] portNames = SerialPortList.getPortNames();
-//		System.out.println(portNames[0]);
-//		SerialPort serialPort = new SerialPort(portNames[0]);
-//		try {
-//			serialPort.openPort();
-//			serialPort.closePort();
-//		} catch (SerialPortException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
 		// cpp file
 		String cppPath = this.getFileProject();
 		if(cppPath != ""){
@@ -136,8 +171,8 @@ public class generatorHandler extends AbstractHandler {
 			// /avr/bin/avr-objcopy -O ihex -R .eeprom test.cpp.elf test.cpp.hex
 			execCmd( avrPath + "/hardware/tools/avr/bin/avr-objcopy -O ihex -R .eeprom " + avrPath + "/test.cpp.elf " + avrPath + "/test.cpp.hex");
 			// /avr/bin/avrdude -C./avr/etc/avrdude.conf -v -patmega1280 -carduino -P/dev/cu.usbserial-AH00PD34 -b57600 -D -Uflash:w:test.cpp.hex:i
-			execCmd( avrPath + "/hardware/tools/avr/bin/avrdude -C" + avrPath + "/hardware/tools/avr/etc/avrdude.conf -v -patmega328p -carduino -P/dev/tty.usbserial-A9MP9FFZ -b57600 -D -Uflash:w:" + avrPath + "/test.cpp.hex:i");		
-//			execCmd( avrPath + "/avr/bin/avrdude -C" + avrPath + "/avr/etc/avrdude.conf -v -patmega1280 -carduino -P" + portNames[0] + " -b57600 -D -Uflash:w:" + avrPath + "/test.cpp.hex:i");		
+			execCmd( avrPath + "/hardware/tools/avr/bin/avrdude -C" + avrPath + "/hardware/tools/avr/etc/avrdude.conf -v -patmega328p -carduino -P" + getUSBName() + " -b57600 -D -Uflash:w:" + avrPath + "/test.cpp.hex:i");		
+//			execCmd( avrPath + "/hardware/tools/avr/bin/avrdude -C" + avrPath + "/hardware/tools/avr/etc/avrdude.conf -v -patmega328p -carduino -P/dev/tty.usbserial-A9MP9FFZ -b57600 -D -Uflash:w:" + avrPath + "/test.cpp.hex:i");		
 			
 			MessageDialog.openInformation(
 					window.getShell(),
