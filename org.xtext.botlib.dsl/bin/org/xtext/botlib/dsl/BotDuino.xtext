@@ -14,38 +14,18 @@ DomainModel :
  (elements+=Entity)*;
 
 Entity:
- Type | Rules | Methods | Variables;
+ Type | Rules | Methods;
 
 Type:
- Button | Sensor | BlueTooth | CTRL | LED | Motor | Servo;
+ Button | Sensor | BlueTooth | CTRL | LED | Motor | Servo | Variables;
 
 
 Rules:
-	SensorRule | ButtonRule | CTRLRule | BTRule | Proc;
+	SensorRule | ButtonRule | CTRLRule | BTRule | VarRule | Proc | Loop;
 
 Methods:
-  LEDMethods | MotorMethods | CallProc;	
+  LEDMethods | MotorMethods | CallProc | AttrVar;	
 
-BTRule:
- superType=[BlueTooth] 
- 'when' name=ID
- 'then' thenPart=XBlockExpression;
- 
-SensorRule:
- superType=[Sensor] 
- 'when' (sensorActions+= 'HIGH' | sensorActions+= 'LOW')
- 'then' thenPart=XBlockExpression;
- 
-CTRLRule:
- superType=[CTRL] 
- 'when' (ctrlActions+= 'UP' | ctrlActions+= 'DOWN' | ctrlActions+= 'LEFT' | ctrlActions+= 'RIGHT')
- 'then' thenPart=XBlockExpression;
- 
-ButtonRule:
- superType=[Button] 
- 'when' ( btnActions+= 'PUSH' | btnActions+= 'FREE')
- 'then' thenPart=XBlockExpression;
- 
 Variables:
  'VAR' name=ID '=' values+=INT*;
  
@@ -84,11 +64,42 @@ Servo:
  values+=INT* ',' values+=INT* ',' values+=INT*
  ')';
 
+BTRule:
+ superType=[BlueTooth] 
+ 'when' name=CH
+ 'then' thenPart=XBlockExpression;
+ 
+SensorRule:
+ superType=[Sensor] 
+ 'when' (sensorActions+= 'HIGH' | sensorActions+= 'LOW')
+ 'then' thenPart=XBlockExpression;
+ 
+CTRLRule:
+ superType=[CTRL] 
+ 'when' (ctrlActions+= 'UP' | ctrlActions+= 'DOWN' | ctrlActions+= 'LEFT' | ctrlActions+= 'RIGHT')
+ 'then' thenPart=XBlockExpression;
+ 
+ButtonRule:
+ superType=[Button] 
+ 'when' ( btnActions+= 'PUSH' | btnActions+= 'FREE')
+ 'then' thenPart=XBlockExpression; 
+ 
+VarRule:
+ superType=[Variables] 
+ 'when' values+=INT*
+ 'then' thenPart=XBlockExpression;
+ 
+AttrVar:
+ superType=[Variables] 
+ '=' values+=INT*;
+
 Proc:
- 'Procedure'
+  'Procedure'
   name=ID ('extends' superType=[Proc])?
-  thenPart=XBlockExpression
-;
+  thenPart=XBlockExpression;
+  
+Loop:
+  'Always' thenPart=XBlockExpression;
 
 LEDMethods:	
   superType=[LED]'.'( ledFunctions+= 'on' | ledFunctions+= 'off');
@@ -98,21 +109,17 @@ MotorMethods:
 
 CallProc:
   'Exec' superType=[Proc];
+
   
 terminal INT returns ecore::EInt : ('0'..'9')+;
  
 terminal ML_COMMENT : '/*' -> '*/';
 
-XBlockExpression returns xbase::XExpression:
- {ObjectLiteral}
+terminal CH : ('a'..'z'|'A'..'Z' | '0'..'9');
+
+XBlockExpression returns xbase::XExpression:{ObjectLiteral}
  '{'
    expressions+=(Methods)*
  '}';
-
-//XBlockProcedure returns xbase::XExpression:
-// {ObjectLiteral}
-// '{'
-//   execute+=(Methods)*
-// '}';
 
 
