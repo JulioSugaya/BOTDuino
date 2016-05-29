@@ -27,6 +27,10 @@ import org.eclipse.xtext.botlib.dsl.botDuino.impl.SensorRuleImpl
 import org.eclipse.xtext.botlib.dsl.botDuino.Methods
 import org.eclipse.xtext.botlib.dsl.botDuino.Loop
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.LoopImpl
+import org.eclipse.xtext.botlib.dsl.botDuino.VarRule
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.VarRuleImpl
+import org.eclipse.xtext.botlib.dsl.botDuino.AttrVar
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.AttrVarImpl
 
 class BotDuinoGenerator implements IGenerator {
 	
@@ -84,9 +88,11 @@ class BotDuinoGenerator implements IGenerator {
 	// Includes  
 	// Instance & Vars
 	def compile(Type e) {
-	  	c_vars += '''«e.eClass.name» «e.name»(«e.values.join(",")»);''' + ql
-	  	if(e instanceof BlueToothImpl){
-	  		c_vars += '''String «e.name»Response = "";''' + ql
+		if(!(e instanceof Variables)){
+		  	c_vars += '''«e.eClass.name» «e.name»(«e.values.join(",")»);''' + ql
+		  	if(e instanceof BlueToothImpl){
+		  		c_vars += '''String «e.name»Response = "";''' + ql
+		  	}
 	  	}
 	}
 
@@ -146,6 +152,13 @@ class BotDuinoGenerator implements IGenerator {
 		  	proc_block += splitExp(e.thenPart as ObjectLiteralImpl) + ql
 			proc_block += "}" + ql
 		}
+		if(e.eClass.name == VarRule.simpleName){
+		  	var ruleClass = e as VarRuleImpl
+			c_loop += ind1 + "if(" + ruleClass.superType.name + " == " + ruleClass.values.get(0) + "){ "+ ql
+			c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
+			c_loop += ind1 + "}" + ql
+		  		
+		}	  	
 	} 
 	  
 	def String splitExp(ObjectLiteralImpl exp){
@@ -160,7 +173,9 @@ class BotDuinoGenerator implements IGenerator {
 	  		if(c instanceof CallProc){
 	  			s += ind2 + c.superType.name + "();" + ql
 	  		}
-	  		
+	  		if(c instanceof AttrVar){
+	  			s += ind2 + c.buildExp()
+	  		}
 	  	}
 	  	return s
 	}
@@ -173,6 +188,11 @@ class BotDuinoGenerator implements IGenerator {
     def String buildExp(LEDMethods exp){
 	  	val x = exp as LEDMethodsImpl
 	  	return x.superType.name + "." + x.ledFunctions.get(0) + "();" + ql
+	}
+	  	  
+    def String buildExp(AttrVar exp){
+	  	val x = exp as AttrVarImpl
+	  	return x.superType.name + " = " + x.values.get(0) + ";" + ql
 	}
 	
 }
