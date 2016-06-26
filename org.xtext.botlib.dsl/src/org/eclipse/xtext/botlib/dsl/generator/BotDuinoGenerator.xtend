@@ -22,15 +22,16 @@ import org.eclipse.xtext.botlib.dsl.botDuino.Variables
 import org.eclipse.xtext.botlib.dsl.botDuino.Proc
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.ProcImpl
 import org.eclipse.xtext.botlib.dsl.botDuino.CallProc
-import org.eclipse.xtext.botlib.dsl.botDuino.SensorRule
-import org.eclipse.xtext.botlib.dsl.botDuino.impl.SensorRuleImpl
-import org.eclipse.xtext.botlib.dsl.botDuino.Methods
 import org.eclipse.xtext.botlib.dsl.botDuino.Loop
-import org.eclipse.xtext.botlib.dsl.botDuino.impl.LoopImpl
 import org.eclipse.xtext.botlib.dsl.botDuino.VarRule
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.VarRuleImpl
 import org.eclipse.xtext.botlib.dsl.botDuino.AttrVar
 import org.eclipse.xtext.botlib.dsl.botDuino.impl.AttrVarImpl
+import org.eclipse.xtext.botlib.dsl.botDuino.SensorIRRule
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.SensorIRRuleImpl
+import org.eclipse.xtext.botlib.dsl.botDuino.SensorSR04Rule
+import org.eclipse.xtext.botlib.dsl.botDuino.impl.SensorSR04RuleImpl
+import org.eclipse.xtext.botlib.dsl.botDuino.WaitMethod
 
 class BotDuinoGenerator implements IGenerator {
 	
@@ -64,7 +65,7 @@ class BotDuinoGenerator implements IGenerator {
 	    }
 
      	c_loop += bt_block + ql
-		context = c_includes + ql + c_vars + ql + c_setup + "}" + ql + c_loop + "}" + ql + proc_block
+		context = c_includes + ql + c_vars + ql + c_setup + "}" + ql + proc_block + ql + c_loop + "}"
 		fsa.deleteFile(resource.URI.lastSegment + ".cpp")
     	fsa.generateFile( resource.URI.lastSegment + ".cpp", context)
 	}
@@ -124,24 +125,35 @@ class BotDuinoGenerator implements IGenerator {
 		  		bt_block += ind1 + "}" + ql
 		  		bt_test = btClass.superType.name
 			}
-		  	bt_block += ind1 + '''if( «btClass.superType.name»Response == "«e.fullyQualifiedName»" ){''' + ql
+		  	bt_block += ind1 + '''if( «btClass.superType.name»Response «btClass.op.get(0)» "«e.fullyQualifiedName»" ){''' + ql
 		  	bt_block += splitExp(e.thenPart as ObjectLiteralImpl) + ql
 		  	bt_block += ind1 + "}" + ql
 		}
 		if(e.eClass.name == ButtonRule.simpleName){
 		  	var ruleClass = e as ButtonRuleImpl
 		  	var state = "HIGH"
-		  	if(ruleClass.btnActions.get(0) == "FREE"){
+		  	if(ruleClass.actions.get(0) == "FREE"){
 		  		 state = "LOW";
 		  	}
-			c_loop += ind1 + "if(" + ruleClass.superType.name + ".getState() == " + state + "){ "+ ql
+			c_loop += ind1 + '''if( «ruleClass.superType.name».getState() «ruleClass.op.get(0)» «state» ){'''+ ql
 			c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
 			c_loop += ind1 + "}" + ql
 		  		
 		}
-		if(e.eClass.name == SensorRule.simpleName){
-		  	var ruleClass = e as SensorRuleImpl
-			c_loop += ind1 + "if(" + ruleClass.superType.name + ".getState() == " + ruleClass.sensorActions.get(0) + "){ "+ ql
+		if(e.eClass.name == SensorIRRule.simpleName){
+		  	var ruleClass = e as SensorIRRuleImpl
+		  	var state = "HIGH"
+		  	if(ruleClass.actions.get(0) == "FOUND"){
+		  		 state = "LOW";
+		  	}
+			c_loop += ind1 + '''if( «ruleClass.superType.name».getState() «ruleClass.op.get(0)» «state» ){'''+ ql
+			c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
+			c_loop += ind1 + "}" + ql
+		  		
+		}	  	
+		if(e.eClass.name == SensorSR04Rule.simpleName){
+		  	var ruleClass = e as SensorSR04RuleImpl
+			c_loop += ind1 + '''if( «ruleClass.superType.name».getDistanceCM() «ruleClass.op.get(0)» «ruleClass.value.get(0)» ){'''+ ql
 			c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
 			c_loop += ind1 + "}" + ql
 		  		
@@ -154,7 +166,7 @@ class BotDuinoGenerator implements IGenerator {
 		}
 		if(e.eClass.name == VarRule.simpleName){
 		  	var ruleClass = e as VarRuleImpl
-			c_loop += ind1 + "if(" + ruleClass.superType.name + " == " + ruleClass.values.get(0) + "){ "+ ql
+			c_loop += ind1 + '''if( «ruleClass.superType.name» «ruleClass.op.get(0)» «ruleClass.values.get(0)» ){'''+ ql
 			c_loop += splitExp(e.thenPart as ObjectLiteralImpl) + ql
 			c_loop += ind1 + "}" + ql
 		  		
@@ -173,6 +185,9 @@ class BotDuinoGenerator implements IGenerator {
 	  		if(c instanceof CallProc){
 	  			s += ind2 + c.superType.name + "();" + ql
 	  		}
+	  		if(c instanceof WaitMethod){
+	  			s += ind2 + "delay(" + c.value.get(0).intValue * 1000 + ");" + ql
+	  		}
 	  		if(c instanceof AttrVar){
 	  			s += ind2 + c.buildExp()
 	  		}
@@ -182,12 +197,20 @@ class BotDuinoGenerator implements IGenerator {
 	  
 	def String buildExp(MotorMethods exp){
 	  	val x = exp as MotorMethodsImpl
-	  	return x.superType.name + "." + x.motorFunctions.get(0) + "();" + ql
+	  	var param = "()"
+	  	if(x.value.size > 0){
+	  		param = x.value.get(0) + ")"
+	  	}
+	  	return x.superType.name + "." + x.motorFunctions.get(0) + param + ";" + ql
 	}
 	  	  
     def String buildExp(LEDMethods exp){
 	  	val x = exp as LEDMethodsImpl
-	  	return x.superType.name + "." + x.ledFunctions.get(0) + "();" + ql
+	  	var param = "()"
+	  	if(x.value.size > 0){
+	  		param = x.value.get(0) + ")"
+	  	}	  	
+	  	return x.superType.name + "." + x.ledFunctions.get(0) + param + ";" + ql
 	}
 	  	  
     def String buildExp(AttrVar exp){

@@ -17,14 +17,14 @@ Entity:
  Type | Rules | Methods;
 
 Type:
- Button | Sensor | BlueTooth | CTRL | LED | Motor | Servo | Variables;
+ Button | SensorIR | SensorSR04 | BlueTooth | CTRL | LED | Motor | Servo | Variables;
 
 
 Rules:
-	SensorRule | ButtonRule | CTRLRule | BTRule | VarRule | Proc | Loop;
+	SensorIRRule | SensorSR04Rule | ButtonRule | CTRLRule | BTRule | VarRule | Proc | Loop;
 
 Methods:
-  LEDMethods | MotorMethods | CallProc | AttrVar;	
+  LEDMethods | MotorMethods | CallProc | AttrVar | WaitMethod;	
 
 Variables:
  'VAR' name=ID '=' values+=INT*;
@@ -44,8 +44,13 @@ Motor:
  values+=INT* ',' values+=INT* ',' values+=INT*
  ')';
 
-Sensor:
- 'Sensor' name=ID ('extends' superType=[Sensor])? '('
+SensorIR:
+ 'SensorIR' name=ID ('extends' superType=[SensorIR])? '('
+ values+=INT*
+ ')';
+
+SensorSR04:
+ 'SensorSR04' name=ID ('extends' superType=[SensorSR04])? '('
  values+=INT* ',' values+=INT*
  ')';
  
@@ -65,33 +70,31 @@ Servo:
  ')';
 
 BTRule:
- superType=[BlueTooth] 
- 'when' name=CH
- 'then' thenPart=XBlockExpression;
+ 'When' superType=[BlueTooth] (op+='==' | op+='!=') name=CH
+ 'Then' thenPart=XBlockExpression;
  
-SensorRule:
- superType=[Sensor] 
- 'when' (sensorActions+= 'HIGH' | sensorActions+= 'LOW')
- 'then' thenPart=XBlockExpression;
+SensorIRRule:
+ 'When' superType=[SensorIR] (op+='==' | op+='!=') (actions+= 'FOUND' | actions+= 'NOTHING')
+ 'Then' thenPart=XBlockExpression;
+ 
+SensorSR04Rule:
+ 'When' superType=[SensorSR04] (op+='==' | op+='!=' | op+='>' | op+='<') (value+=INT 'cm')
+ 'Then' thenPart=XBlockExpression;
  
 CTRLRule:
- superType=[CTRL] 
- 'when' (ctrlActions+= 'UP' | ctrlActions+= 'DOWN' | ctrlActions+= 'LEFT' | ctrlActions+= 'RIGHT')
- 'then' thenPart=XBlockExpression;
+ 'When' superType=[CTRL] (op+='==' | op+='!=') (actions+= 'UP' | actions+= 'DOWN' | actions+= 'LEFT' | actions+= 'RIGHT')
+ 'Then' thenPart=XBlockExpression;
  
 ButtonRule:
- superType=[Button] 
- 'when' ( btnActions+= 'PUSH' | btnActions+= 'FREE')
- 'then' thenPart=XBlockExpression; 
+ 'When' superType=[Button] (op+='==' | op+='!=') ( actions+= 'PUSH' | actions+= 'FREE')
+ 'Then' thenPart=XBlockExpression; 
  
 VarRule:
- superType=[Variables] 
- 'when' values+=INT*
- 'then' thenPart=XBlockExpression;
+ 'When' superType=[Variables] (op+='==' | op+='!=') values+=INT*
+ 'Then' thenPart=XBlockExpression;
  
 AttrVar:
- superType=[Variables] 
- '=' values+=INT*;
+ superType=[Variables] '=' values+=INT*;
 
 Proc:
   'Procedure'
@@ -99,13 +102,16 @@ Proc:
   thenPart=XBlockExpression;
   
 Loop:
-  'Always' thenPart=XBlockExpression;
+  'Loop' thenPart=XBlockExpression;
 
 LEDMethods:	
-  superType=[LED]'.'( ledFunctions+= 'on' | ledFunctions+= 'off');
+  superType=[LED]'.'( ledFunctions+= 'on' | ledFunctions+= 'off' | ledFunctions+='on(' + value+=INT + ')');
 
 MotorMethods:	
-  superType=[Motor] | superType=[Servo]'.'( motorFunctions+= 'run' | motorFunctions+= 'stop' | motorFunctions+= 'reverse');
+  superType=[Motor] | superType=[Servo]'.'( motorFunctions+= 'run' | motorFunctions+= 'stop' | motorFunctions+= 'reverse' | motorFunctions+= 'reverse(' + value+=INT + ')' | motorFunctions+= 'run(' + value+=INT + ')');
+  
+WaitMethod:
+  'wait(' value+=INT ')';
 
 CallProc:
   'Exec' superType=[Proc];
