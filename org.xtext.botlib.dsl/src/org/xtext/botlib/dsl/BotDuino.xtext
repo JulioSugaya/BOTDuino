@@ -27,47 +27,31 @@ Methods:
   LEDMethods | MotorMethods | CallProc | AttrVar | WaitMethod;	
 
 Variables:
- 'VAR' name=ID '=' values+=INT*;
+ 'VAR' name=ValidID '=' values+=INT*;
  
 LED:
- 'LED' name=ID ('extends' superType=[LED])? '('
- values+=INT*
- ')';
+ 'LED' name=ID '(' values+=INT* ')';
 
 Button:
- 'Button' name=ID ('extends' superType=[Button])? '('
- values+=INT*
- ')';
+ 'Button' name=ID '(' values+=INT* ')';
 
 Motor:
- 'Motor' name=ID ('extends' superType=[Motor])? '('
- values+=INT* ',' values+=INT* ',' values+=INT*
- ')';
+ 'Motor' name=ID '(' values+=INT* ',' values+=INT* ',' values+=INT* ')';
 
 SensorIR:
- 'SensorIR' name=ID ('extends' superType=[SensorIR])? '('
- values+=INT*
- ')';
+ 'SensorIR' name=ID '(' values+=INT* ')';
 
 SensorSR04:
- 'SensorSR04' name=ID ('extends' superType=[SensorSR04])? '('
- values+=INT* ',' values+=INT*
- ')';
+ 'SensorSR04' name=ID '(' values+=INT* ',' values+=INT* ')';
  
 BlueTooth:
- 'BlueTooth' name=ID ('extends' superType=[BlueTooth])? '('
- values+=INT* ',' values+=INT*
- ')'; 
+ 'BlueTooth' name=ID '(' values+=INT* ',' values+=INT* ')'; 
  
 CTRL:
- 'CTRL' name=ID ('extends' superType=[CTRL])? '('
- values+=INT* ',' values+=INT* ',' values+=INT* ',' values+=INT* ',' values+=INT*
- ')';
+ 'CTRL' name=ID '(' values+=INT* ',' values+=INT* ',' values+=INT* ',' values+=INT* ',' values+=INT* ')';
   
 Servo:
- 'Servo' name=ID ('extends' superType=[Servo])? '('
- values+=INT* ',' values+=INT* ',' values+=INT*
- ')';
+ 'Servo' name=ID '(' values+=INT* ',' values+=INT* ',' values+=INT* ')';
 
 BTRule:
  'When' superType=[BlueTooth] (op+='==' | op+='!=') name=CH
@@ -127,5 +111,3 @@ XBlockExpression returns xbase::XExpression:{ObjectLiteral}
  '{'
    expressions+=(Methods)*
  '}';
-
-
